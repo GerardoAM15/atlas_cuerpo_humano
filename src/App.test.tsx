@@ -23,6 +23,7 @@ describe('router', () => {
     ['/estudio', /Modo estudio/],
     ['/creditos', /Créditos y licencias/],
     ['/no-existe', /Página no encontrada/],
+    ['/simulaciones/no-existe', /Página no encontrada/],
   ])('ruta %s', (ruta, titulo) => {
     renderEn(ruta);
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(titulo);

@@ -59,6 +59,11 @@ docs/           README técnico, fuentes, licencias
 ```
 - Alias de importación: `@/` → `src/`.
 - Las páginas con three.js se cargan con `React.lazy` para no penalizar la portada.
+- Simulaciones (`src/simulations/<id>/`): `modelo.ts` con funciones puras del tiempo (curvas fisiológicas, fases),
+  probadas en `modelo.test.ts`, y un componente SVG que usa lo común de `src/simulations/comun/` (reloj con
+  Play/Pausa/velocidad, `GraficaLinea`, `Pasos` narrados, `MarcoSimulacion` con la etiqueta «Esquemático»).
+  Se registran en `src/simulations/catalogo.ts` (carga diferida, ruta `/simulaciones/:id`). Valores típicos de
+  adulto en reposo; las simplificaciones se indican en la propia interfaz.
 
 ## Rendimiento
 - Objetivo: 60 FPS en una laptop sin GPU dedicada. Sombras desactivadas por defecto; instancing/merge cuando se

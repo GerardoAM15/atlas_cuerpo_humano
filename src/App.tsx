@@ -4,6 +4,7 @@ import Layout from '@/components/Layout';
 import Cargando from '@/components/Cargando';
 import Inicio from '@/pages/Inicio';
 import Simulaciones from '@/pages/Simulaciones';
+import Simulacion from '@/pages/Simulacion';
 import Estudio from '@/pages/Estudio';
 import Creditos from '@/pages/Creditos';
 import NoEncontrada from '@/pages/NoEncontrada';
@@ -25,6 +26,7 @@ export default function App() {
           }
         />
         <Route path="simulaciones" element={<Simulaciones />} />
+        <Route path="simulaciones/:id" element={<Simulacion />} />
         <Route path="estudio" element={<Estudio />} />
         <Route path="creditos" element={<Creditos />} />
         <Route path="*" element={<NoEncontrada />} />
