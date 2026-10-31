@@ -23,20 +23,24 @@ sistemas, consultar la ficha de cada estructura, ver simulaciones fisiológicas 
   - Complemento: Z-Anatomy (CC BY-SA 4.0, `.blend` → glTF con Blender CLI).
 - Pipeline reproducible en `/scripts`: descarga → OBJ→glTF (obj2gltf) → un `.glb` por sistema (cada estructura
   es un nodo con nombre = id propio) → `@gltf-transform/cli` (weld, simplify, draco/meshopt) →
-  `public/models/<sistema>.glb` + manifest JSON.
+  `public/models/<sistema>.glb` + `src/data/manifest-modelos.json`.
 - Presupuesto: cada sistema < 8 MB, total < 80 MB.
 - Crudos en `/assets-raw` (en `.gitignore`, nunca se suben). Los `.glb` optimizados sí, si caben (< 100 MB por archivo).
 - **Si un modelo no está disponible, NO inventar**: marcarlo como pendiente en el manifest y avisar.
 - Mantener la página «Créditos y licencias» con la atribución exigida por cada licencia (la de
-  BodyParts3D está en `public/models/manifest.json` → `fuentes`). Lo que venga de Z-Anatomy obliga a CC BY-SA.
+  BodyParts3D está en `src/data/manifest-modelos.json` → `fuentes`). Lo que venga de Z-Anatomy obliga a CC BY-SA.
 
 ## Datos (separados del 3D)
 - `src/data/estructuras/<sistema>.json`, una entrada por estructura:
   `id, nodoModelo, nombre, latin, ingles, sistema, region, tipo, descripcion, funcion, ubicacion, relaciones,
   datosClinicos, curiosidad` + extras por tipo (huesos: clasificación, articulaciones; músculos: origen,
   inserción, inervación, irrigación, acción).
-- Validación con Zod + test de integridad: ids únicos, cada `nodoModelo` existe en el manifest, `relaciones`
-  apuntan a ids válidos.
+- **Los JSON se generan; no se editan a mano.** La fuente está en `scripts/datos/<sistema>/` (módulos compactos:
+  `par()` crea la versión derecha/izquierda; en ids, `~` = mismo lado y `^` = lado opuesto). Tras editar:
+  `npm run datos`. `nodoModelo` se toma del manifest y `relaciones` se deriva de las articulaciones más `relacionesExtra`.
+- Esquemas Zod en `src/data/esquemas.ts`; el catálogo (`src/data/catalogo.ts`) valida al cargar. Tests de integridad:
+  ids únicos, 206 huesos, cada `nodoModelo` existe en el manifest (o la estructura está `pendiente`), relaciones
+  válidas, articulaciones recíprocas, regiones conocidas (`src/data/regiones.ts`) y pares completos.
 - Nivel universitario introductorio, preciso y conciso. Fuentes generales en `docs/FUENTES.md`.
 - **Precisión anatómica ante todo**: si un dato no es seguro, marcarlo para revisión (campo `revisar`) en vez de inventarlo.
 
@@ -83,3 +87,5 @@ docs/           README técnico, fuentes, licencias
 - `npm run build` — typecheck + build de producción
 - `npm test` — pruebas (Vitest)
 - `npm run preview` — sirve `dist/`
+- `npm run datos` — regenera `src/data/estructuras/*.json` desde `scripts/datos/`
+- `npm run modelos` — regenera los `.glb` y el manifest (requiere `npm run modelos:descargar`)

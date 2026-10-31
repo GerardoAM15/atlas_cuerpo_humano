@@ -13,7 +13,8 @@
     "typecheck": "tsc -b --noEmit",
     "modelos:descargar": "node scripts/descargar-bodyparts3d.mjs",
     "modelos": "node scripts/construir-modelos.mjs",
-    "modelos:inspeccionar": "gltf-transform inspect public/models/esqueletico.glb"
+    "modelos:inspeccionar": "gltf-transform inspect public/models/esqueletico.glb",
+    "datos": "node scripts/generar-datos.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^9.122.0",

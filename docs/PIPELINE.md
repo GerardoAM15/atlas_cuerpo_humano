@@ -9,7 +9,7 @@ npm run modelos -- esqueletico   #      o solo uno
 npm run modelos:inspeccionar     # resumen del .glb con gltf-transform inspect
 ```
 
-`assets-raw/` está en `.gitignore`. Los `.glb` de `public/models/` y `manifest.json` **sí** se versionan.
+`assets-raw/` está en `.gitignore`. Los `.glb` de `public/models/` y `src/data/manifest-modelos.json` **sí** se versionan.
 
 ## Pasos
 
@@ -20,7 +20,7 @@ npm run modelos:inspeccionar     # resumen del .glb con gltf-transform inspect
 | 2a | `scripts/lib/convertir.mjs` | OBJ → glTF con **obj2gltf** (`inputUpAxis: 'Z'`). Un `.glb` por elemento, cacheado en `assets-raw/intermedio/`. |
 | 2b | `scripts/lib/agrupar.mjs` | Un documento por sistema: nodo raíz `<sistema>`, un nodo por estructura con **nombre = id propio**. Las estructuras con varias mallas (p. ej. el esternón) tienen hijos `<id>__FJxxxx`. Pasa de mm a m. |
 | 3 | `scripts/lib/optimizar.mjs` | glTF-Transform: `dedup`, `weld`, `simplify` (meshoptimizer, fracción por sistema), `prune` y `meshopt` (cuantización + `EXT_meshopt_compression`). No se usan `join`/`flatten`/`instance`, porque fusionarían nodos. |
-| 4 | `scripts/construir-modelos.mjs` | Escribe `public/models/<sistema>.glb` y actualiza `public/models/manifest.json`. Avisa si se superan 8 MB por sistema u 80 MB en total. |
+| 4 | `scripts/construir-modelos.mjs` | Escribe `public/models/<sistema>.glb` y actualiza `src/data/manifest-modelos.json`. Avisa si se superan 8 MB por sistema u 80 MB en total. |
 
 ## Sistema de coordenadas
 BodyParts3D usa milímetros, Z arriba, anterior en −Y y derecha del paciente en −X. La salida usa:
@@ -30,7 +30,7 @@ BodyParts3D usa milímetros, Z arriba, anterior en −Y y derecha del paciente e
 - el mismo marco para todos los sistemas, sin centrar cada uno, para que encajen al superponerse. Los pies
   quedan cerca de y = 0 y el vértex en y ≈ 1,64.
 
-## Manifest (`public/models/manifest.json`)
+## Manifest (`src/data/manifest-modelos.json`)
 ```jsonc
 {
   "unidades": "m",

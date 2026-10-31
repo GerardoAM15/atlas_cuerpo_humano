@@ -24,7 +24,9 @@ interface Manifest {
 }
 
 const DIR_PUBLIC = path.resolve(__dirname, '..', 'public');
-const manifest: Manifest = JSON.parse(fs.readFileSync(path.join(DIR_PUBLIC, 'models', 'manifest.json'), 'utf8'));
+const manifest: Manifest = JSON.parse(
+  fs.readFileSync(path.resolve(__dirname, '..', 'src', 'data', 'manifest-modelos.json'), 'utf8'),
+);
 const MB = 1024 * 1024;
 
 describe('configuración del sistema esquelético', () => {

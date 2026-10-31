@@ -39,3 +39,49 @@ describe('useAtlasStore', () => {
     expect(guardado.state).not.toHaveProperty('seleccion');
   });
 });
+
+describe('useAtlasStore: selección, cámara y herramientas', () => {
+  beforeEach(() => useAtlasStore.getState().reiniciar());
+
+  it('seleccionar con enfocar emite un comando de cámara nuevo cada vez', () => {
+    useAtlasStore.getState().seleccionar('femur-d', { enfocar: true, region: 'muslo-pierna' });
+    const c1 = useAtlasStore.getState().comandoCamara;
+    useAtlasStore.getState().seleccionar('femur-d', { enfocar: true });
+    const c2 = useAtlasStore.getState().comandoCamara;
+    expect(c1).toMatchObject({ tipo: 'enfocar', id: 'femur-d' });
+    expect(c2!.n).toBeGreaterThan(c1!.n);
+    expect(useAtlasStore.getState().regionActiva).toBe('muslo-pierna');
+  });
+
+  it('seleccionar una estructura oculta la vuelve a mostrar', () => {
+    useAtlasStore.getState().ocultarEstructura('tibia-d');
+    useAtlasStore.getState().seleccionar('tibia-d');
+    expect(useAtlasStore.getState().ocultas).not.toContain('tibia-d');
+  });
+
+  it('ocultar la estructura seleccionada la deselecciona', () => {
+    useAtlasStore.getState().seleccionar('tibia-d');
+    useAtlasStore.getState().ocultarEstructura('tibia-d');
+    expect(useAtlasStore.getState().seleccion).toBeNull();
+  });
+
+  it('aislar requiere una selección y se desactiva al deseleccionar', () => {
+    useAtlasStore.getState().setAislar(true);
+    expect(useAtlasStore.getState().aislar).toBe(false);
+    useAtlasStore.getState().seleccionar('humero-i');
+    useAtlasStore.getState().setAislar(true);
+    expect(useAtlasStore.getState().aislar).toBe(true);
+    useAtlasStore.getState().seleccionar(null);
+    expect(useAtlasStore.getState().aislar).toBe(false);
+  });
+
+  it('limita el factor de explosión a [0, 1] y conserva la región', () => {
+    useAtlasStore.getState().setExplosion({ region: 'mano', factor: 3 });
+    expect(useAtlasStore.getState().explosion).toEqual({ region: 'mano', factor: 1 });
+  });
+
+  it('actualiza el corte parcialmente', () => {
+    useAtlasStore.getState().setCorte({ activo: true, eje: 'coronal' });
+    expect(useAtlasStore.getState().corte).toMatchObject({ activo: true, eje: 'coronal', invertir: false });
+  });
+});

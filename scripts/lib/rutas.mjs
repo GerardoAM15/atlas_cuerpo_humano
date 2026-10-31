@@ -16,4 +16,5 @@ export const DIR_AGRUPADO = path.join(DIR_CRUDOS, 'intermedio', 'sistemas');
 
 /** Salida final servida por la app. */
 export const DIR_MODELOS = path.join(RAIZ, 'public', 'models');
-export const RUTA_MANIFEST = path.join(DIR_MODELOS, 'manifest.json');
+/** El manifest vive en src/ para que la app lo importe (tipado y validado) sin petición extra. */
+export const RUTA_MANIFEST = path.join(RAIZ, 'src', 'data', 'manifest-modelos.json');

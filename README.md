@@ -21,5 +21,6 @@ npm run build
 - [docs/FUENTES.md](docs/FUENTES.md) — fuentes del contenido
 - [docs/LICENCIAS.md](docs/LICENCIAS.md) — licencias de modelos y texto
 - [docs/PIPELINE.md](docs/PIPELINE.md) — pipeline de modelos 3D (`npm run modelos:descargar` y `npm run modelos`)
+- Datos de estructuras: fuente en `scripts/datos/`, se generan con `npm run datos` (ver CLAUDE.md)
 
 Modelos 3D: «BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International».

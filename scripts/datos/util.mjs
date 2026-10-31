@@ -1,0 +1,69 @@
+// Utilidades para escribir los datos de estructuras de forma compacta.
+//
+// Convenciones dentro de una plantilla bilateral:
+//   {lado}   → «derecho/izquierdo» o «derecha/izquierda» según el género
+//   {Side}   → «Right»/«Left»     {side} → «right»/«left»
+//   id~      → id del MISMO lado      (p. ej. 'tibia~'    → 'tibia-d')
+//   id^      → id del lado OPUESTO    (p. ej. 'parietal^' → 'parietal-i')
+
+const LADOS = [
+  { s: 'd', o: 'i', lado: 'derecho', m: 'derecho', f: 'derecha', Side: 'Right', side: 'right' },
+  { s: 'i', o: 'd', lado: 'izquierdo', m: 'izquierdo', f: 'izquierda', Side: 'Left', side: 'left' },
+];
+
+function sustituir(valor, l, genero) {
+  if (typeof valor === 'string') {
+    return valor
+      .replaceAll('{lado}', genero === 'f' ? l.f : l.m)
+      .replaceAll('{Side}', l.Side)
+      .replaceAll('{side}', l.side)
+      .replace(/^([a-z0-9-]+)~$/, `$1-${l.s}`)
+      .replace(/^([a-z0-9-]+)\^$/, `$1-${l.o}`);
+  }
+  if (Array.isArray(valor)) return valor.map((v) => sustituir(v, l, genero));
+  if (valor && typeof valor === 'object') {
+    return Object.fromEntries(Object.entries(valor).map(([k, v]) => [k, sustituir(v, l, genero)]));
+  }
+  return valor;
+}
+
+/** Estructura par: devuelve las versiones derecha (-d) e izquierda (-i). */
+export function par(id, genero, plantilla) {
+  return LADOS.map((l) => ({ id: `${id}-${l.s}`, lado: l.lado, ...sustituir(plantilla, l, genero) }));
+}
+
+/** Estructura impar (línea media). */
+export function impar(id, datos) {
+  return { id, ...datos };
+}
+
+/** Articulación abreviada: art('Sutura coronal', 'sutura', 'frontal', 'parietal~'). */
+export const art = (nombre, tipo, ...con) => ({ nombre, tipo, con });
+
+/**
+ * Articulaciones de una falange de la mano o del pie.
+ * El primer dedo (pulgar / dedo gordo) no tiene falange media: una sola interfalángica.
+ * @param {'mano'|'pie'} seg  @param {'proximal'|'media'|'distal'} fila
+ * @param {string} metaId  id (con ~) del metacarpiano/metatarsiano  @param {string} nombreMeta  «metacarpofalángica»…
+ */
+export function articulacionesFalange(seg, fila, n, primerDedo, metaId, nombreMeta) {
+  const f = (fl) => `falange-${fl}-${seg}-${n}~`;
+  const BISAGRA = 'sinovial troclear (gínglimo)';
+  const mtf = art(`Articulación ${nombreMeta}`, 'sinovial condílea (elipsoidea)', metaId);
+  if (primerDedo) {
+    return fila === 'proximal'
+      ? [mtf, art('Articulación interfalángica', BISAGRA, f('distal'))]
+      : [art('Articulación interfalángica', BISAGRA, f('proximal'))];
+  }
+  return {
+    proximal: [mtf, art('Articulación interfalángica proximal', BISAGRA, f('media'))],
+    media: [art('Articulación interfalángica proximal', BISAGRA, f('proximal')), art('Articulación interfalángica distal', BISAGRA, f('distal'))],
+    distal: [art('Articulación interfalángica distal', BISAGRA, f('media'))],
+  }[fila];
+}
+
+export const ORDINAL_F =['primera', 'segunda', 'tercera', 'cuarta', 'quinta', 'sexta', 'séptima', 'octava', 'novena', 'décima', 'undécima', 'duodécima'];
+export const ORDINAL_M = ['primer', 'segundo', 'tercer', 'cuarto', 'quinto', 'sexto', 'séptimo', 'octavo', 'noveno', 'décimo', 'undécimo', 'duodécimo'];
+export const ORDINAL_EN = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth', 'eleventh', 'twelfth'];
+export const ROMANO = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII'];
+export const cap = (s) => s[0].toUpperCase() + s.slice(1);
