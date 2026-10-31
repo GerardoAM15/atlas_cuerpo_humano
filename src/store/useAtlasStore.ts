@@ -19,7 +19,8 @@ export interface Corte {
 export type ComandoCamara =
   | { tipo: 'vista'; vista: Vista; n: number }
   | { tipo: 'enfocar'; id: string; n: number }
-  | { tipo: 'reiniciar'; n: number };
+  | { tipo: 'reiniciar'; n: number }
+  | { tipo: 'caja'; caja: { min: [number, number, number]; max: [number, number, number] }; n: number };
 
 /** Estado del visor: sistemas visibles, selección, cortes, explosión, etiquetas y cámara. */
 export interface EstadoAtlas {
@@ -36,6 +37,8 @@ export interface EstadoAtlas {
   /** Región cuyos pines se muestran y que se despliega en el árbol. */
   regionActiva: string | null;
   comandoCamara: ComandoCamara | null;
+  /** Modo quiz: sin etiqueta de hover ni pines (revelarían la respuesta) y sin acercar la cámara al hacer clic. */
+  modoQuiz: boolean;
 
   alternarSistema: (id: SistemaId) => void;
   setOpacidad: (id: SistemaId, valor: number) => void;
@@ -56,6 +59,10 @@ export interface EstadoAtlas {
   vista: (vista: Vista) => void;
   enfocar: (id: string) => void;
   reiniciarCamara: () => void;
+  /** Encuadra la cámara en una caja (coordenadas de escena). */
+  encuadrar: (caja: { min: [number, number, number]; max: [number, number, number] }) => void;
+  setModoQuiz: (v: boolean) => void;
+  setSistemasVisibles: (visibles: Partial<Record<SistemaId, boolean>>) => void;
   reiniciar: () => void;
 }
 
@@ -87,6 +94,7 @@ export const useAtlasStore = create<EstadoAtlas>()(
       etiquetas: false,
       regionActiva: null,
       comandoCamara: null,
+      modoQuiz: false,
 
       alternarSistema: (id) =>
         set((s) => ({ sistemasVisibles: { ...s.sistemasVisibles, [id]: !s.sistemasVisibles[id] } })),
@@ -127,6 +135,9 @@ export const useAtlasStore = create<EstadoAtlas>()(
       vista: (vista) => set({ comandoCamara: { tipo: 'vista', vista, n: n() } }),
       enfocar: (id) => set({ comandoCamara: { tipo: 'enfocar', id, n: n() } }),
       reiniciarCamara: () => set({ comandoCamara: { tipo: 'reiniciar', n: n() } }),
+      encuadrar: (caja) => set({ comandoCamara: { tipo: 'caja', caja, n: n() } }),
+      setModoQuiz: (v) => set({ modoQuiz: v, hover: null }),
+      setSistemasVisibles: (visibles) => set((s) => ({ sistemasVisibles: { ...s.sistemasVisibles, ...visibles } })),
       reiniciar: () =>
         set({
           sistemasVisibles: visiblesIniciales(),

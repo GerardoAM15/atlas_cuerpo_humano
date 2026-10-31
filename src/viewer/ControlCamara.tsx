@@ -25,8 +25,8 @@ export default function ControlCamara({ sistemas }: { sistemas: readonly Sistema
     if (!cc || !comando) return;
     if (comando.tipo === 'reiniciar') {
       encuadrarCuerpo(true);
-    } else if (comando.tipo === 'enfocar') {
-      const c = cajaDe(comando.id);
+    } else if (comando.tipo === 'enfocar' || comando.tipo === 'caja') {
+      const c = comando.tipo === 'caja' ? comando.caja : cajaDe(comando.id);
       if (!c) return;
       const caja = new THREE.Box3(new THREE.Vector3(...c.min), new THREE.Vector3(...c.max));
       const tam = caja.getSize(new THREE.Vector3()).length();

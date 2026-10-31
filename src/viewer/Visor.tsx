@@ -18,7 +18,10 @@ const SISTEMAS_CON_MODELO = SISTEMAS.map((s) => s.id).filter(sistemaTieneModelo)
  */
 export default function Visor() {
   const visibles = useAtlasStore((s) => s.sistemasVisibles);
-  const hover = useAtlasStore((s) => s.hover);
+  const hoverReal = useAtlasStore((s) => s.hover);
+  const modoQuiz = useAtlasStore((s) => s.modoQuiz);
+  // En modo quiz no se muestra el nombre al pasar el ratón.
+  const hover = modoQuiz ? null : hoverReal;
   const etiqueta = useRef<HTMLDivElement>(null);
   const sistemas = SISTEMAS_CON_MODELO.filter((s) => visibles[s]);
 
@@ -41,7 +44,7 @@ export default function Visor() {
         const r = e.currentTarget.getBoundingClientRect();
         el.style.transform = `translate(${e.clientX - r.left + 14}px, ${e.clientY - r.top + 14}px)`;
       }}
-      style={{ cursor: hover ? 'pointer' : 'grab' }}
+      style={{ cursor: hoverReal ? 'pointer' : 'grab' }}
     >
       <Canvas
         frameloop="demand"
@@ -68,7 +71,7 @@ export default function Visor() {
             <ModeloSistema sistema={s} />
           </Suspense>
         ))}
-        <Pines />
+        {!modoQuiz && <Pines />}
         <PlanoCorte sistemas={sistemas.length ? sistemas : SISTEMAS_CON_MODELO} />
         <ControlCamara sistemas={sistemas.length ? sistemas : SISTEMAS_CON_MODELO} />
       </Canvas>

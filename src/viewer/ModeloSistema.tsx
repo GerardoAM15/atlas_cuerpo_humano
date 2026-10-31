@@ -170,7 +170,8 @@ export default function ModeloSistema({ sistema }: { sistema: SistemaId }) {
         e.stopPropagation();
         const id = primerImpacto(e);
         const e2 = id ? POR_ID.get(id) : undefined;
-        if (id && e2) seleccionar(id, { enfocar: true, region: claveRegion(e2.sistema, e2.region) });
+        // En modo quiz, el clic es la respuesta: no se mueve la cámara.
+        if (id && e2) seleccionar(id, { enfocar: !useAtlasStore.getState().modoQuiz, region: claveRegion(e2.sistema, e2.region) });
       }}
     >
       <primitive object={scene} />

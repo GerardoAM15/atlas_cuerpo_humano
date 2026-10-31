@@ -21,11 +21,13 @@ describe('router', () => {
   it.each([
     ['/simulaciones', /Simulaciones fisiológicas/],
     ['/estudio', /Modo estudio/],
+    ['/estudio/no-existe', /Página no encontrada/],
     ['/creditos', /Créditos y licencias/],
     ['/no-existe', /Página no encontrada/],
     ['/simulaciones/no-existe', /Página no encontrada/],
-  ])('ruta %s', (ruta, titulo) => {
+  ])('ruta %s', async (ruta, titulo) => {
     renderEn(ruta);
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(titulo);
+    // Algunas páginas se cargan de forma diferida.
+    expect(await screen.findByRole('heading', { level: 1 })).toHaveTextContent(titulo);
   });
 });

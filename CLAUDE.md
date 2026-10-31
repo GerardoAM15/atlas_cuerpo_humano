@@ -64,6 +64,10 @@ docs/           README técnico, fuentes, licencias
   Play/Pausa/velocidad, `GraficaLinea`, `Pasos` narrados, `MarcoSimulacion` con la etiqueta «Esquemático»).
   Se registran en `src/simulations/catalogo.ts` (carga diferida, ruta `/simulaciones/:id`). Valores típicos de
   adulto en reposo; las simplificaciones se indican en la propia interfaz.
+- Modo estudio (`src/study/`): `sm2.ts` (repetición espaciada), `conceptos.ts` (el progreso se guarda por concepto:
+  derecha e izquierda cuentan juntas), `respuestas.ts` (respuestas escritas), `generador.ts` (preguntas con semilla,
+  sin repetir y con distractores según la dificultad) y `progreso.ts` (estadísticas y store persistente
+  `atlas3d:progreso`). El quiz reutiliza el `Visor` en «modo quiz» (sin etiquetas que revelen la respuesta).
 
 ## Rendimiento
 - Objetivo: 60 FPS en una laptop sin GPU dedicada. Sombras desactivadas por defecto; instancing/merge cuando se
