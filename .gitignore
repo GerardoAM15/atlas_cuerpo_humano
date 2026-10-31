@@ -1,0 +1,16 @@
+node_modules/
+dist/
+*.tsbuildinfo
+coverage/
+.vite/
+
+# Modelos crudos descargados (BodyParts3D / Z-Anatomy): NO se versionan
+assets-raw/
+# Intermedios del pipeline
+scripts/.tmp/
+
+.env
+.env.local
+.DS_Store
+Thumbs.db
+*.log
