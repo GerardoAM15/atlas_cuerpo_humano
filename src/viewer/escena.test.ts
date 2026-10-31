@@ -66,13 +66,13 @@ describe('explosión', () => {
 
 describe('pines', () => {
   it('muestra solo estructuras con modelo de la región', () => {
-    const pines = pinesDeRegion('craneo', null);
+    const pines = pinesDeRegion('esqueletico/craneo', null);
     expect(pines).toHaveLength(22);
-    expect(pinesDeRegion('oido-medio', null)).toHaveLength(0);
+    expect(pinesDeRegion('esqueletico/oido-medio', null)).toHaveLength(0);
   });
 
   it('con una selección lateral, filtra por su lado', () => {
-    const pines = pinesDeRegion('mano', 'escafoides-d');
+    const pines = pinesDeRegion('esqueletico/mano', 'escafoides-d');
     expect(pines.length).toBe(27);
     expect(pines.every((p) => p.lado === 'derecho')).toBe(true);
   });

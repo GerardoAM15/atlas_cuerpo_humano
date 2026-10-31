@@ -2,6 +2,7 @@ import { useId, useMemo, useState } from 'react';
 import { crearBuscador } from '@/data/busqueda';
 import { ESTRUCTURAS } from '@/data/catalogo';
 import { useAtlasStore } from '@/store/useAtlasStore';
+import { claveRegion } from '../escena';
 
 const buscar = crearBuscador(ESTRUCTURAS);
 
@@ -17,7 +18,7 @@ export default function Buscador() {
   const elegir = (i: number) => {
     const e = resultados[i];
     if (!e) return;
-    seleccionar(e.id, { enfocar: e.nodoModelo !== null, region: e.region });
+    seleccionar(e.id, { enfocar: e.nodoModelo !== null, region: claveRegion(e.sistema, e.region), sistema: e.sistema });
     setTexto('');
     setAbierto(false);
   };

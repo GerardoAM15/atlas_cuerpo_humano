@@ -1,8 +1,8 @@
-import { Suspense, useRef } from 'react';
+import { Suspense, useEffect, useRef, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Grid } from '@react-three/drei';
 import { POR_ID, sistemaTieneModelo } from '@/data/catalogo';
-import { SISTEMAS } from '@/data/sistemas';
+import { SISTEMAS, type SistemaId } from '@/data/sistemas';
 import { useAtlasStore } from '@/store/useAtlasStore';
 import ControlCamara from './ControlCamara';
 import ModeloSistema from './ModeloSistema';
@@ -21,6 +21,15 @@ export default function Visor() {
   const hover = useAtlasStore((s) => s.hover);
   const etiqueta = useRef<HTMLDivElement>(null);
   const sistemas = SISTEMAS_CON_MODELO.filter((s) => visibles[s]);
+
+  // Carga diferida: un sistema se descarga la primera vez que se hace visible y después
+  // permanece montado (oculto) para no volver a cargarlo.
+  const [cargados, setCargados] = useState<SistemaId[]>([]);
+  const claveVisibles = sistemas.join(',');
+  useEffect(() => {
+    setCargados((prev) => (sistemas.every((s) => prev.includes(s)) ? prev : [...new Set([...prev, ...sistemas])]));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [claveVisibles]);
 
   return (
     <div
@@ -54,12 +63,12 @@ export default function Visor() {
           fadeDistance={8}
           infiniteGrid
         />
-        <Suspense fallback={null}>
-          {SISTEMAS_CON_MODELO.map((s) => (
-            <ModeloSistema key={s} sistema={s} />
-          ))}
-          <Pines />
-        </Suspense>
+        {cargados.map((s) => (
+          <Suspense key={s} fallback={null}>
+            <ModeloSistema sistema={s} />
+          </Suspense>
+        ))}
+        <Pines />
         <PlanoCorte sistemas={sistemas.length ? sistemas : SISTEMAS_CON_MODELO} />
         <ControlCamara sistemas={sistemas.length ? sistemas : SISTEMAS_CON_MODELO} />
       </Canvas>

@@ -3,6 +3,7 @@ import { POR_ID, estructurasDe, sistemaTieneModelo } from '@/data/catalogo';
 import { REGIONES } from '@/data/regiones';
 import { SISTEMAS } from '@/data/sistemas';
 import { useAtlasStore } from '@/store/useAtlasStore';
+import { claveRegion } from '../escena';
 
 function IconoOjo({ tachado }: { tachado: boolean }) {
   return (
@@ -65,7 +66,7 @@ export default function ArbolEstructuras() {
                         type="button"
                         onClick={() => {
                           alternar(clave);
-                          setRegionActiva(r.id);
+                          setRegionActiva(claveRegion(s.id, r.id));
                         }}
                         className="flex w-full items-center gap-1.5 rounded px-1 py-0.5 text-slate-300 hover:bg-slate-800"
                       >
@@ -83,7 +84,7 @@ export default function ArbolEstructuras() {
                               <li key={e.id} role="treeitem" aria-selected={sel} data-id={e.id} className="group flex items-center">
                                 <button
                                   type="button"
-                                  onClick={() => seleccionar(e.id, { enfocar: !sinModelo, region: e.region })}
+                                  onClick={() => seleccionar(e.id, { enfocar: !sinModelo, region: claveRegion(e.sistema, e.region), sistema: e.sistema })}
                                   className={`flex-1 truncate rounded px-1 py-0.5 text-left text-xs ${
                                     sel ? 'bg-sky-500/20 text-sky-200' : 'text-slate-400 hover:bg-slate-800 hover:text-slate-100'
                                   } ${oculta ? 'line-through opacity-60' : ''} ${sinModelo ? 'italic text-slate-500' : ''}`}

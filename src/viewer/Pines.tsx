@@ -28,7 +28,7 @@ export default function Pines() {
           <Html key={e.id} position={[c[0] + d[0], c[1] + d[1], c[2] + d[2]]} center zIndexRange={[20, 0]}>
             <button
               type="button"
-              onClick={() => seleccionar(e.id, { enfocar: true })}
+              onClick={() => seleccionar(e.id, { enfocar: true, sistema: e.sistema })}
               title={e.nombre}
               aria-label={`${i + 1}. ${e.nombre}`}
               className={`flex h-5 min-w-5 items-center justify-center rounded-full border px-1 text-[10px] font-bold shadow ${

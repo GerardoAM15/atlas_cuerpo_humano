@@ -13,13 +13,12 @@ export default function ControlCamara({ sistemas }: { sistemas: readonly Sistema
   const comando = useAtlasStore((s) => s.comandoCamara);
   const camara = useThree((s) => s.camera) as THREE.PerspectiveCamera;
   const aspecto = useThree((s) => s.size.width / Math.max(1, s.size.height));
-  const clave = sistemas.join(',');
-
-  // Encuadre inicial del cuerpo completo (sin animación).
+  // Encuadre inicial del cuerpo completo (sin animación). No se repite al activar o desactivar
+  // sistemas: eso anularía el enfoque de una estructura que acaba de activar su sistema.
   useEffect(() => {
     encuadrarCuerpo(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [clave]);
+  }, []);
 
   useEffect(() => {
     const cc = ref.current;

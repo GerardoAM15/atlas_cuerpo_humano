@@ -1,0 +1,2382 @@
+[
+  {
+    "id": "pared-auricula-derecha",
+    "nodoModelo": "pared-auricula-derecha",
+    "tipo": "organo",
+    "sistema": "cardiovascular",
+    "nombre": "Aurícula derecha (pared)",
+    "latin": "Atrium dextrum",
+    "ingles": "Wall of right atrium",
+    "region": "corazon",
+    "descripcion": "Cámara del corazón que recibe la sangre venosa del cuerpo; incluye la orejuela derecha y, en su pared, el nodo sinoauricular.",
+    "funcion": "Recibe la sangre desoxigenada de las venas cavas y del seno coronario y la impulsa al ventrículo derecho.",
+    "ubicacion": "Borde derecho del corazón, por encima del ventrículo derecho.",
+    "datosClinicos": "En su pared está el nodo sinoauricular, el marcapasos natural; la fibrilación auricular es la arritmia sostenida más frecuente.",
+    "curiosidad": "El tabique interauricular conserva la fosa oval, resto del agujero oval fetal.",
+    "relaciones": [
+      "cavidad-auricula-derecha",
+      "valvula-tricuspide",
+      "vena-cava-superior",
+      "vena-cava-inferior",
+      "seno-coronario"
+    ]
+  },
+  {
+    "id": "pared-auricula-izquierda",
+    "nodoModelo": "pared-auricula-izquierda",
+    "tipo": "organo",
+    "sistema": "cardiovascular",
+    "nombre": "Aurícula izquierda (pared)",
+    "latin": "Atrium sinistrum",
+    "ingles": "Wall of left atrium",
+    "region": "corazon",
+    "descripcion": "Cámara más posterior del corazón, de paredes lisas, que recibe las cuatro venas pulmonares; incluye la orejuela izquierda.",
+    "funcion": "Recibe la sangre oxigenada de los pulmones y la impulsa al ventrículo izquierdo.",
+    "ubicacion": "Cara posterior (base) del corazón, delante del esófago.",
+    "datosClinicos": "En la fibrilación auricular se forman coágulos sobre todo en la orejuela izquierda, que pueden causar ictus embólicos.",
+    "curiosidad": "Está en contacto con el esófago: por eso se puede explorar con una ecocardiografía transesofágica.",
+    "relaciones": [
+      "cavidad-auricula-izquierda",
+      "valvula-mitral",
+      "vena-pulmonar-superior-d",
+      "vena-pulmonar-superior-i"
+    ]
+  },
+  {
+    "id": "miocardio-ventricular",
+    "nodoModelo": "miocardio-ventricular",
+    "tipo": "organo",
+    "sistema": "cardiovascular",
+    "nombre": "Paredes ventriculares (miocardio)",
+    "latin": "Myocardium ventriculorum",
+    "ingles": "Wall of ventricle",
+    "region": "corazon",
+    "descripcion": "Músculo cardíaco de ambos ventrículos y del tabique interventricular. La pared del ventrículo izquierdo es unas tres veces más gruesa que la del derecho.",
+    "funcion": "Se contrae en la sístole e impulsa la sangre hacia el tronco pulmonar (ventrículo derecho) y la aorta (ventrículo izquierdo).",
+    "ubicacion": "Mayor parte de la cara anterior e inferior del corazón; el vértice corresponde al ventrículo izquierdo.",
+    "datosClinicos": "El infarto de miocardio es la necrosis de una zona de esta pared por la obstrucción de una arteria coronaria; la hipertensión engrosa la pared del ventrículo izquierdo (hipertrofia).",
+    "revisar": "BodyParts3D modela ambos ventrículos y el tabique en una sola malla; no se pueden seleccionar por separado.",
+    "relaciones": [
+      "cavidad-ventriculo-derecho",
+      "cavidad-ventriculo-izquierdo",
+      "musculos-papilares-vd",
+      "musculos-papilares-vi"
+    ]
+  },
+  {
+    "id": "cavidad-auricula-derecha",
+    "nodoModelo": "cavidad-auricula-derecha",
+    "tipo": "otro",
+    "sistema": "cardiovascular",
+    "region": "corazon",
+    "nombre": "Cavidad de la aurícula derecha",
+    "latin": "Cavitas atrii dextri",
+    "ingles": "Cavity of right atrium",
+    "descripcion": "Molde del espacio interior de la aurícula derecha, ocupado por sangre desoxigenada.",
+    "funcion": "Reservorio de la sangre que vuelve del cuerpo antes de pasar al ventrículo derecho.",
+    "ubicacion": "Interior de la aurícula derecha.",
+    "datosClinicos": "Su presión (presión venosa central) refleja el llenado del corazón derecho.",
+    "relaciones": [
+      "pared-auricula-derecha",
+      "valvula-tricuspide"
+    ]
+  },
+  {
+    "id": "cavidad-auricula-izquierda",
+    "nodoModelo": "cavidad-auricula-izquierda",
+    "tipo": "otro",
+    "sistema": "cardiovascular",
+    "region": "corazon",
+    "nombre": "Cavidad de la aurícula izquierda",
+    "latin": "Cavitas atrii sinistri",
+    "ingles": "Cavity of left atrium",
+    "descripcion": "Molde del espacio interior de la aurícula izquierda, ocupado por sangre oxigenada.",
+    "funcion": "Reservorio de la sangre que llega de los pulmones antes de pasar al ventrículo izquierdo.",
+    "ubicacion": "Interior de la aurícula izquierda.",
+    "datosClinicos": "Se dilata en la estenosis mitral y en la fibrilación auricular de larga evolución.",
+    "relaciones": [
+      "pared-auricula-izquierda",
+      "valvula-mitral"
+    ]
+  },
+  {
+    "id": "cavidad-ventriculo-derecho",
+    "nodoModelo": "cavidad-ventriculo-derecho",
+    "tipo": "otro",
+    "sistema": "cardiovascular",
+    "region": "corazon",
+    "nombre": "Cavidad del ventrículo derecho",
+    "latin": "Cavitas ventriculi dextri",
+    "ingles": "Cavity of right ventricle",
+    "descripcion": "Molde del interior del ventrículo derecho, con forma de media luna en corte transversal; incluye el infundíbulo (cono arterioso).",
+    "funcion": "Contiene la sangre desoxigenada que el ventrículo derecho impulsa hacia los pulmones.",
+    "ubicacion": "Interior del ventrículo derecho, en la cara anterior del corazón.",
+    "datosClinicos": "Se dilata en la hipertensión pulmonar y en la embolia pulmonar masiva.",
+    "relaciones": [
+      "miocardio-ventricular",
+      "valvula-tricuspide",
+      "valvula-pulmonar"
+    ]
+  },
+  {
+    "id": "cavidad-ventriculo-izquierdo",
+    "nodoModelo": "cavidad-ventriculo-izquierdo",
+    "tipo": "otro",
+    "sistema": "cardiovascular",
+    "region": "corazon",
+    "nombre": "Cavidad del ventrículo izquierdo",
+    "latin": "Cavitas ventriculi sinistri",
+    "ingles": "Cavity of left ventricle",
+    "descripcion": "Molde del interior del ventrículo izquierdo, de forma cónica y circular en corte transversal.",
+    "funcion": "Contiene la sangre oxigenada que el ventrículo izquierdo impulsa a la aorta.",
+    "ubicacion": "Interior del ventrículo izquierdo, hacia el vértice del corazón.",
+    "datosClinicos": "La fracción de eyección (porcentaje del volumen que se expulsa en cada latido; normal ≥ 50–55 %) mide su función.",
+    "relaciones": [
+      "miocardio-ventricular",
+      "valvula-mitral",
+      "valvula-aortica"
+    ]
+  },
+  {
+    "id": "valvula-tricuspide",
+    "nodoModelo": "valvula-tricuspide",
+    "tipo": "valvula",
+    "sistema": "cardiovascular",
+    "region": "corazon",
+    "nombre": "Válvula tricúspide",
+    "latin": "Valva atrioventricularis dextra (valva tricuspidalis)",
+    "ingles": "Tricuspid valve",
+    "descripcion": "Válvula auriculoventricular derecha con tres valvas (anterior, posterior y septal) sujetas por cuerdas tendinosas a los músculos papilares.",
+    "funcion": "Deja pasar la sangre de la aurícula al ventrículo derecho en la diástole e impide su retroceso en la sístole.",
+    "ubicacion": "Entre la aurícula y el ventrículo derechos.",
+    "datosClinicos": "La endocarditis de la tricúspide es típica de usuarios de drogas por vía intravenosa.",
+    "curiosidad": "Su cierre, junto con el de la mitral, produce el primer ruido cardíaco.",
+    "relaciones": [
+      "pared-auricula-derecha",
+      "cavidad-ventriculo-derecho",
+      "musculos-papilares-vd"
+    ]
+  },
+  {
+    "id": "valvula-mitral",
+    "nodoModelo": "valvula-mitral",
+    "tipo": "valvula",
+    "sistema": "cardiovascular",
+    "region": "corazon",
+    "nombre": "Válvula mitral",
+    "latin": "Valva atrioventricularis sinistra (valva mitralis)",
+    "ingles": "Mitral valve",
+    "descripcion": "Válvula auriculoventricular izquierda, con dos valvas (anterior y posterior) sujetas por cuerdas tendinosas.",
+    "funcion": "Deja pasar la sangre de la aurícula al ventrículo izquierdo en la diástole e impide su retroceso en la sístole.",
+    "ubicacion": "Entre la aurícula y el ventrículo izquierdos.",
+    "datosClinicos": "El prolapso mitral es frecuente y suele ser benigno; la estenosis mitral es casi siempre secuela de la fiebre reumática.",
+    "curiosidad": "Se llama así por su parecido con la mitra de un obispo.",
+    "relaciones": [
+      "pared-auricula-izquierda",
+      "cavidad-ventriculo-izquierdo",
+      "musculos-papilares-vi",
+      "valvula-aortica"
+    ]
+  },
+  {
+    "id": "valvula-pulmonar",
+    "nodoModelo": "valvula-pulmonar",
+    "tipo": "valvula",
+    "sistema": "cardiovascular",
+    "region": "corazon",
+    "nombre": "Válvula pulmonar",
+    "latin": "Valva trunci pulmonalis",
+    "ingles": "Pulmonary valve",
+    "descripcion": "Válvula semilunar con tres valvas en forma de nido de golondrina, en el origen del tronco pulmonar.",
+    "funcion": "Deja salir la sangre del ventrículo derecho hacia los pulmones e impide que vuelva en la diástole.",
+    "ubicacion": "Salida del ventrículo derecho, a la altura del tercer cartílago costal izquierdo.",
+    "datosClinicos": "La estenosis pulmonar es una cardiopatía congénita frecuente; forma parte de la tetralogía de Fallot.",
+    "curiosidad": "Su cierre, junto con el de la aórtica, produce el segundo ruido cardíaco.",
+    "relaciones": [
+      "cavidad-ventriculo-derecho",
+      "tronco-pulmonar"
+    ]
+  },
+  {
+    "id": "valvula-aortica",
+    "nodoModelo": "valvula-aortica",
+    "tipo": "valvula",
+    "sistema": "cardiovascular",
+    "region": "corazon",
+    "nombre": "Válvula aórtica",
+    "latin": "Valva aortae",
+    "ingles": "Aortic valve",
+    "descripcion": "Válvula semilunar de tres valvas en el origen de la aorta; por encima de ellas, en los senos aórticos, nacen las arterias coronarias.",
+    "funcion": "Deja salir la sangre del ventrículo izquierdo hacia la aorta e impide que vuelva en la diástole.",
+    "ubicacion": "Salida del ventrículo izquierdo, detrás de la mitad izquierda del esternón a la altura del tercer espacio intercostal.",
+    "datosClinicos": "La estenosis aórtica degenerativa (calcificada) es la valvulopatía más frecuente en personas mayores en los países desarrollados.",
+    "revisar": "La nomenclatura de las valvas en BodyParts3D (anterior, posterior derecha, posterior izquierda) sigue la FMA y difiere de la clínica (coronaria derecha, coronaria izquierda, no coronaria).",
+    "relaciones": [
+      "cavidad-ventriculo-izquierdo",
+      "aorta-ascendente",
+      "arteria-coronaria-derecha",
+      "arteria-coronaria-izquierda"
+    ]
+  },
+  {
+    "id": "musculos-papilares-vd",
+    "nodoModelo": "musculos-papilares-vd",
+    "tipo": "musculo",
+    "sistema": "cardiovascular",
+    "region": "corazon",
+    "nombre": "Músculos papilares del ventrículo derecho",
+    "latin": "Musculi papillares ventriculi dextri",
+    "ingles": "Papillary muscles of right ventricle",
+    "descripcion": "Tres columnas musculares (anterior, posterior y septal) que se proyectan hacia la cavidad del ventrículo derecho.",
+    "funcion": "Tensan las cuerdas tendinosas durante la sístole para que las valvas de la tricúspide no se inviertan hacia la aurícula.",
+    "ubicacion": "Interior del ventrículo derecho.",
+    "origen": "Pared y tabique del ventrículo derecho.",
+    "insercion": "Cuerdas tendinosas de las valvas de la válvula tricúspide.",
+    "inervacion": "Sistema nervioso autónomo (plexo cardíaco); su contracción la desencadena el sistema de conducción.",
+    "irrigacion": "Ramas de la arteria coronaria derecha y de la interventricular anterior.",
+    "accion": "Se contraen al comienzo de la sístole ventricular y mantienen cerrada la válvula tricúspide.",
+    "datosClinicos": "Por el papilar anterior pasa la trabécula septomarginal, que lleva la rama derecha del haz de His.",
+    "relaciones": [
+      "valvula-tricuspide",
+      "miocardio-ventricular"
+    ]
+  },
+  {
+    "id": "musculos-papilares-vi",
+    "nodoModelo": "musculos-papilares-vi",
+    "tipo": "musculo",
+    "sistema": "cardiovascular",
+    "region": "corazon",
+    "nombre": "Músculos papilares del ventrículo izquierdo",
+    "latin": "Musculi papillares ventriculi sinistri",
+    "ingles": "Papillary muscles of left ventricle",
+    "descripcion": "Columnas musculares (anterolateral y posteromedial en la nomenclatura clínica) que sujetan la válvula mitral.",
+    "funcion": "Tensan las cuerdas tendinosas de la válvula mitral durante la sístole.",
+    "ubicacion": "Interior del ventrículo izquierdo.",
+    "origen": "Pared del ventrículo izquierdo.",
+    "insercion": "Cuerdas tendinosas de las valvas de la válvula mitral.",
+    "inervacion": "Sistema nervioso autónomo (plexo cardíaco); su contracción la desencadena el sistema de conducción.",
+    "irrigacion": "El anterolateral, por las ramas interventricular anterior y circunfleja; el posteromedial, a menudo solo por la descendente posterior.",
+    "accion": "Se contraen al comienzo de la sístole y evitan el prolapso de las valvas mitrales hacia la aurícula.",
+    "datosClinicos": "Su rotura tras un infarto (más frecuente en el posteromedial, de irrigación única) causa una insuficiencia mitral aguda grave.",
+    "revisar": "BodyParts3D nombra estas mallas «lateral papillary muscle» y «anterolateral head of lateral papillary muscle»; confirmar a qué papilar clínico corresponde cada una.",
+    "relaciones": [
+      "valvula-mitral",
+      "miocardio-ventricular"
+    ]
+  },
+  {
+    "id": "arteria-coronaria-derecha",
+    "nodoModelo": "arteria-coronaria-derecha",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "coronarios",
+    "nombre": "Arteria coronaria derecha y sus ramas",
+    "latin": "Arteria coronaria dextra",
+    "ingles": "Right coronary artery (with branches)",
+    "descripcion": "Nace del seno aórtico derecho, recorre el surco coronario derecho y suele dar la rama marginal derecha y la interventricular posterior.",
+    "funcion": "Irriga la aurícula y el ventrículo derechos, parte del tabique y, en la mayoría de las personas, los nodos sinoauricular y auriculoventricular.",
+    "ubicacion": "Surco coronario derecho y cara inferior del corazón.",
+    "datosClinicos": "Su oclusión produce el infarto de cara inferior, a menudo con bradicardia o bloqueo auriculoventricular.",
+    "curiosidad": "En aproximadamente el 70–80 % de las personas da la arteria interventricular posterior («dominancia derecha»).",
+    "relaciones": [
+      "aorta-ascendente",
+      "pared-auricula-derecha",
+      "miocardio-ventricular"
+    ]
+  },
+  {
+    "id": "arteria-coronaria-izquierda",
+    "nodoModelo": "arteria-coronaria-izquierda",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "coronarios",
+    "nombre": "Arteria coronaria izquierda y sus ramas",
+    "latin": "Arteria coronaria sinistra",
+    "ingles": "Left coronary artery (with branches)",
+    "descripcion": "Nace del seno aórtico izquierdo como un tronco corto que se divide en la rama interventricular anterior (descendente anterior) y la circunfleja.",
+    "funcion": "Irriga la mayor parte del ventrículo izquierdo, la aurícula izquierda y los dos tercios anteriores del tabique interventricular.",
+    "ubicacion": "Surco interventricular anterior y surco coronario izquierdo.",
+    "datosClinicos": "La interventricular anterior es la arteria que con más frecuencia se ocluye; su obstrucción proximal causa infartos anteriores extensos.",
+    "relaciones": [
+      "aorta-ascendente",
+      "pared-auricula-izquierda",
+      "miocardio-ventricular"
+    ]
+  },
+  {
+    "id": "seno-coronario",
+    "nodoModelo": "seno-coronario",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "coronarios",
+    "nombre": "Seno coronario",
+    "latin": "Sinus coronarius",
+    "ingles": "Coronary sinus",
+    "descripcion": "Vena ancha y corta situada en la parte posterior del surco coronario, donde confluyen la mayoría de las venas del corazón.",
+    "funcion": "Devuelve la sangre venosa del miocardio a la aurícula derecha.",
+    "ubicacion": "Parte posterior del surco coronario, entre la aurícula y el ventrículo izquierdos.",
+    "datosClinicos": "Por él se introducen los electrodos que estimulan el ventrículo izquierdo en la terapia de resincronización cardíaca.",
+    "relaciones": [
+      "pared-auricula-derecha",
+      "vena-cardiaca-magna",
+      "vena-cardiaca-media",
+      "vena-cardiaca-menor",
+      "vena-posterior-vi"
+    ]
+  },
+  {
+    "id": "vena-cardiaca-magna",
+    "nodoModelo": "vena-cardiaca-magna",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "coronarios",
+    "nombre": "Vena cardíaca magna",
+    "latin": "Vena cardiaca magna",
+    "ingles": "Great cardiac vein",
+    "descripcion": "Principal vena del corazón; comienza como vena interventricular anterior junto a la arteria del mismo nombre y rodea el lado izquierdo hasta el seno coronario.",
+    "funcion": "Drena el territorio irrigado por la arteria coronaria izquierda.",
+    "ubicacion": "Surco interventricular anterior y surco coronario izquierdo.",
+    "datosClinicos": "Es una vía de acceso para algunos procedimientos de ablación y de estimulación cardíaca.",
+    "relaciones": [
+      "seno-coronario",
+      "arteria-coronaria-izquierda"
+    ]
+  },
+  {
+    "id": "vena-cardiaca-media",
+    "nodoModelo": "vena-cardiaca-media",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "coronarios",
+    "nombre": "Vena cardíaca media",
+    "latin": "Vena cardiaca media",
+    "ingles": "Middle cardiac vein",
+    "descripcion": "Vena que asciende por el surco interventricular posterior junto a la arteria interventricular posterior.",
+    "funcion": "Drena la cara inferior de ambos ventrículos y la parte posterior del tabique.",
+    "ubicacion": "Surco interventricular posterior.",
+    "datosClinicos": "Puede usarse como vía alternativa para colocar electrodos de estimulación del ventrículo izquierdo.",
+    "relaciones": [
+      "seno-coronario",
+      "arteria-coronaria-derecha"
+    ]
+  },
+  {
+    "id": "vena-cardiaca-menor",
+    "nodoModelo": "vena-cardiaca-menor",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "coronarios",
+    "nombre": "Vena cardíaca menor",
+    "latin": "Vena cardiaca parva",
+    "ingles": "Small cardiac vein",
+    "descripcion": "Vena pequeña que acompaña a la rama marginal derecha y recorre el surco coronario derecho.",
+    "funcion": "Drena parte de la aurícula y del ventrículo derechos.",
+    "ubicacion": "Surco coronario derecho.",
+    "datosClinicos": "Es inconstante y de calibre variable.",
+    "relaciones": [
+      "seno-coronario",
+      "arteria-coronaria-derecha"
+    ]
+  },
+  {
+    "id": "venas-cardiacas-anteriores",
+    "nodoModelo": "venas-cardiacas-anteriores",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "coronarios",
+    "nombre": "Venas cardíacas anteriores",
+    "latin": "Venae ventriculi dextri anteriores",
+    "ingles": "Anterior cardiac veins",
+    "descripcion": "Pequeñas venas de la cara anterior del ventrículo derecho que desembocan directamente en la aurícula derecha.",
+    "funcion": "Drenan la pared anterior del ventrículo derecho sin pasar por el seno coronario.",
+    "ubicacion": "Cara anterior del ventrículo derecho.",
+    "datosClinicos": "Se encuentran durante la cirugía de la salida del ventrículo derecho.",
+    "relaciones": [
+      "pared-auricula-derecha"
+    ]
+  },
+  {
+    "id": "vena-posterior-vi",
+    "nodoModelo": "vena-posterior-vi",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "coronarios",
+    "nombre": "Vena posterior del ventrículo izquierdo",
+    "latin": "Vena ventriculi sinistri posterior",
+    "ingles": "Posterior vein of left ventricle",
+    "descripcion": "Vena de la cara posterior e inferior del ventrículo izquierdo.",
+    "funcion": "Drena la pared posterolateral del ventrículo izquierdo hacia el seno coronario.",
+    "ubicacion": "Cara diafragmática del ventrículo izquierdo.",
+    "datosClinicos": "Es la vena preferida para colocar el electrodo ventricular izquierdo en la resincronización cardíaca.",
+    "relaciones": [
+      "seno-coronario"
+    ]
+  },
+  {
+    "id": "aorta-ascendente",
+    "nodoModelo": "aorta-ascendente",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "grandes-vasos",
+    "nombre": "Aorta ascendente",
+    "latin": "Aorta ascendens",
+    "ingles": "Ascending aorta",
+    "descripcion": "Primer tramo de la aorta, de unos 5 cm, que sale del ventrículo izquierdo dentro del pericardio; en su raíz están los senos aórticos.",
+    "funcion": "Recibe toda la sangre expulsada por el ventrículo izquierdo; de sus senos nacen las arterias coronarias.",
+    "ubicacion": "Mediastino medio, detrás de la mitad izquierda del esternón.",
+    "datosClinicos": "Su dilatación (aneurisma) puede causar insuficiencia aórtica y disección; se vigila con ecocardiografía.",
+    "relaciones": [
+      "valvula-aortica",
+      "arco-aortico",
+      "arteria-coronaria-derecha",
+      "arteria-coronaria-izquierda"
+    ]
+  },
+  {
+    "id": "arco-aortico",
+    "nodoModelo": "arco-aortico",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "grandes-vasos",
+    "nombre": "Arco de la aorta",
+    "latin": "Arcus aortae",
+    "ingles": "Arch of aorta",
+    "descripcion": "Segmento curvo de la aorta que pasa por encima del bronquio principal izquierdo; de él nacen el tronco braquiocefálico, la carótida común izquierda y la subclavia izquierda.",
+    "funcion": "Distribuye la sangre a la cabeza, el cuello y los miembros superiores.",
+    "ubicacion": "Mediastino superior, a la altura del ángulo esternal.",
+    "datosClinicos": "La coartación de aorta (estrechamiento cerca del ligamento arterioso) causa hipertensión en los brazos y pulsos débiles en las piernas.",
+    "curiosidad": "El nervio laríngeo recurrente izquierdo rodea el arco por debajo; un aneurisma del arco puede causar ronquera.",
+    "relaciones": [
+      "aorta-ascendente",
+      "aorta-toracica",
+      "tronco-braquiocefalico",
+      "carotida-comun-i",
+      "arteria-subclavia-i",
+      "bronquio-principal-i"
+    ]
+  },
+  {
+    "id": "aorta-toracica",
+    "nodoModelo": "aorta-toracica",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "grandes-vasos",
+    "nombre": "Aorta torácica descendente",
+    "latin": "Aorta thoracica (pars thoracica aortae descendentis)",
+    "ingles": "Descending thoracic aorta",
+    "descripcion": "Continuación del arco que desciende por el mediastino posterior, a la izquierda de la columna, hasta el hiato aórtico del diafragma (T12).",
+    "funcion": "Da las arterias intercostales posteriores, bronquiales y esofágicas, y conduce la sangre al abdomen.",
+    "ubicacion": "Mediastino posterior, desde T4 hasta T12.",
+    "datosClinicos": "La disección aórtica de tipo B afecta a este segmento y suele tratarse con endoprótesis.",
+    "relaciones": [
+      "arco-aortico",
+      "aorta-abdominal",
+      "diafragma",
+      "vertebra-t4",
+      "vertebra-t12"
+    ]
+  },
+  {
+    "id": "aorta-abdominal",
+    "nodoModelo": "aorta-abdominal",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "abdomen-pelvis",
+    "nombre": "Aorta abdominal",
+    "latin": "Aorta abdominalis",
+    "ingles": "Abdominal aorta",
+    "descripcion": "Tramo final de la aorta, desde el hiato aórtico (T12) hasta su bifurcación en las arterias ilíacas comunes (L4).",
+    "funcion": "Irriga las vísceras abdominales (tronco celíaco, mesentéricas, renales) y la pared abdominal.",
+    "ubicacion": "Retroperitoneo, delante de la columna lumbar, a la izquierda de la vena cava inferior.",
+    "datosClinicos": "El aneurisma de aorta abdominal (diámetro ≥ 3 cm) suele ser infrarrenal y asintomático hasta su rotura; se criba con ecografía en varones mayores fumadores.",
+    "curiosidad": "Su bifurcación se proyecta aproximadamente a la altura del ombligo.",
+    "relaciones": [
+      "aorta-toracica",
+      "tronco-celiaco",
+      "arteria-mesenterica-superior",
+      "arteria-mesenterica-inferior",
+      "arteria-renal-d",
+      "arteria-renal-i",
+      "iliaca-comun-d",
+      "iliaca-comun-i"
+    ]
+  },
+  {
+    "id": "tronco-pulmonar",
+    "nodoModelo": "tronco-pulmonar",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "desoxigenada"
+    },
+    "region": "grandes-vasos",
+    "nombre": "Tronco pulmonar",
+    "latin": "Truncus pulmonalis",
+    "ingles": "Pulmonary trunk",
+    "descripcion": "Arteria corta y ancha que sale del ventrículo derecho y se divide en las arterias pulmonares derecha e izquierda bajo el arco aórtico.",
+    "funcion": "Lleva la sangre desoxigenada del ventrículo derecho hacia los pulmones.",
+    "ubicacion": "Mediastino medio, delante y a la izquierda de la aorta ascendente.",
+    "datosClinicos": "Un conducto arterioso que no se cierra tras el nacimiento lo mantiene comunicado con la aorta (ductus persistente).",
+    "curiosidad": "Es una arteria que transporta sangre desoxigenada: las arterias se definen por salir del corazón, no por el tipo de sangre.",
+    "relaciones": [
+      "valvula-pulmonar",
+      "arteria-pulmonar-d",
+      "arteria-pulmonar-i",
+      "arco-aortico"
+    ]
+  },
+  {
+    "id": "arteria-pulmonar-d",
+    "nodoModelo": "arteria-pulmonar-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "desoxigenada"
+    },
+    "region": "grandes-vasos",
+    "nombre": "Arteria pulmonar derecha",
+    "latin": "Arteria pulmonalis",
+    "ingles": "Right pulmonary artery",
+    "descripcion": "Rama del tronco pulmonar que entra en el hilio del pulmón y se ramifica siguiendo los bronquios.",
+    "funcion": "Lleva sangre desoxigenada al pulmón para que se oxigene en los alvéolos.",
+    "ubicacion": "Mediastino y hilio pulmonar; la derecha pasa por debajo del arco aórtico y detrás de la aorta ascendente.",
+    "datosClinicos": "La embolia pulmonar es la obstrucción de estas arterias o de sus ramas por un trombo, casi siempre procedente de las venas de las piernas.",
+    "relaciones": [
+      "tronco-pulmonar",
+      "bronquio-principal-d"
+    ]
+  },
+  {
+    "id": "arteria-pulmonar-i",
+    "nodoModelo": "arteria-pulmonar-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "desoxigenada"
+    },
+    "region": "grandes-vasos",
+    "nombre": "Arteria pulmonar izquierda",
+    "latin": "Arteria pulmonalis",
+    "ingles": "Left pulmonary artery",
+    "descripcion": "Rama del tronco pulmonar que entra en el hilio del pulmón y se ramifica siguiendo los bronquios.",
+    "funcion": "Lleva sangre desoxigenada al pulmón para que se oxigene en los alvéolos.",
+    "ubicacion": "Mediastino y hilio pulmonar; la derecha pasa por debajo del arco aórtico y detrás de la aorta ascendente.",
+    "datosClinicos": "La embolia pulmonar es la obstrucción de estas arterias o de sus ramas por un trombo, casi siempre procedente de las venas de las piernas.",
+    "relaciones": [
+      "tronco-pulmonar",
+      "bronquio-principal-i"
+    ]
+  },
+  {
+    "id": "vena-pulmonar-superior-d",
+    "nodoModelo": "vena-pulmonar-superior-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "oxigenada"
+    },
+    "region": "grandes-vasos",
+    "nombre": "Vena pulmonar superior derecha",
+    "latin": "Vena pulmonalis superior",
+    "ingles": "Right superior pulmonary vein",
+    "descripcion": "Una de las cuatro venas pulmonares (dos por pulmón) que desembocan en la aurícula izquierda.",
+    "funcion": "Devuelve al corazón la sangre oxigenada en el pulmón.",
+    "ubicacion": "Hilio pulmonar y cara posterior de la aurícula izquierda.",
+    "datosClinicos": "Los focos que desencadenan la fibrilación auricular suelen estar en su desembocadura; la ablación consiste en aislarlas eléctricamente.",
+    "curiosidad": "Son venas que llevan sangre oxigenada: por eso en los atlas se pintan de rojo.",
+    "relaciones": [
+      "pared-auricula-izquierda"
+    ]
+  },
+  {
+    "id": "vena-pulmonar-superior-i",
+    "nodoModelo": "vena-pulmonar-superior-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "oxigenada"
+    },
+    "region": "grandes-vasos",
+    "nombre": "Vena pulmonar superior izquierda",
+    "latin": "Vena pulmonalis superior",
+    "ingles": "Left superior pulmonary vein",
+    "descripcion": "Una de las cuatro venas pulmonares (dos por pulmón) que desembocan en la aurícula izquierda.",
+    "funcion": "Devuelve al corazón la sangre oxigenada en el pulmón.",
+    "ubicacion": "Hilio pulmonar y cara posterior de la aurícula izquierda.",
+    "datosClinicos": "Los focos que desencadenan la fibrilación auricular suelen estar en su desembocadura; la ablación consiste en aislarlas eléctricamente.",
+    "curiosidad": "Son venas que llevan sangre oxigenada: por eso en los atlas se pintan de rojo.",
+    "relaciones": [
+      "pared-auricula-izquierda"
+    ]
+  },
+  {
+    "id": "vena-pulmonar-inferior-d",
+    "nodoModelo": "vena-pulmonar-inferior-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "oxigenada"
+    },
+    "region": "grandes-vasos",
+    "nombre": "Vena pulmonar inferior derecha",
+    "latin": "Vena pulmonalis inferior",
+    "ingles": "Right inferior pulmonary vein",
+    "descripcion": "Una de las cuatro venas pulmonares (dos por pulmón) que desembocan en la aurícula izquierda.",
+    "funcion": "Devuelve al corazón la sangre oxigenada en el pulmón.",
+    "ubicacion": "Hilio pulmonar y cara posterior de la aurícula izquierda.",
+    "datosClinicos": "Los focos que desencadenan la fibrilación auricular suelen estar en su desembocadura; la ablación consiste en aislarlas eléctricamente.",
+    "curiosidad": "Son venas que llevan sangre oxigenada: por eso en los atlas se pintan de rojo.",
+    "relaciones": [
+      "pared-auricula-izquierda"
+    ]
+  },
+  {
+    "id": "vena-pulmonar-inferior-i",
+    "nodoModelo": "vena-pulmonar-inferior-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "oxigenada"
+    },
+    "region": "grandes-vasos",
+    "nombre": "Vena pulmonar inferior izquierda",
+    "latin": "Vena pulmonalis inferior",
+    "ingles": "Left inferior pulmonary vein",
+    "descripcion": "Una de las cuatro venas pulmonares (dos por pulmón) que desembocan en la aurícula izquierda.",
+    "funcion": "Devuelve al corazón la sangre oxigenada en el pulmón.",
+    "ubicacion": "Hilio pulmonar y cara posterior de la aurícula izquierda.",
+    "datosClinicos": "Los focos que desencadenan la fibrilación auricular suelen estar en su desembocadura; la ablación consiste en aislarlas eléctricamente.",
+    "curiosidad": "Son venas que llevan sangre oxigenada: por eso en los atlas se pintan de rojo.",
+    "relaciones": [
+      "pared-auricula-izquierda"
+    ]
+  },
+  {
+    "id": "vena-cava-superior",
+    "nodoModelo": "vena-cava-superior",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "grandes-vasos",
+    "nombre": "Vena cava superior",
+    "latin": "Vena cava superior",
+    "ingles": "Superior vena cava",
+    "descripcion": "Vena gruesa y sin válvulas formada por la unión de las dos venas braquiocefálicas; recibe la vena ácigos.",
+    "funcion": "Devuelve a la aurícula derecha la sangre de la cabeza, el cuello, los miembros superiores y el tórax.",
+    "ubicacion": "Mediastino superior y medio, a la derecha de la aorta ascendente.",
+    "datosClinicos": "Su compresión por tumores del pulmón o del mediastino produce el síndrome de vena cava superior (edema de cara y cuello).",
+    "relaciones": [
+      "vena-braquiocefalica-d",
+      "vena-braquiocefalica-i",
+      "vena-acigos",
+      "pared-auricula-derecha"
+    ]
+  },
+  {
+    "id": "vena-cava-inferior",
+    "nodoModelo": "vena-cava-inferior",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "grandes-vasos",
+    "nombre": "Vena cava inferior",
+    "latin": "Vena cava inferior",
+    "ingles": "Inferior vena cava",
+    "descripcion": "La vena más gruesa del cuerpo; se forma por la unión de las ilíacas comunes a la altura de L5 y atraviesa el diafragma a nivel de T8.",
+    "funcion": "Devuelve a la aurícula derecha la sangre de los miembros inferiores, la pelvis y el abdomen.",
+    "ubicacion": "Retroperitoneo, a la derecha de la aorta abdominal; detrás del hígado.",
+    "datosClinicos": "Puede comprimirse por el útero grávido en decúbito supino (hipotensión supina del embarazo); en ella se colocan filtros para prevenir embolias.",
+    "relaciones": [
+      "vena-iliaca-comun-d",
+      "vena-iliaca-comun-i",
+      "vena-renal-d",
+      "vena-renal-i",
+      "pared-auricula-derecha",
+      "diafragma"
+    ]
+  },
+  {
+    "id": "tronco-braquiocefalico",
+    "nodoModelo": "tronco-braquiocefalico",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "grandes-vasos",
+    "nombre": "Tronco braquiocefálico",
+    "latin": "Truncus brachiocephalicus",
+    "ingles": "Brachiocephalic trunk",
+    "descripcion": "Primera y mayor rama del arco aórtico; detrás de la articulación esternoclavicular derecha se divide en carótida común y subclavia derechas.",
+    "funcion": "Irriga el lado derecho de la cabeza y el cuello y el miembro superior derecho.",
+    "ubicacion": "Mediastino superior, por detrás del manubrio.",
+    "datosClinicos": "Cruza por delante de la tráquea y puede lesionarse en las traqueostomías bajas.",
+    "curiosidad": "Solo existe en el lado derecho.",
+    "relaciones": [
+      "arco-aortico",
+      "carotida-comun-d",
+      "arteria-subclavia-d",
+      "traquea"
+    ]
+  },
+  {
+    "id": "vena-braquiocefalica-d",
+    "nodoModelo": "vena-braquiocefalica-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "grandes-vasos",
+    "nombre": "Vena braquiocefálica derecha",
+    "latin": "Vena brachiocephalica",
+    "ingles": "Right brachiocephalic vein",
+    "descripcion": "Vena formada detrás de la articulación esternoclavicular por la unión de la yugular interna y la subclavia. La izquierda es más larga y cruza por delante de las ramas del arco aórtico.",
+    "funcion": "Lleva la sangre de la cabeza, el cuello y el miembro superior a la vena cava superior.",
+    "ubicacion": "Mediastino superior, detrás del manubrio.",
+    "datosClinicos": "En la unión yugulo-subclavia izquierda desemboca el conducto torácico, que vierte la linfa a la sangre.",
+    "relaciones": [
+      "vena-cava-superior",
+      "yugular-interna-d",
+      "vena-subclavia-d"
+    ]
+  },
+  {
+    "id": "vena-braquiocefalica-i",
+    "nodoModelo": "vena-braquiocefalica-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "grandes-vasos",
+    "nombre": "Vena braquiocefálica izquierda",
+    "latin": "Vena brachiocephalica",
+    "ingles": "Left brachiocephalic vein",
+    "descripcion": "Vena formada detrás de la articulación esternoclavicular por la unión de la yugular interna y la subclavia. La izquierda es más larga y cruza por delante de las ramas del arco aórtico.",
+    "funcion": "Lleva la sangre de la cabeza, el cuello y el miembro superior a la vena cava superior.",
+    "ubicacion": "Mediastino superior, detrás del manubrio.",
+    "datosClinicos": "En la unión yugulo-subclavia izquierda desemboca el conducto torácico, que vierte la linfa a la sangre.",
+    "relaciones": [
+      "vena-cava-superior",
+      "yugular-interna-i",
+      "vena-subclavia-i"
+    ]
+  },
+  {
+    "id": "vena-acigos",
+    "nodoModelo": "vena-acigos",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "grandes-vasos",
+    "nombre": "Vena ácigos",
+    "latin": "Vena azygos",
+    "ingles": "Azygos vein",
+    "descripcion": "Vena que asciende por el lado derecho de los cuerpos vertebrales torácicos y se arquea sobre el bronquio principal derecho.",
+    "funcion": "Drena la pared posterior del tórax y del abdomen y conecta los sistemas de las venas cavas superior e inferior.",
+    "ubicacion": "Mediastino posterior, a la derecha de la columna torácica.",
+    "datosClinicos": "Es una vía colateral importante cuando se obstruye una de las venas cavas.",
+    "relaciones": [
+      "vena-cava-superior",
+      "bronquio-principal-d"
+    ]
+  },
+  {
+    "id": "carotida-comun-d",
+    "nodoModelo": "carotida-comun-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "cabeza-cuello",
+    "nombre": "Arteria carótida común derecha",
+    "latin": "Arteria carotis communis",
+    "ingles": "Right common carotid artery",
+    "descripcion": "Arteria que asciende por el cuello dentro de la vaina carotídea; la derecha nace del tronco braquiocefálico y la izquierda del arco aórtico.",
+    "funcion": "Se divide a la altura del borde superior del cartílago tiroides (C3–C4) en carótidas interna y externa.",
+    "ubicacion": "Cara lateral del cuello, por dentro de la vena yugular interna y bajo el esternocleidomastoideo.",
+    "datosClinicos": "Su pulso se palpa junto a la laringe; en la bifurcación están el seno carotídeo (barorreceptor) y el cuerpo carotídeo (quimiorreceptor).",
+    "relaciones": [
+      "carotida-interna-d",
+      "yugular-interna-d",
+      "esternocleidomastoideo-d"
+    ]
+  },
+  {
+    "id": "carotida-comun-i",
+    "nodoModelo": "carotida-comun-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "cabeza-cuello",
+    "nombre": "Arteria carótida común izquierda",
+    "latin": "Arteria carotis communis",
+    "ingles": "Left common carotid artery",
+    "descripcion": "Arteria que asciende por el cuello dentro de la vaina carotídea; la derecha nace del tronco braquiocefálico y la izquierda del arco aórtico.",
+    "funcion": "Se divide a la altura del borde superior del cartílago tiroides (C3–C4) en carótidas interna y externa.",
+    "ubicacion": "Cara lateral del cuello, por dentro de la vena yugular interna y bajo el esternocleidomastoideo.",
+    "datosClinicos": "Su pulso se palpa junto a la laringe; en la bifurcación están el seno carotídeo (barorreceptor) y el cuerpo carotídeo (quimiorreceptor).",
+    "relaciones": [
+      "carotida-interna-i",
+      "yugular-interna-i",
+      "esternocleidomastoideo-i"
+    ]
+  },
+  {
+    "id": "carotida-interna-d",
+    "nodoModelo": "carotida-interna-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "cabeza-cuello",
+    "nombre": "Arteria carótida interna derecha",
+    "latin": "Arteria carotis interna",
+    "ingles": "Right internal carotid artery",
+    "descripcion": "Rama terminal de la carótida común que no da ramas en el cuello; entra en el cráneo por el conducto carotídeo del temporal.",
+    "funcion": "Irriga la mayor parte del encéfalo (hemisferios cerebrales) y el ojo (arteria oftálmica).",
+    "ubicacion": "Cuello y base del cráneo.",
+    "datosClinicos": "La estenosis aterosclerótica de su origen es una causa importante de ictus; se trata con endarterectomía o stent.",
+    "relaciones": [
+      "carotida-comun-d",
+      "temporal-d"
+    ]
+  },
+  {
+    "id": "carotida-interna-i",
+    "nodoModelo": "carotida-interna-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "cabeza-cuello",
+    "nombre": "Arteria carótida interna izquierda",
+    "latin": "Arteria carotis interna",
+    "ingles": "Left internal carotid artery",
+    "descripcion": "Rama terminal de la carótida común que no da ramas en el cuello; entra en el cráneo por el conducto carotídeo del temporal.",
+    "funcion": "Irriga la mayor parte del encéfalo (hemisferios cerebrales) y el ojo (arteria oftálmica).",
+    "ubicacion": "Cuello y base del cráneo.",
+    "datosClinicos": "La estenosis aterosclerótica de su origen es una causa importante de ictus; se trata con endarterectomía o stent.",
+    "relaciones": [
+      "carotida-comun-i",
+      "temporal-i"
+    ]
+  },
+  {
+    "id": "arteria-vertebral-d",
+    "nodoModelo": "arteria-vertebral-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "cabeza-cuello",
+    "nombre": "Arteria vertebral derecha",
+    "latin": "Arteria vertebralis",
+    "ingles": "Right vertebral artery",
+    "descripcion": "Primera rama de la subclavia; asciende por los agujeros transversos de C6 a C1 y entra en el cráneo por el agujero magno.",
+    "funcion": "Las dos vertebrales se unen y forman la arteria basilar, que irriga el tronco del encéfalo, el cerebelo y la parte posterior del cerebro.",
+    "ubicacion": "Cuello, dentro de las apófisis transversas cervicales.",
+    "datosClinicos": "Su disección (a veces tras manipulaciones cervicales bruscas) puede causar ictus del territorio posterior.",
+    "relaciones": [
+      "arteria-subclavia-d",
+      "vertebra-c6",
+      "vertebra-c1",
+      "occipital"
+    ]
+  },
+  {
+    "id": "arteria-vertebral-i",
+    "nodoModelo": "arteria-vertebral-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "cabeza-cuello",
+    "nombre": "Arteria vertebral izquierda",
+    "latin": "Arteria vertebralis",
+    "ingles": "Left vertebral artery",
+    "descripcion": "Primera rama de la subclavia; asciende por los agujeros transversos de C6 a C1 y entra en el cráneo por el agujero magno.",
+    "funcion": "Las dos vertebrales se unen y forman la arteria basilar, que irriga el tronco del encéfalo, el cerebelo y la parte posterior del cerebro.",
+    "ubicacion": "Cuello, dentro de las apófisis transversas cervicales.",
+    "datosClinicos": "Su disección (a veces tras manipulaciones cervicales bruscas) puede causar ictus del territorio posterior.",
+    "relaciones": [
+      "arteria-subclavia-i",
+      "vertebra-c6",
+      "vertebra-c1",
+      "occipital"
+    ]
+  },
+  {
+    "id": "yugular-interna-d",
+    "nodoModelo": "yugular-interna-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "cabeza-cuello",
+    "nombre": "Vena yugular interna derecha",
+    "latin": "Vena jugularis interna",
+    "ingles": "Right internal jugular vein",
+    "descripcion": "Gran vena que nace en el agujero yugular como continuación del seno sigmoideo y desciende en la vaina carotídea.",
+    "funcion": "Drena la sangre del encéfalo, la cara y el cuello.",
+    "ubicacion": "Cara lateral del cuello, por fuera de la carótida común.",
+    "datosClinicos": "Es la vía preferida para colocar catéteres venosos centrales (habitualmente la derecha, guiada por ecografía).",
+    "relaciones": [
+      "vena-braquiocefalica-d",
+      "carotida-comun-d"
+    ]
+  },
+  {
+    "id": "yugular-interna-i",
+    "nodoModelo": "yugular-interna-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "cabeza-cuello",
+    "nombre": "Vena yugular interna izquierda",
+    "latin": "Vena jugularis interna",
+    "ingles": "Left internal jugular vein",
+    "descripcion": "Gran vena que nace en el agujero yugular como continuación del seno sigmoideo y desciende en la vaina carotídea.",
+    "funcion": "Drena la sangre del encéfalo, la cara y el cuello.",
+    "ubicacion": "Cara lateral del cuello, por fuera de la carótida común.",
+    "datosClinicos": "Es la vía preferida para colocar catéteres venosos centrales (habitualmente la derecha, guiada por ecografía).",
+    "relaciones": [
+      "vena-braquiocefalica-i",
+      "carotida-comun-i"
+    ]
+  },
+  {
+    "id": "arteria-subclavia-d",
+    "nodoModelo": "arteria-subclavia-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "miembro-superior",
+    "nombre": "Arteria subclavia derecha",
+    "latin": "Arteria subclavia",
+    "ingles": "Right subclavian artery",
+    "descripcion": "Arteria que arquea sobre la primera costilla pasando por detrás del escaleno anterior; la derecha nace del tronco braquiocefálico y la izquierda del arco aórtico.",
+    "funcion": "Irriga el miembro superior y, por sus ramas, parte del encéfalo, el cuello y la pared torácica.",
+    "ubicacion": "Base del cuello, por encima de la primera costilla.",
+    "datosClinicos": "En el «robo de la subclavia», una estenosis proximal hace que el brazo tome sangre de la arteria vertebral y cause mareos al moverlo.",
+    "relaciones": [
+      "arteria-axilar-d",
+      "arteria-vertebral-d",
+      "escaleno-anterior-d",
+      "costilla-1-d"
+    ]
+  },
+  {
+    "id": "arteria-subclavia-i",
+    "nodoModelo": "arteria-subclavia-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "miembro-superior",
+    "nombre": "Arteria subclavia izquierda",
+    "latin": "Arteria subclavia",
+    "ingles": "Left subclavian artery",
+    "descripcion": "Arteria que arquea sobre la primera costilla pasando por detrás del escaleno anterior; la derecha nace del tronco braquiocefálico y la izquierda del arco aórtico.",
+    "funcion": "Irriga el miembro superior y, por sus ramas, parte del encéfalo, el cuello y la pared torácica.",
+    "ubicacion": "Base del cuello, por encima de la primera costilla.",
+    "datosClinicos": "En el «robo de la subclavia», una estenosis proximal hace que el brazo tome sangre de la arteria vertebral y cause mareos al moverlo.",
+    "relaciones": [
+      "arteria-axilar-i",
+      "arteria-vertebral-i",
+      "escaleno-anterior-i",
+      "costilla-1-i"
+    ]
+  },
+  {
+    "id": "arteria-axilar-d",
+    "nodoModelo": "arteria-axilar-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "miembro-superior",
+    "nombre": "Arteria axilar derecha",
+    "latin": "Arteria axillaris",
+    "ingles": "Right axillary artery",
+    "descripcion": "Continuación de la subclavia desde el borde externo de la primera costilla hasta el borde inferior del redondo mayor; el pectoral menor la divide en tres partes.",
+    "funcion": "Irriga la pared torácica, el hombro y la axila.",
+    "ubicacion": "Axila, rodeada por los cordones del plexo braquial.",
+    "datosClinicos": "Puede lesionarse en las luxaciones anteriores del hombro y en las fracturas del cuello del húmero.",
+    "relaciones": [
+      "arteria-subclavia-d",
+      "arteria-braquial-d",
+      "pectoral-menor-d",
+      "redondo-mayor-d"
+    ]
+  },
+  {
+    "id": "arteria-axilar-i",
+    "nodoModelo": "arteria-axilar-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "miembro-superior",
+    "nombre": "Arteria axilar izquierda",
+    "latin": "Arteria axillaris",
+    "ingles": "Left axillary artery",
+    "descripcion": "Continuación de la subclavia desde el borde externo de la primera costilla hasta el borde inferior del redondo mayor; el pectoral menor la divide en tres partes.",
+    "funcion": "Irriga la pared torácica, el hombro y la axila.",
+    "ubicacion": "Axila, rodeada por los cordones del plexo braquial.",
+    "datosClinicos": "Puede lesionarse en las luxaciones anteriores del hombro y en las fracturas del cuello del húmero.",
+    "relaciones": [
+      "arteria-subclavia-i",
+      "arteria-braquial-i",
+      "pectoral-menor-i",
+      "redondo-mayor-i"
+    ]
+  },
+  {
+    "id": "arteria-braquial-d",
+    "nodoModelo": "arteria-braquial-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "miembro-superior",
+    "nombre": "Arteria braquial derecha",
+    "latin": "Arteria brachialis",
+    "ingles": "Right brachial artery",
+    "descripcion": "Arteria principal del brazo, que desciende por su cara medial y se divide en la fosa del codo en radial y cubital.",
+    "funcion": "Irriga el brazo y, a través de sus ramas terminales, el antebrazo y la mano.",
+    "ubicacion": "Cara medial del brazo y fosa del codo, por dentro del tendón del bíceps.",
+    "datosClinicos": "Es la arteria en la que se mide la presión arterial con el manguito; las fracturas supracondíleas en niños pueden lesionarla.",
+    "relaciones": [
+      "arteria-axilar-d",
+      "arteria-radial-d",
+      "arteria-cubital-d",
+      "biceps-braquial-d",
+      "humero-d"
+    ]
+  },
+  {
+    "id": "arteria-braquial-i",
+    "nodoModelo": "arteria-braquial-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "miembro-superior",
+    "nombre": "Arteria braquial izquierda",
+    "latin": "Arteria brachialis",
+    "ingles": "Left brachial artery",
+    "descripcion": "Arteria principal del brazo, que desciende por su cara medial y se divide en la fosa del codo en radial y cubital.",
+    "funcion": "Irriga el brazo y, a través de sus ramas terminales, el antebrazo y la mano.",
+    "ubicacion": "Cara medial del brazo y fosa del codo, por dentro del tendón del bíceps.",
+    "datosClinicos": "Es la arteria en la que se mide la presión arterial con el manguito; las fracturas supracondíleas en niños pueden lesionarla.",
+    "relaciones": [
+      "arteria-axilar-i",
+      "arteria-radial-i",
+      "arteria-cubital-i",
+      "biceps-braquial-i",
+      "humero-i"
+    ]
+  },
+  {
+    "id": "arteria-radial-d",
+    "nodoModelo": "arteria-radial-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "miembro-superior",
+    "nombre": "Arteria radial derecha",
+    "latin": "Arteria radialis",
+    "ingles": "Right radial artery",
+    "descripcion": "Rama terminal lateral de la braquial que desciende por el lado radial del antebrazo y forma sobre todo el arco palmar profundo.",
+    "funcion": "Irriga el lado radial del antebrazo y la mano.",
+    "ubicacion": "Antebrazo, lado del pulgar; superficial en la muñeca.",
+    "datosClinicos": "Es el lugar habitual para tomar el pulso, obtener gasometrías y acceder en el cateterismo cardíaco.",
+    "relaciones": [
+      "arteria-braquial-d",
+      "radio-d",
+      "flexor-radial-carpo-d"
+    ]
+  },
+  {
+    "id": "arteria-radial-i",
+    "nodoModelo": "arteria-radial-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "miembro-superior",
+    "nombre": "Arteria radial izquierda",
+    "latin": "Arteria radialis",
+    "ingles": "Left radial artery",
+    "descripcion": "Rama terminal lateral de la braquial que desciende por el lado radial del antebrazo y forma sobre todo el arco palmar profundo.",
+    "funcion": "Irriga el lado radial del antebrazo y la mano.",
+    "ubicacion": "Antebrazo, lado del pulgar; superficial en la muñeca.",
+    "datosClinicos": "Es el lugar habitual para tomar el pulso, obtener gasometrías y acceder en el cateterismo cardíaco.",
+    "relaciones": [
+      "arteria-braquial-i",
+      "radio-i",
+      "flexor-radial-carpo-i"
+    ]
+  },
+  {
+    "id": "arteria-cubital-d",
+    "nodoModelo": "arteria-cubital-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "miembro-superior",
+    "nombre": "Arteria cubital derecha",
+    "latin": "Arteria ulnaris",
+    "ingles": "Right ulnar artery",
+    "descripcion": "Rama terminal medial y más gruesa de la braquial; desciende por el lado cubital del antebrazo y forma sobre todo el arco palmar superficial.",
+    "funcion": "Irriga el lado cubital del antebrazo y la mano; da la arteria interósea común.",
+    "ubicacion": "Antebrazo, lado del meñique.",
+    "datosClinicos": "La prueba de Allen comprueba que la cubital puede irrigar la mano antes de puncionar la radial.",
+    "relaciones": [
+      "arteria-braquial-d",
+      "cubito-d",
+      "flexor-cubital-carpo-d"
+    ]
+  },
+  {
+    "id": "arteria-cubital-i",
+    "nodoModelo": "arteria-cubital-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "miembro-superior",
+    "nombre": "Arteria cubital izquierda",
+    "latin": "Arteria ulnaris",
+    "ingles": "Left ulnar artery",
+    "descripcion": "Rama terminal medial y más gruesa de la braquial; desciende por el lado cubital del antebrazo y forma sobre todo el arco palmar superficial.",
+    "funcion": "Irriga el lado cubital del antebrazo y la mano; da la arteria interósea común.",
+    "ubicacion": "Antebrazo, lado del meñique.",
+    "datosClinicos": "La prueba de Allen comprueba que la cubital puede irrigar la mano antes de puncionar la radial.",
+    "relaciones": [
+      "arteria-braquial-i",
+      "cubito-i",
+      "flexor-cubital-carpo-i"
+    ]
+  },
+  {
+    "id": "vena-subclavia-d",
+    "nodoModelo": "vena-subclavia-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "miembro-superior",
+    "nombre": "Vena subclavia derecha",
+    "latin": "Vena subclavia",
+    "ingles": "Right subclavian vein",
+    "descripcion": "Continuación de la vena axilar que pasa sobre la primera costilla por delante del escaleno anterior.",
+    "funcion": "Drena el miembro superior y se une a la yugular interna para formar la braquiocefálica.",
+    "ubicacion": "Base del cuello, detrás de la clavícula.",
+    "datosClinicos": "Se usa para colocar catéteres centrales; su trombosis por esfuerzo se conoce como síndrome de Paget-Schroetter.",
+    "relaciones": [
+      "vena-axilar-d",
+      "vena-braquiocefalica-d",
+      "clavicula-d",
+      "costilla-1-d"
+    ]
+  },
+  {
+    "id": "vena-subclavia-i",
+    "nodoModelo": "vena-subclavia-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "miembro-superior",
+    "nombre": "Vena subclavia izquierda",
+    "latin": "Vena subclavia",
+    "ingles": "Left subclavian vein",
+    "descripcion": "Continuación de la vena axilar que pasa sobre la primera costilla por delante del escaleno anterior.",
+    "funcion": "Drena el miembro superior y se une a la yugular interna para formar la braquiocefálica.",
+    "ubicacion": "Base del cuello, detrás de la clavícula.",
+    "datosClinicos": "Se usa para colocar catéteres centrales; su trombosis por esfuerzo se conoce como síndrome de Paget-Schroetter.",
+    "relaciones": [
+      "vena-axilar-i",
+      "vena-braquiocefalica-i",
+      "clavicula-i",
+      "costilla-1-i"
+    ]
+  },
+  {
+    "id": "vena-axilar-d",
+    "nodoModelo": "vena-axilar-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "miembro-superior",
+    "nombre": "Vena axilar derecha",
+    "latin": "Vena axillaris",
+    "ingles": "Right axillary vein",
+    "descripcion": "Vena profunda de la axila, formada por la unión de la vena basílica con las venas braquiales.",
+    "funcion": "Drena el miembro superior hacia la vena subclavia.",
+    "ubicacion": "Axila, medial a la arteria axilar.",
+    "datosClinicos": "Puede canalizarse guiada por ecografía como alternativa a la subclavia.",
+    "relaciones": [
+      "vena-subclavia-d",
+      "vena-basilica-d",
+      "vena-cefalica-d"
+    ]
+  },
+  {
+    "id": "vena-axilar-i",
+    "nodoModelo": "vena-axilar-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "miembro-superior",
+    "nombre": "Vena axilar izquierda",
+    "latin": "Vena axillaris",
+    "ingles": "Left axillary vein",
+    "descripcion": "Vena profunda de la axila, formada por la unión de la vena basílica con las venas braquiales.",
+    "funcion": "Drena el miembro superior hacia la vena subclavia.",
+    "ubicacion": "Axila, medial a la arteria axilar.",
+    "datosClinicos": "Puede canalizarse guiada por ecografía como alternativa a la subclavia.",
+    "relaciones": [
+      "vena-subclavia-i",
+      "vena-basilica-i",
+      "vena-cefalica-i"
+    ]
+  },
+  {
+    "id": "vena-cefalica-d",
+    "nodoModelo": "vena-cefalica-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "miembro-superior",
+    "nombre": "Vena cefálica derecha",
+    "latin": "Vena cephalica",
+    "ingles": "Right cephalic vein",
+    "descripcion": "Vena superficial del lado lateral del miembro superior que asciende por el surco deltopectoral.",
+    "funcion": "Drena la piel y el tejido subcutáneo del lado radial del miembro superior a la vena axilar.",
+    "ubicacion": "Borde lateral del antebrazo y del brazo; surco entre el deltoides y el pectoral mayor.",
+    "datosClinicos": "Se usa para introducir electrodos de marcapasos y para fístulas arteriovenosas de hemodiálisis.",
+    "relaciones": [
+      "vena-axilar-d",
+      "vena-mediana-cubital-d",
+      "deltoides-d",
+      "pectoral-mayor-d"
+    ]
+  },
+  {
+    "id": "vena-cefalica-i",
+    "nodoModelo": "vena-cefalica-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "miembro-superior",
+    "nombre": "Vena cefálica izquierda",
+    "latin": "Vena cephalica",
+    "ingles": "Left cephalic vein",
+    "descripcion": "Vena superficial del lado lateral del miembro superior que asciende por el surco deltopectoral.",
+    "funcion": "Drena la piel y el tejido subcutáneo del lado radial del miembro superior a la vena axilar.",
+    "ubicacion": "Borde lateral del antebrazo y del brazo; surco entre el deltoides y el pectoral mayor.",
+    "datosClinicos": "Se usa para introducir electrodos de marcapasos y para fístulas arteriovenosas de hemodiálisis.",
+    "relaciones": [
+      "vena-axilar-i",
+      "vena-mediana-cubital-i",
+      "deltoides-i",
+      "pectoral-mayor-i"
+    ]
+  },
+  {
+    "id": "vena-basilica-d",
+    "nodoModelo": "vena-basilica-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "miembro-superior",
+    "nombre": "Vena basílica derecha",
+    "latin": "Vena basilica",
+    "ingles": "Right basilic vein",
+    "descripcion": "Vena superficial del lado medial del miembro superior que se hace profunda a mitad del brazo.",
+    "funcion": "Drena el lado cubital del miembro superior y contribuye a formar la vena axilar.",
+    "ubicacion": "Borde medial del antebrazo y del brazo.",
+    "datosClinicos": "Es la vía habitual para los catéteres centrales de inserción periférica (PICC).",
+    "relaciones": [
+      "vena-axilar-d",
+      "vena-mediana-cubital-d"
+    ]
+  },
+  {
+    "id": "vena-basilica-i",
+    "nodoModelo": "vena-basilica-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "miembro-superior",
+    "nombre": "Vena basílica izquierda",
+    "latin": "Vena basilica",
+    "ingles": "Left basilic vein",
+    "descripcion": "Vena superficial del lado medial del miembro superior que se hace profunda a mitad del brazo.",
+    "funcion": "Drena el lado cubital del miembro superior y contribuye a formar la vena axilar.",
+    "ubicacion": "Borde medial del antebrazo y del brazo.",
+    "datosClinicos": "Es la vía habitual para los catéteres centrales de inserción periférica (PICC).",
+    "relaciones": [
+      "vena-axilar-i",
+      "vena-mediana-cubital-i"
+    ]
+  },
+  {
+    "id": "vena-mediana-cubital-d",
+    "nodoModelo": "vena-mediana-cubital-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "miembro-superior",
+    "nombre": "Vena mediana cubital derecha",
+    "latin": "Vena mediana cubiti",
+    "ingles": "Right median cubital vein",
+    "descripcion": "Vena superficial que cruza en diagonal la fosa del codo y comunica la vena cefálica con la basílica.",
+    "funcion": "Comunica los dos principales sistemas venosos superficiales del miembro superior.",
+    "ubicacion": "Fosa del codo, sobre la aponeurosis bicipital.",
+    "datosClinicos": "Es la vena más utilizada para las extracciones de sangre; la aponeurosis bicipital protege la arteria braquial que está debajo.",
+    "relaciones": [
+      "vena-cefalica-d",
+      "vena-basilica-d"
+    ]
+  },
+  {
+    "id": "vena-mediana-cubital-i",
+    "nodoModelo": "vena-mediana-cubital-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "miembro-superior",
+    "nombre": "Vena mediana cubital izquierda",
+    "latin": "Vena mediana cubiti",
+    "ingles": "Left median cubital vein",
+    "descripcion": "Vena superficial que cruza en diagonal la fosa del codo y comunica la vena cefálica con la basílica.",
+    "funcion": "Comunica los dos principales sistemas venosos superficiales del miembro superior.",
+    "ubicacion": "Fosa del codo, sobre la aponeurosis bicipital.",
+    "datosClinicos": "Es la vena más utilizada para las extracciones de sangre; la aponeurosis bicipital protege la arteria braquial que está debajo.",
+    "relaciones": [
+      "vena-cefalica-i",
+      "vena-basilica-i"
+    ]
+  },
+  {
+    "id": "tronco-celiaco",
+    "nodoModelo": "tronco-celiaco",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "abdomen-pelvis",
+    "nombre": "Tronco celíaco",
+    "latin": "Truncus coeliacus",
+    "ingles": "Celiac trunk",
+    "descripcion": "Rama anterior corta de la aorta abdominal (a nivel de T12) que se divide en las arterias gástrica izquierda, esplénica y hepática común.",
+    "funcion": "Irriga el intestino anterior: esófago abdominal, estómago, duodeno proximal, hígado, vesícula, páncreas y bazo.",
+    "ubicacion": "Justo por debajo del hiato aórtico del diafragma.",
+    "datosClinicos": "Puede comprimirse por el ligamento arqueado medio del diafragma (síndrome de Dunbar).",
+    "relaciones": [
+      "aorta-abdominal"
+    ]
+  },
+  {
+    "id": "arteria-mesenterica-superior",
+    "nodoModelo": "arteria-mesenterica-superior",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "abdomen-pelvis",
+    "nombre": "Arteria mesentérica superior",
+    "latin": "Arteria mesenterica superior",
+    "ingles": "Superior mesenteric artery",
+    "descripcion": "Rama anterior de la aorta abdominal (a nivel de L1) que desciende por la raíz del mesenterio.",
+    "funcion": "Irriga el intestino medio: duodeno distal, yeyuno, íleon, ciego, apéndice, colon ascendente y dos tercios del transverso.",
+    "ubicacion": "Por detrás del páncreas y por delante de la tercera porción del duodeno y de la vena renal izquierda.",
+    "datosClinicos": "Su oclusión embólica causa isquemia mesentérica aguda, una urgencia con alta mortalidad.",
+    "relaciones": [
+      "aorta-abdominal",
+      "vena-mesenterica-superior",
+      "vena-renal-i"
+    ]
+  },
+  {
+    "id": "arteria-mesenterica-inferior",
+    "nodoModelo": "arteria-mesenterica-inferior",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "abdomen-pelvis",
+    "nombre": "Arteria mesentérica inferior",
+    "latin": "Arteria mesenterica inferior",
+    "ingles": "Inferior mesenteric artery",
+    "descripcion": "Rama anterior de la aorta abdominal (a nivel de L3), más pequeña que la superior.",
+    "funcion": "Irriga el intestino posterior: tercio distal del colon transverso, colon descendente, sigma y parte superior del recto.",
+    "ubicacion": "Retroperitoneo, a la izquierda de la aorta.",
+    "datosClinicos": "Se liga en la cirugía del cáncer de colon izquierdo y de recto.",
+    "relaciones": [
+      "aorta-abdominal"
+    ]
+  },
+  {
+    "id": "arteria-renal-d",
+    "nodoModelo": "arteria-renal-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "abdomen-pelvis",
+    "nombre": "Arteria renal derecha",
+    "latin": "Arteria renalis",
+    "ingles": "Right renal artery",
+    "descripcion": "Rama lateral de la aorta abdominal (a nivel de L1–L2); la derecha es más larga y pasa por detrás de la vena cava inferior.",
+    "funcion": "Irriga el riñón, que recibe en reposo en torno al 20–25 % del gasto cardíaco.",
+    "ubicacion": "Retroperitoneo, hacia el hilio renal.",
+    "datosClinicos": "Su estenosis causa hipertensión renovascular; son frecuentes las arterias renales accesorias.",
+    "relaciones": [
+      "aorta-abdominal",
+      "vena-renal-d"
+    ]
+  },
+  {
+    "id": "arteria-renal-i",
+    "nodoModelo": "arteria-renal-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "abdomen-pelvis",
+    "nombre": "Arteria renal izquierda",
+    "latin": "Arteria renalis",
+    "ingles": "Left renal artery",
+    "descripcion": "Rama lateral de la aorta abdominal (a nivel de L1–L2); la derecha es más larga y pasa por detrás de la vena cava inferior.",
+    "funcion": "Irriga el riñón, que recibe en reposo en torno al 20–25 % del gasto cardíaco.",
+    "ubicacion": "Retroperitoneo, hacia el hilio renal.",
+    "datosClinicos": "Su estenosis causa hipertensión renovascular; son frecuentes las arterias renales accesorias.",
+    "relaciones": [
+      "aorta-abdominal",
+      "vena-renal-i"
+    ]
+  },
+  {
+    "id": "vena-renal-d",
+    "nodoModelo": "vena-renal-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "abdomen-pelvis",
+    "nombre": "Vena renal derecha",
+    "latin": "Vena renalis",
+    "ingles": "Right renal vein",
+    "descripcion": "Vena que sale del hilio renal por delante de la arteria; la izquierda es más larga y cruza por delante de la aorta, bajo la mesentérica superior.",
+    "funcion": "Devuelve la sangre del riñón a la vena cava inferior.",
+    "ubicacion": "Retroperitoneo, del hilio renal a la vena cava inferior.",
+    "datosClinicos": "La izquierda puede comprimirse entre la aorta y la mesentérica superior (síndrome del cascanueces); recibe la vena gonadal izquierda.",
+    "relaciones": [
+      "vena-cava-inferior",
+      "arteria-renal-d"
+    ]
+  },
+  {
+    "id": "vena-renal-i",
+    "nodoModelo": "vena-renal-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "abdomen-pelvis",
+    "nombre": "Vena renal izquierda",
+    "latin": "Vena renalis",
+    "ingles": "Left renal vein",
+    "descripcion": "Vena que sale del hilio renal por delante de la arteria; la izquierda es más larga y cruza por delante de la aorta, bajo la mesentérica superior.",
+    "funcion": "Devuelve la sangre del riñón a la vena cava inferior.",
+    "ubicacion": "Retroperitoneo, del hilio renal a la vena cava inferior.",
+    "datosClinicos": "La izquierda puede comprimirse entre la aorta y la mesentérica superior (síndrome del cascanueces); recibe la vena gonadal izquierda.",
+    "relaciones": [
+      "vena-cava-inferior",
+      "arteria-renal-i"
+    ]
+  },
+  {
+    "id": "vena-porta",
+    "nodoModelo": "vena-porta",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "abdomen-pelvis",
+    "nombre": "Vena porta hepática",
+    "latin": "Vena portae hepatis",
+    "ingles": "Hepatic portal vein",
+    "descripcion": "Vena formada detrás del cuello del páncreas por la unión de la vena mesentérica superior y la esplénica.",
+    "funcion": "Lleva al hígado la sangre del tubo digestivo, el bazo y el páncreas, rica en nutrientes absorbidos.",
+    "ubicacion": "Ligamento hepatoduodenal, detrás del colédoco y de la arteria hepática.",
+    "datosClinicos": "La hipertensión portal (p. ej. por cirrosis) abre circulaciones colaterales como las varices esofágicas.",
+    "curiosidad": "El hígado recibe aproximadamente tres cuartas partes de su sangre por la porta y el resto por la arteria hepática.",
+    "relaciones": [
+      "vena-esplenica",
+      "vena-mesenterica-superior"
+    ]
+  },
+  {
+    "id": "vena-esplenica",
+    "nodoModelo": "vena-esplenica",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "abdomen-pelvis",
+    "nombre": "Vena esplénica",
+    "latin": "Vena splenica (lienalis)",
+    "ingles": "Splenic vein",
+    "descripcion": "Vena que sale del hilio del bazo y discurre por detrás del páncreas hasta unirse a la mesentérica superior.",
+    "funcion": "Drena el bazo, parte del estómago y el páncreas; suele recibir la vena mesentérica inferior.",
+    "ubicacion": "Cara posterior del cuerpo del páncreas.",
+    "datosClinicos": "Su trombosis, a menudo por pancreatitis, puede causar varices gástricas aisladas.",
+    "relaciones": [
+      "vena-porta"
+    ]
+  },
+  {
+    "id": "vena-mesenterica-superior",
+    "nodoModelo": "vena-mesenterica-superior",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "abdomen-pelvis",
+    "nombre": "Vena mesentérica superior",
+    "latin": "Vena mesenterica superior",
+    "ingles": "Superior mesenteric vein",
+    "descripcion": "Vena que asciende a la derecha de la arteria mesentérica superior por la raíz del mesenterio.",
+    "funcion": "Drena el intestino delgado, el ciego y el colon ascendente y transverso.",
+    "ubicacion": "Raíz del mesenterio, a la derecha de su arteria.",
+    "datosClinicos": "Su trombosis es una causa poco frecuente pero grave de isquemia intestinal.",
+    "relaciones": [
+      "vena-porta",
+      "arteria-mesenterica-superior"
+    ]
+  },
+  {
+    "id": "iliaca-comun-d",
+    "nodoModelo": "iliaca-comun-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "abdomen-pelvis",
+    "nombre": "Arteria ilíaca común derecha",
+    "latin": "Arteria iliaca communis",
+    "ingles": "Right common iliac artery",
+    "descripcion": "Rama terminal de la aorta (a nivel de L4) que se divide, delante de la articulación sacroilíaca, en ilíacas externa e interna.",
+    "funcion": "Lleva la sangre a la pelvis y al miembro inferior.",
+    "ubicacion": "Retroperitoneo, desde la bifurcación aórtica hasta el estrecho superior de la pelvis.",
+    "datosClinicos": "Es asiento frecuente de aterosclerosis y de extensión de los aneurismas aórticos.",
+    "relaciones": [
+      "aorta-abdominal",
+      "iliaca-externa-d",
+      "iliaca-interna-d"
+    ]
+  },
+  {
+    "id": "iliaca-comun-i",
+    "nodoModelo": "iliaca-comun-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "abdomen-pelvis",
+    "nombre": "Arteria ilíaca común izquierda",
+    "latin": "Arteria iliaca communis",
+    "ingles": "Left common iliac artery",
+    "descripcion": "Rama terminal de la aorta (a nivel de L4) que se divide, delante de la articulación sacroilíaca, en ilíacas externa e interna.",
+    "funcion": "Lleva la sangre a la pelvis y al miembro inferior.",
+    "ubicacion": "Retroperitoneo, desde la bifurcación aórtica hasta el estrecho superior de la pelvis.",
+    "datosClinicos": "Es asiento frecuente de aterosclerosis y de extensión de los aneurismas aórticos.",
+    "relaciones": [
+      "aorta-abdominal",
+      "iliaca-externa-i",
+      "iliaca-interna-i"
+    ]
+  },
+  {
+    "id": "iliaca-externa-d",
+    "nodoModelo": "iliaca-externa-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "abdomen-pelvis",
+    "nombre": "Arteria ilíaca externa derecha",
+    "latin": "Arteria iliaca externa",
+    "ingles": "Right external iliac artery",
+    "descripcion": "Arteria que sigue el borde medial del psoas y pasa bajo el ligamento inguinal, donde pasa a llamarse femoral.",
+    "funcion": "Es la principal vía de sangre hacia el miembro inferior.",
+    "ubicacion": "Pelvis mayor, sobre el psoas mayor.",
+    "datosClinicos": "Se usa como arteria receptora en el trasplante renal.",
+    "relaciones": [
+      "iliaca-comun-d",
+      "arteria-femoral-d",
+      "psoas-mayor-d"
+    ]
+  },
+  {
+    "id": "iliaca-externa-i",
+    "nodoModelo": "iliaca-externa-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "abdomen-pelvis",
+    "nombre": "Arteria ilíaca externa izquierda",
+    "latin": "Arteria iliaca externa",
+    "ingles": "Left external iliac artery",
+    "descripcion": "Arteria que sigue el borde medial del psoas y pasa bajo el ligamento inguinal, donde pasa a llamarse femoral.",
+    "funcion": "Es la principal vía de sangre hacia el miembro inferior.",
+    "ubicacion": "Pelvis mayor, sobre el psoas mayor.",
+    "datosClinicos": "Se usa como arteria receptora en el trasplante renal.",
+    "relaciones": [
+      "iliaca-comun-i",
+      "arteria-femoral-i",
+      "psoas-mayor-i"
+    ]
+  },
+  {
+    "id": "iliaca-interna-d",
+    "nodoModelo": "iliaca-interna-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "abdomen-pelvis",
+    "nombre": "Arteria ilíaca interna derecha",
+    "latin": "Arteria iliaca interna",
+    "ingles": "Right internal iliac artery",
+    "descripcion": "Arteria corta que desciende a la pelvis menor y se divide en numerosas ramas viscerales y parietales.",
+    "funcion": "Irriga las vísceras pélvicas, el periné, la región glútea y la parte medial del muslo.",
+    "ubicacion": "Pelvis menor, delante de la articulación sacroilíaca.",
+    "datosClinicos": "Se emboliza para controlar hemorragias pélvicas graves (fracturas de pelvis, hemorragia posparto).",
+    "relaciones": [
+      "iliaca-comun-d",
+      "gluteo-mayor-d"
+    ]
+  },
+  {
+    "id": "iliaca-interna-i",
+    "nodoModelo": "iliaca-interna-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "abdomen-pelvis",
+    "nombre": "Arteria ilíaca interna izquierda",
+    "latin": "Arteria iliaca interna",
+    "ingles": "Left internal iliac artery",
+    "descripcion": "Arteria corta que desciende a la pelvis menor y se divide en numerosas ramas viscerales y parietales.",
+    "funcion": "Irriga las vísceras pélvicas, el periné, la región glútea y la parte medial del muslo.",
+    "ubicacion": "Pelvis menor, delante de la articulación sacroilíaca.",
+    "datosClinicos": "Se emboliza para controlar hemorragias pélvicas graves (fracturas de pelvis, hemorragia posparto).",
+    "relaciones": [
+      "iliaca-comun-i",
+      "gluteo-mayor-i"
+    ]
+  },
+  {
+    "id": "vena-iliaca-comun-d",
+    "nodoModelo": "vena-iliaca-comun-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "abdomen-pelvis",
+    "nombre": "Vena ilíaca común derecha",
+    "latin": "Vena iliaca communis",
+    "ingles": "Right common iliac vein",
+    "descripcion": "Vena formada por la unión de las ilíacas externa e interna; las dos se unen a nivel de L5 para formar la vena cava inferior.",
+    "funcion": "Drena la pelvis y el miembro inferior.",
+    "ubicacion": "Retroperitoneo, por detrás y a la derecha de las arterias ilíacas comunes.",
+    "datosClinicos": "La izquierda puede comprimirse entre la arteria ilíaca común derecha y la columna (síndrome de May-Thurner), lo que favorece trombosis.",
+    "relaciones": [
+      "vena-cava-inferior",
+      "iliaca-comun-d"
+    ]
+  },
+  {
+    "id": "vena-iliaca-comun-i",
+    "nodoModelo": "vena-iliaca-comun-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "abdomen-pelvis",
+    "nombre": "Vena ilíaca común izquierda",
+    "latin": "Vena iliaca communis",
+    "ingles": "Left common iliac vein",
+    "descripcion": "Vena formada por la unión de las ilíacas externa e interna; las dos se unen a nivel de L5 para formar la vena cava inferior.",
+    "funcion": "Drena la pelvis y el miembro inferior.",
+    "ubicacion": "Retroperitoneo, por detrás y a la derecha de las arterias ilíacas comunes.",
+    "datosClinicos": "La izquierda puede comprimirse entre la arteria ilíaca común derecha y la columna (síndrome de May-Thurner), lo que favorece trombosis.",
+    "relaciones": [
+      "vena-cava-inferior",
+      "iliaca-comun-i"
+    ]
+  },
+  {
+    "id": "arteria-femoral-d",
+    "nodoModelo": "arteria-femoral-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "miembro-inferior",
+    "nombre": "Arteria femoral derecha",
+    "latin": "Arteria femoralis",
+    "ingles": "Right femoral artery",
+    "descripcion": "Continuación de la ilíaca externa bajo el ligamento inguinal; recorre el triángulo femoral y el conducto aductor.",
+    "funcion": "Es la principal arteria del muslo; su rama femoral profunda irriga la mayor parte de los músculos del muslo.",
+    "ubicacion": "Cara anteromedial del muslo, por dentro del sartorio.",
+    "datosClinicos": "Su pulso se palpa en el punto medio inguinal; es el acceso clásico para cateterismos.",
+    "relaciones": [
+      "iliaca-externa-d",
+      "arteria-poplitea-d",
+      "vena-femoral-d",
+      "sartorio-d",
+      "femur-d"
+    ]
+  },
+  {
+    "id": "arteria-femoral-i",
+    "nodoModelo": "arteria-femoral-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "miembro-inferior",
+    "nombre": "Arteria femoral izquierda",
+    "latin": "Arteria femoralis",
+    "ingles": "Left femoral artery",
+    "descripcion": "Continuación de la ilíaca externa bajo el ligamento inguinal; recorre el triángulo femoral y el conducto aductor.",
+    "funcion": "Es la principal arteria del muslo; su rama femoral profunda irriga la mayor parte de los músculos del muslo.",
+    "ubicacion": "Cara anteromedial del muslo, por dentro del sartorio.",
+    "datosClinicos": "Su pulso se palpa en el punto medio inguinal; es el acceso clásico para cateterismos.",
+    "relaciones": [
+      "iliaca-externa-i",
+      "arteria-poplitea-i",
+      "vena-femoral-i",
+      "sartorio-i",
+      "femur-i"
+    ]
+  },
+  {
+    "id": "arteria-poplitea-d",
+    "nodoModelo": "arteria-poplitea-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "miembro-inferior",
+    "nombre": "Arteria poplítea derecha",
+    "latin": "Arteria poplitea",
+    "ingles": "Right popliteal artery",
+    "descripcion": "Continuación de la femoral tras el hiato del aductor; es la estructura más profunda de la fosa poplítea.",
+    "funcion": "Irriga la rodilla (arterias geniculares) y se divide en tibiales anterior y posterior.",
+    "ubicacion": "Fosa poplítea, detrás de la rodilla, contra el fémur.",
+    "datosClinicos": "Puede lesionarse en las luxaciones de rodilla; sus aneurismas son los más frecuentes de las arterias periféricas.",
+    "relaciones": [
+      "arteria-femoral-d",
+      "arteria-tibial-anterior-d",
+      "arteria-tibial-posterior-d",
+      "vena-poplitea-d",
+      "femur-d"
+    ]
+  },
+  {
+    "id": "arteria-poplitea-i",
+    "nodoModelo": "arteria-poplitea-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "miembro-inferior",
+    "nombre": "Arteria poplítea izquierda",
+    "latin": "Arteria poplitea",
+    "ingles": "Left popliteal artery",
+    "descripcion": "Continuación de la femoral tras el hiato del aductor; es la estructura más profunda de la fosa poplítea.",
+    "funcion": "Irriga la rodilla (arterias geniculares) y se divide en tibiales anterior y posterior.",
+    "ubicacion": "Fosa poplítea, detrás de la rodilla, contra el fémur.",
+    "datosClinicos": "Puede lesionarse en las luxaciones de rodilla; sus aneurismas son los más frecuentes de las arterias periféricas.",
+    "relaciones": [
+      "arteria-femoral-i",
+      "arteria-tibial-anterior-i",
+      "arteria-tibial-posterior-i",
+      "vena-poplitea-i",
+      "femur-i"
+    ]
+  },
+  {
+    "id": "arteria-tibial-anterior-d",
+    "nodoModelo": "arteria-tibial-anterior-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "miembro-inferior",
+    "nombre": "Arteria tibial anterior derecha",
+    "latin": "Arteria tibialis anterior",
+    "ingles": "Right anterior tibial artery",
+    "descripcion": "Rama de la poplítea que atraviesa la membrana interósea y desciende por el compartimento anterior de la pierna.",
+    "funcion": "Irriga los músculos anteriores de la pierna y continúa en el dorso del pie como arteria dorsal del pie.",
+    "ubicacion": "Compartimento anterior de la pierna, sobre la membrana interósea.",
+    "datosClinicos": "Se comprime en el síndrome compartimental anterior.",
+    "relaciones": [
+      "arteria-poplitea-d",
+      "arteria-dorsal-pie-d",
+      "tibial-anterior-d"
+    ]
+  },
+  {
+    "id": "arteria-tibial-anterior-i",
+    "nodoModelo": "arteria-tibial-anterior-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "miembro-inferior",
+    "nombre": "Arteria tibial anterior izquierda",
+    "latin": "Arteria tibialis anterior",
+    "ingles": "Left anterior tibial artery",
+    "descripcion": "Rama de la poplítea que atraviesa la membrana interósea y desciende por el compartimento anterior de la pierna.",
+    "funcion": "Irriga los músculos anteriores de la pierna y continúa en el dorso del pie como arteria dorsal del pie.",
+    "ubicacion": "Compartimento anterior de la pierna, sobre la membrana interósea.",
+    "datosClinicos": "Se comprime en el síndrome compartimental anterior.",
+    "relaciones": [
+      "arteria-poplitea-i",
+      "arteria-dorsal-pie-i",
+      "tibial-anterior-i"
+    ]
+  },
+  {
+    "id": "arteria-tibial-posterior-d",
+    "nodoModelo": "arteria-tibial-posterior-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "miembro-inferior",
+    "nombre": "Arteria tibial posterior derecha",
+    "latin": "Arteria tibialis posterior",
+    "ingles": "Right posterior tibial artery",
+    "descripcion": "Rama terminal más gruesa de la poplítea, que desciende por el compartimento posterior y pasa por detrás del maléolo medial.",
+    "funcion": "Irriga el compartimento posterior de la pierna y la planta del pie (arterias plantares); da la arteria peronea.",
+    "ubicacion": "Compartimento posterior profundo de la pierna.",
+    "datosClinicos": "Su pulso, detrás del maléolo medial, se explora para valorar la enfermedad arterial periférica.",
+    "relaciones": [
+      "arteria-poplitea-d",
+      "tibia-d",
+      "soleo-d"
+    ]
+  },
+  {
+    "id": "arteria-tibial-posterior-i",
+    "nodoModelo": "arteria-tibial-posterior-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "miembro-inferior",
+    "nombre": "Arteria tibial posterior izquierda",
+    "latin": "Arteria tibialis posterior",
+    "ingles": "Left posterior tibial artery",
+    "descripcion": "Rama terminal más gruesa de la poplítea, que desciende por el compartimento posterior y pasa por detrás del maléolo medial.",
+    "funcion": "Irriga el compartimento posterior de la pierna y la planta del pie (arterias plantares); da la arteria peronea.",
+    "ubicacion": "Compartimento posterior profundo de la pierna.",
+    "datosClinicos": "Su pulso, detrás del maléolo medial, se explora para valorar la enfermedad arterial periférica.",
+    "relaciones": [
+      "arteria-poplitea-i",
+      "tibia-i",
+      "soleo-i"
+    ]
+  },
+  {
+    "id": "arteria-dorsal-pie-d",
+    "nodoModelo": "arteria-dorsal-pie-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "miembro-inferior",
+    "nombre": "Arteria dorsal del pie derecha",
+    "latin": "Arteria dorsalis pedis",
+    "ingles": "Right dorsalis pedis artery",
+    "descripcion": "Continuación de la tibial anterior en el dorso del pie, lateral al tendón del extensor largo del dedo gordo.",
+    "funcion": "Irriga el dorso del pie y contribuye al arco plantar profundo.",
+    "ubicacion": "Dorso del pie, entre los tendones extensores del dedo gordo y de los dedos.",
+    "datosClinicos": "Su pulso se busca en la valoración del pie diabético; falta de forma congénita en una pequeña parte de la población.",
+    "relaciones": [
+      "arteria-tibial-anterior-d",
+      "extensor-largo-dedo-gordo-d"
+    ]
+  },
+  {
+    "id": "arteria-dorsal-pie-i",
+    "nodoModelo": "arteria-dorsal-pie-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "miembro-inferior",
+    "nombre": "Arteria dorsal del pie izquierda",
+    "latin": "Arteria dorsalis pedis",
+    "ingles": "Left dorsalis pedis artery",
+    "descripcion": "Continuación de la tibial anterior en el dorso del pie, lateral al tendón del extensor largo del dedo gordo.",
+    "funcion": "Irriga el dorso del pie y contribuye al arco plantar profundo.",
+    "ubicacion": "Dorso del pie, entre los tendones extensores del dedo gordo y de los dedos.",
+    "datosClinicos": "Su pulso se busca en la valoración del pie diabético; falta de forma congénita en una pequeña parte de la población.",
+    "relaciones": [
+      "arteria-tibial-anterior-i",
+      "extensor-largo-dedo-gordo-i"
+    ]
+  },
+  {
+    "id": "vena-femoral-d",
+    "nodoModelo": "vena-femoral-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "miembro-inferior",
+    "nombre": "Vena femoral derecha",
+    "latin": "Vena femoralis",
+    "ingles": "Right femoral vein",
+    "descripcion": "Vena profunda del muslo que acompaña a la arteria femoral y recibe la vena safena mayor en la ingle.",
+    "funcion": "Drena el miembro inferior hacia la vena ilíaca externa.",
+    "ubicacion": "Triángulo femoral (medial a la arteria) y conducto aductor.",
+    "datosClinicos": "Es un lugar frecuente de trombosis venosa profunda; también se usa para accesos venosos centrales.",
+    "relaciones": [
+      "arteria-femoral-d",
+      "vena-poplitea-d",
+      "vena-safena-mayor-d"
+    ]
+  },
+  {
+    "id": "vena-femoral-i",
+    "nodoModelo": "vena-femoral-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "miembro-inferior",
+    "nombre": "Vena femoral izquierda",
+    "latin": "Vena femoralis",
+    "ingles": "Left femoral vein",
+    "descripcion": "Vena profunda del muslo que acompaña a la arteria femoral y recibe la vena safena mayor en la ingle.",
+    "funcion": "Drena el miembro inferior hacia la vena ilíaca externa.",
+    "ubicacion": "Triángulo femoral (medial a la arteria) y conducto aductor.",
+    "datosClinicos": "Es un lugar frecuente de trombosis venosa profunda; también se usa para accesos venosos centrales.",
+    "relaciones": [
+      "arteria-femoral-i",
+      "vena-poplitea-i",
+      "vena-safena-mayor-i"
+    ]
+  },
+  {
+    "id": "vena-poplitea-d",
+    "nodoModelo": "vena-poplitea-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "miembro-inferior",
+    "nombre": "Vena poplítea derecha",
+    "latin": "Vena poplitea",
+    "ingles": "Right popliteal vein",
+    "descripcion": "Vena profunda de la fosa poplítea, situada entre la arteria (más profunda) y el nervio tibial (más superficial).",
+    "funcion": "Drena la pierna y recibe la vena safena menor.",
+    "ubicacion": "Fosa poplítea.",
+    "datosClinicos": "Las trombosis de esta vena y de las proximales tienen el mayor riesgo de embolia pulmonar.",
+    "relaciones": [
+      "arteria-poplitea-d",
+      "vena-femoral-d",
+      "vena-safena-menor-d"
+    ]
+  },
+  {
+    "id": "vena-poplitea-i",
+    "nodoModelo": "vena-poplitea-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "miembro-inferior",
+    "nombre": "Vena poplítea izquierda",
+    "latin": "Vena poplitea",
+    "ingles": "Left popliteal vein",
+    "descripcion": "Vena profunda de la fosa poplítea, situada entre la arteria (más profunda) y el nervio tibial (más superficial).",
+    "funcion": "Drena la pierna y recibe la vena safena menor.",
+    "ubicacion": "Fosa poplítea.",
+    "datosClinicos": "Las trombosis de esta vena y de las proximales tienen el mayor riesgo de embolia pulmonar.",
+    "relaciones": [
+      "arteria-poplitea-i",
+      "vena-femoral-i",
+      "vena-safena-menor-i"
+    ]
+  },
+  {
+    "id": "vena-safena-mayor-d",
+    "nodoModelo": "vena-safena-mayor-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "miembro-inferior",
+    "nombre": "Vena safena mayor derecha",
+    "latin": "Vena saphena magna",
+    "ingles": "Right great saphenous vein",
+    "descripcion": "La vena más larga del cuerpo; asciende por delante del maléolo medial y la cara medial de la pierna y del muslo hasta la vena femoral.",
+    "funcion": "Drena la piel y el tejido subcutáneo de la mayor parte del miembro inferior.",
+    "ubicacion": "Tejido subcutáneo de la cara medial del miembro inferior.",
+    "datosClinicos": "Es la vena más afectada por las varices y la más utilizada como injerto en los bypass coronarios.",
+    "relaciones": [
+      "vena-femoral-d"
+    ]
+  },
+  {
+    "id": "vena-safena-mayor-i",
+    "nodoModelo": "vena-safena-mayor-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "miembro-inferior",
+    "nombre": "Vena safena mayor izquierda",
+    "latin": "Vena saphena magna",
+    "ingles": "Left great saphenous vein",
+    "descripcion": "La vena más larga del cuerpo; asciende por delante del maléolo medial y la cara medial de la pierna y del muslo hasta la vena femoral.",
+    "funcion": "Drena la piel y el tejido subcutáneo de la mayor parte del miembro inferior.",
+    "ubicacion": "Tejido subcutáneo de la cara medial del miembro inferior.",
+    "datosClinicos": "Es la vena más afectada por las varices y la más utilizada como injerto en los bypass coronarios.",
+    "relaciones": [
+      "vena-femoral-i"
+    ]
+  },
+  {
+    "id": "vena-safena-menor-d",
+    "nodoModelo": "vena-safena-menor-d",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "miembro-inferior",
+    "nombre": "Vena safena menor derecha",
+    "latin": "Vena saphena parva",
+    "ingles": "Right small saphenous vein",
+    "descripcion": "Vena superficial que pasa por detrás del maléolo lateral y asciende por la línea media de la pantorrilla.",
+    "funcion": "Drena el borde lateral del pie y la cara posterior de la pierna hacia la vena poplítea.",
+    "ubicacion": "Tejido subcutáneo de la pantorrilla.",
+    "datosClinicos": "Su insuficiencia produce varices en la cara posterior de la pierna.",
+    "relaciones": [
+      "vena-poplitea-d",
+      "gastrocnemio-d"
+    ]
+  },
+  {
+    "id": "vena-safena-menor-i",
+    "nodoModelo": "vena-safena-menor-i",
+    "tipo": "vaso",
+    "sistema": "cardiovascular",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "miembro-inferior",
+    "nombre": "Vena safena menor izquierda",
+    "latin": "Vena saphena parva",
+    "ingles": "Left small saphenous vein",
+    "descripcion": "Vena superficial que pasa por detrás del maléolo lateral y asciende por la línea media de la pantorrilla.",
+    "funcion": "Drena el borde lateral del pie y la cara posterior de la pierna hacia la vena poplítea.",
+    "ubicacion": "Tejido subcutáneo de la pantorrilla.",
+    "datosClinicos": "Su insuficiencia produce varices en la cara posterior de la pierna.",
+    "relaciones": [
+      "vena-poplitea-i",
+      "gastrocnemio-i"
+    ]
+  }
+]

@@ -1,5 +1,5 @@
-// Paso 1 del pipeline: descarga BodyParts3D 4.0 (árbol PART-OF) en assets-raw/bodyparts3d
-// y descomprime las mallas OBJ. Si un archivo ya existe, no se vuelve a descargar.
+// Paso 1 del pipeline: descarga BodyParts3D 4.0 (árboles PART-OF e IS-A, ~200 MB) en
+// assets-raw/bodyparts3d y descomprime las mallas OBJ. Si un archivo ya existe, no se vuelve a descargar.
 //
 // Uso: npm run modelos:descargar
 import fs from 'node:fs';
@@ -7,8 +7,8 @@ import path from 'node:path';
 import { Readable } from 'node:stream';
 import { pipeline } from 'node:stream/promises';
 import AdmZip from 'adm-zip';
-import { ARCHIVOS_BP3D, URL_BASE_BP3D, rutaLista } from './lib/bodyparts3d.mjs';
-import { DIR_BP3D, DIR_BP3D_OBJ } from './lib/rutas.mjs';
+import { ARBOLES, ARCHIVOS_BP3D, URL_BASE_BP3D, rutaLista } from './lib/bodyparts3d.mjs';
+import { DIR_BP3D } from './lib/rutas.mjs';
 
 fs.mkdirSync(DIR_BP3D, { recursive: true });
 
@@ -32,9 +32,11 @@ y guárdalo en ${DIR_BP3D}`);
   console.log(`✔ ${archivo} (${(fs.statSync(destino).size / 1e6).toFixed(1)} MB)`);
 }
 
-if (!fs.existsSync(DIR_BP3D_OBJ)) {
-  console.log('… descomprimiendo mallas OBJ');
-  new AdmZip(rutaLista('partof_BP3D_4.0_obj_99.zip')).extractAllTo(DIR_BP3D, true);
+for (const { zip, dir } of ARBOLES) {
+  if (!fs.existsSync(dir)) {
+    console.log(`… descomprimiendo ${zip}`);
+    new AdmZip(rutaLista(zip)).extractAllTo(DIR_BP3D, true);
+  }
+  const n = fs.readdirSync(dir).filter((f) => f.endsWith('.obj')).length;
+  console.log(`✔ ${n} archivos OBJ en ${path.relative(process.cwd(), dir)}`);
 }
-const n = fs.readdirSync(DIR_BP3D_OBJ).filter((f) => f.endsWith('.obj')).length;
-console.log(`✔ ${n} archivos OBJ en ${path.relative(process.cwd(), DIR_BP3D_OBJ)}`);

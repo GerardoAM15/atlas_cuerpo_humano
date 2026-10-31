@@ -7,7 +7,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { indexarElementos } from './lib/bodyparts3d.mjs';
+import { indexarElementos, leerCompuestos } from './lib/bodyparts3d.mjs';
 import { agruparSistema } from './lib/agrupar.mjs';
 import { convertirElementos } from './lib/convertir.mjs';
 import { crearIO, medir, optimizar } from './lib/optimizar.mjs';
@@ -30,7 +30,11 @@ const FUENTES = {
 };
 
 const DIR_CONFIG = path.join(RAIZ, 'scripts', 'config');
-const disponibles = fs.readdirSync(DIR_CONFIG).filter((f) => f.endsWith('.mjs')).map((f) => f.replace('.mjs', ''));
+// Los módulos auxiliares (desde-datos.mjs) no son sistemas.
+const disponibles = fs
+  .readdirSync(DIR_CONFIG)
+  .filter((f) => f.endsWith('.mjs') && f !== 'desde-datos.mjs')
+  .map((f) => f.replace('.mjs', ''));
 const pedidos = process.argv.slice(2);
 for (const s of pedidos) {
   if (!disponibles.includes(s)) throw new Error(`Sistema sin configuración: ${s}. Disponibles: ${disponibles.join(', ')}`);
@@ -39,6 +43,7 @@ const sistemas = pedidos.length ? pedidos : disponibles;
 
 console.log('Indexando OBJ de BodyParts3D…');
 const indice = indexarElementos();
+const compuestos = leerCompuestos();
 const io = await crearIO();
 fs.mkdirSync(DIR_MODELOS, { recursive: true });
 fs.mkdirSync(DIR_AGRUPADO, { recursive: true });
@@ -53,10 +58,10 @@ manifest.fuentes = FUENTES;
 for (const sistema of sistemas) {
   console.log(`\n== ${sistema}`);
   const { default: config } = await import(pathToFileURL(path.join(DIR_CONFIG, `${sistema}.mjs`)).href);
-  const { resueltas, pendientes } = resolver(config.estructuras, indice);
+  const { resueltas, pendientes } = resolver(config.estructuras, indice, compuestos);
   console.log(`  ${resueltas.length} estructuras con modelo, ${pendientes.length} pendientes`);
 
-  const elementos = resueltas.flatMap((e) => e.elementos.map((el) => el.elemento));
+  const elementos = resueltas.flatMap((e) => e.elementos);
   const rutasGlb = await convertirElementos(elementos);
 
   const doc = await agruparSistema(sistema, resueltas, rutasGlb);
@@ -80,9 +85,9 @@ for (const sistema of sistemas) {
         tipo: e.tipo,
         estado: 'disponible',
         fuente: 'bodyparts3d',
-        fma: [...new Set(e.elementos.map((el) => el.fma))],
+        fma: [...new Set(e.elementos.map((el) => el.fmaCompuesto ?? el.fma))],
         elementos: e.elementos.map((el) => el.elemento),
-        nombresFuente: [...new Set(e.elementos.map((el) => el.nombre))],
+        nombresFuente: [...new Set(e.elementos.map((el) => el.nombreCompuesto ?? el.nombre))],
         triangulos: sumarTriangulos(despues.porNodo, e.id),
         caja: cajaDe(antes.porNodo, e.id),
         ...(e.revisar ? { revisar: e.revisar } : {}),

@@ -8,6 +8,7 @@ export const RAIZ = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '
 export const DIR_CRUDOS = path.join(RAIZ, 'assets-raw');
 export const DIR_BP3D = path.join(DIR_CRUDOS, 'bodyparts3d');
 export const DIR_BP3D_OBJ = path.join(DIR_BP3D, 'partof_BP3D_4.0_obj_99');
+export const DIR_BP3D_OBJ_ISA = path.join(DIR_BP3D, 'isa_BP3D_4.0_obj_99');
 
 /** Intermedios: un .glb por elemento OBJ convertido con obj2gltf (cacheados). */
 export const DIR_INTERMEDIO = path.join(DIR_CRUDOS, 'intermedio', 'bodyparts3d');

@@ -85,12 +85,18 @@ export function desplazamientosExplosion(sistema: SistemaId, region: string, fac
   return res;
 }
 
+/** Clave de región única entre sistemas («cabeza-cuello» existe en varios): «sistema/región». */
+export const claveRegion = (sistema: SistemaId, region: string) => `${sistema}/${region}`;
+
 /**
- * Estructuras con pin numerado: las de la región activa con modelo. Si la selección
- * tiene lado, solo se muestran las de ese lado (y las impares) para no saturar la vista.
+ * Estructuras con pin numerado: las de la región activa («sistema/región») con modelo. Si la
+ * selección tiene lado, solo se muestran las de ese lado (y las impares) para no saturar la vista.
  */
-export function pinesDeRegion(region: string | null, seleccion: string | null): Estructura[] {
-  if (!region) return [];
+export function pinesDeRegion(clave: string | null, seleccion: string | null): Estructura[] {
+  if (!clave) return [];
+  const [sistema, region] = clave.split('/');
   const lado = seleccion ? POR_ID.get(seleccion)?.lado : undefined;
-  return [...POR_ID.values()].filter((e) => e.region === region && e.nodoModelo !== null && (!lado || !e.lado || e.lado === lado));
+  return [...POR_ID.values()].filter(
+    (e) => e.sistema === sistema && e.region === region && e.nodoModelo !== null && (!lado || !e.lado || e.lado === lado),
+  );
 }

@@ -39,8 +39,11 @@ export interface EstadoAtlas {
 
   alternarSistema: (id: SistemaId) => void;
   setOpacidad: (id: SistemaId, valor: number) => void;
-  /** Selecciona una estructura; con `enfocar` la cámara se acerca a ella. */
-  seleccionar: (id: string | null, opciones?: { enfocar?: boolean; region?: string }) => void;
+  /**
+   * Selecciona una estructura; con `enfocar` la cámara se acerca a ella, `region` («sistema/región»)
+   * pasa a ser la región activa y `sistema` se hace visible si estaba oculto.
+   */
+  seleccionar: (id: string | null, opciones?: { enfocar?: boolean; region?: string; sistema?: SistemaId }) => void;
   setHover: (id: string | null) => void;
   ocultarEstructura: (id: string) => void;
   mostrarEstructura: (id: string) => void;
@@ -95,6 +98,10 @@ export const useAtlasStore = create<EstadoAtlas>()(
           ocultas: id ? s.ocultas.filter((o) => o !== id) : s.ocultas,
           aislar: id ? s.aislar : false,
           regionActiva: opciones?.region ?? s.regionActiva,
+          sistemasVisibles:
+            opciones?.sistema && !s.sistemasVisibles[opciones.sistema]
+              ? { ...s.sistemasVisibles, [opciones.sistema]: true }
+              : s.sistemasVisibles,
           comandoCamara: id && opciones?.enfocar ? { tipo: 'enfocar', id, n: n() } : s.comandoCamara,
         })),
       setHover: (id) => set((s) => (s.hover === id ? s : { hover: id })),

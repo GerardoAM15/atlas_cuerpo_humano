@@ -26,6 +26,7 @@ export const TipoEstructura = z.enum([
   'ligamento',
   'organo',
   'vaso',
+  'valvula',
   'nervio',
   'glandula',
   'otro',
@@ -81,6 +82,10 @@ export const EstructuraMusculo = base.extend({
 export const EstructuraGenerica = base.extend({
   tipo: TipoEstructura.exclude(['hueso', 'musculo']),
   articulaciones: z.array(Articulacion).optional(),
+  /** Vasos: arteria o vena y tipo de sangre que transportan (las pulmonares invierten la regla). */
+  vaso: z
+    .object({ clase: z.enum(['arteria', 'vena']), sangre: z.enum(['oxigenada', 'desoxigenada', 'mixta']) })
+    .optional(),
 });
 
 export const Estructura = z.discriminatedUnion('tipo', [EstructuraHueso, EstructuraMusculo, EstructuraGenerica]);

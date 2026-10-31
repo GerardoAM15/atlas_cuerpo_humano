@@ -86,26 +86,30 @@ describe('manifest', () => {
   });
 });
 
-describe('esqueletico.glb', () => {
+describe.each(Object.keys(manifest.sistemas))('%s.glb', (sistema) => {
   let nodos: Set<string>;
+  const entradas = () => manifest.sistemas[sistema]!.estructuras;
 
   beforeAll(async () => {
     await MeshoptDecoder.ready;
     const io = new NodeIO().registerExtensions(ALL_EXTENSIONS).registerDependencies({ 'meshopt.decoder': MeshoptDecoder });
-    const doc = await io.read(path.join(DIR_PUBLIC, manifest.sistemas.esqueletico!.archivo));
+    const doc = await io.read(path.join(DIR_PUBLIC, manifest.sistemas[sistema]!.archivo));
     nodos = new Set(doc.getRoot().listNodes().map((n) => n.getName()));
   });
 
   it('cada estructura disponible del manifest existe como nodo en el modelo', () => {
-    const faltan = manifest.sistemas
-      .esqueletico!.estructuras.filter((e) => e.estado === 'disponible')
-      .filter((e) => !nodos.has(e.nodo!));
+    const faltan = entradas().filter((e) => e.estado === 'disponible' && !nodos.has(e.nodo!));
     expect(faltan.map((e) => e.id)).toEqual([]);
   });
 
   it('no contiene nodos de estructuras pendientes', () => {
-    for (const e of manifest.sistemas.esqueletico!.estructuras.filter((x) => x.estado === 'pendiente')) {
-      expect(nodos.has(e.id)).toBe(false);
-    }
+    for (const e of entradas().filter((x) => x.estado === 'pendiente')) expect(nodos.has(e.id)).toBe(false);
+  });
+});
+
+describe('ids entre sistemas', () => {
+  it('no se repiten (los nombres de nodo se resuelven de forma global en la app)', () => {
+    const ids = Object.values(manifest.sistemas).flatMap((s) => s.estructuras.map((e) => e.id));
+    expect(ids.length - new Set(ids).size).toBe(0);
   });
 });

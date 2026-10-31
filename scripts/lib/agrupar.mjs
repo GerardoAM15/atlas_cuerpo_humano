@@ -10,19 +10,29 @@
 // Los nombres de nodo usan solo [a-z0-9-_] porque GLTFLoader elimina caracteres como «.» y «:».
 // Unidades de salida: metros, Y arriba, +Z anterior, -X lado derecho del paciente.
 import { Document, NodeIO } from '@gltf-transform/core';
+import { claveElemento } from './convertir.mjs';
 
 const MM_A_M = 0.001;
 
 /** Materiales compartidos por tipo de estructura (la app los recolorea en tiempo de ejecución). */
+// Clave = `material` de la configuración o, si falta, el tipo de estructura.
 const MATERIALES = {
   hueso: { color: [0.89, 0.85, 0.78, 1], rugosidad: 0.75 },
   cartilago: { color: [0.62, 0.76, 0.82, 1], rugosidad: 0.55 },
+  musculo: { color: [0.7, 0.24, 0.22, 1], rugosidad: 0.6 },
+  tendon: { color: [0.9, 0.88, 0.8, 1], rugosidad: 0.5 },
+  miocardio: { color: [0.62, 0.17, 0.17, 1], rugosidad: 0.55 },
+  valvula: { color: [0.96, 0.86, 0.62, 1], rugosidad: 0.5 },
+  arteria: { color: [0.82, 0.13, 0.13, 1], rugosidad: 0.45 },
+  vena: { color: [0.2, 0.33, 0.78, 1], rugosidad: 0.45 },
+  'via-aerea': { color: [0.9, 0.76, 0.72, 1], rugosidad: 0.55 },
+  organo: { color: [0.78, 0.5, 0.45, 1], rugosidad: 0.6 },
 };
 
 /**
  * @param {string} sistema
  * @param {import('./resolver.mjs').EstructuraResuelta[]} estructuras
- * @param {Map<string, string>} rutasGlb  elemento → .glb intermedio
+ * @param {Map<string, string>} rutasGlb  clave de elemento → .glb intermedio
  */
 export async function agruparSistema(sistema, estructuras, rutasGlb) {
   const io = new NodeIO();
@@ -50,11 +60,11 @@ export async function agruparSistema(sistema, estructuras, rutasGlb) {
     const variasMallas = est.elementos.length > 1;
 
     for (const el of est.elementos) {
-      const origen = await io.read(rutasGlb.get(el.elemento));
+      const origen = await io.read(rutasGlb.get(claveElemento(el)));
       const prims = origen.getRoot().listMeshes().flatMap((m) => m.listPrimitives());
       const nombre = variasMallas ? `${est.id}__${el.elemento}` : est.id;
       const malla = doc.createMesh(nombre);
-      for (const p of prims) malla.addPrimitive(copiarPrimitiva(doc, p, material(est.tipo)));
+      for (const p of prims) malla.addPrimitive(copiarPrimitiva(doc, p, material(est.material ?? est.tipo)));
 
       if (variasMallas) {
         nodo.addChild(doc.createNode(nombre).setMesh(malla).setExtras({ elemento: el.elemento, fma: el.fma }));

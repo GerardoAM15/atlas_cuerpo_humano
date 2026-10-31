@@ -66,6 +66,27 @@ describe('datos de estructuras', () => {
     }
   });
 
+  it('el sistema muscular tiene al menos 150 músculos con origen, inserción, inervación, irrigación y acción', () => {
+    // El esquema Zod ya obliga a que los cinco campos existan y no estén vacíos.
+    expect(estructurasDe('muscular').filter((e) => e.tipo === 'musculo').length).toBeGreaterThanOrEqual(150);
+  });
+
+  it('cada vaso indica si es arteria o vena y qué sangre lleva', () => {
+    const vasos = estructurasDe('cardiovascular').filter((e) => e.tipo === 'vaso');
+    expect(vasos.length).toBeGreaterThan(50);
+    for (const v of vasos) expect('vaso' in v && v.vaso, v.id).toBeTruthy();
+    // Las arterias pulmonares llevan sangre desoxigenada y las venas pulmonares, oxigenada.
+    const ap = vasos.find((v) => v.id === 'arteria-pulmonar-d');
+    const vp = vasos.find((v) => v.id === 'vena-pulmonar-superior-d');
+    expect(ap && 'vaso' in ap && ap.vaso?.sangre).toBe('desoxigenada');
+    expect(vp && 'vaso' in vp && vp.vaso?.sangre).toBe('oxigenada');
+  });
+
+  it('los pulmones figuran como pendientes de modelo (BodyParts3D no los incluye)', () => {
+    expect(POR_ID.get('pulmon-d')?.nodoModelo).toBeNull();
+    expect(POR_ID.get('pulmon-i')?.nodoModelo).toBeNull();
+  });
+
   it('las estructuras pares están completas (derecha e izquierda)', () => {
     for (const e of ESTRUCTURAS.filter((x) => x.lado)) {
       const pareja = e.id.replace(/-(d|i)$/, (_, s: string) => (s === 'd' ? '-i' : '-d'));

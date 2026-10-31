@@ -23,7 +23,8 @@ for (const sistema of sistemas) {
   const modelo = new Map((manifest.sistemas[sistema]?.estructuras ?? []).map((e) => [e.id, e]));
 
   const salida = fuente.map((e) => {
-    const { relacionesExtra = [], ...resto } = e;
+    // fuente/material/pendienteModelo los usa solo el pipeline 3D (scripts/config).
+    const { relacionesExtra = [], fuente: _f, material: _m, pendienteModelo: _p, ...resto } = e;
     const enModelo = modelo.get(e.id);
     const relaciones = [...new Set([...(e.articulaciones ?? []).flatMap((a) => a.con), ...relacionesExtra])].filter((r) => r !== e.id);
     const ordenado = {

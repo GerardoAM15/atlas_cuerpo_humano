@@ -5,7 +5,7 @@ import { createPortal, useThree, type ThreeEvent } from '@react-three/fiber';
 import { POR_ID, POR_NODO, urlModelo } from '@/data/catalogo';
 import type { SistemaId } from '@/data/sistemas';
 import { useAtlasStore } from '@/store/useAtlasStore';
-import { desplazamientosExplosion } from './escena';
+import { claveRegion, desplazamientosExplosion } from './escena';
 import { COLOR_HOVER, COLOR_SELECCION, PLANO_CORTE } from './recursos';
 
 interface EntradaRegistro {
@@ -24,7 +24,7 @@ interface Materiales {
  * Recorre la escena del .glb y asocia cada nodo con nombre de estructura a sus mallas.
  * Se ejecuta una vez por escena (useGLTF la cachea por URL).
  */
-function construirRegistro(escena: THREE.Object3D) {
+function construirRegistro(escena: THREE.Object3D, sistema: SistemaId) {
   const registro = new Map<string, EntradaRegistro>();
   const materiales = new Map<THREE.Material, Materiales>();
 
@@ -36,6 +36,7 @@ function construirRegistro(escena: THREE.Object3D) {
       if ((m as THREE.Mesh).isMesh) {
         const malla = m as THREE.Mesh;
         malla.userData.estructura = id;
+        malla.userData.sistema = sistema;
         mallas.push(malla);
       }
     });
@@ -60,6 +61,9 @@ function construirRegistro(escena: THREE.Object3D) {
   return { registro, materiales: [...materiales.values()] };
 }
 
+/** Por debajo de esta opacidad un sistema no captura clics ni hover: se selecciona lo que hay detrás. */
+export const OPACIDAD_MINIMA_SELECCION = 0.35;
+
 /** Grosor del contorno de selección, en metros. */
 const GROSOR_CONTORNO = 0.0025;
 
@@ -78,7 +82,7 @@ function ancestrosVisibles(obj: THREE.Object3D | null): boolean {
 export default function ModeloSistema({ sistema }: { sistema: SistemaId }) {
   const { scene } = useGLTF(urlModelo(sistema), false, true);
   const invalidate = useThree((s) => s.invalidate);
-  const { registro, materiales } = useMemo(() => construirRegistro(scene), [scene]);
+  const { registro, materiales } = useMemo(() => construirRegistro(scene, sistema), [scene, sistema]);
 
   const visible = useAtlasStore((s) => s.sistemasVisibles[sistema]);
   const opacidad = useAtlasStore((s) => s.opacidad[sistema]);
@@ -132,12 +136,17 @@ export default function ModeloSistema({ sistema }: { sistema: SistemaId }) {
     invalidate();
   }, [registro, sistema, explosion.region, explosion.factor, invalidate]);
 
-  /** Primera intersección válida: visible, no recortada y del sistema (con opacidad suficiente). */
+  /**
+   * Primera intersección válida entre todos los sistemas: visible, no recortada y de un sistema
+   * con opacidad suficiente (así se puede seleccionar un hueso a través de músculos translúcidos).
+   */
   const primerImpacto = (e: ThreeEvent<PointerEvent | MouseEvent>): string | null => {
-    if ((opacidad ?? 1) < 0.05) return null;
+    const opacidades = useAtlasStore.getState().opacidad;
     for (const i of e.intersections) {
       const id = i.object.userData.estructura as string | undefined;
-      if (id && ancestrosVisibles(i.object) && visibleTrasCorte(i.point, corteActivo)) return id;
+      const sis = i.object.userData.sistema as SistemaId | undefined;
+      if (!id || !sis || (opacidades[sis] ?? 1) < OPACIDAD_MINIMA_SELECCION) continue;
+      if (ancestrosVisibles(i.object) && visibleTrasCorte(i.point, corteActivo)) return id;
     }
     return null;
   };
@@ -157,7 +166,8 @@ export default function ModeloSistema({ sistema }: { sistema: SistemaId }) {
         if (!visible || e.delta > 5) return; // ignora el clic al terminar un arrastre
         e.stopPropagation();
         const id = primerImpacto(e);
-        if (id) seleccionar(id, { enfocar: true, region: POR_ID.get(id)?.region });
+        const e2 = id ? POR_ID.get(id) : undefined;
+        if (id && e2) seleccionar(id, { enfocar: true, region: claveRegion(e2.sistema, e2.region) });
       }}
     >
       <primitive object={scene} />

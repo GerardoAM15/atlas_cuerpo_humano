@@ -3,6 +3,7 @@ import { MANIFEST, POR_ID } from '@/data/catalogo';
 import { nombreRegion } from '@/data/regiones';
 import { SISTEMAS_POR_ID } from '@/data/sistemas';
 import { useAtlasStore } from '@/store/useAtlasStore';
+import { claveRegion } from '../escena';
 
 const CLASIFICACION: Record<string, string> = {
   largo: 'Hueso largo',
@@ -12,7 +13,42 @@ const CLASIFICACION: Record<string, string> = {
   sesamoideo: 'Hueso sesamoideo',
   neumatico: 'Neumático',
 };
-const TIPO: Record<string, string> = { hueso: 'Hueso', cartilago: 'Cartílago', musculo: 'Músculo' };
+const TIPO: Record<string, string> = {
+  hueso: 'Hueso',
+  cartilago: 'Cartílago',
+  articulacion: 'Articulación',
+  musculo: 'Músculo',
+  tendon: 'Tendón',
+  ligamento: 'Ligamento',
+  organo: 'Órgano',
+  vaso: 'Vaso sanguíneo',
+  valvula: 'Válvula',
+  nervio: 'Nervio',
+  glandula: 'Glándula',
+  otro: 'Estructura',
+};
+const SANGRE: Record<string, string> = { oxigenada: 'sangre oxigenada', desoxigenada: 'sangre desoxigenada', mixta: 'sangre mixta' };
+
+/** Datos de un músculo como lista de definición compacta. */
+function DatosMusculo({ e }: { e: { origen: string; insercion: string; inervacion: string; irrigacion: string; accion: string } }) {
+  const filas: [string, string][] = [
+    ['Origen', e.origen],
+    ['Inserción', e.insercion],
+    ['Inervación', e.inervacion],
+    ['Irrigación', e.irrigacion],
+    ['Acción', e.accion],
+  ];
+  return (
+    <dl className="mt-4 space-y-2 rounded-lg border border-slate-800 bg-slate-900/50 p-3 text-sm">
+      {filas.map(([k, v]) => (
+        <div key={k}>
+          <dt className="text-xs font-semibold uppercase tracking-wide text-slate-500">{k}</dt>
+          <dd className="text-slate-300">{v}</dd>
+        </div>
+      ))}
+    </dl>
+  );
+}
 
 function Seccion({ titulo, children }: { titulo: string; children: ReactNode }) {
   return (
@@ -30,7 +66,7 @@ function Enlace({ id }: { id: string }) {
   return (
     <button
       type="button"
-      onClick={() => seleccionar(id, { enfocar: e.nodoModelo !== null, region: e.region })}
+      onClick={() => seleccionar(id, { enfocar: e.nodoModelo !== null, region: claveRegion(e.sistema, e.region), sistema: e.sistema })}
       className="rounded bg-slate-800 px-1.5 py-0.5 text-xs text-sky-300 hover:bg-slate-700"
     >
       {e.nombre}
@@ -93,6 +129,13 @@ export default function Ficha({ onCerrar }: { onCerrar?: () => void }) {
               {CLASIFICACION[c] ?? c}
             </span>
           ))}
+        {'vaso' in e && e.vaso && (
+          <span
+            className={`rounded-full px-2 py-0.5 text-xs ${e.vaso.sangre === 'oxigenada' ? 'bg-red-500/20 text-red-200' : e.vaso.sangre === 'desoxigenada' ? 'bg-blue-500/20 text-blue-200' : 'bg-violet-500/20 text-violet-200'}`}
+          >
+            {e.vaso.clase === 'arteria' ? 'Arteria' : 'Vena'} · {SANGRE[e.vaso.sangre]}
+          </span>
+        )}
       </div>
 
       {pendiente ? (
@@ -125,6 +168,7 @@ export default function Ficha({ onCerrar }: { onCerrar?: () => void }) {
       )}
 
       <Seccion titulo="Descripción">{e.descripcion}</Seccion>
+      {e.tipo === 'musculo' && <DatosMusculo e={e} />}
       <Seccion titulo="Función">{e.funcion}</Seccion>
       <Seccion titulo="Ubicación">{e.ubicacion}</Seccion>
 

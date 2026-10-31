@@ -67,3 +67,31 @@ export const ORDINAL_M = ['primer', 'segundo', 'tercer', 'cuarto', 'quinto', 'se
 export const ORDINAL_EN = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth', 'eleventh', 'twelfth'];
 export const ROMANO = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII'];
 export const cap = (s) => s[0].toUpperCase() + s.slice(1);
+
+/**
+ * Músculo par. `nombre` e `ingles` van sin lado (se añade «derecho/izquierdo» y «Right/Left»);
+ * `fuente` usa {side} para los nombres de BodyParts3D.
+ */
+export function musculo(id, datos) {
+  return par(id, 'm', {
+    tipo: 'musculo',
+    ...datos,
+    nombre: `${datos.nombre} {lado}`,
+    ingles: `{Side} ${datos.ingles}`,
+  });
+}
+
+/** Estructura impar con modelo (o pendiente si no hay `fuente`). */
+export const unica = (id, datos) => ({ id, ...datos });
+
+/**
+ * Datos comunes de un vaso. El material del modelo sigue la sangre que transporta
+ * (convención de los atlas): oxigenada → rojo, desoxigenada → azul.
+ */
+export function datosVaso(clase, sangre = clase === 'arteria' ? 'oxigenada' : 'desoxigenada') {
+  return {
+    tipo: 'vaso',
+    vaso: { clase, sangre },
+    material: sangre === 'oxigenada' ? 'arteria' : 'vena',
+  };
+}
