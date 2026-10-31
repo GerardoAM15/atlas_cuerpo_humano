@@ -1,0 +1,6930 @@
+{
+  "version": 1,
+  "sistemas": {
+    "esqueletico": {
+      "archivo": "models/esqueletico.glb",
+      "bytes": 3204760,
+      "triangulos": 357810,
+      "estructuras": [
+        {
+          "id": "frontal",
+          "nodo": "frontal",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA52734"
+          ],
+          "elementos": [
+            "FJ3200"
+          ],
+          "nombresFuente": [
+            "Frontal bone"
+          ],
+          "triangulos": 7254,
+          "caja": {
+            "min": [
+              -0.0633,
+              1.5209,
+              0.1066
+            ],
+            "max": [
+              0.062,
+              1.6299,
+              0.1774
+            ]
+          }
+        },
+        {
+          "id": "parietal-d",
+          "nodo": "parietal-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA52788"
+          ],
+          "elementos": [
+            "FJ3380"
+          ],
+          "nombresFuente": [
+            "Right parietal bone"
+          ],
+          "triangulos": 6500,
+          "caja": {
+            "min": [
+              -0.0762,
+              1.5179,
+              -0.0148
+            ],
+            "max": [
+              0.005,
+              1.6363,
+              0.1279
+            ]
+          }
+        },
+        {
+          "id": "parietal-i",
+          "nodo": "parietal-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA52789"
+          ],
+          "elementos": [
+            "FJ3274"
+          ],
+          "nombresFuente": [
+            "Left parietal bone"
+          ],
+          "triangulos": 6604,
+          "caja": {
+            "min": [
+              -0.0079,
+              1.5178,
+              -0.015
+            ],
+            "max": [
+              0.0749,
+              1.6363,
+              0.1317
+            ]
+          }
+        },
+        {
+          "id": "temporal-d",
+          "nodo": "temporal-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA52738"
+          ],
+          "elementos": [
+            "FJ3386"
+          ],
+          "nombresFuente": [
+            "Right temporal bone"
+          ],
+          "triangulos": 2898,
+          "caja": {
+            "min": [
+              -0.074,
+              1.4756,
+              0.035
+            ],
+            "max": [
+              -0.0127,
+              1.5515,
+              0.1337
+            ]
+          }
+        },
+        {
+          "id": "temporal-i",
+          "nodo": "temporal-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA52739"
+          ],
+          "elementos": [
+            "FJ3281"
+          ],
+          "nombresFuente": [
+            "Left temporal bone"
+          ],
+          "triangulos": 2842,
+          "caja": {
+            "min": [
+              0.0116,
+              1.4755,
+              0.0351
+            ],
+            "max": [
+              0.0726,
+              1.5515,
+              0.1336
+            ]
+          }
+        },
+        {
+          "id": "occipital",
+          "nodo": "occipital",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA52735"
+          ],
+          "elementos": [
+            "FJ3309"
+          ],
+          "nombresFuente": [
+            "Occipital bone"
+          ],
+          "triangulos": 6224,
+          "caja": {
+            "min": [
+              -0.062,
+              1.4778,
+              -0.018
+            ],
+            "max": [
+              0.0607,
+              1.5845,
+              0.101
+            ]
+          }
+        },
+        {
+          "id": "esfenoides",
+          "nodo": "esfenoides",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA52736"
+          ],
+          "elementos": [
+            "FJ3394"
+          ],
+          "nombresFuente": [
+            "Sphenoid bone"
+          ],
+          "triangulos": 4234,
+          "caja": {
+            "min": [
+              -0.0563,
+              1.4789,
+              0.0904
+            ],
+            "max": [
+              0.055,
+              1.5485,
+              0.145
+            ]
+          }
+        },
+        {
+          "id": "etmoides",
+          "nodo": "etmoides",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA52740"
+          ],
+          "elementos": [
+            "FJ3199"
+          ],
+          "nombresFuente": [
+            "Ethmoid"
+          ],
+          "triangulos": 11138,
+          "caja": {
+            "min": [
+              -0.0215,
+              1.4973,
+              0.1198
+            ],
+            "max": [
+              0.0202,
+              1.5323,
+              0.1672
+            ]
+          }
+        },
+        {
+          "id": "nasal-d",
+          "nodo": "nasal-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA53647"
+          ],
+          "elementos": [
+            "FJ3378"
+          ],
+          "nombresFuente": [
+            "Right nasal bone"
+          ],
+          "triangulos": 392,
+          "caja": {
+            "min": [
+              -0.0091,
+              1.5012,
+              0.1696
+            ],
+            "max": [
+              -0.0007,
+              1.5332,
+              0.1908
+            ]
+          }
+        },
+        {
+          "id": "nasal-i",
+          "nodo": "nasal-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA53648"
+          ],
+          "elementos": [
+            "FJ3272"
+          ],
+          "nombresFuente": [
+            "Left nasal bone"
+          ],
+          "triangulos": 388,
+          "caja": {
+            "min": [
+              -0.0025,
+              1.5019,
+              0.1693
+            ],
+            "max": [
+              0.0072,
+              1.5335,
+              0.1895
+            ]
+          }
+        },
+        {
+          "id": "maxilar-d",
+          "nodo": "maxilar-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA53649"
+          ],
+          "elementos": [
+            "FJ3375"
+          ],
+          "nombresFuente": [
+            "Right maxilla"
+          ],
+          "triangulos": 3664,
+          "caja": {
+            "min": [
+              -0.0476,
+              1.464,
+              0.1294
+            ],
+            "max": [
+              -0.0003,
+              1.5333,
+              0.184
+            ]
+          }
+        },
+        {
+          "id": "maxilar-i",
+          "nodo": "maxilar-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA53650"
+          ],
+          "elementos": [
+            "FJ3269"
+          ],
+          "nombresFuente": [
+            "Left maxilla"
+          ],
+          "triangulos": 3620,
+          "caja": {
+            "min": [
+              -0.0031,
+              1.464,
+              0.1268
+            ],
+            "max": [
+              0.0458,
+              1.5333,
+              0.1829
+            ]
+          }
+        },
+        {
+          "id": "lagrimal-d",
+          "nodo": "lagrimal-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA53645"
+          ],
+          "elementos": [
+            "FJ3371"
+          ],
+          "nombresFuente": [
+            "Right lacrimal bone"
+          ],
+          "triangulos": 652,
+          "caja": {
+            "min": [
+              -0.018,
+              1.5019,
+              0.1509
+            ],
+            "max": [
+              -0.0075,
+              1.5273,
+              0.1655
+            ]
+          }
+        },
+        {
+          "id": "lagrimal-i",
+          "nodo": "lagrimal-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA53646"
+          ],
+          "elementos": [
+            "FJ3265"
+          ],
+          "nombresFuente": [
+            "Left lacrimal bone"
+          ],
+          "triangulos": 604,
+          "caja": {
+            "min": [
+              0.0073,
+              1.4979,
+              0.1508
+            ],
+            "max": [
+              0.0179,
+              1.5269,
+              0.1647
+            ]
+          }
+        },
+        {
+          "id": "cigomatico-d",
+          "nodo": "cigomatico-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA52892"
+          ],
+          "elementos": [
+            "FJ3392"
+          ],
+          "nombresFuente": [
+            "Right zygomatic bone"
+          ],
+          "triangulos": 1150,
+          "caja": {
+            "min": [
+              -0.0646,
+              1.4806,
+              0.1218
+            ],
+            "max": [
+              -0.0332,
+              1.5366,
+              0.1615
+            ]
+          }
+        },
+        {
+          "id": "cigomatico-i",
+          "nodo": "cigomatico-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA52893"
+          ],
+          "elementos": [
+            "FJ3287"
+          ],
+          "nombresFuente": [
+            "Left zygomatic bone"
+          ],
+          "triangulos": 1048,
+          "caja": {
+            "min": [
+              0.0319,
+              1.4806,
+              0.1217
+            ],
+            "max": [
+              0.0632,
+              1.5367,
+              0.1614
+            ]
+          }
+        },
+        {
+          "id": "palatino-d",
+          "nodo": "palatino-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA53655"
+          ],
+          "elementos": [
+            "FJ3379"
+          ],
+          "nombresFuente": [
+            "Right palatine bone"
+          ],
+          "triangulos": 1488,
+          "caja": {
+            "min": [
+              -0.0288,
+              1.4704,
+              0.1033
+            ],
+            "max": [
+              0.0001,
+              1.5133,
+              0.1499
+            ]
+          }
+        },
+        {
+          "id": "palatino-i",
+          "nodo": "palatino-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA53656"
+          ],
+          "elementos": [
+            "FJ3273"
+          ],
+          "nombresFuente": [
+            "Left palatine bone"
+          ],
+          "triangulos": 1604,
+          "caja": {
+            "min": [
+              -0.0015,
+              1.4702,
+              0.1033
+            ],
+            "max": [
+              0.0275,
+              1.5134,
+              0.15
+            ]
+          }
+        },
+        {
+          "id": "cornete-inferior-d",
+          "nodo": "cornete-inferior-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA54737"
+          ],
+          "elementos": [
+            "FJ3369"
+          ],
+          "nombresFuente": [
+            "Right inferior nasal concha"
+          ],
+          "triangulos": 636,
+          "caja": {
+            "min": [
+              -0.0165,
+              1.4785,
+              0.13
+            ],
+            "max": [
+              -0.0067,
+              1.4985,
+              0.1663
+            ]
+          }
+        },
+        {
+          "id": "cornete-inferior-i",
+          "nodo": "cornete-inferior-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA54738"
+          ],
+          "elementos": [
+            "FJ3263"
+          ],
+          "nombresFuente": [
+            "Left inferior nasal concha"
+          ],
+          "triangulos": 662,
+          "caja": {
+            "min": [
+              0.0046,
+              1.4827,
+              0.134
+            ],
+            "max": [
+              0.0159,
+              1.4981,
+              0.1695
+            ]
+          }
+        },
+        {
+          "id": "vomer",
+          "nodo": "vomer",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA9710"
+          ],
+          "elementos": [
+            "FJ3395"
+          ],
+          "nombresFuente": [
+            "Vomer"
+          ],
+          "triangulos": 3608,
+          "caja": {
+            "min": [
+              -0.0061,
+              1.4746,
+              0.1107
+            ],
+            "max": [
+              0.0048,
+              1.5181,
+              0.1658
+            ]
+          }
+        },
+        {
+          "id": "mandibula",
+          "nodo": "mandibula",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA52748"
+          ],
+          "elementos": [
+            "FJ3289"
+          ],
+          "nombresFuente": [
+            "Mandible"
+          ],
+          "triangulos": 2788,
+          "caja": {
+            "min": [
+              -0.0538,
+              1.4216,
+              0.0899
+            ],
+            "max": [
+              0.0526,
+              1.5061,
+              0.1738
+            ]
+          }
+        },
+        {
+          "id": "hioides",
+          "nodo": "hioides",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA52749"
+          ],
+          "elementos": [
+            "FJ2772"
+          ],
+          "nombresFuente": [
+            "Hyoid bone"
+          ],
+          "triangulos": 1034,
+          "caja": {
+            "min": [
+              -0.0195,
+              1.4224,
+              0.0944
+            ],
+            "max": [
+              0.0183,
+              1.4409,
+              0.129
+            ]
+          }
+        },
+        {
+          "id": "vertebra-c1",
+          "nodo": "vertebra-c1",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA12519"
+          ],
+          "elementos": [
+            "FJ3176"
+          ],
+          "nombresFuente": [
+            "Atlas"
+          ],
+          "triangulos": 1514,
+          "caja": {
+            "min": [
+              -0.0414,
+              1.4622,
+              0.0406
+            ],
+            "max": [
+              0.0402,
+              1.4814,
+              0.0876
+            ]
+          }
+        },
+        {
+          "id": "vertebra-c2",
+          "nodo": "vertebra-c2",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA12520"
+          ],
+          "elementos": [
+            "FJ3177"
+          ],
+          "nombresFuente": [
+            "Axis"
+          ],
+          "triangulos": 2038,
+          "caja": {
+            "min": [
+              -0.026,
+              1.4332,
+              0.0367
+            ],
+            "max": [
+              0.0246,
+              1.4783,
+              0.0865
+            ]
+          }
+        },
+        {
+          "id": "vertebra-c3",
+          "nodo": "vertebra-c3",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA12521"
+          ],
+          "elementos": [
+            "FJ3161"
+          ],
+          "nombresFuente": [
+            "Third cervical vertebra"
+          ],
+          "triangulos": 1762,
+          "caja": {
+            "min": [
+              -0.0298,
+              1.417,
+              0.0381
+            ],
+            "max": [
+              0.0285,
+              1.4457,
+              0.0878
+            ]
+          }
+        },
+        {
+          "id": "vertebra-c4",
+          "nodo": "vertebra-c4",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA12522"
+          ],
+          "elementos": [
+            "FJ3164"
+          ],
+          "nombresFuente": [
+            "Fourth cervical vertebra"
+          ],
+          "triangulos": 2056,
+          "caja": {
+            "min": [
+              -0.0278,
+              1.4046,
+              0.0407
+            ],
+            "max": [
+              0.0264,
+              1.4321,
+              0.0891
+            ]
+          }
+        },
+        {
+          "id": "vertebra-c5",
+          "nodo": "vertebra-c5",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA12523"
+          ],
+          "elementos": [
+            "FJ3167"
+          ],
+          "nombresFuente": [
+            "Fifth cervical vertebra"
+          ],
+          "triangulos": 1928,
+          "caja": {
+            "min": [
+              -0.0297,
+              1.3938,
+              0.0361
+            ],
+            "max": [
+              0.0283,
+              1.418,
+              0.0908
+            ]
+          }
+        },
+        {
+          "id": "vertebra-c6",
+          "nodo": "vertebra-c6",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA12524"
+          ],
+          "elementos": [
+            "FJ3170"
+          ],
+          "nombresFuente": [
+            "Sixth cervical vertebra"
+          ],
+          "triangulos": 1922,
+          "caja": {
+            "min": [
+              -0.0313,
+              1.3816,
+              0.0292
+            ],
+            "max": [
+              0.0299,
+              1.4047,
+              0.0917
+            ]
+          }
+        },
+        {
+          "id": "vertebra-c7",
+          "nodo": "vertebra-c7",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA12525"
+          ],
+          "elementos": [
+            "FJ3172"
+          ],
+          "nombresFuente": [
+            "Seventh cervical vertebra"
+          ],
+          "triangulos": 1518,
+          "caja": {
+            "min": [
+              -0.0332,
+              1.3647,
+              0.0213
+            ],
+            "max": [
+              0.0319,
+              1.3918,
+              0.09
+            ]
+          }
+        },
+        {
+          "id": "vertebra-t1",
+          "nodo": "vertebra-t1",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA9165"
+          ],
+          "elementos": [
+            "FJ3158"
+          ],
+          "nombresFuente": [
+            "First thoracic vertebra"
+          ],
+          "triangulos": 1394,
+          "caja": {
+            "min": [
+              -0.0374,
+              1.3472,
+              0.0171
+            ],
+            "max": [
+              0.0359,
+              1.3769,
+              0.0869
+            ]
+          }
+        },
+        {
+          "id": "vertebra-t2",
+          "nodo": "vertebra-t2",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA9187"
+          ],
+          "elementos": [
+            "FJ3160"
+          ],
+          "nombresFuente": [
+            "Second thoracic vertebra"
+          ],
+          "triangulos": 1566,
+          "caja": {
+            "min": [
+              -0.0359,
+              1.3266,
+              0.0121
+            ],
+            "max": [
+              0.0346,
+              1.3604,
+              0.0827
+            ]
+          }
+        },
+        {
+          "id": "vertebra-t3",
+          "nodo": "vertebra-t3",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA9209"
+          ],
+          "elementos": [
+            "FJ3163"
+          ],
+          "nombresFuente": [
+            "Third thoracic vertebra"
+          ],
+          "triangulos": 1674,
+          "caja": {
+            "min": [
+              -0.033,
+              1.3022,
+              0.0014
+            ],
+            "max": [
+              0.0318,
+              1.3418,
+              0.0767
+            ]
+          }
+        },
+        {
+          "id": "vertebra-t4",
+          "nodo": "vertebra-t4",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA9248"
+          ],
+          "elementos": [
+            "FJ3166"
+          ],
+          "nombresFuente": [
+            "Fourth thoracic vertebra"
+          ],
+          "triangulos": 1676,
+          "caja": {
+            "min": [
+              -0.0355,
+              1.2777,
+              0.0002
+            ],
+            "max": [
+              0.0343,
+              1.3214,
+              0.0696
+            ]
+          }
+        },
+        {
+          "id": "vertebra-t5",
+          "nodo": "vertebra-t5",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA9922"
+          ],
+          "elementos": [
+            "FJ3169"
+          ],
+          "nombresFuente": [
+            "Fifth thoracic vertebra"
+          ],
+          "triangulos": 1826,
+          "caja": {
+            "min": [
+              -0.0362,
+              1.2398,
+              0
+            ],
+            "max": [
+              0.0349,
+              1.2973,
+              0.066
+            ]
+          }
+        },
+        {
+          "id": "vertebra-t6",
+          "nodo": "vertebra-t6",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA9945"
+          ],
+          "elementos": [
+            "FJ3171"
+          ],
+          "nombresFuente": [
+            "Sixth thoracic vertebra"
+          ],
+          "triangulos": 1826,
+          "caja": {
+            "min": [
+              -0.0364,
+              1.2094,
+              0.0012
+            ],
+            "max": [
+              0.035,
+              1.2691,
+              0.0652
+            ]
+          }
+        },
+        {
+          "id": "vertebra-t7",
+          "nodo": "vertebra-t7",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA9968"
+          ],
+          "elementos": [
+            "FJ3173"
+          ],
+          "nombresFuente": [
+            "Seventh thoracic vertebra"
+          ],
+          "triangulos": 2096,
+          "caja": {
+            "min": [
+              -0.0372,
+              1.1793,
+              0.0007
+            ],
+            "max": [
+              0.0363,
+              1.2418,
+              0.067
+            ]
+          }
+        },
+        {
+          "id": "vertebra-t8",
+          "nodo": "vertebra-t8",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA9991"
+          ],
+          "elementos": [
+            "FJ3174"
+          ],
+          "nombresFuente": [
+            "Eighth thoracic vertebra"
+          ],
+          "triangulos": 2048,
+          "caja": {
+            "min": [
+              -0.0337,
+              1.1537,
+              0.0009
+            ],
+            "max": [
+              0.0322,
+              1.2131,
+              0.072
+            ]
+          }
+        },
+        {
+          "id": "vertebra-t9",
+          "nodo": "vertebra-t9",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA10014"
+          ],
+          "elementos": [
+            "FJ3175"
+          ],
+          "nombresFuente": [
+            "Ninth thoracic vertebra"
+          ],
+          "triangulos": 2042,
+          "caja": {
+            "min": [
+              -0.0344,
+              1.1266,
+              0.0062
+            ],
+            "max": [
+              0.033,
+              1.1848,
+              0.0777
+            ]
+          }
+        },
+        {
+          "id": "vertebra-t10",
+          "nodo": "vertebra-t10",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA10037"
+          ],
+          "elementos": [
+            "FJ3154"
+          ],
+          "nombresFuente": [
+            "Tenth thoracic vertebra"
+          ],
+          "triangulos": 2158,
+          "caja": {
+            "min": [
+              -0.0337,
+              1.0998,
+              0.0078
+            ],
+            "max": [
+              0.0322,
+              1.1571,
+              0.0841
+            ]
+          }
+        },
+        {
+          "id": "vertebra-t11",
+          "nodo": "vertebra-t11",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA10059"
+          ],
+          "elementos": [
+            "FJ3155"
+          ],
+          "nombresFuente": [
+            "Eleventh thoracic vertebra"
+          ],
+          "triangulos": 2000,
+          "caja": {
+            "min": [
+              -0.0268,
+              1.0757,
+              0.013
+            ],
+            "max": [
+              0.0256,
+              1.1293,
+              0.0925
+            ]
+          }
+        },
+        {
+          "id": "vertebra-t12",
+          "nodo": "vertebra-t12",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA10081"
+          ],
+          "elementos": [
+            "FJ3156"
+          ],
+          "nombresFuente": [
+            "Twelfth thoracic vertebra"
+          ],
+          "triangulos": 2086,
+          "caja": {
+            "min": [
+              -0.0224,
+              1.05,
+              0.0226
+            ],
+            "max": [
+              0.0211,
+              1.1016,
+              0.1014
+            ]
+          }
+        },
+        {
+          "id": "vertebra-l1",
+          "nodo": "vertebra-l1",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA13072"
+          ],
+          "elementos": [
+            "FJ3157"
+          ],
+          "nombresFuente": [
+            "First lumbar vertebra"
+          ],
+          "triangulos": 2406,
+          "caja": {
+            "min": [
+              -0.0358,
+              1.0152,
+              0.0292
+            ],
+            "max": [
+              0.0345,
+              1.072,
+              0.1095
+            ]
+          }
+        },
+        {
+          "id": "vertebra-l2",
+          "nodo": "vertebra-l2",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA13073"
+          ],
+          "elementos": [
+            "FJ3159"
+          ],
+          "nombresFuente": [
+            "Second lumbar vertebra"
+          ],
+          "triangulos": 2496,
+          "caja": {
+            "min": [
+              -0.0404,
+              0.9923,
+              0.0343
+            ],
+            "max": [
+              0.0391,
+              1.0398,
+              0.1147
+            ]
+          }
+        },
+        {
+          "id": "vertebra-l3",
+          "nodo": "vertebra-l3",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA13074"
+          ],
+          "elementos": [
+            "FJ3162"
+          ],
+          "nombresFuente": [
+            "Third lumbar vertebra"
+          ],
+          "triangulos": 2474,
+          "caja": {
+            "min": [
+              -0.0402,
+              0.9677,
+              0.0295
+            ],
+            "max": [
+              0.0388,
+              1.0097,
+              0.1154
+            ]
+          }
+        },
+        {
+          "id": "vertebra-l4",
+          "nodo": "vertebra-l4",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA13075"
+          ],
+          "elementos": [
+            "FJ3165"
+          ],
+          "nombresFuente": [
+            "Fourth lumbar vertebra"
+          ],
+          "triangulos": 2632,
+          "caja": {
+            "min": [
+              -0.0428,
+              0.9387,
+              0.0262
+            ],
+            "max": [
+              0.0414,
+              0.9834,
+              0.1104
+            ]
+          }
+        },
+        {
+          "id": "vertebra-l5",
+          "nodo": "vertebra-l5",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA13076"
+          ],
+          "elementos": [
+            "FJ3168"
+          ],
+          "nombresFuente": [
+            "Fifth lumbar vertebra"
+          ],
+          "triangulos": 2640,
+          "caja": {
+            "min": [
+              -0.051,
+              0.9046,
+              0.0182
+            ],
+            "max": [
+              0.0496,
+              0.9548,
+              0.0991
+            ]
+          }
+        },
+        {
+          "id": "sacro",
+          "nodo": "sacro",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA16202"
+          ],
+          "elementos": [
+            "FJ3393"
+          ],
+          "nombresFuente": [
+            "Sacrum"
+          ],
+          "triangulos": 5038,
+          "caja": {
+            "min": [
+              -0.0596,
+              0.7828,
+              -0.0073
+            ],
+            "max": [
+              0.0582,
+              0.9272,
+              0.0814
+            ]
+          }
+        },
+        {
+          "id": "esternon",
+          "nodo": "esternon",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA7486",
+            "FMA7487",
+            "FMA7488"
+          ],
+          "elementos": [
+            "FJ3290",
+            "FJ3178",
+            "FJ3153"
+          ],
+          "nombresFuente": [
+            "Manubrium",
+            "Body of sternum",
+            "Xiphoid process"
+          ],
+          "triangulos": 5552,
+          "caja": {
+            "min": [
+              -0.0274,
+              1.164,
+              0.1308
+            ],
+            "max": [
+              0.0274,
+              1.3253,
+              0.2138
+            ]
+          }
+        },
+        {
+          "id": "costilla-1-d",
+          "nodo": "costilla-1-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA7857"
+          ],
+          "elementos": [
+            "FJ3334"
+          ],
+          "nombresFuente": [
+            "Right first rib"
+          ],
+          "triangulos": 1638,
+          "caja": {
+            "min": [
+              -0.0698,
+              1.3101,
+              0.0644
+            ],
+            "max": [
+              -0.0151,
+              1.3705,
+              0.1304
+            ]
+          }
+        },
+        {
+          "id": "costilla-1-i",
+          "nodo": "costilla-1-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA7987"
+          ],
+          "elementos": [
+            "FJ3228"
+          ],
+          "nombresFuente": [
+            "Left first rib"
+          ],
+          "triangulos": 1638,
+          "caja": {
+            "min": [
+              0.0138,
+              1.3101,
+              0.0644
+            ],
+            "max": [
+              0.0685,
+              1.3705,
+              0.1304
+            ]
+          }
+        },
+        {
+          "id": "costilla-2-d",
+          "nodo": "costilla-2-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA7882"
+          ],
+          "elementos": [
+            "FJ3336"
+          ],
+          "nombresFuente": [
+            "Right second rib"
+          ],
+          "triangulos": 2796,
+          "caja": {
+            "min": [
+              -0.097,
+              1.2736,
+              0.0507
+            ],
+            "max": [
+              -0.016,
+              1.359,
+              0.1672
+            ]
+          }
+        },
+        {
+          "id": "costilla-2-i",
+          "nodo": "costilla-2-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA8012"
+          ],
+          "elementos": [
+            "FJ3229"
+          ],
+          "nombresFuente": [
+            "Left second rib"
+          ],
+          "triangulos": 2796,
+          "caja": {
+            "min": [
+              0.0147,
+              1.2735,
+              0.0506
+            ],
+            "max": [
+              0.0957,
+              1.359,
+              0.1671
+            ]
+          }
+        },
+        {
+          "id": "costilla-3-d",
+          "nodo": "costilla-3-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA7909"
+          ],
+          "elementos": [
+            "FJ3338"
+          ],
+          "nombresFuente": [
+            "Right third rib"
+          ],
+          "triangulos": 3626,
+          "caja": {
+            "min": [
+              -0.1089,
+              1.2438,
+              0.0368
+            ],
+            "max": [
+              -0.014,
+              1.336,
+              0.1793
+            ]
+          }
+        },
+        {
+          "id": "costilla-3-i",
+          "nodo": "costilla-3-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA8039"
+          ],
+          "elementos": [
+            "FJ3230"
+          ],
+          "nombresFuente": [
+            "Left third rib"
+          ],
+          "triangulos": 3626,
+          "caja": {
+            "min": [
+              0.0127,
+              1.2438,
+              0.0369
+            ],
+            "max": [
+              0.1076,
+              1.336,
+              0.1793
+            ]
+          }
+        },
+        {
+          "id": "costilla-4-d",
+          "nodo": "costilla-4-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA7957"
+          ],
+          "elementos": [
+            "FJ3340"
+          ],
+          "nombresFuente": [
+            "Right fourth rib"
+          ],
+          "triangulos": 4416,
+          "caja": {
+            "min": [
+              -0.1176,
+              1.2111,
+              0.0232
+            ],
+            "max": [
+              -0.015,
+              1.3153,
+              0.1922
+            ]
+          }
+        },
+        {
+          "id": "costilla-4-i",
+          "nodo": "costilla-4-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA8148"
+          ],
+          "elementos": [
+            "FJ3231"
+          ],
+          "nombresFuente": [
+            "Left fourth rib"
+          ],
+          "triangulos": 4424,
+          "caja": {
+            "min": [
+              0.0129,
+              1.2111,
+              0.0232
+            ],
+            "max": [
+              0.1163,
+              1.3153,
+              0.1922
+            ]
+          }
+        },
+        {
+          "id": "costilla-5-d",
+          "nodo": "costilla-5-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA8066"
+          ],
+          "elementos": [
+            "FJ3342"
+          ],
+          "nombresFuente": [
+            "Right fifth rib"
+          ],
+          "triangulos": 4854,
+          "caja": {
+            "min": [
+              -0.1271,
+              1.1722,
+              0.0127
+            ],
+            "max": [
+              -0.0153,
+              1.2913,
+              0.1977
+            ]
+          }
+        },
+        {
+          "id": "costilla-5-i",
+          "nodo": "costilla-5-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA8093"
+          ],
+          "elementos": [
+            "FJ3232"
+          ],
+          "nombresFuente": [
+            "Left fifth rib"
+          ],
+          "triangulos": 4854,
+          "caja": {
+            "min": [
+              0.014,
+              1.1722,
+              0.0127
+            ],
+            "max": [
+              0.1258,
+              1.2913,
+              0.1977
+            ]
+          }
+        },
+        {
+          "id": "costilla-6-d",
+          "nodo": "costilla-6-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA8175"
+          ],
+          "elementos": [
+            "FJ3344"
+          ],
+          "nombresFuente": [
+            "Right sixth rib"
+          ],
+          "triangulos": 5122,
+          "caja": {
+            "min": [
+              -0.1343,
+              1.1379,
+              0.0036
+            ],
+            "max": [
+              -0.0148,
+              1.2657,
+              0.1935
+            ]
+          }
+        },
+        {
+          "id": "costilla-6-i",
+          "nodo": "costilla-6-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA8202"
+          ],
+          "elementos": [
+            "FJ3233"
+          ],
+          "nombresFuente": [
+            "Left sixth rib"
+          ],
+          "triangulos": 5132,
+          "caja": {
+            "min": [
+              0.0128,
+              1.1379,
+              0.0036
+            ],
+            "max": [
+              0.1331,
+              1.2668,
+              0.1935
+            ]
+          }
+        },
+        {
+          "id": "costilla-7-d",
+          "nodo": "costilla-7-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA8229"
+          ],
+          "elementos": [
+            "FJ3346"
+          ],
+          "nombresFuente": [
+            "Right seventh rib"
+          ],
+          "triangulos": 5016,
+          "caja": {
+            "min": [
+              -0.1371,
+              1.1052,
+              0.0045
+            ],
+            "max": [
+              -0.0137,
+              1.2403,
+              0.1802
+            ]
+          }
+        },
+        {
+          "id": "costilla-7-i",
+          "nodo": "costilla-7-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA8256"
+          ],
+          "elementos": [
+            "FJ3234"
+          ],
+          "nombresFuente": [
+            "Left seventh rib"
+          ],
+          "triangulos": 5016,
+          "caja": {
+            "min": [
+              0.0124,
+              1.1052,
+              0.0045
+            ],
+            "max": [
+              0.1358,
+              1.2402,
+              0.1802
+            ]
+          }
+        },
+        {
+          "id": "costilla-8-d",
+          "nodo": "costilla-8-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA8283"
+          ],
+          "elementos": [
+            "FJ3347"
+          ],
+          "nombresFuente": [
+            "Right eighth rib"
+          ],
+          "triangulos": 4168,
+          "caja": {
+            "min": [
+              -0.133,
+              1.0747,
+              0.0046
+            ],
+            "max": [
+              -0.0137,
+              1.2113,
+              0.1627
+            ]
+          }
+        },
+        {
+          "id": "costilla-8-i",
+          "nodo": "costilla-8-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA8310"
+          ],
+          "elementos": [
+            "FJ3235"
+          ],
+          "nombresFuente": [
+            "Left eighth rib"
+          ],
+          "triangulos": 4168,
+          "caja": {
+            "min": [
+              0.0124,
+              1.0747,
+              0.0046
+            ],
+            "max": [
+              0.1316,
+              1.2113,
+              0.1627
+            ]
+          }
+        },
+        {
+          "id": "costilla-9-d",
+          "nodo": "costilla-9-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA8364"
+          ],
+          "elementos": [
+            "FJ3348"
+          ],
+          "nombresFuente": [
+            "Right ninth rib"
+          ],
+          "triangulos": 3788,
+          "caja": {
+            "min": [
+              -0.1291,
+              1.0501,
+              0.0075
+            ],
+            "max": [
+              -0.0159,
+              1.1854,
+              0.1356
+            ]
+          }
+        },
+        {
+          "id": "costilla-9-i",
+          "nodo": "costilla-9-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA8391"
+          ],
+          "elementos": [
+            "FJ3236"
+          ],
+          "nombresFuente": [
+            "Left ninth rib"
+          ],
+          "triangulos": 3788,
+          "caja": {
+            "min": [
+              0.0146,
+              1.0501,
+              0.0075
+            ],
+            "max": [
+              0.1278,
+              1.1854,
+              0.1356
+            ]
+          }
+        },
+        {
+          "id": "costilla-10-d",
+          "nodo": "costilla-10-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA8445"
+          ],
+          "elementos": [
+            "FJ3330"
+          ],
+          "nombresFuente": [
+            "Right tenth rib"
+          ],
+          "triangulos": 3410,
+          "caja": {
+            "min": [
+              -0.1236,
+              1.023,
+              0.0114
+            ],
+            "max": [
+              -0.0169,
+              1.159,
+              0.1177
+            ]
+          }
+        },
+        {
+          "id": "costilla-10-i",
+          "nodo": "costilla-10-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA8472"
+          ],
+          "elementos": [
+            "FJ3225"
+          ],
+          "nombresFuente": [
+            "Left tenth rib"
+          ],
+          "triangulos": 3412,
+          "caja": {
+            "min": [
+              0.0156,
+              1.023,
+              0.0114
+            ],
+            "max": [
+              0.1223,
+              1.159,
+              0.1177
+            ]
+          }
+        },
+        {
+          "id": "costilla-11-d",
+          "nodo": "costilla-11-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA8531"
+          ],
+          "elementos": [
+            "FJ3331"
+          ],
+          "nombresFuente": [
+            "Right eleventh rib"
+          ],
+          "triangulos": 2432,
+          "caja": {
+            "min": [
+              -0.1114,
+              1.0081,
+              0.018
+            ],
+            "max": [
+              -0.0176,
+              1.1217,
+              0.096
+            ]
+          }
+        },
+        {
+          "id": "costilla-11-i",
+          "nodo": "costilla-11-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA8532"
+          ],
+          "elementos": [
+            "FJ3226"
+          ],
+          "nombresFuente": [
+            "Left eleventh rib"
+          ],
+          "triangulos": 2432,
+          "caja": {
+            "min": [
+              0.0163,
+              1.0081,
+              0.018
+            ],
+            "max": [
+              0.1101,
+              1.1217,
+              0.096
+            ]
+          }
+        },
+        {
+          "id": "costilla-12-d",
+          "nodo": "costilla-12-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA8533"
+          ],
+          "elementos": [
+            "FJ3332"
+          ],
+          "nombresFuente": [
+            "Right twelfth rib"
+          ],
+          "triangulos": 1408,
+          "caja": {
+            "min": [
+              -0.0865,
+              1.0113,
+              0.028
+            ],
+            "max": [
+              -0.0182,
+              1.0892,
+              0.0661
+            ]
+          }
+        },
+        {
+          "id": "costilla-12-i",
+          "nodo": "costilla-12-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA8534"
+          ],
+          "elementos": [
+            "FJ3227"
+          ],
+          "nombresFuente": [
+            "Left twelfth rib"
+          ],
+          "triangulos": 1408,
+          "caja": {
+            "min": [
+              0.0169,
+              1.0113,
+              0.028
+            ],
+            "max": [
+              0.0852,
+              1.0892,
+              0.0661
+            ]
+          }
+        },
+        {
+          "id": "clavicula-d",
+          "nodo": "clavicula-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA13322"
+          ],
+          "elementos": [
+            "FJ3362"
+          ],
+          "nombresFuente": [
+            "Right clavicle"
+          ],
+          "triangulos": 818,
+          "caja": {
+            "min": [
+              -0.1453,
+              1.3086,
+              0.0544
+            ],
+            "max": [
+              -0.0097,
+              1.3554,
+              0.1469
+            ]
+          }
+        },
+        {
+          "id": "clavicula-i",
+          "nodo": "clavicula-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA13323"
+          ],
+          "elementos": [
+            "FJ3237"
+          ],
+          "nombresFuente": [
+            "Left clavicle"
+          ],
+          "triangulos": 824,
+          "caja": {
+            "min": [
+              0.0084,
+              1.3085,
+              0.0544
+            ],
+            "max": [
+              0.1439,
+              1.3552,
+              0.1471
+            ]
+          }
+        },
+        {
+          "id": "escapula-d",
+          "nodo": "escapula-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA13395"
+          ],
+          "elementos": [
+            "FJ3384"
+          ],
+          "nombresFuente": [
+            "Right scapula"
+          ],
+          "triangulos": 13086,
+          "caja": {
+            "min": [
+              -0.1665,
+              1.184,
+              -0.0051
+            ],
+            "max": [
+              -0.0571,
+              1.3499,
+              0.1029
+            ]
+          }
+        },
+        {
+          "id": "escapula-i",
+          "nodo": "escapula-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA13396"
+          ],
+          "elementos": [
+            "FJ3279"
+          ],
+          "nombresFuente": [
+            "Left scapula"
+          ],
+          "triangulos": 14052,
+          "caja": {
+            "min": [
+              0.0571,
+              1.1839,
+              -0.0051
+            ],
+            "max": [
+              0.1665,
+              1.3499,
+              0.1028
+            ]
+          }
+        },
+        {
+          "id": "humero-d",
+          "nodo": "humero-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA23130"
+          ],
+          "elementos": [
+            "FJ3368"
+          ],
+          "nombresFuente": [
+            "Right humerus"
+          ],
+          "triangulos": 1892,
+          "caja": {
+            "min": [
+              -0.2408,
+              1.0292,
+              0.051
+            ],
+            "max": [
+              -0.1401,
+              1.3365,
+              0.1002
+            ]
+          }
+        },
+        {
+          "id": "humero-i",
+          "nodo": "humero-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA23131"
+          ],
+          "elementos": [
+            "FJ3262"
+          ],
+          "nombresFuente": [
+            "Left humerus"
+          ],
+          "triangulos": 1922,
+          "caja": {
+            "min": [
+              0.1401,
+              1.0292,
+              0.0511
+            ],
+            "max": [
+              0.2408,
+              1.3365,
+              0.1002
+            ]
+          }
+        },
+        {
+          "id": "radio-d",
+          "nodo": "radio-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA23464"
+          ],
+          "elementos": [
+            "FJ3349"
+          ],
+          "nombresFuente": [
+            "Right radius"
+          ],
+          "triangulos": 408,
+          "caja": {
+            "min": [
+              -0.2795,
+              0.8058,
+              0.0611
+            ],
+            "max": [
+              -0.2198,
+              1.0351,
+              0.1269
+            ]
+          }
+        },
+        {
+          "id": "radio-i",
+          "nodo": "radio-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA23465"
+          ],
+          "elementos": [
+            "FJ3277"
+          ],
+          "nombresFuente": [
+            "Left radius"
+          ],
+          "triangulos": 408,
+          "caja": {
+            "min": [
+              0.2198,
+              0.8062,
+              0.0615
+            ],
+            "max": [
+              0.2791,
+              1.035,
+              0.1273
+            ]
+          }
+        },
+        {
+          "id": "cubito-d",
+          "nodo": "cubito-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA23467"
+          ],
+          "elementos": [
+            "FJ3391"
+          ],
+          "nombresFuente": [
+            "Right ulna"
+          ],
+          "triangulos": 482,
+          "caja": {
+            "min": [
+              -0.2472,
+              0.8052,
+              0.0448
+            ],
+            "max": [
+              -0.1969,
+              1.0524,
+              0.1235
+            ]
+          }
+        },
+        {
+          "id": "cubito-i",
+          "nodo": "cubito-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA23468"
+          ],
+          "elementos": [
+            "FJ3286"
+          ],
+          "nombresFuente": [
+            "Left ulna"
+          ],
+          "triangulos": 434,
+          "caja": {
+            "min": [
+              0.1969,
+              0.805,
+              0.0446
+            ],
+            "max": [
+              0.2471,
+              1.0525,
+              0.1233
+            ]
+          }
+        },
+        {
+          "id": "escafoides-d",
+          "nodo": "escafoides-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24435"
+          ],
+          "elementos": [
+            "FJ3383"
+          ],
+          "nombresFuente": [
+            "Right scaphoid"
+          ],
+          "triangulos": 302,
+          "caja": {
+            "min": [
+              -0.2731,
+              0.7964,
+              0.1116
+            ],
+            "max": [
+              -0.2493,
+              0.8118,
+              0.1267
+            ]
+          }
+        },
+        {
+          "id": "escafoides-i",
+          "nodo": "escafoides-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24436"
+          ],
+          "elementos": [
+            "FJ3278"
+          ],
+          "nombresFuente": [
+            "Left scaphoid"
+          ],
+          "triangulos": 304,
+          "caja": {
+            "min": [
+              0.2495,
+              0.7962,
+              0.1115
+            ],
+            "max": [
+              0.273,
+              0.8117,
+              0.1264
+            ]
+          }
+        },
+        {
+          "id": "semilunar-d",
+          "nodo": "semilunar-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24437"
+          ],
+          "elementos": [
+            "FJ3374"
+          ],
+          "nombresFuente": [
+            "Right lunate"
+          ],
+          "triangulos": 324,
+          "caja": {
+            "min": [
+              -0.2527,
+              0.7975,
+              0.1106
+            ],
+            "max": [
+              -0.2362,
+              0.8098,
+              0.1269
+            ]
+          }
+        },
+        {
+          "id": "semilunar-i",
+          "nodo": "semilunar-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24438"
+          ],
+          "elementos": [
+            "FJ3268"
+          ],
+          "nombresFuente": [
+            "Left lunate"
+          ],
+          "triangulos": 306,
+          "caja": {
+            "min": [
+              0.2363,
+              0.7972,
+              0.1106
+            ],
+            "max": [
+              0.2529,
+              0.8099,
+              0.1271
+            ]
+          }
+        },
+        {
+          "id": "piramidal-d",
+          "nodo": "piramidal-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24439"
+          ],
+          "elementos": [
+            "FJ3390"
+          ],
+          "nombresFuente": [
+            "Right triquetral"
+          ],
+          "triangulos": 170,
+          "caja": {
+            "min": [
+              -0.2428,
+              0.7888,
+              0.1146
+            ],
+            "max": [
+              -0.2322,
+              0.8026,
+              0.1297
+            ]
+          }
+        },
+        {
+          "id": "piramidal-i",
+          "nodo": "piramidal-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24440"
+          ],
+          "elementos": [
+            "FJ3285"
+          ],
+          "nombresFuente": [
+            "Left triquetral"
+          ],
+          "triangulos": 300,
+          "caja": {
+            "min": [
+              0.2318,
+              0.7889,
+              0.1144
+            ],
+            "max": [
+              0.2427,
+              0.8025,
+              0.1298
+            ]
+          }
+        },
+        {
+          "id": "pisiforme-d",
+          "nodo": "pisiforme-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24441"
+          ],
+          "elementos": [
+            "FJ3382"
+          ],
+          "nombresFuente": [
+            "Right pisiform"
+          ],
+          "triangulos": 190,
+          "caja": {
+            "min": [
+              -0.2402,
+              0.7897,
+              0.1272
+            ],
+            "max": [
+              -0.232,
+              0.8013,
+              0.1377
+            ]
+          }
+        },
+        {
+          "id": "pisiforme-i",
+          "nodo": "pisiforme-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24442"
+          ],
+          "elementos": [
+            "FJ3276"
+          ],
+          "nombresFuente": [
+            "Left pisiform"
+          ],
+          "triangulos": 210,
+          "caja": {
+            "min": [
+              0.2318,
+              0.7897,
+              0.127
+            ],
+            "max": [
+              0.24,
+              0.8013,
+              0.1376
+            ]
+          }
+        },
+        {
+          "id": "trapecio-d",
+          "nodo": "trapecio-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24443"
+          ],
+          "elementos": [
+            "FJ3388"
+          ],
+          "nombresFuente": [
+            "Right trapezium"
+          ],
+          "triangulos": 424,
+          "caja": {
+            "min": [
+              -0.2817,
+              0.7858,
+              0.1177
+            ],
+            "max": [
+              -0.2649,
+              0.8057,
+              0.1346
+            ]
+          }
+        },
+        {
+          "id": "trapecio-i",
+          "nodo": "trapecio-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24444"
+          ],
+          "elementos": [
+            "FJ3283"
+          ],
+          "nombresFuente": [
+            "Left trapezium"
+          ],
+          "triangulos": 348,
+          "caja": {
+            "min": [
+              0.2648,
+              0.7857,
+              0.1177
+            ],
+            "max": [
+              0.2818,
+              0.8058,
+              0.1346
+            ]
+          }
+        },
+        {
+          "id": "trapezoide-d",
+          "nodo": "trapezoide-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA23725"
+          ],
+          "elementos": [
+            "FJ3389"
+          ],
+          "nombresFuente": [
+            "Right trapezoid"
+          ],
+          "triangulos": 354,
+          "caja": {
+            "min": [
+              -0.2733,
+              0.7829,
+              0.1135
+            ],
+            "max": [
+              -0.2621,
+              0.7953,
+              0.1284
+            ]
+          }
+        },
+        {
+          "id": "trapezoide-i",
+          "nodo": "trapezoide-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24445"
+          ],
+          "elementos": [
+            "FJ3284"
+          ],
+          "nombresFuente": [
+            "Left trapezoid"
+          ],
+          "triangulos": 396,
+          "caja": {
+            "min": [
+              0.2623,
+              0.7827,
+              0.1136
+            ],
+            "max": [
+              0.2733,
+              0.7953,
+              0.1284
+            ]
+          }
+        },
+        {
+          "id": "grande-d",
+          "nodo": "grande-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24446"
+          ],
+          "elementos": [
+            "FJ3361"
+          ],
+          "nombresFuente": [
+            "Right capitate"
+          ],
+          "triangulos": 406,
+          "caja": {
+            "min": [
+              -0.2645,
+              0.7822,
+              0.1105
+            ],
+            "max": [
+              -0.2484,
+              0.8046,
+              0.1275
+            ]
+          }
+        },
+        {
+          "id": "grande-i",
+          "nodo": "grande-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24447"
+          ],
+          "elementos": [
+            "FJ3257"
+          ],
+          "nombresFuente": [
+            "Left capitate"
+          ],
+          "triangulos": 388,
+          "caja": {
+            "min": [
+              0.2486,
+              0.7822,
+              0.1106
+            ],
+            "max": [
+              0.2643,
+              0.8046,
+              0.1274
+            ]
+          }
+        },
+        {
+          "id": "ganchoso-d",
+          "nodo": "ganchoso-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24448"
+          ],
+          "elementos": [
+            "FJ3367"
+          ],
+          "nombresFuente": [
+            "Right hamate"
+          ],
+          "triangulos": 490,
+          "caja": {
+            "min": [
+              -0.2519,
+              0.7813,
+              0.1114
+            ],
+            "max": [
+              -0.2366,
+              0.8007,
+              0.1339
+            ]
+          }
+        },
+        {
+          "id": "ganchoso-i",
+          "nodo": "ganchoso-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24449"
+          ],
+          "elementos": [
+            "FJ3261"
+          ],
+          "nombresFuente": [
+            "Left hamate"
+          ],
+          "triangulos": 440,
+          "caja": {
+            "min": [
+              0.2366,
+              0.7813,
+              0.1113
+            ],
+            "max": [
+              0.2516,
+              0.8006,
+              0.134
+            ]
+          }
+        },
+        {
+          "id": "metacarpiano-1-d",
+          "nodo": "metacarpiano-1-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24464"
+          ],
+          "elementos": [
+            "FJ3350"
+          ],
+          "nombresFuente": [
+            "Right first metacarpal bone"
+          ],
+          "triangulos": 526,
+          "caja": {
+            "min": [
+              -0.3096,
+              0.7603,
+              0.1236
+            ],
+            "max": [
+              -0.2722,
+              0.7972,
+              0.1539
+            ]
+          }
+        },
+        {
+          "id": "metacarpiano-1-i",
+          "nodo": "metacarpiano-1-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24465"
+          ],
+          "elementos": [
+            "FJ3240"
+          ],
+          "nombresFuente": [
+            "Left first metacarpal bone"
+          ],
+          "triangulos": 556,
+          "caja": {
+            "min": [
+              0.2724,
+              0.7603,
+              0.1234
+            ],
+            "max": [
+              0.3096,
+              0.7974,
+              0.1538
+            ]
+          }
+        },
+        {
+          "id": "metacarpiano-2-d",
+          "nodo": "metacarpiano-2-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24466"
+          ],
+          "elementos": [
+            "FJ3352"
+          ],
+          "nombresFuente": [
+            "Right second metacarpal bone"
+          ],
+          "triangulos": 606,
+          "caja": {
+            "min": [
+              -0.2927,
+              0.7189,
+              0.1171
+            ],
+            "max": [
+              -0.2618,
+              0.7869,
+              0.1428
+            ]
+          }
+        },
+        {
+          "id": "metacarpiano-2-i",
+          "nodo": "metacarpiano-2-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24467"
+          ],
+          "elementos": [
+            "FJ3243"
+          ],
+          "nombresFuente": [
+            "Left second metacarpal bone"
+          ],
+          "triangulos": 594,
+          "caja": {
+            "min": [
+              0.2618,
+              0.719,
+              0.1171
+            ],
+            "max": [
+              0.2926,
+              0.7869,
+              0.1424
+            ]
+          }
+        },
+        {
+          "id": "metacarpiano-3-d",
+          "nodo": "metacarpiano-3-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24468"
+          ],
+          "elementos": [
+            "FJ3354"
+          ],
+          "nombresFuente": [
+            "Right third metacarpal bone"
+          ],
+          "triangulos": 582,
+          "caja": {
+            "min": [
+              -0.2723,
+              0.7208,
+              0.1123
+            ],
+            "max": [
+              -0.2525,
+              0.7853,
+              0.1427
+            ]
+          }
+        },
+        {
+          "id": "metacarpiano-3-i",
+          "nodo": "metacarpiano-3-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24469"
+          ],
+          "elementos": [
+            "FJ3246"
+          ],
+          "nombresFuente": [
+            "Left third metacarpal bone"
+          ],
+          "triangulos": 586,
+          "caja": {
+            "min": [
+              0.2524,
+              0.7206,
+              0.1124
+            ],
+            "max": [
+              0.2723,
+              0.785,
+              0.1428
+            ]
+          }
+        },
+        {
+          "id": "metacarpiano-4-d",
+          "nodo": "metacarpiano-4-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24470"
+          ],
+          "elementos": [
+            "FJ3356"
+          ],
+          "nombresFuente": [
+            "Right fourth metacarpal bone"
+          ],
+          "triangulos": 426,
+          "caja": {
+            "min": [
+              -0.2537,
+              0.7253,
+              0.1159
+            ],
+            "max": [
+              -0.2414,
+              0.7852,
+              0.142
+            ]
+          }
+        },
+        {
+          "id": "metacarpiano-4-i",
+          "nodo": "metacarpiano-4-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24471"
+          ],
+          "elementos": [
+            "FJ3249"
+          ],
+          "nombresFuente": [
+            "Left fourth metacarpal bone"
+          ],
+          "triangulos": 432,
+          "caja": {
+            "min": [
+              0.2414,
+              0.7253,
+              0.1159
+            ],
+            "max": [
+              0.2538,
+              0.7852,
+              0.1419
+            ]
+          }
+        },
+        {
+          "id": "metacarpiano-5-d",
+          "nodo": "metacarpiano-5-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24472"
+          ],
+          "elementos": [
+            "FJ3358"
+          ],
+          "nombresFuente": [
+            "Right fifth metacarpal bone"
+          ],
+          "triangulos": 430,
+          "caja": {
+            "min": [
+              -0.2453,
+              0.732,
+              0.1201
+            ],
+            "max": [
+              -0.2252,
+              0.7869,
+              0.1445
+            ]
+          }
+        },
+        {
+          "id": "metacarpiano-5-i",
+          "nodo": "metacarpiano-5-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24473"
+          ],
+          "elementos": [
+            "FJ3252"
+          ],
+          "nombresFuente": [
+            "Left fifth metacarpal bone"
+          ],
+          "triangulos": 468,
+          "caja": {
+            "min": [
+              0.2253,
+              0.732,
+              0.1202
+            ],
+            "max": [
+              0.2454,
+              0.7868,
+              0.1444
+            ]
+          }
+        },
+        {
+          "id": "falange-proximal-mano-1-d",
+          "nodo": "falange-proximal-mano-1-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24450"
+          ],
+          "elementos": [
+            "FJ3327"
+          ],
+          "nombresFuente": [
+            "Proximal phalanx of right thumb"
+          ],
+          "triangulos": 316,
+          "caja": {
+            "min": [
+              -0.3188,
+              0.7356,
+              0.1427
+            ],
+            "max": [
+              -0.2986,
+              0.7672,
+              0.1649
+            ]
+          }
+        },
+        {
+          "id": "falange-proximal-mano-1-i",
+          "nodo": "falange-proximal-mano-1-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA65470"
+          ],
+          "elementos": [
+            "FJ3318"
+          ],
+          "nombresFuente": [
+            "Proximal phalanx of left thumb"
+          ],
+          "triangulos": 336,
+          "caja": {
+            "min": [
+              0.2987,
+              0.7355,
+              0.1426
+            ],
+            "max": [
+              0.3186,
+              0.7672,
+              0.1648
+            ]
+          }
+        },
+        {
+          "id": "falange-proximal-mano-2-d",
+          "nodo": "falange-proximal-mano-2-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24451"
+          ],
+          "elementos": [
+            "FJ3322"
+          ],
+          "nombresFuente": [
+            "Proximal phalanx of right index finger"
+          ],
+          "triangulos": 360,
+          "caja": {
+            "min": [
+              -0.3028,
+              0.6858,
+              0.1341
+            ],
+            "max": [
+              -0.281,
+              0.7232,
+              0.1568
+            ]
+          }
+        },
+        {
+          "id": "falange-proximal-mano-2-i",
+          "nodo": "falange-proximal-mano-2-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA71915"
+          ],
+          "elementos": [
+            "FJ3313"
+          ],
+          "nombresFuente": [
+            "Proximal phalanx of left index finger"
+          ],
+          "triangulos": 384,
+          "caja": {
+            "min": [
+              0.2808,
+              0.6857,
+              0.1341
+            ],
+            "max": [
+              0.3028,
+              0.7234,
+              0.1571
+            ]
+          }
+        },
+        {
+          "id": "falange-proximal-mano-3-d",
+          "nodo": "falange-proximal-mano-3-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24452"
+          ],
+          "elementos": [
+            "FJ3325"
+          ],
+          "nombresFuente": [
+            "Proximal phalanx of right middle finger"
+          ],
+          "triangulos": 448,
+          "caja": {
+            "min": [
+              -0.2774,
+              0.6843,
+              0.1351
+            ],
+            "max": [
+              -0.2592,
+              0.7249,
+              0.1642
+            ]
+          }
+        },
+        {
+          "id": "falange-proximal-mano-3-i",
+          "nodo": "falange-proximal-mano-3-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA71908"
+          ],
+          "elementos": [
+            "FJ3316"
+          ],
+          "nombresFuente": [
+            "Proximal phalanx of left middle finger"
+          ],
+          "triangulos": 440,
+          "caja": {
+            "min": [
+              0.2592,
+              0.6843,
+              0.1352
+            ],
+            "max": [
+              0.2774,
+              0.725,
+              0.1641
+            ]
+          }
+        },
+        {
+          "id": "falange-proximal-mano-4-d",
+          "nodo": "falange-proximal-mano-4-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24453"
+          ],
+          "elementos": [
+            "FJ3326"
+          ],
+          "nombresFuente": [
+            "Proximal phalanx of right ring finger"
+          ],
+          "triangulos": 364,
+          "caja": {
+            "min": [
+              -0.2538,
+              0.69,
+              0.1357
+            ],
+            "max": [
+              -0.2406,
+              0.7289,
+              0.162
+            ]
+          }
+        },
+        {
+          "id": "falange-proximal-mano-4-i",
+          "nodo": "falange-proximal-mano-4-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA71916"
+          ],
+          "elementos": [
+            "FJ3317"
+          ],
+          "nombresFuente": [
+            "Proximal phalanx of left ring finger"
+          ],
+          "triangulos": 366,
+          "caja": {
+            "min": [
+              0.2405,
+              0.6901,
+              0.1357
+            ],
+            "max": [
+              0.2539,
+              0.729,
+              0.1619
+            ]
+          }
+        },
+        {
+          "id": "falange-proximal-mano-5-d",
+          "nodo": "falange-proximal-mano-5-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24454"
+          ],
+          "elementos": [
+            "FJ3323"
+          ],
+          "nombresFuente": [
+            "Proximal phalanx of right little finger"
+          ],
+          "triangulos": 312,
+          "caja": {
+            "min": [
+              -0.2363,
+              0.7034,
+              0.1387
+            ],
+            "max": [
+              -0.2222,
+              0.736,
+              0.1595
+            ]
+          }
+        },
+        {
+          "id": "falange-proximal-mano-5-i",
+          "nodo": "falange-proximal-mano-5-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA66791"
+          ],
+          "elementos": [
+            "FJ3314"
+          ],
+          "nombresFuente": [
+            "Proximal phalanx of left little finger"
+          ],
+          "triangulos": 270,
+          "caja": {
+            "min": [
+              0.2222,
+              0.7034,
+              0.1387
+            ],
+            "max": [
+              0.2363,
+              0.7358,
+              0.1595
+            ]
+          }
+        },
+        {
+          "id": "falange-media-mano-2-d",
+          "nodo": "falange-media-mano-2-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24455"
+          ],
+          "elementos": [
+            "FJ3303"
+          ],
+          "nombresFuente": [
+            "Middle phalanx of right index finger"
+          ],
+          "triangulos": 256,
+          "caja": {
+            "min": [
+              -0.309,
+              0.671,
+              0.1513
+            ],
+            "max": [
+              -0.2944,
+              0.6915,
+              0.1721
+            ]
+          }
+        },
+        {
+          "id": "falange-media-mano-2-i",
+          "nodo": "falange-media-mano-2-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA23938"
+          ],
+          "elementos": [
+            "FJ3296"
+          ],
+          "nombresFuente": [
+            "Middle phalanx of left index finger"
+          ],
+          "triangulos": 300,
+          "caja": {
+            "min": [
+              0.2944,
+              0.671,
+              0.1513
+            ],
+            "max": [
+              0.309,
+              0.6915,
+              0.1721
+            ]
+          }
+        },
+        {
+          "id": "falange-media-mano-3-d",
+          "nodo": "falange-media-mano-3-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24456"
+          ],
+          "elementos": [
+            "FJ3306"
+          ],
+          "nombresFuente": [
+            "Middle phalanx of right middle finger"
+          ],
+          "triangulos": 330,
+          "caja": {
+            "min": [
+              -0.2802,
+              0.6625,
+              0.1578
+            ],
+            "max": [
+              -0.2666,
+              0.6878,
+              0.1809
+            ]
+          }
+        },
+        {
+          "id": "falange-media-mano-3-i",
+          "nodo": "falange-media-mano-3-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA23940"
+          ],
+          "elementos": [
+            "FJ3299"
+          ],
+          "nombresFuente": [
+            "Middle phalanx of left middle finger"
+          ],
+          "triangulos": 366,
+          "caja": {
+            "min": [
+              0.2665,
+              0.6624,
+              0.1579
+            ],
+            "max": [
+              0.2802,
+              0.6878,
+              0.1809
+            ]
+          }
+        },
+        {
+          "id": "falange-media-mano-4-d",
+          "nodo": "falange-media-mano-4-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24457"
+          ],
+          "elementos": [
+            "FJ3292"
+          ],
+          "nombresFuente": [
+            "Middle phalanx of right ring finger"
+          ],
+          "triangulos": 306,
+          "caja": {
+            "min": [
+              -0.2543,
+              0.6697,
+              0.1565
+            ],
+            "max": [
+              -0.2428,
+              0.6936,
+              0.1806
+            ]
+          }
+        },
+        {
+          "id": "falange-media-mano-4-i",
+          "nodo": "falange-media-mano-4-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA23942"
+          ],
+          "elementos": [
+            "FJ3291"
+          ],
+          "nombresFuente": [
+            "Middle phalanx of left ring finger"
+          ],
+          "triangulos": 326,
+          "caja": {
+            "min": [
+              0.2428,
+              0.6698,
+              0.1568
+            ],
+            "max": [
+              0.2545,
+              0.6937,
+              0.1805
+            ]
+          }
+        },
+        {
+          "id": "falange-media-mano-5-d",
+          "nodo": "falange-media-mano-5-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24458"
+          ],
+          "elementos": [
+            "FJ3304"
+          ],
+          "nombresFuente": [
+            "Middle phalanx of right little finger"
+          ],
+          "triangulos": 206,
+          "caja": {
+            "min": [
+              -0.2305,
+              0.6876,
+              0.1548
+            ],
+            "max": [
+              -0.2189,
+              0.7072,
+              0.1714
+            ]
+          }
+        },
+        {
+          "id": "falange-media-mano-5-i",
+          "nodo": "falange-media-mano-5-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA23944"
+          ],
+          "elementos": [
+            "FJ3297"
+          ],
+          "nombresFuente": [
+            "Middle phalanx of left little finger"
+          ],
+          "triangulos": 252,
+          "caja": {
+            "min": [
+              0.2189,
+              0.6875,
+              0.1549
+            ],
+            "max": [
+              0.2303,
+              0.7071,
+              0.1715
+            ]
+          }
+        },
+        {
+          "id": "falange-distal-mano-1-d",
+          "nodo": "falange-distal-mano-1-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24459"
+          ],
+          "elementos": [
+            "FJ3198"
+          ],
+          "nombresFuente": [
+            "Distal phalanx of right thumb"
+          ],
+          "triangulos": 228,
+          "caja": {
+            "min": [
+              -0.3239,
+              0.7191,
+              0.1571
+            ],
+            "max": [
+              -0.3103,
+              0.7422,
+              0.1734
+            ]
+          }
+        },
+        {
+          "id": "falange-distal-mano-1-i",
+          "nodo": "falange-distal-mano-1-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA23951"
+          ],
+          "elementos": [
+            "FJ3188"
+          ],
+          "nombresFuente": [
+            "Distal phalanx of left thumb"
+          ],
+          "triangulos": 262,
+          "caja": {
+            "min": [
+              0.3108,
+              0.7192,
+              0.1572
+            ],
+            "max": [
+              0.3239,
+              0.7422,
+              0.1733
+            ]
+          }
+        },
+        {
+          "id": "falange-distal-mano-2-d",
+          "nodo": "falange-distal-mano-2-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24460"
+          ],
+          "elementos": [
+            "FJ3193"
+          ],
+          "nombresFuente": [
+            "Distal phalanx of right index finger"
+          ],
+          "triangulos": 208,
+          "caja": {
+            "min": [
+              -0.3114,
+              0.6618,
+              0.1696
+            ],
+            "max": [
+              -0.3014,
+              0.6757,
+              0.1867
+            ]
+          }
+        },
+        {
+          "id": "falange-distal-mano-2-i",
+          "nodo": "falange-distal-mano-2-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA23953"
+          ],
+          "elementos": [
+            "FJ3183"
+          ],
+          "nombresFuente": [
+            "Distal phalanx of left index finger"
+          ],
+          "triangulos": 318,
+          "caja": {
+            "min": [
+              0.3013,
+              0.6619,
+              0.1696
+            ],
+            "max": [
+              0.3113,
+              0.6756,
+              0.1867
+            ]
+          }
+        },
+        {
+          "id": "falange-distal-mano-3-d",
+          "nodo": "falange-distal-mano-3-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24461"
+          ],
+          "elementos": [
+            "FJ3196"
+          ],
+          "nombresFuente": [
+            "Distal phalanx of right middle finger"
+          ],
+          "triangulos": 170,
+          "caja": {
+            "min": [
+              -0.2809,
+              0.6531,
+              0.1782
+            ],
+            "max": [
+              -0.2714,
+              0.6665,
+              0.1954
+            ]
+          }
+        },
+        {
+          "id": "falange-distal-mano-3-i",
+          "nodo": "falange-distal-mano-3-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA23955"
+          ],
+          "elementos": [
+            "FJ3186"
+          ],
+          "nombresFuente": [
+            "Distal phalanx of left middle finger"
+          ],
+          "triangulos": 260,
+          "caja": {
+            "min": [
+              0.2714,
+              0.6534,
+              0.1781
+            ],
+            "max": [
+              0.2809,
+              0.6664,
+              0.1951
+            ]
+          }
+        },
+        {
+          "id": "falange-distal-mano-4-d",
+          "nodo": "falange-distal-mano-4-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24462"
+          ],
+          "elementos": [
+            "FJ3197"
+          ],
+          "nombresFuente": [
+            "Distal phalanx of right ring finger"
+          ],
+          "triangulos": 112,
+          "caja": {
+            "min": [
+              -0.2536,
+              0.6649,
+              0.1787
+            ],
+            "max": [
+              -0.2453,
+              0.674,
+              0.1944
+            ]
+          }
+        },
+        {
+          "id": "falange-distal-mano-4-i",
+          "nodo": "falange-distal-mano-4-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA23957"
+          ],
+          "elementos": [
+            "FJ3187"
+          ],
+          "nombresFuente": [
+            "Distal phalanx of left ring finger"
+          ],
+          "triangulos": 192,
+          "caja": {
+            "min": [
+              0.2453,
+              0.6648,
+              0.1788
+            ],
+            "max": [
+              0.2536,
+              0.6739,
+              0.1944
+            ]
+          }
+        },
+        {
+          "id": "falange-distal-mano-5-d",
+          "nodo": "falange-distal-mano-5-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24463"
+          ],
+          "elementos": [
+            "FJ3194"
+          ],
+          "nombresFuente": [
+            "Distal phalanx of right little finger"
+          ],
+          "triangulos": 184,
+          "caja": {
+            "min": [
+              -0.2272,
+              0.6767,
+              0.1682
+            ],
+            "max": [
+              -0.2189,
+              0.6893,
+              0.1819
+            ]
+          }
+        },
+        {
+          "id": "falange-distal-mano-5-i",
+          "nodo": "falange-distal-mano-5-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA23959"
+          ],
+          "elementos": [
+            "FJ3184"
+          ],
+          "nombresFuente": [
+            "Distal phalanx of left little finger"
+          ],
+          "triangulos": 198,
+          "caja": {
+            "min": [
+              0.2189,
+              0.6766,
+              0.1684
+            ],
+            "max": [
+              0.2272,
+              0.6893,
+              0.1823
+            ]
+          }
+        },
+        {
+          "id": "coxal-d",
+          "nodo": "coxal-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA16586"
+          ],
+          "elementos": [
+            "FJ3152"
+          ],
+          "nombresFuente": [
+            "Right hip bone"
+          ],
+          "triangulos": 1894,
+          "caja": {
+            "min": [
+              -0.1449,
+              0.7522,
+              0.0011
+            ],
+            "max": [
+              -0.0028,
+              0.9579,
+              0.139
+            ]
+          }
+        },
+        {
+          "id": "coxal-i",
+          "nodo": "coxal-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA16587"
+          ],
+          "elementos": [
+            "FJ3288"
+          ],
+          "nombresFuente": [
+            "Left hip bone"
+          ],
+          "triangulos": 1814,
+          "caja": {
+            "min": [
+              0.0028,
+              0.752,
+              0.0013
+            ],
+            "max": [
+              0.1448,
+              0.9581,
+              0.1391
+            ]
+          }
+        },
+        {
+          "id": "femur-d",
+          "nodo": "femur-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24474"
+          ],
+          "elementos": [
+            "FJ3365"
+          ],
+          "nombresFuente": [
+            "Right femur"
+          ],
+          "triangulos": 1550,
+          "caja": {
+            "min": [
+              -0.1501,
+              0.3681,
+              0.0495
+            ],
+            "max": [
+              -0.0319,
+              0.8343,
+              0.1122
+            ]
+          }
+        },
+        {
+          "id": "femur-i",
+          "nodo": "femur-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24475"
+          ],
+          "elementos": [
+            "FJ3259"
+          ],
+          "nombresFuente": [
+            "Left femur"
+          ],
+          "triangulos": 1602,
+          "caja": {
+            "min": [
+              0.032,
+              0.3681,
+              0.0495
+            ],
+            "max": [
+              0.1502,
+              0.8342,
+              0.1123
+            ]
+          }
+        },
+        {
+          "id": "rotula-d",
+          "nodo": "rotula-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24486"
+          ],
+          "elementos": [
+            "FJ3381"
+          ],
+          "nombresFuente": [
+            "Right patella"
+          ],
+          "triangulos": 304,
+          "caja": {
+            "min": [
+              -0.1023,
+              0.3615,
+              0.101
+            ],
+            "max": [
+              -0.0606,
+              0.4008,
+              0.1227
+            ]
+          }
+        },
+        {
+          "id": "rotula-i",
+          "nodo": "rotula-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24487"
+          ],
+          "elementos": [
+            "FJ3275"
+          ],
+          "nombresFuente": [
+            "Left patella"
+          ],
+          "triangulos": 304,
+          "caja": {
+            "min": [
+              0.0606,
+              0.3615,
+              0.1009
+            ],
+            "max": [
+              0.1022,
+              0.4008,
+              0.1228
+            ]
+          }
+        },
+        {
+          "id": "tibia-d",
+          "nodo": "tibia-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24477"
+          ],
+          "elementos": [
+            "FJ3387"
+          ],
+          "nombresFuente": [
+            "Right tibia"
+          ],
+          "triangulos": 832,
+          "caja": {
+            "min": [
+              -0.1094,
+              -0.006,
+              0.0521
+            ],
+            "max": [
+              -0.0352,
+              0.3739,
+              0.1148
+            ]
+          }
+        },
+        {
+          "id": "tibia-i",
+          "nodo": "tibia-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24478"
+          ],
+          "elementos": [
+            "FJ3282"
+          ],
+          "nombresFuente": [
+            "Left tibia"
+          ],
+          "triangulos": 846,
+          "caja": {
+            "min": [
+              0.035,
+              -0.0061,
+              0.052
+            ],
+            "max": [
+              0.1095,
+              0.3739,
+              0.1145
+            ]
+          }
+        },
+        {
+          "id": "perone-d",
+          "nodo": "perone-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24480"
+          ],
+          "elementos": [
+            "FJ3366"
+          ],
+          "nombresFuente": [
+            "Right fibula"
+          ],
+          "triangulos": 570,
+          "caja": {
+            "min": [
+              -0.1202,
+              -0.0253,
+              0.0485
+            ],
+            "max": [
+              -0.0843,
+              0.3591,
+              0.0782
+            ]
+          }
+        },
+        {
+          "id": "perone-i",
+          "nodo": "perone-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24481"
+          ],
+          "elementos": [
+            "FJ3260"
+          ],
+          "nombresFuente": [
+            "Left fibula"
+          ],
+          "triangulos": 562,
+          "caja": {
+            "min": [
+              0.0845,
+              -0.0252,
+              0.0485
+            ],
+            "max": [
+              0.1201,
+              0.3591,
+              0.0781
+            ]
+          }
+        },
+        {
+          "id": "astragalo-d",
+          "nodo": "astragalo-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24482"
+          ],
+          "elementos": [
+            "FJ3385"
+          ],
+          "nombresFuente": [
+            "Right talus"
+          ],
+          "triangulos": 1184,
+          "caja": {
+            "min": [
+              -0.0901,
+              -0.0312,
+              0.0488
+            ],
+            "max": [
+              -0.0496,
+              0.0031,
+              0.1056
+            ]
+          }
+        },
+        {
+          "id": "astragalo-i",
+          "nodo": "astragalo-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24483"
+          ],
+          "elementos": [
+            "FJ3280"
+          ],
+          "nombresFuente": [
+            "Left talus"
+          ],
+          "triangulos": 1142,
+          "caja": {
+            "min": [
+              0.0496,
+              -0.0313,
+              0.0488
+            ],
+            "max": [
+              0.0902,
+              0.0031,
+              0.1057
+            ]
+          }
+        },
+        {
+          "id": "calcaneo-d",
+          "nodo": "calcaneo-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24497"
+          ],
+          "elementos": [
+            "FJ3360"
+          ],
+          "nombresFuente": [
+            "Right calcaneus"
+          ],
+          "triangulos": 1076,
+          "caja": {
+            "min": [
+              -0.1008,
+              -0.0685,
+              0.024
+            ],
+            "max": [
+              -0.0449,
+              -0.0192,
+              0.0941
+            ]
+          }
+        },
+        {
+          "id": "calcaneo-i",
+          "nodo": "calcaneo-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24498"
+          ],
+          "elementos": [
+            "FJ3256"
+          ],
+          "nombresFuente": [
+            "Left calcaneus"
+          ],
+          "triangulos": 1120,
+          "caja": {
+            "min": [
+              0.045,
+              -0.0684,
+              0.0242
+            ],
+            "max": [
+              0.1008,
+              -0.0191,
+              0.0941
+            ]
+          }
+        },
+        {
+          "id": "navicular-d",
+          "nodo": "navicular-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24500"
+          ],
+          "elementos": [
+            "FJ3308"
+          ],
+          "nombresFuente": [
+            "Navicular bone of right foot"
+          ],
+          "triangulos": 618,
+          "caja": {
+            "min": [
+              -0.0968,
+              -0.0308,
+              0.0943
+            ],
+            "max": [
+              -0.0582,
+              -0.0062,
+              0.121
+            ]
+          }
+        },
+        {
+          "id": "navicular-i",
+          "nodo": "navicular-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24501"
+          ],
+          "elementos": [
+            "FJ3307"
+          ],
+          "nombresFuente": [
+            "Navicular bone of left foot"
+          ],
+          "triangulos": 624,
+          "caja": {
+            "min": [
+              0.0579,
+              -0.031,
+              0.0943
+            ],
+            "max": [
+              0.0966,
+              -0.0063,
+              0.1211
+            ]
+          }
+        },
+        {
+          "id": "cuboides-d",
+          "nodo": "cuboides-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24528"
+          ],
+          "elementos": [
+            "FJ3364"
+          ],
+          "nombresFuente": [
+            "Right cuboid bone"
+          ],
+          "triangulos": 822,
+          "caja": {
+            "min": [
+              -0.1151,
+              -0.0511,
+              0.0837
+            ],
+            "max": [
+              -0.0824,
+              -0.0221,
+              0.1168
+            ]
+          }
+        },
+        {
+          "id": "cuboides-i",
+          "nodo": "cuboides-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24529"
+          ],
+          "elementos": [
+            "FJ3258"
+          ],
+          "nombresFuente": [
+            "Left cuboid bone"
+          ],
+          "triangulos": 806,
+          "caja": {
+            "min": [
+              0.082,
+              -0.0515,
+              0.0832
+            ],
+            "max": [
+              0.1151,
+              -0.0219,
+              0.1167
+            ]
+          }
+        },
+        {
+          "id": "cuneiforme-medial-d",
+          "nodo": "cuneiforme-medial-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24521"
+          ],
+          "elementos": [
+            "FJ3377"
+          ],
+          "nombresFuente": [
+            "Right medial cuneiform bone"
+          ],
+          "triangulos": 838,
+          "caja": {
+            "min": [
+              -0.0941,
+              -0.0453,
+              0.112
+            ],
+            "max": [
+              -0.066,
+              -0.0142,
+              0.1405
+            ]
+          }
+        },
+        {
+          "id": "cuneiforme-medial-i",
+          "nodo": "cuneiforme-medial-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24522"
+          ],
+          "elementos": [
+            "FJ3271"
+          ],
+          "nombresFuente": [
+            "Left medial cuneiform bone"
+          ],
+          "triangulos": 872,
+          "caja": {
+            "min": [
+              0.066,
+              -0.0451,
+              0.1121
+            ],
+            "max": [
+              0.0941,
+              -0.0142,
+              0.1405
+            ]
+          }
+        },
+        {
+          "id": "cuneiforme-intermedio-d",
+          "nodo": "cuneiforme-intermedio-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24523"
+          ],
+          "elementos": [
+            "FJ3370"
+          ],
+          "nombresFuente": [
+            "Right intermediate cuneiform bone"
+          ],
+          "triangulos": 430,
+          "caja": {
+            "min": [
+              -0.102,
+              -0.0344,
+              0.1096
+            ],
+            "max": [
+              -0.0819,
+              -0.0114,
+              0.1305
+            ]
+          }
+        },
+        {
+          "id": "cuneiforme-intermedio-i",
+          "nodo": "cuneiforme-intermedio-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24524"
+          ],
+          "elementos": [
+            "FJ3264"
+          ],
+          "nombresFuente": [
+            "Left intermediate cuneiform bone"
+          ],
+          "triangulos": 440,
+          "caja": {
+            "min": [
+              0.082,
+              -0.0344,
+              0.1096
+            ],
+            "max": [
+              0.102,
+              -0.0113,
+              0.1303
+            ]
+          }
+        },
+        {
+          "id": "cuneiforme-lateral-d",
+          "nodo": "cuneiforme-lateral-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24525"
+          ],
+          "elementos": [
+            "FJ3373"
+          ],
+          "nombresFuente": [
+            "Right lateral cuneiform bone"
+          ],
+          "triangulos": 600,
+          "caja": {
+            "min": [
+              -0.1129,
+              -0.0406,
+              0.1008
+            ],
+            "max": [
+              -0.0872,
+              -0.0149,
+              0.1252
+            ]
+          }
+        },
+        {
+          "id": "cuneiforme-lateral-i",
+          "nodo": "cuneiforme-lateral-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24526"
+          ],
+          "elementos": [
+            "FJ3267"
+          ],
+          "nombresFuente": [
+            "Left lateral cuneiform bone"
+          ],
+          "triangulos": 648,
+          "caja": {
+            "min": [
+              0.0872,
+              -0.0406,
+              0.1009
+            ],
+            "max": [
+              0.1129,
+              -0.0148,
+              0.1251
+            ]
+          }
+        },
+        {
+          "id": "metatarsiano-1-d",
+          "nodo": "metatarsiano-1-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24507"
+          ],
+          "elementos": [
+            "FJ3351"
+          ],
+          "nombresFuente": [
+            "Right first metatarsal bone"
+          ],
+          "triangulos": 910,
+          "caja": {
+            "min": [
+              -0.1044,
+              -0.0653,
+              0.1299
+            ],
+            "max": [
+              -0.0748,
+              -0.0221,
+              0.1922
+            ]
+          }
+        },
+        {
+          "id": "metatarsiano-1-i",
+          "nodo": "metatarsiano-1-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24508"
+          ],
+          "elementos": [
+            "FJ3241"
+          ],
+          "nombresFuente": [
+            "Left first metatarsal bone"
+          ],
+          "triangulos": 946,
+          "caja": {
+            "min": [
+              0.0748,
+              -0.0654,
+              0.13
+            ],
+            "max": [
+              0.1044,
+              -0.0221,
+              0.1922
+            ]
+          }
+        },
+        {
+          "id": "metatarsiano-2-d",
+          "nodo": "metatarsiano-2-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24509"
+          ],
+          "elementos": [
+            "FJ3353"
+          ],
+          "nombresFuente": [
+            "Right second metatarsal bone"
+          ],
+          "triangulos": 610,
+          "caja": {
+            "min": [
+              -0.1213,
+              -0.0663,
+              0.1224
+            ],
+            "max": [
+              -0.0907,
+              -0.0183,
+              0.1874
+            ]
+          }
+        },
+        {
+          "id": "metatarsiano-2-i",
+          "nodo": "metatarsiano-2-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24510"
+          ],
+          "elementos": [
+            "FJ3244"
+          ],
+          "nombresFuente": [
+            "Left second metatarsal bone"
+          ],
+          "triangulos": 618,
+          "caja": {
+            "min": [
+              0.0906,
+              -0.0662,
+              0.1225
+            ],
+            "max": [
+              0.1213,
+              -0.0183,
+              0.1874
+            ]
+          }
+        },
+        {
+          "id": "metatarsiano-3-d",
+          "nodo": "metatarsiano-3-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24511"
+          ],
+          "elementos": [
+            "FJ3355"
+          ],
+          "nombresFuente": [
+            "Right third metatarsal bone"
+          ],
+          "triangulos": 624,
+          "caja": {
+            "min": [
+              -0.1336,
+              -0.0664,
+              0.1184
+            ],
+            "max": [
+              -0.0983,
+              -0.0237,
+              0.1809
+            ]
+          }
+        },
+        {
+          "id": "metatarsiano-3-i",
+          "nodo": "metatarsiano-3-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24512"
+          ],
+          "elementos": [
+            "FJ3247"
+          ],
+          "nombresFuente": [
+            "Left third metatarsal bone"
+          ],
+          "triangulos": 628,
+          "caja": {
+            "min": [
+              0.0983,
+              -0.0665,
+              0.1181
+            ],
+            "max": [
+              0.1336,
+              -0.0237,
+              0.1808
+            ]
+          }
+        },
+        {
+          "id": "metatarsiano-4-d",
+          "nodo": "metatarsiano-4-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24513"
+          ],
+          "elementos": [
+            "FJ3357"
+          ],
+          "nombresFuente": [
+            "Right fourth metatarsal bone"
+          ],
+          "triangulos": 554,
+          "caja": {
+            "min": [
+              -0.1427,
+              -0.0673,
+              0.107
+            ],
+            "max": [
+              -0.1019,
+              -0.032,
+              0.1697
+            ]
+          }
+        },
+        {
+          "id": "metatarsiano-4-i",
+          "nodo": "metatarsiano-4-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24514"
+          ],
+          "elementos": [
+            "FJ3250"
+          ],
+          "nombresFuente": [
+            "Left fourth metatarsal bone"
+          ],
+          "triangulos": 610,
+          "caja": {
+            "min": [
+              0.1018,
+              -0.0674,
+              0.107
+            ],
+            "max": [
+              0.1426,
+              -0.032,
+              0.1694
+            ]
+          }
+        },
+        {
+          "id": "metatarsiano-5-d",
+          "nodo": "metatarsiano-5-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24515"
+          ],
+          "elementos": [
+            "FJ3359"
+          ],
+          "nombresFuente": [
+            "Right fifth metatarsal bone"
+          ],
+          "triangulos": 670,
+          "caja": {
+            "min": [
+              -0.1523,
+              -0.0698,
+              0.0894
+            ],
+            "max": [
+              -0.1065,
+              -0.0399,
+              0.1551
+            ]
+          }
+        },
+        {
+          "id": "metatarsiano-5-i",
+          "nodo": "metatarsiano-5-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA24516"
+          ],
+          "elementos": [
+            "FJ3253"
+          ],
+          "nombresFuente": [
+            "Left fifth metatarsal bone"
+          ],
+          "triangulos": 702,
+          "caja": {
+            "min": [
+              0.1064,
+              -0.0698,
+              0.0893
+            ],
+            "max": [
+              0.1524,
+              -0.0398,
+              0.1551
+            ]
+          }
+        },
+        {
+          "id": "falange-proximal-pie-1-d",
+          "nodo": "falange-proximal-pie-1-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA43253"
+          ],
+          "elementos": [
+            "FJ3310"
+          ],
+          "nombresFuente": [
+            "Proximal phalanx of right big toe"
+          ],
+          "triangulos": 468,
+          "caja": {
+            "min": [
+              -0.1172,
+              -0.0686,
+              0.1861
+            ],
+            "max": [
+              -0.0867,
+              -0.0514,
+              0.2193
+            ]
+          }
+        },
+        {
+          "id": "falange-proximal-pie-1-i",
+          "nodo": "falange-proximal-pie-1-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA43254"
+          ],
+          "elementos": [
+            "FJ3329"
+          ],
+          "nombresFuente": [
+            "Proximal phalanx of left big toe"
+          ],
+          "triangulos": 502,
+          "caja": {
+            "min": [
+              0.0867,
+              -0.0684,
+              0.186
+            ],
+            "max": [
+              0.1171,
+              -0.0516,
+              0.2193
+            ]
+          }
+        },
+        {
+          "id": "falange-proximal-pie-2-d",
+          "nodo": "falange-proximal-pie-2-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA32634"
+          ],
+          "elementos": [
+            "FJ3319"
+          ],
+          "nombresFuente": [
+            "Proximal phalanx of right second toe"
+          ],
+          "triangulos": 392,
+          "caja": {
+            "min": [
+              -0.1336,
+              -0.0669,
+              0.1836
+            ],
+            "max": [
+              -0.1113,
+              -0.0545,
+              0.2117
+            ]
+          }
+        },
+        {
+          "id": "falange-proximal-pie-2-i",
+          "nodo": "falange-proximal-pie-2-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA32635"
+          ],
+          "elementos": [
+            "FJ3328"
+          ],
+          "nombresFuente": [
+            "Proximal phalanx of left second toe"
+          ],
+          "triangulos": 374,
+          "caja": {
+            "min": [
+              0.1114,
+              -0.0668,
+              0.1835
+            ],
+            "max": [
+              0.1335,
+              -0.0545,
+              0.2116
+            ]
+          }
+        },
+        {
+          "id": "falange-proximal-pie-3-d",
+          "nodo": "falange-proximal-pie-3-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA32636"
+          ],
+          "elementos": [
+            "FJ3320"
+          ],
+          "nombresFuente": [
+            "Proximal phalanx of right third toe"
+          ],
+          "triangulos": 398,
+          "caja": {
+            "min": [
+              -0.1459,
+              -0.0676,
+              0.1744
+            ],
+            "max": [
+              -0.1251,
+              -0.0562,
+              0.2028
+            ]
+          }
+        },
+        {
+          "id": "falange-proximal-pie-3-i",
+          "nodo": "falange-proximal-pie-3-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA32637"
+          ],
+          "elementos": [
+            "FJ3311"
+          ],
+          "nombresFuente": [
+            "Proximal phalanx of left third toe"
+          ],
+          "triangulos": 388,
+          "caja": {
+            "min": [
+              0.1251,
+              -0.0677,
+              0.1746
+            ],
+            "max": [
+              0.1458,
+              -0.0559,
+              0.2028
+            ]
+          }
+        },
+        {
+          "id": "falange-proximal-pie-4-d",
+          "nodo": "falange-proximal-pie-4-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA32638"
+          ],
+          "elementos": [
+            "FJ3321"
+          ],
+          "nombresFuente": [
+            "Proximal phalanx of right fourth toe"
+          ],
+          "triangulos": 418,
+          "caja": {
+            "min": [
+              -0.1559,
+              -0.0697,
+              0.1644
+            ],
+            "max": [
+              -0.1343,
+              -0.0565,
+              0.1884
+            ]
+          }
+        },
+        {
+          "id": "falange-proximal-pie-4-i",
+          "nodo": "falange-proximal-pie-4-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA32639"
+          ],
+          "elementos": [
+            "FJ3312"
+          ],
+          "nombresFuente": [
+            "Proximal phalanx of left fourth toe"
+          ],
+          "triangulos": 418,
+          "caja": {
+            "min": [
+              0.1343,
+              -0.0697,
+              0.1644
+            ],
+            "max": [
+              0.1559,
+              -0.0565,
+              0.1884
+            ]
+          }
+        },
+        {
+          "id": "falange-proximal-pie-5-d",
+          "nodo": "falange-proximal-pie-5-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA32640"
+          ],
+          "elementos": [
+            "FJ3324"
+          ],
+          "nombresFuente": [
+            "Proximal phalanx of right little toe"
+          ],
+          "triangulos": 382,
+          "caja": {
+            "min": [
+              -0.1648,
+              -0.0699,
+              0.1487
+            ],
+            "max": [
+              -0.1429,
+              -0.06,
+              0.1741
+            ]
+          }
+        },
+        {
+          "id": "falange-proximal-pie-5-i",
+          "nodo": "falange-proximal-pie-5-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA32641"
+          ],
+          "elementos": [
+            "FJ3315"
+          ],
+          "nombresFuente": [
+            "Proximal phalanx of left little toe"
+          ],
+          "triangulos": 386,
+          "caja": {
+            "min": [
+              0.1429,
+              -0.0698,
+              0.1488
+            ],
+            "max": [
+              0.1648,
+              -0.06,
+              0.174
+            ]
+          }
+        },
+        {
+          "id": "falange-media-pie-2-d",
+          "nodo": "falange-media-pie-2-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA32642"
+          ],
+          "elementos": [
+            "FJ3300"
+          ],
+          "nombresFuente": [
+            "Middle phalanx of right second toe"
+          ],
+          "triangulos": 258,
+          "caja": {
+            "min": [
+              -0.1394,
+              -0.068,
+              0.2076
+            ],
+            "max": [
+              -0.1252,
+              -0.0594,
+              0.2247
+            ]
+          }
+        },
+        {
+          "id": "falange-media-pie-2-i",
+          "nodo": "falange-media-pie-2-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA32643"
+          ],
+          "elementos": [
+            "FJ3293"
+          ],
+          "nombresFuente": [
+            "Middle phalanx of left second toe"
+          ],
+          "triangulos": 322,
+          "caja": {
+            "min": [
+              0.1251,
+              -0.068,
+              0.2075
+            ],
+            "max": [
+              0.1392,
+              -0.0593,
+              0.2246
+            ]
+          }
+        },
+        {
+          "id": "falange-media-pie-3-d",
+          "nodo": "falange-media-pie-3-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA32644"
+          ],
+          "elementos": [
+            "FJ3301"
+          ],
+          "nombresFuente": [
+            "Middle phalanx of right third toe"
+          ],
+          "triangulos": 292,
+          "caja": {
+            "min": [
+              -0.1517,
+              -0.0688,
+              0.1989
+            ],
+            "max": [
+              -0.1389,
+              -0.0609,
+              0.2157
+            ]
+          }
+        },
+        {
+          "id": "falange-media-pie-3-i",
+          "nodo": "falange-media-pie-3-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA32645"
+          ],
+          "elementos": [
+            "FJ3294"
+          ],
+          "nombresFuente": [
+            "Middle phalanx of left third toe"
+          ],
+          "triangulos": 288,
+          "caja": {
+            "min": [
+              0.1389,
+              -0.069,
+              0.1989
+            ],
+            "max": [
+              0.1518,
+              -0.0611,
+              0.2159
+            ]
+          }
+        },
+        {
+          "id": "falange-media-pie-4-d",
+          "nodo": "falange-media-pie-4-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA32646"
+          ],
+          "elementos": [
+            "FJ3302"
+          ],
+          "nombresFuente": [
+            "Middle phalanx of right fourth toe"
+          ],
+          "triangulos": 342,
+          "caja": {
+            "min": [
+              -0.1613,
+              -0.0699,
+              0.1854
+            ],
+            "max": [
+              -0.1491,
+              -0.0619,
+              0.1988
+            ]
+          }
+        },
+        {
+          "id": "falange-media-pie-4-i",
+          "nodo": "falange-media-pie-4-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA32647"
+          ],
+          "elementos": [
+            "FJ3295"
+          ],
+          "nombresFuente": [
+            "Middle phalanx of left fourth toe"
+          ],
+          "triangulos": 280,
+          "caja": {
+            "min": [
+              0.149,
+              -0.0698,
+              0.1854
+            ],
+            "max": [
+              0.1614,
+              -0.062,
+              0.1988
+            ]
+          }
+        },
+        {
+          "id": "falange-media-pie-5-d",
+          "nodo": "falange-media-pie-5-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA230986"
+          ],
+          "elementos": [
+            "FJ3305"
+          ],
+          "nombresFuente": [
+            "Middle phalanx of right little toe"
+          ],
+          "triangulos": 136,
+          "caja": {
+            "min": [
+              -0.1667,
+              -0.0701,
+              0.1715
+            ],
+            "max": [
+              -0.1581,
+              -0.0637,
+              0.1788
+            ]
+          }
+        },
+        {
+          "id": "falange-media-pie-5-i",
+          "nodo": "falange-media-pie-5-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA230988"
+          ],
+          "elementos": [
+            "FJ3298"
+          ],
+          "nombresFuente": [
+            "Middle phalanx of left little toe"
+          ],
+          "triangulos": 224,
+          "caja": {
+            "min": [
+              0.1581,
+              -0.0701,
+              0.1716
+            ],
+            "max": [
+              0.1667,
+              -0.0638,
+              0.179
+            ]
+          }
+        },
+        {
+          "id": "falange-distal-pie-1-d",
+          "nodo": "falange-distal-pie-1-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA32650"
+          ],
+          "elementos": [
+            "FJ3192"
+          ],
+          "nombresFuente": [
+            "Distal phalanx of right big toe"
+          ],
+          "triangulos": 404,
+          "caja": {
+            "min": [
+              -0.1251,
+              -0.0699,
+              0.2108
+            ],
+            "max": [
+              -0.1024,
+              -0.059,
+              0.236
+            ]
+          }
+        },
+        {
+          "id": "falange-distal-pie-1-i",
+          "nodo": "falange-distal-pie-1-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA32651"
+          ],
+          "elementos": [
+            "FJ3182"
+          ],
+          "nombresFuente": [
+            "Distal phalanx of left big toe"
+          ],
+          "triangulos": 366,
+          "caja": {
+            "min": [
+              0.1025,
+              -0.07,
+              0.2107
+            ],
+            "max": [
+              0.1251,
+              -0.059,
+              0.2359
+            ]
+          }
+        },
+        {
+          "id": "falange-distal-pie-2-d",
+          "nodo": "falange-distal-pie-2-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA32652"
+          ],
+          "elementos": [
+            "FJ3189"
+          ],
+          "nombresFuente": [
+            "Distal phalanx of right second toe"
+          ],
+          "triangulos": 196,
+          "caja": {
+            "min": [
+              -0.1433,
+              -0.0703,
+              0.221
+            ],
+            "max": [
+              -0.1323,
+              -0.0631,
+              0.2341
+            ]
+          }
+        },
+        {
+          "id": "falange-distal-pie-2-i",
+          "nodo": "falange-distal-pie-2-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA32653"
+          ],
+          "elementos": [
+            "FJ3179"
+          ],
+          "nombresFuente": [
+            "Distal phalanx of left second toe"
+          ],
+          "triangulos": 238,
+          "caja": {
+            "min": [
+              0.1322,
+              -0.0702,
+              0.2209
+            ],
+            "max": [
+              0.1434,
+              -0.063,
+              0.234
+            ]
+          }
+        },
+        {
+          "id": "falange-distal-pie-3-d",
+          "nodo": "falange-distal-pie-3-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA32654"
+          ],
+          "elementos": [
+            "FJ3190"
+          ],
+          "nombresFuente": [
+            "Distal phalanx of right third toe"
+          ],
+          "triangulos": 258,
+          "caja": {
+            "min": [
+              -0.1548,
+              -0.0702,
+              0.2123
+            ],
+            "max": [
+              -0.1459,
+              -0.0644,
+              0.2237
+            ]
+          }
+        },
+        {
+          "id": "falange-distal-pie-3-i",
+          "nodo": "falange-distal-pie-3-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA32655"
+          ],
+          "elementos": [
+            "FJ3180"
+          ],
+          "nombresFuente": [
+            "Distal phalanx of left third toe"
+          ],
+          "triangulos": 336,
+          "caja": {
+            "min": [
+              0.1458,
+              -0.0703,
+              0.2123
+            ],
+            "max": [
+              0.1548,
+              -0.0644,
+              0.2237
+            ]
+          }
+        },
+        {
+          "id": "falange-distal-pie-4-d",
+          "nodo": "falange-distal-pie-4-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA32656"
+          ],
+          "elementos": [
+            "FJ3191"
+          ],
+          "nombresFuente": [
+            "Distal phalanx of right fourth toe"
+          ],
+          "triangulos": 240,
+          "caja": {
+            "min": [
+              -0.1641,
+              -0.0704,
+              0.1954
+            ],
+            "max": [
+              -0.1553,
+              -0.0634,
+              0.2065
+            ]
+          }
+        },
+        {
+          "id": "falange-distal-pie-4-i",
+          "nodo": "falange-distal-pie-4-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA32657"
+          ],
+          "elementos": [
+            "FJ3181"
+          ],
+          "nombresFuente": [
+            "Distal phalanx of left fourth toe"
+          ],
+          "triangulos": 224,
+          "caja": {
+            "min": [
+              0.1552,
+              -0.0703,
+              0.1954
+            ],
+            "max": [
+              0.1641,
+              -0.0635,
+              0.2066
+            ]
+          }
+        },
+        {
+          "id": "falange-distal-pie-5-d",
+          "nodo": "falange-distal-pie-5-d",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA32658"
+          ],
+          "elementos": [
+            "FJ3195"
+          ],
+          "nombresFuente": [
+            "Distal phalanx of right little toe"
+          ],
+          "triangulos": 210,
+          "caja": {
+            "min": [
+              -0.1693,
+              -0.0704,
+              0.1762
+            ],
+            "max": [
+              -0.1612,
+              -0.0651,
+              0.1866
+            ]
+          }
+        },
+        {
+          "id": "falange-distal-pie-5-i",
+          "nodo": "falange-distal-pie-5-i",
+          "tipo": "hueso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA32659"
+          ],
+          "elementos": [
+            "FJ3185"
+          ],
+          "nombresFuente": [
+            "Distal phalanx of left little toe"
+          ],
+          "triangulos": 220,
+          "caja": {
+            "min": [
+              0.1613,
+              -0.0705,
+              0.1762
+            ],
+            "max": [
+              0.1694,
+              -0.0651,
+              0.1865
+            ]
+          }
+        },
+        {
+          "id": "cartilago-costal-1-d",
+          "nodo": "cartilago-costal-1-d",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA7875"
+          ],
+          "elementos": [
+            "FJ3333"
+          ],
+          "nombresFuente": [
+            "Right first costal cartilage"
+          ],
+          "triangulos": 616,
+          "caja": {
+            "min": [
+              -0.0562,
+              1.2969,
+              0.1222
+            ],
+            "max": [
+              -0.0195,
+              1.3202,
+              0.1508
+            ]
+          }
+        },
+        {
+          "id": "cartilago-costal-1-i",
+          "nodo": "cartilago-costal-1-i",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA8005"
+          ],
+          "elementos": [
+            "FJ3239"
+          ],
+          "nombresFuente": [
+            "Left first costal cartilage"
+          ],
+          "triangulos": 592,
+          "caja": {
+            "min": [
+              0.0195,
+              1.2969,
+              0.1223
+            ],
+            "max": [
+              0.0562,
+              1.3203,
+              0.1508
+            ]
+          }
+        },
+        {
+          "id": "cartilago-costal-2-d",
+          "nodo": "cartilago-costal-2-d",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA7886"
+          ],
+          "elementos": [
+            "FJ3335"
+          ],
+          "nombresFuente": [
+            "Right second costal cartilage"
+          ],
+          "triangulos": 600,
+          "caja": {
+            "min": [
+              -0.0482,
+              1.2701,
+              0.1577
+            ],
+            "max": [
+              -0.0102,
+              1.288,
+              0.1783
+            ]
+          }
+        },
+        {
+          "id": "cartilago-costal-2-i",
+          "nodo": "cartilago-costal-2-i",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA8031"
+          ],
+          "elementos": [
+            "FJ3242"
+          ],
+          "nombresFuente": [
+            "Left second costal cartilage"
+          ],
+          "triangulos": 546,
+          "caja": {
+            "min": [
+              0.0102,
+              1.2702,
+              0.1577
+            ],
+            "max": [
+              0.0481,
+              1.288,
+              0.1782
+            ]
+          }
+        },
+        {
+          "id": "cartilago-costal-3-d",
+          "nodo": "cartilago-costal-3-d",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA7913"
+          ],
+          "elementos": [
+            "FJ3337"
+          ],
+          "nombresFuente": [
+            "Right third costal cartilage"
+          ],
+          "triangulos": 590,
+          "caja": {
+            "min": [
+              -0.0507,
+              1.2424,
+              0.1714
+            ],
+            "max": [
+              -0.0131,
+              1.26,
+              0.1901
+            ]
+          }
+        },
+        {
+          "id": "cartilago-costal-3-i",
+          "nodo": "cartilago-costal-3-i",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA8058"
+          ],
+          "elementos": [
+            "FJ3245"
+          ],
+          "nombresFuente": [
+            "Left third costal cartilage"
+          ],
+          "triangulos": 560,
+          "caja": {
+            "min": [
+              0.0131,
+              1.2424,
+              0.1714
+            ],
+            "max": [
+              0.0507,
+              1.26,
+              0.1901
+            ]
+          }
+        },
+        {
+          "id": "cartilago-costal-4-d",
+          "nodo": "cartilago-costal-4-d",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA7976"
+          ],
+          "elementos": [
+            "FJ3339"
+          ],
+          "nombresFuente": [
+            "Right fourth costal cartilage"
+          ],
+          "triangulos": 582,
+          "caja": {
+            "min": [
+              -0.0599,
+              1.2111,
+              0.1842
+            ],
+            "max": [
+              -0.0143,
+              1.2356,
+              0.1986
+            ]
+          }
+        },
+        {
+          "id": "cartilago-costal-4-i",
+          "nodo": "cartilago-costal-4-i",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA8167"
+          ],
+          "elementos": [
+            "FJ3248"
+          ],
+          "nombresFuente": [
+            "Left fourth costal cartilage"
+          ],
+          "triangulos": 564,
+          "caja": {
+            "min": [
+              0.0143,
+              1.2111,
+              0.1843
+            ],
+            "max": [
+              0.0598,
+              1.2356,
+              0.1986
+            ]
+          }
+        },
+        {
+          "id": "cartilago-costal-5-d",
+          "nodo": "cartilago-costal-5-d",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA8070"
+          ],
+          "elementos": [
+            "FJ3341"
+          ],
+          "nombresFuente": [
+            "Right fifth costal cartilage"
+          ],
+          "triangulos": 614,
+          "caja": {
+            "min": [
+              -0.0822,
+              1.1716,
+              0.1893
+            ],
+            "max": [
+              -0.0177,
+              1.2153,
+              0.209
+            ]
+          }
+        },
+        {
+          "id": "cartilago-costal-5-i",
+          "nodo": "cartilago-costal-5-i",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA8112"
+          ],
+          "elementos": [
+            "FJ3251"
+          ],
+          "nombresFuente": [
+            "Left fifth costal cartilage"
+          ],
+          "triangulos": 630,
+          "caja": {
+            "min": [
+              0.0177,
+              1.1716,
+              0.1893
+            ],
+            "max": [
+              0.082,
+              1.2152,
+              0.209
+            ]
+          }
+        },
+        {
+          "id": "cartilago-costal-6-d",
+          "nodo": "cartilago-costal-6-d",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA8194"
+          ],
+          "elementos": [
+            "FJ3343"
+          ],
+          "nombresFuente": [
+            "Right sixth costal cartilage"
+          ],
+          "triangulos": 772,
+          "caja": {
+            "min": [
+              -0.0937,
+              1.1376,
+              0.1847
+            ],
+            "max": [
+              -0.0139,
+              1.1973,
+              0.2122
+            ]
+          }
+        },
+        {
+          "id": "cartilago-costal-6-i",
+          "nodo": "cartilago-costal-6-i",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA8221"
+          ],
+          "elementos": [
+            "FJ3254"
+          ],
+          "nombresFuente": [
+            "Left sixth costal cartilage"
+          ],
+          "triangulos": 748,
+          "caja": {
+            "min": [
+              0.0139,
+              1.1376,
+              0.1852
+            ],
+            "max": [
+              0.093,
+              1.1973,
+              0.2122
+            ]
+          }
+        },
+        {
+          "id": "cartilago-costal-7-d",
+          "nodo": "cartilago-costal-7-d",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA8248"
+          ],
+          "elementos": [
+            "FJ3345"
+          ],
+          "nombresFuente": [
+            "Right seventh costal cartilage"
+          ],
+          "triangulos": 1224,
+          "caja": {
+            "min": [
+              -0.1099,
+              1.1026,
+              0.1708
+            ],
+            "max": [
+              0.0496,
+              1.1865,
+              0.2132
+            ]
+          }
+        },
+        {
+          "id": "cartilago-costal-7-i",
+          "nodo": "cartilago-costal-7-i",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA8275"
+          ],
+          "elementos": [
+            "FJ3255"
+          ],
+          "nombresFuente": [
+            "Left seventh costal cartilage"
+          ],
+          "triangulos": 1156,
+          "caja": {
+            "min": [
+              0.0033,
+              1.1026,
+              0.1709
+            ],
+            "max": [
+              0.1085,
+              1.1864,
+              0.2132
+            ]
+          }
+        },
+        {
+          "id": "disco-c2-c3",
+          "nodo": "disco-c2-c3",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA25058"
+          ],
+          "elementos": [
+            "FJ3202"
+          ],
+          "nombresFuente": [
+            "Intervertebral disk of axis"
+          ],
+          "triangulos": 1876,
+          "caja": {
+            "min": [
+              -0.0134,
+              1.4414,
+              0.0692
+            ],
+            "max": [
+              0.0117,
+              1.4509,
+              0.0873
+            ]
+          }
+        },
+        {
+          "id": "disco-c3-c4",
+          "nodo": "disco-c3-c4",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA13896"
+          ],
+          "elementos": [
+            "FJ3213"
+          ],
+          "nombresFuente": [
+            "Intervertebral disk of third cervical vertebra"
+          ],
+          "triangulos": 730,
+          "caja": {
+            "min": [
+              -0.012,
+              1.4269,
+              0.0727
+            ],
+            "max": [
+              0.0107,
+              1.4331,
+              0.0887
+            ]
+          }
+        },
+        {
+          "id": "disco-c4-c5",
+          "nodo": "disco-c4-c5",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA13897"
+          ],
+          "elementos": [
+            "FJ3218"
+          ],
+          "nombresFuente": [
+            "Intervertebral disk of fourth cervical vertebra"
+          ],
+          "triangulos": 840,
+          "caja": {
+            "min": [
+              -0.0134,
+              1.4087,
+              0.0742
+            ],
+            "max": [
+              0.0121,
+              1.4193,
+              0.0913
+            ]
+          }
+        },
+        {
+          "id": "disco-c5-c6",
+          "nodo": "disco-c5-c6",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA13898"
+          ],
+          "elementos": [
+            "FJ3219"
+          ],
+          "nombresFuente": [
+            "Intervertebral disk of fifth cervical vertebra"
+          ],
+          "triangulos": 862,
+          "caja": {
+            "min": [
+              -0.0148,
+              1.3926,
+              0.0755
+            ],
+            "max": [
+              0.0135,
+              1.4033,
+              0.092
+            ]
+          }
+        },
+        {
+          "id": "disco-c6-c7",
+          "nodo": "disco-c6-c7",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA13899"
+          ],
+          "elementos": [
+            "FJ3220"
+          ],
+          "nombresFuente": [
+            "Intervertebral disk of sixth cervical vertebra"
+          ],
+          "triangulos": 834,
+          "caja": {
+            "min": [
+              -0.0148,
+              1.3772,
+              0.0735
+            ],
+            "max": [
+              0.0134,
+              1.3867,
+              0.0903
+            ]
+          }
+        },
+        {
+          "id": "disco-c7-t1",
+          "nodo": "disco-c7-t1",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA13900"
+          ],
+          "elementos": [
+            "FJ3221"
+          ],
+          "nombresFuente": [
+            "Intervertebral disk of seventh cervical vertebra"
+          ],
+          "triangulos": 956,
+          "caja": {
+            "min": [
+              -0.0163,
+              1.36,
+              0.0698
+            ],
+            "max": [
+              0.0149,
+              1.3717,
+              0.0876
+            ]
+          }
+        },
+        {
+          "id": "disco-t1-t2",
+          "nodo": "disco-t1-t2",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA10458"
+          ],
+          "elementos": [
+            "FJ3222"
+          ],
+          "nombresFuente": [
+            "Intervertebral disk of first thoracic vertebra"
+          ],
+          "triangulos": 1060,
+          "caja": {
+            "min": [
+              -0.0171,
+              1.3419,
+              0.0639
+            ],
+            "max": [
+              0.0155,
+              1.3548,
+              0.0838
+            ]
+          }
+        },
+        {
+          "id": "disco-t2-t3",
+          "nodo": "disco-t2-t3",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA13495"
+          ],
+          "elementos": [
+            "FJ3223"
+          ],
+          "nombresFuente": [
+            "Intervertebral disk of second thoracic vertebra"
+          ],
+          "triangulos": 1230,
+          "caja": {
+            "min": [
+              -0.0166,
+              1.3207,
+              0.0554
+            ],
+            "max": [
+              0.0153,
+              1.3356,
+              0.0783
+            ]
+          }
+        },
+        {
+          "id": "disco-t3-t4",
+          "nodo": "disco-t3-t4",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA13500"
+          ],
+          "elementos": [
+            "FJ3224"
+          ],
+          "nombresFuente": [
+            "Intervertebral disk of third thoracic vertebra"
+          ],
+          "triangulos": 1390,
+          "caja": {
+            "min": [
+              -0.0155,
+              1.2997,
+              0.0457
+            ],
+            "max": [
+              0.0142,
+              1.3144,
+              0.0716
+            ]
+          }
+        },
+        {
+          "id": "disco-t4-t5",
+          "nodo": "disco-t4-t5",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA13501"
+          ],
+          "elementos": [
+            "FJ3203"
+          ],
+          "nombresFuente": [
+            "Intervertebral disk of fourth thoracic vertebra"
+          ],
+          "triangulos": 1300,
+          "caja": {
+            "min": [
+              -0.0155,
+              1.278,
+              0.0377
+            ],
+            "max": [
+              0.0142,
+              1.2913,
+              0.0667
+            ]
+          }
+        },
+        {
+          "id": "disco-t5-t6",
+          "nodo": "disco-t5-t6",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA13502"
+          ],
+          "elementos": [
+            "FJ3204"
+          ],
+          "nombresFuente": [
+            "Intervertebral disk of fifth thoracic vertebra"
+          ],
+          "triangulos": 1530,
+          "caja": {
+            "min": [
+              -0.0159,
+              1.2545,
+              0.0336
+            ],
+            "max": [
+              0.0146,
+              1.265,
+              0.0653
+            ]
+          }
+        },
+        {
+          "id": "disco-t6-t7",
+          "nodo": "disco-t6-t7",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA13503"
+          ],
+          "elementos": [
+            "FJ3205"
+          ],
+          "nombresFuente": [
+            "Intervertebral disk of sixth thoracic vertebra"
+          ],
+          "triangulos": 2110,
+          "caja": {
+            "min": [
+              -0.0177,
+              1.2271,
+              0.0306
+            ],
+            "max": [
+              0.0164,
+              1.2391,
+              0.0662
+            ]
+          }
+        },
+        {
+          "id": "disco-t7-t8",
+          "nodo": "disco-t7-t8",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA13504"
+          ],
+          "elementos": [
+            "FJ3206"
+          ],
+          "nombresFuente": [
+            "Intervertebral disk of seventh thoracic vertebra"
+          ],
+          "triangulos": 2146,
+          "caja": {
+            "min": [
+              -0.0176,
+              1.2009,
+              0.0328
+            ],
+            "max": [
+              0.0163,
+              1.2132,
+              0.0695
+            ]
+          }
+        },
+        {
+          "id": "disco-t8-t9",
+          "nodo": "disco-t8-t9",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA13505"
+          ],
+          "elementos": [
+            "FJ3207"
+          ],
+          "nombresFuente": [
+            "Intervertebral disk of eighth thoracic vertebra"
+          ],
+          "triangulos": 2552,
+          "caja": {
+            "min": [
+              -0.0185,
+              1.1747,
+              0.0384
+            ],
+            "max": [
+              0.0172,
+              1.1894,
+              0.0742
+            ]
+          }
+        },
+        {
+          "id": "disco-t9-t10",
+          "nodo": "disco-t9-t10",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA13506"
+          ],
+          "elementos": [
+            "FJ3208"
+          ],
+          "nombresFuente": [
+            "Intervertebral disk of ninth thoracic vertebra"
+          ],
+          "triangulos": 2416,
+          "caja": {
+            "min": [
+              -0.0196,
+              1.1471,
+              0.0436
+            ],
+            "max": [
+              0.0183,
+              1.1625,
+              0.0796
+            ]
+          }
+        },
+        {
+          "id": "disco-t10-t11",
+          "nodo": "disco-t10-t11",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA13507"
+          ],
+          "elementos": [
+            "FJ3209"
+          ],
+          "nombresFuente": [
+            "Intervertebral disk of tenth thoracic vertebra"
+          ],
+          "triangulos": 2452,
+          "caja": {
+            "min": [
+              -0.02,
+              1.1199,
+              0.0497
+            ],
+            "max": [
+              0.0187,
+              1.1353,
+              0.0878
+            ]
+          }
+        },
+        {
+          "id": "disco-t11-t12",
+          "nodo": "disco-t11-t12",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA13508"
+          ],
+          "elementos": [
+            "FJ3210"
+          ],
+          "nombresFuente": [
+            "Intervertebral disk of eleventh thoracic vertebra"
+          ],
+          "triangulos": 2648,
+          "caja": {
+            "min": [
+              -0.0208,
+              1.0916,
+              0.057
+            ],
+            "max": [
+              0.0194,
+              1.1082,
+              0.097
+            ]
+          }
+        },
+        {
+          "id": "disco-t12-l1",
+          "nodo": "disco-t12-l1",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA10446"
+          ],
+          "elementos": [
+            "FJ3211"
+          ],
+          "nombresFuente": [
+            "Intervertebral disk"
+          ],
+          "triangulos": 2852,
+          "caja": {
+            "min": [
+              -0.0218,
+              1.0615,
+              0.0658
+            ],
+            "max": [
+              0.0205,
+              1.0789,
+              0.1051
+            ]
+          },
+          "revisar": "La fuente lo nombra solo \"Intervertebral disk\" (FJ3211); por posición (z 1061–1079 mm) está entre T12 y L1."
+        },
+        {
+          "id": "disco-l1-l2",
+          "nodo": "disco-l1-l2",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA16033"
+          ],
+          "elementos": [
+            "FJ3212"
+          ],
+          "nombresFuente": [
+            "Intervertebral disk of first lumbar vertebra"
+          ],
+          "triangulos": 2884,
+          "caja": {
+            "min": [
+              -0.0219,
+              1.0326,
+              0.0745
+            ],
+            "max": [
+              0.0206,
+              1.0486,
+              0.1123
+            ]
+          }
+        },
+        {
+          "id": "disco-l2-l3",
+          "nodo": "disco-l2-l3",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA16034"
+          ],
+          "elementos": [
+            "FJ3214"
+          ],
+          "nombresFuente": [
+            "Intervertebral disk of second lumbar vertebra"
+          ],
+          "triangulos": 2606,
+          "caja": {
+            "min": [
+              -0.023,
+              1.0011,
+              0.0781
+            ],
+            "max": [
+              0.0216,
+              1.0126,
+              0.116
+            ]
+          }
+        },
+        {
+          "id": "disco-l3-l4",
+          "nodo": "disco-l3-l4",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA16035"
+          ],
+          "elementos": [
+            "FJ3215"
+          ],
+          "nombresFuente": [
+            "Intervertebral disk of third lumbar vertebra"
+          ],
+          "triangulos": 2918,
+          "caja": {
+            "min": [
+              -0.023,
+              0.9633,
+              0.0746
+            ],
+            "max": [
+              0.0217,
+              0.9807,
+              0.1129
+            ]
+          }
+        },
+        {
+          "id": "disco-l4-l5",
+          "nodo": "disco-l4-l5",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA16036"
+          ],
+          "elementos": [
+            "FJ3216"
+          ],
+          "nombresFuente": [
+            "Intervertebral disk of fourth lumbar vertebra"
+          ],
+          "triangulos": 2720,
+          "caja": {
+            "min": [
+              -0.0253,
+              0.9306,
+              0.0643
+            ],
+            "max": [
+              0.0239,
+              0.9536,
+              0.1028
+            ]
+          }
+        },
+        {
+          "id": "disco-l5-s1",
+          "nodo": "disco-l5-s1",
+          "tipo": "cartilago",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA16037"
+          ],
+          "elementos": [
+            "FJ3217"
+          ],
+          "nombresFuente": [
+            "Intervertebral disk of fifth lumbar vertebra"
+          ],
+          "triangulos": 2052,
+          "caja": {
+            "min": [
+              -0.0244,
+              0.8948,
+              0.0539
+            ],
+            "max": [
+              0.023,
+              0.9238,
+              0.0911
+            ]
+          }
+        },
+        {
+          "id": "martillo-d",
+          "nodo": null,
+          "tipo": "hueso",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye este hueso. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "martillo-i",
+          "nodo": null,
+          "tipo": "hueso",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye este hueso. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "yunque-d",
+          "nodo": null,
+          "tipo": "hueso",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye este hueso. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "yunque-i",
+          "nodo": null,
+          "tipo": "hueso",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye este hueso. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "estribo-d",
+          "nodo": null,
+          "tipo": "hueso",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye este hueso. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "estribo-i",
+          "nodo": null,
+          "tipo": "hueso",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye este hueso. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "coccix",
+          "nodo": null,
+          "tipo": "hueso",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye este hueso. Candidato: Z-Anatomy. Verificar si la malla del sacro incluye el cóccix."
+        }
+      ]
+    }
+  },
+  "unidades": "m",
+  "ejes": {
+    "arriba": "+Y",
+    "anterior": "+Z",
+    "derechaDelPaciente": "-X"
+  },
+  "fuentes": {
+    "bodyparts3d": {
+      "nombre": "BodyParts3D",
+      "version": "4.0 (árbol PART-OF, reducción de polígonos 99 %)",
+      "licencia": "CC BY 4.0",
+      "urlLicencia": "https://creativecommons.org/licenses/by/4.0/",
+      "url": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "atribucion": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+      "nota": "Licencia vigente desde el 25/02/2025; antes CC BY-SA 2.1 JP (los OBJ conservan la cabecera antigua)."
+    }
+  },
+  "bytesTotales": 3204760
+}

@@ -7,7 +7,7 @@ export default function Atlas() {
       <div className="pointer-events-none absolute left-4 top-4 max-w-sm rounded-lg border border-slate-800 bg-slate-950/80 p-4 text-sm text-slate-300">
         <p className="font-semibold text-slate-100">Visor 3D</p>
         <p className="mt-1">
-          Escena base de prueba. Los modelos del esqueleto llegan en la Fase 1 (pipeline) y el visor completo en la Fase 2.
+          Vista previa del modelo del esqueleto generado por el pipeline (Fase 1). Selección, fichas, búsqueda y cortes llegan en la Fase 2.
         </p>
       </div>
     </div>

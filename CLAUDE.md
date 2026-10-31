@@ -18,7 +18,8 @@ sistemas, consultar la ficha de cada estructura, ver simulaciones fisiológicas 
 
 ## Modelos 3D
 - **No modelar anatomía con primitivas.** Usar modelos reales con licencia libre:
-  - Principal: BodyParts3D (DBCLS, CC BY-SA 2.1 JP), OBJ por estructura con IDs FMA.
+  - Principal: BodyParts3D 4.0 (DBCLS, **CC BY 4.0** desde el 25/02/2025; antes CC BY-SA 2.1 JP), OBJ por
+    estructura con IDs FMA. Descarga automatizada; ver `docs/PIPELINE.md`.
   - Complemento: Z-Anatomy (CC BY-SA 4.0, `.blend` → glTF con Blender CLI).
 - Pipeline reproducible en `/scripts`: descarga → OBJ→glTF (obj2gltf) → un `.glb` por sistema (cada estructura
   es un nodo con nombre = id propio) → `@gltf-transform/cli` (weld, simplify, draco/meshopt) →
@@ -26,7 +27,8 @@ sistemas, consultar la ficha de cada estructura, ver simulaciones fisiológicas 
 - Presupuesto: cada sistema < 8 MB, total < 80 MB.
 - Crudos en `/assets-raw` (en `.gitignore`, nunca se suben). Los `.glb` optimizados sí, si caben (< 100 MB por archivo).
 - **Si un modelo no está disponible, NO inventar**: marcarlo como pendiente en el manifest y avisar.
-- Mantener la página «Créditos y licencias» con la atribución CC BY-SA.
+- Mantener la página «Créditos y licencias» con la atribución exigida por cada licencia (la de
+  BodyParts3D está en `public/models/manifest.json` → `fuentes`). Lo que venga de Z-Anatomy obliga a CC BY-SA.
 
 ## Datos (separados del 3D)
 - `src/data/estructuras/<sistema>.json`, una entrada por estructura:

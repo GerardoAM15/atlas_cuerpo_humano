@@ -7,20 +7,31 @@ export default function Creditos() {
         <article className="rounded-lg border border-slate-800 bg-slate-900/50 p-5">
           <h2 className="text-lg font-semibold text-slate-100">BodyParts3D</h2>
           <p className="mt-2">
-            BodyParts3D, © The Database Center for Life Science (DBCLS), bajo licencia{' '}
+            «BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International».
+            Licencia:{' '}
             <a
               className="text-sky-400 underline"
-              href="https://creativecommons.org/licenses/by-sa/2.1/jp/deed.es"
+              href="https://creativecommons.org/licenses/by/4.0/deed.es"
               target="_blank"
               rel="noreferrer"
             >
-              Creative Commons Reconocimiento-CompartirIgual 2.1 Japón
+              Creative Commons Atribución 4.0 Internacional
             </a>
-            . Estructuras identificadas con IDs del <em>Foundational Model of Anatomy</em> (FMA).
+            . Fuente:{' '}
+            <a
+              className="text-sky-400 underline"
+              href="https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LSDB Archive (DBCLS)
+            </a>
+            , versión 4.0. Estructuras identificadas con IDs del <em>Foundational Model of Anatomy</em> (FMA).
           </p>
           <p className="mt-2 text-sm text-slate-400">
-            Modificaciones: conversión OBJ → glTF, agrupación por sistema, soldadura y simplificación de mallas y
-            compresión. Los modelos derivados se distribuyen bajo la misma licencia.
+            Modificaciones: conversión OBJ → glTF (obj2gltf), cambio de ejes y unidades (mm → m), agrupación por
+            sistema, simplificación de mallas y compresión meshopt. Hasta el 25/02/2025 la base de datos se
+            distribuía bajo CC BY-SA 2.1 JP.
           </p>
         </article>
 

@@ -20,5 +20,6 @@ npm run build
 ## Documentación
 - [docs/FUENTES.md](docs/FUENTES.md) — fuentes del contenido
 - [docs/LICENCIAS.md](docs/LICENCIAS.md) — licencias de modelos y texto
+- [docs/PIPELINE.md](docs/PIPELINE.md) — pipeline de modelos 3D (`npm run modelos:descargar` y `npm run modelos`)
 
-Modelos 3D: BodyParts3D © DBCLS (CC BY-SA 2.1 JP) y Z-Anatomy (CC BY-SA 4.0).
+Modelos 3D: «BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International».
