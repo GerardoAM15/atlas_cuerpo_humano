@@ -73,12 +73,28 @@ cámara y colocar etiquetas sin recorrer la geometría. Los ids son **únicos en
 | Muscular | 236 (118 músculos × 2) | 222 | 14 | 605 k | 5,8 MB |
 | Cardiovascular | 102 | 102 | 0 | 313 k | 2,3 MB |
 | Respiratorio | 33 | 31 | 2 | 264 k | 2,7 MB |
+| Nervioso | 74 | 55 | 19 | 294 k | 2,3 MB |
+| Digestivo | 42 | 38 | 4 | 162 k | 1,3 MB |
+| Urinario | 6 | 6 | 0 | 10 k | 0,1 MB |
+| Endocrino | 8 | 4 | 4 | 8 k | 0,1 MB |
+| Linfático | 8 | 3 | 5 | 3 k | < 0,1 MB |
+| Reproductor | 15 | 10 | 5 | 5 k | < 0,1 MB |
+| Sentidos | 24 | 23 | 1 | 131 k | 0,9 MB |
+
+Total: 18,6 MB de modelos (límite 80 MB). Los sistemas pequeños no se simplifican (`simplificar: 1`).
 
 ### Carencias de BodyParts3D 4.0 (pendientes; candidato: Z-Anatomy)
 - **Esquelético:** martillo, yunque y estribo (×2) y cóccix. A la vista, la malla del sacro parece incluir el cóccix fusionado.
 - **Muscular:** masetero, temporal, dorsal ancho, recto del abdomen, oblicuo interno, transverso del abdomen y
   cuadrado lumbar (×2). Tienen ficha completa, sin modelo.
 - **Respiratorio:** **pulmones** (no hay parénquima pulmonar, solo el árbol bronquial por segmentos).
+- **Nervioso:** médula espinal (solo existe su conducto central), nervios craneales I, V (salvo la rama oftálmica
+  orbitaria), VI–XII, plexos y nervios periféricos.
+- **Digestivo:** parótida, colon sigmoide, conducto anal y colédoco. No hay terceros molares.
+- **Endocrino:** tiroides y paratiroides. Islotes pancreáticos y gónadas remiten al páncreas y a los testículos.
+- **Linfático:** ganglios, conducto torácico y amígdalas (solo hay bazo y timo).
+- **Reproductor:** el modelo es masculino; todo el aparato femenino queda pendiente. Falta el conducto deferente.
+- **Sentidos:** oído medio e interno. Los dos pabellones auriculares son una sola malla.
 - **Cardiovascular:** los ventrículos y el tabique forman una sola malla («Wall of ventricle»); de los ventrículos
   hay también el molde de la cavidad.
 - **Intercostales:** las tres mallas solo cubren el hemitórax izquierdo.

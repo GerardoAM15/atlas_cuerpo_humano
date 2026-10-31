@@ -47,6 +47,42 @@ export const REGIONES: Partial<Record<SistemaId, readonly Region[]>> = {
     { id: 'pulmones', nombre: 'Pulmones' },
     { id: 'musculos-respiratorios', nombre: 'Músculos respiratorios' },
   ],
+  nervioso: [
+    { id: 'telencefalo', nombre: 'Hemisferios cerebrales', explosion: true },
+    { id: 'nucleos-profundos', nombre: 'Diencéfalo y núcleos basales', explosion: true },
+    { id: 'tronco-cerebelo', nombre: 'Tronco del encéfalo y cerebelo', explosion: true },
+    { id: 'ventriculos', nombre: 'Ventrículos y meninges' },
+    { id: 'nervios-craneales', nombre: 'Nervios craneales' },
+    { id: 'medula-nervios', nombre: 'Médula espinal y nervios periféricos' },
+  ],
+  digestivo: [
+    { id: 'boca', nombre: 'Boca y glándulas salivales', explosion: true },
+    { id: 'tubo-digestivo', nombre: 'Tubo digestivo', explosion: true },
+    { id: 'higado-vias-biliares', nombre: 'Hígado y vías biliares', explosion: true },
+    { id: 'pancreas', nombre: 'Páncreas' },
+  ],
+  urinario: [
+    { id: 'rinones', nombre: 'Riñones' },
+    { id: 'vias-urinarias', nombre: 'Vías urinarias' },
+  ],
+  endocrino: [
+    { id: 'glandulas-craneales', nombre: 'Hipófisis y pineal' },
+    { id: 'glandulas-cervicales', nombre: 'Tiroides y paratiroides' },
+    { id: 'glandulas-abdominales', nombre: 'Suprarrenales, páncreas endocrino y gónadas' },
+  ],
+  linfatico: [
+    { id: 'organos-linfoides', nombre: 'Órganos linfoides' },
+    { id: 'ganglios-conductos', nombre: 'Ganglios y conductos linfáticos' },
+  ],
+  reproductor: [
+    { id: 'masculino', nombre: 'Aparato genital masculino', explosion: true },
+    { id: 'femenino', nombre: 'Aparato genital femenino' },
+  ],
+  sentidos: [
+    { id: 'ojo', nombre: 'Ojo', explosion: true },
+    { id: 'anexos-oculares', nombre: 'Anexos del ojo' },
+    { id: 'oido', nombre: 'Oído' },
+  ],
 };
 
 export function nombreRegion(sistema: SistemaId, region: string): string {

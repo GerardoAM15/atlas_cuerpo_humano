@@ -1,0 +1,135 @@
+[
+  {
+    "id": "rinon-d",
+    "nodoModelo": "rinon-d",
+    "tipo": "organo",
+    "sistema": "urinario",
+    "lado": "derecho",
+    "region": "rinones",
+    "nombre": "Riñón derecho",
+    "latin": "Ren (nephros)",
+    "ingles": "Right kidney",
+    "descripcion": "Órgano en forma de judía de unos 11 cm, con corteza, médula (pirámides renales) y seno renal; contiene alrededor de un millón de nefronas.",
+    "funcion": "Filtra la sangre y produce la orina; regula el agua, los electrolitos, el equilibrio ácido-base y la presión arterial, y produce eritropoyetina y la forma activa de la vitamina D.",
+    "ubicacion": "Retroperitoneo, a los lados de la columna (T12–L3); el derecho algo más bajo por el hígado.",
+    "datosClinicos": "La insuficiencia renal crónica se debe sobre todo a la diabetes y la hipertensión; los cálculos renales causan cólicos muy dolorosos.",
+    "curiosidad": "Los riñones filtran unos 180 litros de plasma al día, pero solo producen 1–2 litros de orina.",
+    "relaciones": [
+      "ureter-d",
+      "arteria-renal-d",
+      "vena-renal-d",
+      "glandula-suprarrenal-d",
+      "costilla-12-d",
+      "psoas-mayor-d"
+    ]
+  },
+  {
+    "id": "rinon-i",
+    "nodoModelo": "rinon-i",
+    "tipo": "organo",
+    "sistema": "urinario",
+    "lado": "izquierdo",
+    "region": "rinones",
+    "nombre": "Riñón izquierdo",
+    "latin": "Ren (nephros)",
+    "ingles": "Left kidney",
+    "descripcion": "Órgano en forma de judía de unos 11 cm, con corteza, médula (pirámides renales) y seno renal; contiene alrededor de un millón de nefronas.",
+    "funcion": "Filtra la sangre y produce la orina; regula el agua, los electrolitos, el equilibrio ácido-base y la presión arterial, y produce eritropoyetina y la forma activa de la vitamina D.",
+    "ubicacion": "Retroperitoneo, a los lados de la columna (T12–L3); el derecho algo más bajo por el hígado.",
+    "datosClinicos": "La insuficiencia renal crónica se debe sobre todo a la diabetes y la hipertensión; los cálculos renales causan cólicos muy dolorosos.",
+    "curiosidad": "Los riñones filtran unos 180 litros de plasma al día, pero solo producen 1–2 litros de orina.",
+    "relaciones": [
+      "ureter-i",
+      "arteria-renal-i",
+      "vena-renal-i",
+      "glandula-suprarrenal-i",
+      "costilla-12-i",
+      "psoas-mayor-i"
+    ]
+  },
+  {
+    "id": "ureter-d",
+    "nodoModelo": "ureter-d",
+    "tipo": "organo",
+    "sistema": "urinario",
+    "lado": "derecho",
+    "region": "vias-urinarias",
+    "nombre": "Uréter derecho",
+    "latin": "Ureter",
+    "ingles": "Right ureter",
+    "descripcion": "Tubo muscular de 25–30 cm que desciende por el retroperitoneo sobre el psoas y entra oblicuamente en la vejiga.",
+    "funcion": "Conduce la orina de la pelvis renal a la vejiga mediante ondas peristálticas; su trayecto oblicuo en la pared vesical evita el reflujo.",
+    "ubicacion": "Retroperitoneo, desde el hilio renal hasta la cara posterior de la vejiga, cruzando los vasos ilíacos.",
+    "datosClinicos": "Los cálculos se detienen en sus tres estrechamientos: unión pieloureteral, cruce de los vasos ilíacos y entrada en la vejiga.",
+    "relaciones": [
+      "rinon-d",
+      "vejiga",
+      "psoas-mayor-d",
+      "iliaca-comun-d"
+    ]
+  },
+  {
+    "id": "ureter-i",
+    "nodoModelo": "ureter-i",
+    "tipo": "organo",
+    "sistema": "urinario",
+    "lado": "izquierdo",
+    "region": "vias-urinarias",
+    "nombre": "Uréter izquierdo",
+    "latin": "Ureter",
+    "ingles": "Left ureter",
+    "descripcion": "Tubo muscular de 25–30 cm que desciende por el retroperitoneo sobre el psoas y entra oblicuamente en la vejiga.",
+    "funcion": "Conduce la orina de la pelvis renal a la vejiga mediante ondas peristálticas; su trayecto oblicuo en la pared vesical evita el reflujo.",
+    "ubicacion": "Retroperitoneo, desde el hilio renal hasta la cara posterior de la vejiga, cruzando los vasos ilíacos.",
+    "datosClinicos": "Los cálculos se detienen en sus tres estrechamientos: unión pieloureteral, cruce de los vasos ilíacos y entrada en la vejiga.",
+    "relaciones": [
+      "rinon-i",
+      "vejiga",
+      "psoas-mayor-i",
+      "iliaca-comun-i"
+    ]
+  },
+  {
+    "id": "vejiga",
+    "nodoModelo": "vejiga",
+    "tipo": "organo",
+    "sistema": "urinario",
+    "region": "vias-urinarias",
+    "nombre": "Vejiga urinaria",
+    "latin": "Vesica urinaria",
+    "ingles": "Urinary bladder",
+    "descripcion": "Órgano muscular hueco (músculo detrusor) que almacena la orina; en su base, el trígono une los dos orificios ureterales y el de la uretra.",
+    "funcion": "Almacena la orina (capacidad funcional de unos 400–600 ml) y la expulsa en la micción.",
+    "ubicacion": "Pelvis menor, detrás de la sínfisis del pubis; en el varón, delante del recto y sobre la próstata.",
+    "datosClinicos": "Las infecciones urinarias bajas (cistitis) son mucho más frecuentes en mujeres por su uretra corta.",
+    "relaciones": [
+      "ureter-d",
+      "ureter-i",
+      "uretra",
+      "prostata",
+      "recto",
+      "coxal-d",
+      "coxal-i"
+    ]
+  },
+  {
+    "id": "uretra",
+    "nodoModelo": "uretra",
+    "tipo": "organo",
+    "sistema": "urinario",
+    "region": "vias-urinarias",
+    "nombre": "Uretra masculina",
+    "latin": "Urethra masculina",
+    "ingles": "Male urethra",
+    "descripcion": "Conducto de unos 18–20 cm con porciones prostática, membranosa y esponjosa (dentro del cuerpo esponjoso del pene).",
+    "funcion": "Conduce la orina al exterior y, en el varón, también el semen.",
+    "ubicacion": "Desde el cuello de la vejiga, a través de la próstata y el pene, hasta el meato urinario.",
+    "datosClinicos": "El crecimiento benigno de la próstata comprime su porción prostática y dificulta la micción.",
+    "curiosidad": "La uretra femenina mide solo unos 4 cm.",
+    "relaciones": [
+      "vejiga",
+      "prostata",
+      "cuerpo-esponjoso"
+    ]
+  }
+]

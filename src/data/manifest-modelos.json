@@ -3092,6 +3092,1424 @@
         }
       ]
     },
+    "digestivo": {
+      "archivo": "models/digestivo.glb",
+      "bytes": 1351492,
+      "triangulos": 161552,
+      "estructuras": [
+        {
+          "id": "lengua",
+          "nodo": "lengua",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA54640"
+          ],
+          "elementos": [
+            "FJ2761"
+          ],
+          "nombresFuente": [
+            "Tongue"
+          ],
+          "triangulos": 500,
+          "caja": {
+            "min": [
+              -0.02,
+              1.431,
+              0.1105
+            ],
+            "max": [
+              0.0188,
+              1.4673,
+              0.1699
+            ]
+          }
+        },
+        {
+          "id": "paladar-blando",
+          "nodo": "paladar-blando",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA55021"
+          ],
+          "elementos": [
+            "FJ2741",
+            "FJ2748",
+            "FJ2753",
+            "FJ2760",
+            "FJ2762"
+          ],
+          "nombresFuente": [
+            "Soft palate"
+          ],
+          "triangulos": 27436,
+          "caja": {
+            "min": [
+              -0.0327,
+              1.461,
+              0.0882
+            ],
+            "max": [
+              0.0314,
+              1.5034,
+              0.1205
+            ]
+          }
+        },
+        {
+          "id": "glandula-submandibular-d",
+          "nodo": "glandula-submandibular-d",
+          "tipo": "glandula",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA59802"
+          ],
+          "elementos": [
+            "FJ2768"
+          ],
+          "nombresFuente": [
+            "Right submandibular gland"
+          ],
+          "triangulos": 226,
+          "caja": {
+            "min": [
+              -0.0316,
+              1.4384,
+              0.1186
+            ],
+            "max": [
+              -0.0157,
+              1.4608,
+              0.1414
+            ]
+          }
+        },
+        {
+          "id": "glandula-submandibular-i",
+          "nodo": "glandula-submandibular-i",
+          "tipo": "glandula",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA59803"
+          ],
+          "elementos": [
+            "FJ2766"
+          ],
+          "nombresFuente": [
+            "Left submandibular gland"
+          ],
+          "triangulos": 228,
+          "caja": {
+            "min": [
+              0.0144,
+              1.4384,
+              0.1186
+            ],
+            "max": [
+              0.0303,
+              1.4608,
+              0.1415
+            ]
+          }
+        },
+        {
+          "id": "glandula-sublingual-d",
+          "nodo": "glandula-sublingual-d",
+          "tipo": "glandula",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA59804"
+          ],
+          "elementos": [
+            "FJ2767"
+          ],
+          "nombresFuente": [
+            "Right sublingual gland"
+          ],
+          "triangulos": 240,
+          "caja": {
+            "min": [
+              -0.0212,
+              1.4408,
+              0.1409
+            ],
+            "max": [
+              -0.0086,
+              1.454,
+              0.1636
+            ]
+          }
+        },
+        {
+          "id": "glandula-sublingual-i",
+          "nodo": "glandula-sublingual-i",
+          "tipo": "glandula",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA59805"
+          ],
+          "elementos": [
+            "FJ2765"
+          ],
+          "nombresFuente": [
+            "Left sublingual gland"
+          ],
+          "triangulos": 230,
+          "caja": {
+            "min": [
+              0.0073,
+              1.4409,
+              0.141
+            ],
+            "max": [
+              0.0199,
+              1.454,
+              0.1636
+            ]
+          }
+        },
+        {
+          "id": "incisivos-superiores",
+          "nodo": "incisivos-superiores",
+          "tipo": "diente",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA55681",
+            "FMA55682",
+            "FMA55680",
+            "FMA55683"
+          ],
+          "elementos": [
+            "FJ1279",
+            "FJ1265",
+            "FJ1280",
+            "FJ1266"
+          ],
+          "nombresFuente": [
+            "Right upper central secondary incisor tooth",
+            "Left upper central secondary incisor tooth",
+            "Right upper lateral secondary incisor tooth",
+            "Left upper lateral secondary incisor tooth"
+          ],
+          "triangulos": 3008,
+          "caja": {
+            "min": [
+              -0.0169,
+              1.4517,
+              0.1689
+            ],
+            "max": [
+              0.0156,
+              1.4806,
+              0.1833
+            ]
+          }
+        },
+        {
+          "id": "caninos-superiores",
+          "nodo": "caninos-superiores",
+          "tipo": "diente",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA55798",
+            "FMA55799"
+          ],
+          "elementos": [
+            "FJ1281",
+            "FJ1267"
+          ],
+          "nombresFuente": [
+            "Right upper secondary canine tooth",
+            "Left upper secondary canine tooth"
+          ],
+          "triangulos": 1530,
+          "caja": {
+            "min": [
+              -0.0228,
+              1.4531,
+              0.1666
+            ],
+            "max": [
+              0.0215,
+              1.4845,
+              0.1759
+            ]
+          }
+        },
+        {
+          "id": "premolares-superiores",
+          "nodo": "premolares-superiores",
+          "tipo": "diente",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA55689",
+            "FMA55690",
+            "FMA55688",
+            "FMA55691"
+          ],
+          "elementos": [
+            "FJ1277",
+            "FJ1262",
+            "FJ1278",
+            "FJ1264"
+          ],
+          "nombresFuente": [
+            "Right upper first secondary premolar tooth",
+            "Left upper first secondary premolar tooth",
+            "Right upper second secondary premolar tooth",
+            "Left upper second secondary premolar tooth"
+          ],
+          "triangulos": 4436,
+          "caja": {
+            "min": [
+              -0.0289,
+              1.4547,
+              0.1536
+            ],
+            "max": [
+              0.0276,
+              1.4832,
+              0.1675
+            ]
+          }
+        },
+        {
+          "id": "molares-superiores",
+          "nodo": "molares-superiores",
+          "tipo": "diente",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA55698",
+            "FMA55699",
+            "FMA55697",
+            "FMA55700"
+          ],
+          "elementos": [
+            "FJ1276",
+            "FJ1261",
+            "FJ1275",
+            "FJ1263"
+          ],
+          "nombresFuente": [
+            "Right upper first secondary molar tooth",
+            "Left upper first secondary molar tooth",
+            "Right upper second secondary molar tooth",
+            "Left upper second secondary molar tooth"
+          ],
+          "triangulos": 6826,
+          "caja": {
+            "min": [
+              -0.0312,
+              1.4579,
+              0.1348
+            ],
+            "max": [
+              0.0299,
+              1.4841,
+              0.1542
+            ]
+          }
+        },
+        {
+          "id": "incisivos-inferiores",
+          "nodo": "incisivos-inferiores",
+          "tipo": "diente",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA57142",
+            "FMA57143",
+            "FMA57140",
+            "FMA57141"
+          ],
+          "elementos": [
+            "FJ1272",
+            "FJ1258",
+            "FJ1273",
+            "FJ1259"
+          ],
+          "nombresFuente": [
+            "Right lower central secondary incisor tooth",
+            "Left lower central secondary incisor tooth",
+            "Right lower lateral secondary incisor tooth",
+            "Left lower lateral secondary incisor tooth"
+          ],
+          "triangulos": 2548,
+          "caja": {
+            "min": [
+              -0.0127,
+              1.4281,
+              0.1603
+            ],
+            "max": [
+              0.0114,
+              1.4536,
+              0.1785
+            ]
+          }
+        },
+        {
+          "id": "caninos-inferiores",
+          "nodo": "caninos-inferiores",
+          "tipo": "diente",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA55686",
+            "FMA55687"
+          ],
+          "elementos": [
+            "FJ1274",
+            "FJ1260"
+          ],
+          "nombresFuente": [
+            "Right lower secondary canine tooth",
+            "Left lower secondary canine tooth"
+          ],
+          "triangulos": 1442,
+          "caja": {
+            "min": [
+              -0.0176,
+              1.4272,
+              0.1583
+            ],
+            "max": [
+              0.0163,
+              1.454,
+              0.1739
+            ]
+          }
+        },
+        {
+          "id": "premolares-inferiores",
+          "nodo": "premolares-inferiores",
+          "tipo": "diente",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA55694",
+            "FMA55693",
+            "FMA55695",
+            "FMA55692"
+          ],
+          "elementos": [
+            "FJ1269",
+            "FJ1255",
+            "FJ1271",
+            "FJ1257"
+          ],
+          "nombresFuente": [
+            "Right lower first secondary premolar tooth",
+            "Left lower first secondary premolar tooth",
+            "Right lower second secondary premolar tooth",
+            "Left lower second secondary premolar tooth"
+          ],
+          "triangulos": 3610,
+          "caja": {
+            "min": [
+              -0.025,
+              1.4321,
+              0.1473
+            ],
+            "max": [
+              0.0237,
+              1.4558,
+              0.1675
+            ]
+          }
+        },
+        {
+          "id": "molares-inferiores",
+          "nodo": "molares-inferiores",
+          "tipo": "diente",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA55705",
+            "FMA55704",
+            "FMA55706",
+            "FMA55703"
+          ],
+          "elementos": [
+            "FJ1268",
+            "FJ1254",
+            "FJ1270",
+            "FJ1256"
+          ],
+          "nombresFuente": [
+            "Right lower first secondary molar tooth",
+            "Left lower first secondary molar tooth",
+            "Right lower second secondary molar tooth",
+            "Left lower second secondary molar tooth"
+          ],
+          "triangulos": 6154,
+          "caja": {
+            "min": [
+              -0.0334,
+              1.4391,
+              0.1263
+            ],
+            "max": [
+              0.0322,
+              1.4632,
+              0.1541
+            ]
+          }
+        },
+        {
+          "id": "esofago",
+          "nodo": "esofago",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA7131"
+          ],
+          "elementos": [
+            "FJ2563"
+          ],
+          "nombresFuente": [
+            "Esophagus"
+          ],
+          "triangulos": 296,
+          "caja": {
+            "min": [
+              -0.0088,
+              1.116,
+              0.0664
+            ],
+            "max": [
+              0.0236,
+              1.3904,
+              0.1243
+            ]
+          }
+        },
+        {
+          "id": "estomago",
+          "nodo": "estomago",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA7148"
+          ],
+          "elementos": [
+            "FJ2564"
+          ],
+          "nombresFuente": [
+            "Stomach"
+          ],
+          "triangulos": 1694,
+          "caja": {
+            "min": [
+              -0.029,
+              1.0399,
+              0.0815
+            ],
+            "max": [
+              0.1055,
+              1.1569,
+              0.1944
+            ]
+          }
+        },
+        {
+          "id": "duodeno",
+          "nodo": "duodeno",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA7206"
+          ],
+          "elementos": [
+            "FJ2573"
+          ],
+          "nombresFuente": [
+            "Duodenum"
+          ],
+          "triangulos": 1678,
+          "caja": {
+            "min": [
+              -0.0656,
+              0.9856,
+              0.1039
+            ],
+            "max": [
+              0.0323,
+              1.0771,
+              0.1569
+            ]
+          }
+        },
+        {
+          "id": "yeyuno",
+          "nodo": "yeyuno",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA16981",
+            "FMA16982",
+            "FMA16983"
+          ],
+          "elementos": [
+            "FJ2606",
+            "FJ2617",
+            "FJ2622",
+            "FJ2623",
+            "FJ2624",
+            "FJ2625",
+            "FJ2626",
+            "FJ2627",
+            "FJ2607",
+            "FJ2608",
+            "FJ2609",
+            "FJ2610",
+            "FJ2628",
+            "FJ2611",
+            "FJ2612",
+            "FJ2613",
+            "FJ2614",
+            "FJ2615",
+            "FJ2616",
+            "FJ2618",
+            "FJ2619",
+            "FJ2620",
+            "FJ2621"
+          ],
+          "nombresFuente": [
+            "Proximal part of jejunum",
+            "Middle part of jejunum",
+            "Distal part of jejunum"
+          ],
+          "triangulos": 5974,
+          "caja": {
+            "min": [
+              -0.0871,
+              0.9092,
+              0.1175
+            ],
+            "max": [
+              0.1066,
+              1.0237,
+              0.1834
+            ]
+          }
+        },
+        {
+          "id": "ileon",
+          "nodo": "ileon",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA14964",
+            "FMA14965",
+            "FMA14966"
+          ],
+          "elementos": [
+            "FJ2574",
+            "FJ2575",
+            "FJ2585",
+            "FJ2596",
+            "FJ2600",
+            "FJ2601",
+            "FJ2602",
+            "FJ2603",
+            "FJ2604",
+            "FJ2605",
+            "FJ2576",
+            "FJ2577",
+            "FJ2578",
+            "FJ2579",
+            "FJ2580",
+            "FJ2581",
+            "FJ2582",
+            "FJ2583",
+            "FJ2584",
+            "FJ2586",
+            "FJ2587",
+            "FJ2588",
+            "FJ2589",
+            "FJ2590",
+            "FJ2591",
+            "FJ2592",
+            "FJ2593",
+            "FJ2594",
+            "FJ2595",
+            "FJ2597",
+            "FJ2598"
+          ],
+          "nombresFuente": [
+            "Proximal part of ileum",
+            "Middle part of ileum",
+            "Distal part of ileum"
+          ],
+          "triangulos": 7854,
+          "caja": {
+            "min": [
+              -0.0799,
+              0.8053,
+              0.12
+            ],
+            "max": [
+              0.1018,
+              0.9526,
+              0.1798
+            ]
+          }
+        },
+        {
+          "id": "ciego",
+          "nodo": "ciego",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA14541"
+          ],
+          "elementos": [
+            "FJ2599"
+          ],
+          "nombresFuente": [
+            "Cecum"
+          ],
+          "triangulos": 286,
+          "caja": {
+            "min": [
+              -0.0798,
+              0.8701,
+              0.1072
+            ],
+            "max": [
+              -0.0514,
+              0.9233,
+              0.1413
+            ]
+          }
+        },
+        {
+          "id": "apendice",
+          "nodo": "apendice",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA14542"
+          ],
+          "elementos": [
+            "FJ2565"
+          ],
+          "nombresFuente": [
+            "Appendix"
+          ],
+          "triangulos": 436,
+          "caja": {
+            "min": [
+              -0.0884,
+              0.8656,
+              0.0818
+            ],
+            "max": [
+              -0.0189,
+              0.8837,
+              0.1208
+            ]
+          }
+        },
+        {
+          "id": "colon-ascendente",
+          "nodo": "colon-ascendente",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA14545"
+          ],
+          "elementos": [
+            "FJ2566"
+          ],
+          "nombresFuente": [
+            "Ascending colon"
+          ],
+          "triangulos": 2114,
+          "caja": {
+            "min": [
+              -0.1268,
+              0.8684,
+              0.0907
+            ],
+            "max": [
+              -0.0639,
+              1.054,
+              0.1456
+            ]
+          }
+        },
+        {
+          "id": "colon-transverso",
+          "nodo": "colon-transverso",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA14546"
+          ],
+          "elementos": [
+            "FJ2572"
+          ],
+          "nombresFuente": [
+            "Transverse colon"
+          ],
+          "triangulos": 2414,
+          "caja": {
+            "min": [
+              -0.0888,
+              0.9934,
+              0.1068
+            ],
+            "max": [
+              0.0966,
+              1.0647,
+              0.1969
+            ]
+          }
+        },
+        {
+          "id": "colon-descendente",
+          "nodo": "colon-descendente",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA14547"
+          ],
+          "elementos": [
+            "FJ2567"
+          ],
+          "nombresFuente": [
+            "Descending colon"
+          ],
+          "triangulos": 2848,
+          "caja": {
+            "min": [
+              -0.0179,
+              0.8223,
+              0.0503
+            ],
+            "max": [
+              0.1175,
+              1.0613,
+              0.1418
+            ]
+          }
+        },
+        {
+          "id": "recto",
+          "nodo": "recto",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA14544"
+          ],
+          "elementos": [
+            "FJ2571"
+          ],
+          "nombresFuente": [
+            "Rectum"
+          ],
+          "triangulos": 1538,
+          "caja": {
+            "min": [
+              -0.0262,
+              0.7573,
+              0.0113
+            ],
+            "max": [
+              0.0354,
+              0.8739,
+              0.0736
+            ]
+          }
+        },
+        {
+          "id": "esfinter-anal-externo",
+          "nodo": "esfinter-anal-externo",
+          "tipo": "musculo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA21930"
+          ],
+          "elementos": [
+            "FJ1450M",
+            "FJ2543",
+            "FJ2548"
+          ],
+          "nombresFuente": [
+            "External anal sphincter"
+          ],
+          "triangulos": 1044,
+          "caja": {
+            "min": [
+              -0.0148,
+              0.7536,
+              0.0169
+            ],
+            "max": [
+              0.0148,
+              0.7749,
+              0.0387
+            ]
+          }
+        },
+        {
+          "id": "higado-segmento-1",
+          "nodo": "higado-segmento-1",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA13365",
+            "FMA15747"
+          ],
+          "elementos": [
+            "FJ2816",
+            "FJ1858"
+          ],
+          "nombresFuente": [
+            "Caudate lobe of liver",
+            "Hepatovenous segment IX"
+          ],
+          "triangulos": 7284,
+          "caja": {
+            "min": [
+              -0.1151,
+              1.0901,
+              0.0436
+            ],
+            "max": [
+              0.0113,
+              1.1752,
+              0.1521
+            ]
+          }
+        },
+        {
+          "id": "higado-segmento-2",
+          "nodo": "higado-segmento-2",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA15739"
+          ],
+          "elementos": [
+            "FJ2818"
+          ],
+          "nombresFuente": [
+            "Hepatovenous segment II"
+          ],
+          "triangulos": 7162,
+          "caja": {
+            "min": [
+              0.0025,
+              1.1196,
+              0.0916
+            ],
+            "max": [
+              0.0944,
+              1.1731,
+              0.2
+            ]
+          }
+        },
+        {
+          "id": "higado-segmento-3",
+          "nodo": "higado-segmento-3",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA15741"
+          ],
+          "elementos": [
+            "FJ2819"
+          ],
+          "nombresFuente": [
+            "Hepatovenous segment III"
+          ],
+          "triangulos": 5162,
+          "caja": {
+            "min": [
+              -0.0016,
+              1.0866,
+              0.1195
+            ],
+            "max": [
+              0.0734,
+              1.1532,
+              0.2024
+            ]
+          }
+        },
+        {
+          "id": "higado-segmento-4",
+          "nodo": "higado-segmento-4",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA15742"
+          ],
+          "elementos": [
+            "FJ2820"
+          ],
+          "nombresFuente": [
+            "Hepatovenous segment IV"
+          ],
+          "triangulos": 8970,
+          "caja": {
+            "min": [
+              -0.0463,
+              1.0608,
+              0.1208
+            ],
+            "max": [
+              0.0115,
+              1.1794,
+              0.2005
+            ]
+          }
+        },
+        {
+          "id": "higado-segmento-5",
+          "nodo": "higado-segmento-5",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA15743"
+          ],
+          "elementos": [
+            "FJ2821"
+          ],
+          "nombresFuente": [
+            "Hepatovenous segment V"
+          ],
+          "triangulos": 5720,
+          "caja": {
+            "min": [
+              -0.1046,
+              1.0464,
+              0.1079
+            ],
+            "max": [
+              -0.0263,
+              1.1161,
+              0.1987
+            ]
+          }
+        },
+        {
+          "id": "higado-segmento-6",
+          "nodo": "higado-segmento-6",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA15744"
+          ],
+          "elementos": [
+            "FJ2822"
+          ],
+          "nombresFuente": [
+            "Hepatovenous segment VI"
+          ],
+          "triangulos": 9724,
+          "caja": {
+            "min": [
+              -0.1146,
+              1.028,
+              0.0445
+            ],
+            "max": [
+              -0.0214,
+              1.1105,
+              0.1649
+            ]
+          }
+        },
+        {
+          "id": "higado-segmento-7",
+          "nodo": "higado-segmento-7",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA15745"
+          ],
+          "elementos": [
+            "FJ2409"
+          ],
+          "nombresFuente": [
+            "Hepatovenous segment VII"
+          ],
+          "triangulos": 4266,
+          "caja": {
+            "min": [
+              -0.1148,
+              1.0279,
+              0.0443
+            ],
+            "max": [
+              -0.0211,
+              1.1108,
+              0.1652
+            ]
+          }
+        },
+        {
+          "id": "higado-segmento-8",
+          "nodo": "higado-segmento-8",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA15746"
+          ],
+          "elementos": [
+            "FJ2823",
+            "FJ2824"
+          ],
+          "nombresFuente": [
+            "Hepatovenous segment VIII"
+          ],
+          "triangulos": 20374,
+          "caja": {
+            "min": [
+              -0.1151,
+              1.0901,
+              0.0433
+            ],
+            "max": [
+              -0.0175,
+              1.1831,
+              0.1987
+            ]
+          }
+        },
+        {
+          "id": "vesicula-biliar",
+          "nodo": "vesicula-biliar",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA7202"
+          ],
+          "elementos": [
+            "FJ2817"
+          ],
+          "nombresFuente": [
+            "Gallbladder"
+          ],
+          "triangulos": 1292,
+          "caja": {
+            "min": [
+              -0.0633,
+              1.0511,
+              0.1302
+            ],
+            "max": [
+              -0.0268,
+              1.0915,
+              0.1786
+            ]
+          }
+        },
+        {
+          "id": "conducto-cistico",
+          "nodo": "conducto-cistico",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA14539"
+          ],
+          "elementos": [
+            "FJ3080"
+          ],
+          "nombresFuente": [
+            "Cystic duct"
+          ],
+          "triangulos": 276,
+          "caja": {
+            "min": [
+              -0.0297,
+              1.0792,
+              0.1284
+            ],
+            "max": [
+              -0.0209,
+              1.0913,
+              0.1378
+            ]
+          }
+        },
+        {
+          "id": "pancreas",
+          "nodo": "pancreas",
+          "tipo": "glandula",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA7198"
+          ],
+          "elementos": [
+            "FJ1895"
+          ],
+          "nombresFuente": [
+            "Pancreas"
+          ],
+          "triangulos": 2516,
+          "caja": {
+            "min": [
+              -0.0479,
+              1.0044,
+              0.0954
+            ],
+            "max": [
+              0.0727,
+              1.0781,
+              0.1464
+            ]
+          }
+        },
+        {
+          "id": "conducto-pancreatico",
+          "nodo": "conducto-pancreatico",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA63103"
+          ],
+          "elementos": [
+            "FJ2630"
+          ],
+          "nombresFuente": [
+            "Pancreatic duct tree"
+          ],
+          "triangulos": 2216,
+          "caja": {
+            "min": [
+              -0.0567,
+              1.0201,
+              0.1037
+            ],
+            "max": [
+              0.0591,
+              1.0685,
+              0.1385
+            ]
+          }
+        },
+        {
+          "id": "glandula-parotida",
+          "nodo": null,
+          "tipo": "glandula",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye esta estructura. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "colon-sigmoide",
+          "nodo": null,
+          "tipo": "organo",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye esta estructura. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "conducto-anal",
+          "nodo": null,
+          "tipo": "organo",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye esta estructura. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "coledoco",
+          "nodo": null,
+          "tipo": "organo",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye esta estructura. Candidato: Z-Anatomy."
+        }
+      ]
+    },
+    "endocrino": {
+      "archivo": "models/endocrino.glb",
+      "bytes": 60308,
+      "triangulos": 8034,
+      "estructuras": [
+        {
+          "id": "hipofisis",
+          "nodo": "hipofisis",
+          "tipo": "glandula",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA13889"
+          ],
+          "elementos": [
+            "FJ1796"
+          ],
+          "nombresFuente": [
+            "Pituitary gland"
+          ],
+          "triangulos": 1164,
+          "caja": {
+            "min": [
+              -0.0068,
+              1.5226,
+              0.1011
+            ],
+            "max": [
+              0.0055,
+              1.5355,
+              0.1106
+            ]
+          }
+        },
+        {
+          "id": "glandula-pineal",
+          "nodo": "glandula-pineal",
+          "tipo": "glandula",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA62033"
+          ],
+          "elementos": [
+            "FJ1795"
+          ],
+          "nombresFuente": [
+            "Pineal body"
+          ],
+          "triangulos": 580,
+          "caja": {
+            "min": [
+              -0.0037,
+              1.5402,
+              0.0592
+            ],
+            "max": [
+              0.0026,
+              1.5479,
+              0.0706
+            ]
+          }
+        },
+        {
+          "id": "glandula-suprarrenal-d",
+          "nodo": "glandula-suprarrenal-d",
+          "tipo": "glandula",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA15629"
+          ],
+          "elementos": [
+            "FJ3130"
+          ],
+          "nombresFuente": [
+            "Right adrenal gland"
+          ],
+          "triangulos": 2294,
+          "caja": {
+            "min": [
+              -0.0625,
+              1.0455,
+              0.0751
+            ],
+            "max": [
+              -0.0306,
+              1.0878,
+              0.1023
+            ]
+          }
+        },
+        {
+          "id": "glandula-suprarrenal-i",
+          "nodo": "glandula-suprarrenal-i",
+          "tipo": "glandula",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA15630"
+          ],
+          "elementos": [
+            "FJ3129"
+          ],
+          "nombresFuente": [
+            "Left adrenal gland"
+          ],
+          "triangulos": 3996,
+          "caja": {
+            "min": [
+              0.0273,
+              1.0633,
+              0.0631
+            ],
+            "max": [
+              0.0755,
+              1.1082,
+              0.0833
+            ]
+          }
+        },
+        {
+          "id": "tiroides",
+          "nodo": null,
+          "tipo": "glandula",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye esta glándula. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "paratiroides",
+          "nodo": null,
+          "tipo": "glandula",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye esta glándula. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "islotes-pancreaticos",
+          "nodo": null,
+          "tipo": "glandula",
+          "estado": "pendiente",
+          "motivo": "Los islotes son microscópicos y están dispersos en el páncreas: ver «Páncreas» en el sistema digestivo."
+        },
+        {
+          "id": "gonadas",
+          "nodo": null,
+          "tipo": "glandula",
+          "estado": "pendiente",
+          "motivo": "Los testículos están en el sistema reproductor; el modelo de BodyParts3D es masculino y no incluye ovarios."
+        }
+      ]
+    },
     "esqueletico": {
       "archivo": "models/esqueletico.glb",
       "bytes": 3204760,
@@ -9999,6 +11417,135 @@
         }
       ]
     },
+    "linfatico": {
+      "archivo": "models/linfatico.glb",
+      "bytes": 30104,
+      "triangulos": 3410,
+      "estructuras": [
+        {
+          "id": "bazo",
+          "nodo": "bazo",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA7196"
+          ],
+          "elementos": [
+            "FJ2561"
+          ],
+          "nombresFuente": [
+            "Spleen"
+          ],
+          "triangulos": 1330,
+          "caja": {
+            "min": [
+              0.0556,
+              1.0516,
+              0.0462
+            ],
+            "max": [
+              0.1139,
+              1.1218,
+              0.1413
+            ]
+          }
+        },
+        {
+          "id": "timo-d",
+          "nodo": "timo-d",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA71194"
+          ],
+          "elementos": [
+            "FJ3151"
+          ],
+          "nombresFuente": [
+            "Right lobe of thymus"
+          ],
+          "triangulos": 1030,
+          "caja": {
+            "min": [
+              -0.0248,
+              1.2612,
+              0.1221
+            ],
+            "max": [
+              0.0024,
+              1.3297,
+              0.1443
+            ]
+          }
+        },
+        {
+          "id": "timo-i",
+          "nodo": "timo-i",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA71195"
+          ],
+          "elementos": [
+            "FJ3150"
+          ],
+          "nombresFuente": [
+            "Left lobe of thymus"
+          ],
+          "triangulos": 1050,
+          "caja": {
+            "min": [
+              -0.0035,
+              1.2576,
+              0.1197
+            ],
+            "max": [
+              0.0218,
+              1.3167,
+              0.1593
+            ]
+          }
+        },
+        {
+          "id": "ganglios-cervicales",
+          "nodo": null,
+          "tipo": "organo",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye esta estructura. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "ganglios-axilares",
+          "nodo": null,
+          "tipo": "organo",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye esta estructura. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "ganglios-inguinales",
+          "nodo": null,
+          "tipo": "organo",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye esta estructura. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "conducto-toracico",
+          "nodo": null,
+          "tipo": "vaso",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye esta estructura. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "amigdalas-palatinas",
+          "nodo": null,
+          "tipo": "organo",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye esta estructura. Candidato: Z-Anatomy."
+        }
+      ]
+    },
     "muscular": {
       "archivo": "models/muscular.glb",
       "bytes": 6099040,
@@ -16657,6 +18204,2211 @@
         }
       ]
     },
+    "nervioso": {
+      "archivo": "models/nervioso.glb",
+      "bytes": 2369760,
+      "triangulos": 293958,
+      "estructuras": [
+        {
+          "id": "lobulo-frontal-d",
+          "nodo": "lobulo-frontal-d",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA72969"
+          ],
+          "elementos": [
+            "FJ1745",
+            "FJ1788",
+            "FJ1801",
+            "FJ1834"
+          ],
+          "nombresFuente": [
+            "right frontal lobe"
+          ],
+          "triangulos": 12630,
+          "caja": {
+            "min": [
+              -0.0642,
+              1.5465,
+              0.0393
+            ],
+            "max": [
+              -0.0016,
+              1.6304,
+              0.1697
+            ]
+          }
+        },
+        {
+          "id": "lobulo-frontal-i",
+          "nodo": "lobulo-frontal-i",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA72970"
+          ],
+          "elementos": [
+            "FJ1744",
+            "FJ1787",
+            "FJ1800",
+            "FJ1833"
+          ],
+          "nombresFuente": [
+            "left frontal lobe"
+          ],
+          "triangulos": 12570,
+          "caja": {
+            "min": [
+              0.0002,
+              1.5469,
+              0.0393
+            ],
+            "max": [
+              0.0629,
+              1.6305,
+              0.1697
+            ]
+          }
+        },
+        {
+          "id": "lobulo-parietal-d",
+          "nodo": "lobulo-parietal-d",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA72973"
+          ],
+          "elementos": [
+            "FJ1733",
+            "FJ1798",
+            "FJ1836",
+            "FJ1842"
+          ],
+          "nombresFuente": [
+            "right parietal lobe"
+          ],
+          "triangulos": 12384,
+          "caja": {
+            "min": [
+              -0.0697,
+              1.5394,
+              -0.0065
+            ],
+            "max": [
+              -0.0014,
+              1.6237,
+              0.0878
+            ]
+          }
+        },
+        {
+          "id": "lobulo-parietal-i",
+          "nodo": "lobulo-parietal-i",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA72974"
+          ],
+          "elementos": [
+            "FJ1732",
+            "FJ1797",
+            "FJ1835",
+            "FJ1841"
+          ],
+          "nombresFuente": [
+            "left parietal lobe"
+          ],
+          "triangulos": 12192,
+          "caja": {
+            "min": [
+              0.0002,
+              1.5393,
+              -0.0063
+            ],
+            "max": [
+              0.0688,
+              1.6237,
+              0.0879
+            ]
+          }
+        },
+        {
+          "id": "lobulo-temporal-d",
+          "nodo": "lobulo-temporal-d",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA72971",
+            "FMA72800",
+            "FMA72804"
+          ],
+          "elementos": [
+            "FJ1747",
+            "FJ1784",
+            "FJ1786",
+            "FJ1790",
+            "FJ1838",
+            "FJ1840"
+          ],
+          "nombresFuente": [
+            "right temporal lobe",
+            "Anterior part of right superior temporal gyrus",
+            "Posterior part of right superior temporal gyrus"
+          ],
+          "triangulos": 8826,
+          "caja": {
+            "min": [
+              -0.0711,
+              1.5136,
+              0.0143
+            ],
+            "max": [
+              -0.0102,
+              1.5728,
+              0.1281
+            ]
+          }
+        },
+        {
+          "id": "lobulo-temporal-i",
+          "nodo": "lobulo-temporal-i",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA72972",
+            "FMA72801",
+            "FMA72805"
+          ],
+          "elementos": [
+            "FJ1746",
+            "FJ1783",
+            "FJ1785",
+            "FJ1789",
+            "FJ1837",
+            "FJ1839"
+          ],
+          "nombresFuente": [
+            "left temporal lobe",
+            "Anterior part of left superior temporal gyrus",
+            "Posterior part of left superior temporal gyrus"
+          ],
+          "triangulos": 8834,
+          "caja": {
+            "min": [
+              0.0089,
+              1.5135,
+              0.014
+            ],
+            "max": [
+              0.0697,
+              1.573,
+              0.128
+            ]
+          }
+        },
+        {
+          "id": "lobulo-occipital-d",
+          "nodo": "lobulo-occipital-d",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA72975"
+          ],
+          "elementos": [
+            "FJ1792"
+          ],
+          "nombresFuente": [
+            "Right occipital lobe"
+          ],
+          "triangulos": 3558,
+          "caja": {
+            "min": [
+              -0.0448,
+              1.5177,
+              -0.0103
+            ],
+            "max": [
+              -0.0016,
+              1.5716,
+              0.053
+            ]
+          }
+        },
+        {
+          "id": "lobulo-occipital-i",
+          "nodo": "lobulo-occipital-i",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA72976"
+          ],
+          "elementos": [
+            "FJ1791"
+          ],
+          "nombresFuente": [
+            "Left occipital lobe"
+          ],
+          "triangulos": 3490,
+          "caja": {
+            "min": [
+              0.0001,
+              1.5178,
+              -0.0103
+            ],
+            "max": [
+              0.0435,
+              1.5715,
+              0.0529
+            ]
+          }
+        },
+        {
+          "id": "lobulo-limbico-d",
+          "nodo": "lobulo-limbico-d",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA72717",
+            "FMA72713"
+          ],
+          "elementos": [
+            "FJ1740",
+            "FJ1807"
+          ],
+          "nombresFuente": [
+            "Right cingulate gyrus",
+            "Right hippocampus"
+          ],
+          "triangulos": 2348,
+          "caja": {
+            "min": [
+              -0.0379,
+              1.5293,
+              0.0308
+            ],
+            "max": [
+              -0.0015,
+              1.5972,
+              0.1421
+            ]
+          }
+        },
+        {
+          "id": "lobulo-limbico-i",
+          "nodo": "lobulo-limbico-i",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA72718",
+            "FMA72714"
+          ],
+          "elementos": [
+            "FJ1739",
+            "FJ1759"
+          ],
+          "nombresFuente": [
+            "Left cingulate gyrus",
+            "Left hippocampus"
+          ],
+          "triangulos": 2254,
+          "caja": {
+            "min": [
+              0,
+              1.5293,
+              0.0307
+            ],
+            "max": [
+              0.0366,
+              1.5972,
+              0.1421
+            ]
+          }
+        },
+        {
+          "id": "insula-d",
+          "nodo": "insula-d",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA72977"
+          ],
+          "elementos": [
+            "FJ1749"
+          ],
+          "nombresFuente": [
+            "Right insula"
+          ],
+          "triangulos": 1914,
+          "caja": {
+            "min": [
+              -0.0456,
+              1.5456,
+              0.0707
+            ],
+            "max": [
+              -0.0263,
+              1.5801,
+              0.1224
+            ]
+          }
+        },
+        {
+          "id": "insula-i",
+          "nodo": "insula-i",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA72978"
+          ],
+          "elementos": [
+            "FJ1748"
+          ],
+          "nombresFuente": [
+            "Left insula"
+          ],
+          "triangulos": 1954,
+          "caja": {
+            "min": [
+              0.025,
+              1.5455,
+              0.0706
+            ],
+            "max": [
+              0.0443,
+              1.5801,
+              0.1223
+            ]
+          }
+        },
+        {
+          "id": "giros-orbitarios",
+          "nodo": "giros-orbitarios",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA256194"
+          ],
+          "elementos": [
+            "FJ1793",
+            "FJ1794"
+          ],
+          "nombresFuente": [
+            "Orbital gyrus"
+          ],
+          "triangulos": 4026,
+          "caja": {
+            "min": [
+              -0.0423,
+              1.5338,
+              0.098
+            ],
+            "max": [
+              0.0411,
+              1.5639,
+              0.1653
+            ]
+          }
+        },
+        {
+          "id": "cuerpo-calloso",
+          "nodo": "cuerpo-calloso",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA86464"
+          ],
+          "elementos": [
+            "FJ1742"
+          ],
+          "nombresFuente": [
+            "Corpus callosum"
+          ],
+          "triangulos": 15116,
+          "caja": {
+            "min": [
+              -0.0266,
+              1.5444,
+              0.0394
+            ],
+            "max": [
+              0.0252,
+              1.5833,
+              0.1311
+            ]
+          }
+        },
+        {
+          "id": "fornix",
+          "nodo": "fornix",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA72924",
+            "FMA72925",
+            "FMA61970"
+          ],
+          "elementos": [
+            "FJ1804",
+            "FJ1756",
+            "FJ1741"
+          ],
+          "nombresFuente": [
+            "Right fornix of forebrain",
+            "Left fornix of forebrain",
+            "Commissure of fornix of forebrain"
+          ],
+          "triangulos": 12072,
+          "caja": {
+            "min": [
+              -0.0321,
+              1.5353,
+              0.057
+            ],
+            "max": [
+              0.0308,
+              1.5674,
+              0.1028
+            ]
+          }
+        },
+        {
+          "id": "sustancia-blanca-d",
+          "nodo": "sustancia-blanca-d",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA260791"
+          ],
+          "elementos": [
+            "FJ1806"
+          ],
+          "nombresFuente": [
+            "White matter of right cerebral hemisphere"
+          ],
+          "triangulos": 13256,
+          "caja": {
+            "min": [
+              -0.0638,
+              1.5219,
+              -0.0006
+            ],
+            "max": [
+              -0.0045,
+              1.623,
+              0.1625
+            ]
+          }
+        },
+        {
+          "id": "sustancia-blanca-i",
+          "nodo": "sustancia-blanca-i",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA260794"
+          ],
+          "elementos": [
+            "FJ1758"
+          ],
+          "nombresFuente": [
+            "White matter of left cerebral hemisphere"
+          ],
+          "triangulos": 12770,
+          "caja": {
+            "min": [
+              0.003,
+              1.5219,
+              -0.0007
+            ],
+            "max": [
+              0.0625,
+              1.6229,
+              0.1624
+            ]
+          }
+        },
+        {
+          "id": "capsula-interna-d",
+          "nodo": "capsula-interna-d",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA72906"
+          ],
+          "elementos": [
+            "FJ1751"
+          ],
+          "nombresFuente": [
+            "Right internal capsule"
+          ],
+          "triangulos": 5370,
+          "caja": {
+            "min": [
+              -0.031,
+              1.5438,
+              0.0645
+            ],
+            "max": [
+              -0.0081,
+              1.5771,
+              0.1187
+            ]
+          }
+        },
+        {
+          "id": "capsula-interna-i",
+          "nodo": "capsula-interna-i",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA72907"
+          ],
+          "elementos": [
+            "FJ1750"
+          ],
+          "nombresFuente": [
+            "Left internal capsule"
+          ],
+          "triangulos": 5370,
+          "caja": {
+            "min": [
+              0.0068,
+              1.5439,
+              0.0645
+            ],
+            "max": [
+              0.0297,
+              1.5771,
+              0.1187
+            ]
+          }
+        },
+        {
+          "id": "talamo-d",
+          "nodo": "talamo-d",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA258714"
+          ],
+          "elementos": [
+            "FJ1827"
+          ],
+          "nombresFuente": [
+            "Right thalamus"
+          ],
+          "triangulos": 758,
+          "caja": {
+            "min": [
+              -0.0246,
+              1.5421,
+              0.0619
+            ],
+            "max": [
+              -0.0012,
+              1.5657,
+              0.0984
+            ]
+          }
+        },
+        {
+          "id": "talamo-i",
+          "nodo": "talamo-i",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA258716"
+          ],
+          "elementos": [
+            "FJ1782"
+          ],
+          "nombresFuente": [
+            "Left thalamus"
+          ],
+          "triangulos": 1388,
+          "caja": {
+            "min": [
+              -0.0001,
+              1.5421,
+              0.0618
+            ],
+            "max": [
+              0.0234,
+              1.5658,
+              0.0984
+            ]
+          }
+        },
+        {
+          "id": "hipotalamo",
+          "nodo": "hipotalamo",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA62008",
+            "FMA62327"
+          ],
+          "elementos": [
+            "FJ1760",
+            "FJ1808",
+            "FJ1780",
+            "FJ1828"
+          ],
+          "nombresFuente": [
+            "Hypothalamus",
+            "Tuber cinereum"
+          ],
+          "triangulos": 3750,
+          "caja": {
+            "min": [
+              -0.0092,
+              1.5321,
+              0.0922
+            ],
+            "max": [
+              0.0079,
+              1.5521,
+              0.1102
+            ]
+          }
+        },
+        {
+          "id": "nucleo-caudado-d",
+          "nodo": "nucleo-caudado-d",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA72826"
+          ],
+          "elementos": [
+            "FJ1802"
+          ],
+          "nombresFuente": [
+            "Right caudate nucleus"
+          ],
+          "triangulos": 1290,
+          "caja": {
+            "min": [
+              -0.035,
+              1.5403,
+              0.0604
+            ],
+            "max": [
+              -0.0032,
+              1.5774,
+              0.1239
+            ]
+          }
+        },
+        {
+          "id": "nucleo-caudado-i",
+          "nodo": "nucleo-caudado-i",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA72827"
+          ],
+          "elementos": [
+            "FJ1754"
+          ],
+          "nombresFuente": [
+            "Left caudate nucleus"
+          ],
+          "triangulos": 1318,
+          "caja": {
+            "min": [
+              0.0019,
+              1.5403,
+              0.0604
+            ],
+            "max": [
+              0.0337,
+              1.5773,
+              0.1239
+            ]
+          }
+        },
+        {
+          "id": "putamen-d",
+          "nodo": "putamen-d",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA72828"
+          ],
+          "elementos": [
+            "FJ1823"
+          ],
+          "nombresFuente": [
+            "Right putamen"
+          ],
+          "triangulos": 3532,
+          "caja": {
+            "min": [
+              -0.0358,
+              1.5454,
+              0.0755
+            ],
+            "max": [
+              -0.0175,
+              1.5715,
+              0.1184
+            ]
+          }
+        },
+        {
+          "id": "putamen-i",
+          "nodo": "putamen-i",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA72829"
+          ],
+          "elementos": [
+            "FJ1776"
+          ],
+          "nombresFuente": [
+            "Left putamen"
+          ],
+          "triangulos": 3528,
+          "caja": {
+            "min": [
+              0.0162,
+              1.5454,
+              0.0755
+            ],
+            "max": [
+              0.0344,
+              1.5715,
+              0.1184
+            ]
+          }
+        },
+        {
+          "id": "globo-palido-d",
+          "nodo": "globo-palido-d",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA72830"
+          ],
+          "elementos": [
+            "FJ1805"
+          ],
+          "nombresFuente": [
+            "Right globus pallidus"
+          ],
+          "triangulos": 2672,
+          "caja": {
+            "min": [
+              -0.0303,
+              1.5463,
+              0.0802
+            ],
+            "max": [
+              -0.0136,
+              1.5636,
+              0.1095
+            ]
+          }
+        },
+        {
+          "id": "globo-palido-i",
+          "nodo": "globo-palido-i",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA72831"
+          ],
+          "elementos": [
+            "FJ1757"
+          ],
+          "nombresFuente": [
+            "Left globus pallidus"
+          ],
+          "triangulos": 3540,
+          "caja": {
+            "min": [
+              0.0123,
+              1.5463,
+              0.0802
+            ],
+            "max": [
+              0.029,
+              1.5636,
+              0.1095
+            ]
+          }
+        },
+        {
+          "id": "amigdala-d",
+          "nodo": "amigdala-d",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA72832"
+          ],
+          "elementos": [
+            "FJ1829"
+          ],
+          "nombresFuente": [
+            "Right amygdala"
+          ],
+          "triangulos": 382,
+          "caja": {
+            "min": [
+              -0.0346,
+              1.5319,
+              0.0891
+            ],
+            "max": [
+              -0.0176,
+              1.5447,
+              0.1075
+            ]
+          }
+        },
+        {
+          "id": "amigdala-i",
+          "nodo": "amigdala-i",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA72833"
+          ],
+          "elementos": [
+            "FJ1753"
+          ],
+          "nombresFuente": [
+            "Left amygdala"
+          ],
+          "triangulos": 380,
+          "caja": {
+            "min": [
+              0.0162,
+              1.532,
+              0.0892
+            ],
+            "max": [
+              0.0334,
+              1.5448,
+              0.1076
+            ]
+          }
+        },
+        {
+          "id": "mesencefalo",
+          "nodo": "mesencefalo",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA61993",
+            "FMA62394",
+            "FMA73422",
+            "FMA73423",
+            "FMA73434",
+            "FMA73435"
+          ],
+          "elementos": [
+            "FJ1770",
+            "FJ1817",
+            "FJ1774",
+            "FJ1821",
+            "FJ1826",
+            "FJ1779",
+            "FJ1810",
+            "FJ1762"
+          ],
+          "nombresFuente": [
+            "Midbrain",
+            "Peduncle of midbrain",
+            "Right superior colliculus",
+            "Left superior colliculus",
+            "Right inferior colliculus",
+            "Left inferior colliculus"
+          ],
+          "triangulos": 12538,
+          "caja": {
+            "min": [
+              -0.0219,
+              1.5285,
+              0.0666
+            ],
+            "max": [
+              0.0206,
+              1.5458,
+              0.0993
+            ]
+          }
+        },
+        {
+          "id": "protuberancia",
+          "nodo": "protuberancia",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA67943"
+          ],
+          "elementos": [
+            "FJ1775",
+            "FJ1822"
+          ],
+          "nombresFuente": [
+            "Pons"
+          ],
+          "triangulos": 10324,
+          "caja": {
+            "min": [
+              -0.0218,
+              1.5021,
+              0.0626
+            ],
+            "max": [
+              0.0204,
+              1.5307,
+              0.097
+            ]
+          }
+        },
+        {
+          "id": "bulbo-raquideo",
+          "nodo": "bulbo-raquideo",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA62004"
+          ],
+          "elementos": [
+            "FJ1769",
+            "FJ1831"
+          ],
+          "nombresFuente": [
+            "Medulla oblongata"
+          ],
+          "triangulos": 6048,
+          "caja": {
+            "min": [
+              -0.014,
+              1.4645,
+              0.0512
+            ],
+            "max": [
+              0.0127,
+              1.5058,
+              0.0844
+            ]
+          }
+        },
+        {
+          "id": "cerebelo",
+          "nodo": "cerebelo",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA67944"
+          ],
+          "elementos": [
+            "FJ1781",
+            "FJ1830"
+          ],
+          "nombresFuente": [
+            "Cerebellum"
+          ],
+          "triangulos": 23848,
+          "caja": {
+            "min": [
+              -0.0539,
+              1.4872,
+              0.0122
+            ],
+            "max": [
+              0.0526,
+              1.5405,
+              0.0685
+            ]
+          }
+        },
+        {
+          "id": "ventriculo-lateral-d",
+          "nodo": "ventriculo-lateral-d",
+          "tipo": "otro",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA78449"
+          ],
+          "elementos": [
+            "FJ1814"
+          ],
+          "nombresFuente": [
+            "Right lateral ventricle"
+          ],
+          "triangulos": 9008,
+          "caja": {
+            "min": [
+              -0.0394,
+              1.5303,
+              0.0176
+            ],
+            "max": [
+              -0.0009,
+              1.5793,
+              0.1269
+            ]
+          }
+        },
+        {
+          "id": "ventriculo-lateral-i",
+          "nodo": "ventriculo-lateral-i",
+          "tipo": "otro",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA78450"
+          ],
+          "elementos": [
+            "FJ1767"
+          ],
+          "nombresFuente": [
+            "Left lateral ventricle"
+          ],
+          "triangulos": 8984,
+          "caja": {
+            "min": [
+              -0.0004,
+              1.5303,
+              0.0176
+            ],
+            "max": [
+              0.0381,
+              1.5793,
+              0.1269
+            ]
+          }
+        },
+        {
+          "id": "tercer-ventriculo",
+          "nodo": "tercer-ventriculo",
+          "tipo": "otro",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA78454"
+          ],
+          "elementos": [
+            "FJ1730"
+          ],
+          "nombresFuente": [
+            "Third ventricle"
+          ],
+          "triangulos": 1934,
+          "caja": {
+            "min": [
+              -0.0046,
+              1.5376,
+              0.065
+            ],
+            "max": [
+              0.0032,
+              1.5607,
+              0.1052
+            ]
+          }
+        },
+        {
+          "id": "acueducto-cerebral",
+          "nodo": "acueducto-cerebral",
+          "tipo": "otro",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA78467"
+          ],
+          "elementos": [
+            "FJ1738"
+          ],
+          "nombresFuente": [
+            "Cerebral aqueduct"
+          ],
+          "triangulos": 342,
+          "caja": {
+            "min": [
+              -0.0022,
+              1.5287,
+              0.0723
+            ],
+            "max": [
+              0.001,
+              1.5464,
+              0.0788
+            ]
+          }
+        },
+        {
+          "id": "cuarto-ventriculo",
+          "nodo": "cuarto-ventriculo",
+          "tipo": "otro",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA78469"
+          ],
+          "elementos": [
+            "FJ1731"
+          ],
+          "nombresFuente": [
+            "Fourth ventricle"
+          ],
+          "triangulos": 3470,
+          "caja": {
+            "min": [
+              -0.0148,
+              1.4911,
+              0.0513
+            ],
+            "max": [
+              0.0135,
+              1.5288,
+              0.0748
+            ]
+          }
+        },
+        {
+          "id": "conducto-central",
+          "nodo": "conducto-central",
+          "tipo": "otro",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA78497"
+          ],
+          "elementos": [
+            "FJ1737"
+          ],
+          "nombresFuente": [
+            "Central canal of spinal cord"
+          ],
+          "triangulos": 364,
+          "caja": {
+            "min": [
+              -0.0018,
+              1.4586,
+              0.0519
+            ],
+            "max": [
+              0.0005,
+              1.4942,
+              0.065
+            ]
+          }
+        },
+        {
+          "id": "plexo-coroideo",
+          "nodo": "plexo-coroideo",
+          "tipo": "otro",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA61934"
+          ],
+          "elementos": [
+            "FJ1755",
+            "FJ1803"
+          ],
+          "nombresFuente": [
+            "Choroid plexus of cerebral hemisphere"
+          ],
+          "triangulos": 5152,
+          "caja": {
+            "min": [
+              -0.038,
+              1.5349,
+              0.0563
+            ],
+            "max": [
+              0.0367,
+              1.5688,
+              0.0997
+            ]
+          }
+        },
+        {
+          "id": "tienda-cerebelo",
+          "nodo": "tienda-cerebelo",
+          "tipo": "otro",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA83966"
+          ],
+          "elementos": [
+            "FJ1843"
+          ],
+          "nombresFuente": [
+            "Tentorium cerebelli"
+          ],
+          "triangulos": 10962,
+          "caja": {
+            "min": [
+              -0.0633,
+              1.5075,
+              0.0058
+            ],
+            "max": [
+              -0.0023,
+              1.5417,
+              0.0933
+            ]
+          }
+        },
+        {
+          "id": "nervio-optico-d",
+          "nodo": "nervio-optico-d",
+          "tipo": "nervio",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA50875"
+          ],
+          "elementos": [
+            "FJ1364",
+            "FJ1819"
+          ],
+          "nombresFuente": [
+            "Right optic nerve"
+          ],
+          "triangulos": 2116,
+          "caja": {
+            "min": [
+              -0.0333,
+              1.5183,
+              0.1021
+            ],
+            "max": [
+              -0.0013,
+              1.5423,
+              0.1517
+            ]
+          }
+        },
+        {
+          "id": "nervio-optico-i",
+          "nodo": "nervio-optico-i",
+          "tipo": "nervio",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA50878"
+          ],
+          "elementos": [
+            "FJ1313",
+            "FJ1772"
+          ],
+          "nombresFuente": [
+            "Left optic nerve"
+          ],
+          "triangulos": 2118,
+          "caja": {
+            "min": [
+              0,
+              1.5183,
+              0.1021
+            ],
+            "max": [
+              0.032,
+              1.5423,
+              0.1517
+            ]
+          }
+        },
+        {
+          "id": "quiasma-optico",
+          "nodo": "quiasma-optico",
+          "tipo": "nervio",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA62045"
+          ],
+          "elementos": [
+            "FJ1771",
+            "FJ1818"
+          ],
+          "nombresFuente": [
+            "Optic chiasm"
+          ],
+          "triangulos": 1712,
+          "caja": {
+            "min": [
+              -0.008,
+              1.5359,
+              0.1001
+            ],
+            "max": [
+              0.0066,
+              1.544,
+              0.1104
+            ]
+          }
+        },
+        {
+          "id": "tracto-optico-d",
+          "nodo": "tracto-optico-d",
+          "tipo": "nervio",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA62382"
+          ],
+          "elementos": [
+            "FJ1820"
+          ],
+          "nombresFuente": [
+            "Right optic tract"
+          ],
+          "triangulos": 1166,
+          "caja": {
+            "min": [
+              -0.0261,
+              1.536,
+              0.0696
+            ],
+            "max": [
+              -0.0013,
+              1.544,
+              0.1074
+            ]
+          }
+        },
+        {
+          "id": "tracto-optico-i",
+          "nodo": "tracto-optico-i",
+          "tipo": "nervio",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA67936"
+          ],
+          "elementos": [
+            "FJ1773"
+          ],
+          "nombresFuente": [
+            "Left optic tract"
+          ],
+          "triangulos": 1168,
+          "caja": {
+            "min": [
+              0,
+              1.536,
+              0.0696
+            ],
+            "max": [
+              0.0248,
+              1.544,
+              0.1074
+            ]
+          }
+        },
+        {
+          "id": "nervio-oculomotor-d",
+          "nodo": "nervio-oculomotor-d",
+          "tipo": "nervio",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA52574",
+            "FMA52576"
+          ],
+          "elementos": [
+            "FJ1372",
+            "FJ1344"
+          ],
+          "nombresFuente": [
+            "Superior branch of right oculomotor nerve",
+            "Inferior branch of right oculomotor nerve"
+          ],
+          "triangulos": 1416,
+          "caja": {
+            "min": [
+              -0.0391,
+              1.5058,
+              0.1142
+            ],
+            "max": [
+              -0.0144,
+              1.5353,
+              0.1501
+            ]
+          }
+        },
+        {
+          "id": "nervio-oculomotor-i",
+          "nodo": "nervio-oculomotor-i",
+          "tipo": "nervio",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA52575",
+            "FMA52577"
+          ],
+          "elementos": [
+            "FJ1321",
+            "FJ1293"
+          ],
+          "nombresFuente": [
+            "Superior branch of left oculomotor nerve",
+            "Inferior branch of left oculomotor nerve"
+          ],
+          "triangulos": 1478,
+          "caja": {
+            "min": [
+              0.0132,
+              1.5058,
+              0.1142
+            ],
+            "max": [
+              0.0377,
+              1.5353,
+              0.1501
+            ]
+          }
+        },
+        {
+          "id": "nervio-troclear-d",
+          "nodo": "nervio-troclear-d",
+          "tipo": "nervio",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA50881"
+          ],
+          "elementos": [
+            "FJ1381"
+          ],
+          "nombresFuente": [
+            "Right trochlear nerve"
+          ],
+          "triangulos": 1378,
+          "caja": {
+            "min": [
+              -0.0208,
+              1.5221,
+              0.0717
+            ],
+            "max": [
+              -0.0116,
+              1.5339,
+              0.1508
+            ]
+          }
+        },
+        {
+          "id": "nervio-troclear-i",
+          "nodo": "nervio-troclear-i",
+          "tipo": "nervio",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA50882"
+          ],
+          "elementos": [
+            "FJ1330"
+          ],
+          "nombresFuente": [
+            "Left trochlear nerve"
+          ],
+          "triangulos": 1360,
+          "caja": {
+            "min": [
+              0.0103,
+              1.5221,
+              0.0717
+            ],
+            "max": [
+              0.0195,
+              1.5339,
+              0.1508
+            ]
+          }
+        },
+        {
+          "id": "nervio-oftalmico-d",
+          "nodo": "nervio-oftalmico-d",
+          "tipo": "nervio",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA52622",
+            "FMA52639",
+            "FMA52656",
+            "FMA52643",
+            "FMA52629",
+            "FMA52669",
+            "FMA52698",
+            "FMA52676",
+            "FMA52715",
+            "FMA82734"
+          ],
+          "elementos": [
+            "FJ1363",
+            "FJ1341",
+            "FJ1376",
+            "FJ1377",
+            "FJ1351",
+            "FJ1361",
+            "FJ1347",
+            "FJ1333",
+            "FJ1366",
+            "FJ1369"
+          ],
+          "nombresFuente": [
+            "Right ophthalmic nerve",
+            "Right frontal nerve",
+            "Right supra-orbital nerve",
+            "Right supratrochlear nerve",
+            "Right lacrimal nerve",
+            "Right nasociliary nerve",
+            "Right infratrochlear nerve",
+            "Right anterior ethmoidal nerve",
+            "Right posterior ethmoidal nerve",
+            "Right long ciliary nerve"
+          ],
+          "triangulos": 6334,
+          "caja": {
+            "min": [
+              -0.0441,
+              1.515,
+              0.0945
+            ],
+            "max": [
+              -0.0026,
+              1.5606,
+              0.1855
+            ]
+          }
+        },
+        {
+          "id": "nervio-oftalmico-i",
+          "nodo": "nervio-oftalmico-i",
+          "tipo": "nervio",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA52623",
+            "FMA52640",
+            "FMA52657",
+            "FMA52644",
+            "FMA52630",
+            "FMA52670",
+            "FMA52699",
+            "FMA52677",
+            "FMA52716",
+            "FMA82735"
+          ],
+          "elementos": [
+            "FJ1312",
+            "FJ1290",
+            "FJ1325",
+            "FJ1326",
+            "FJ1300",
+            "FJ1310",
+            "FJ1296",
+            "FJ1283",
+            "FJ1315",
+            "FJ1318"
+          ],
+          "nombresFuente": [
+            "Left ophthalmic nerve",
+            "Left frontal nerve",
+            "Left supra-orbital nerve",
+            "Left supratrochlear nerve",
+            "Left lacrimal nerve",
+            "Left nasociliary nerve",
+            "Left infratrochlear nerve",
+            "Left anterior ethmoidal nerve",
+            "Left posterior ethmoidal nerve",
+            "Left long ciliary nerve"
+          ],
+          "triangulos": 6376,
+          "caja": {
+            "min": [
+              0.0013,
+              1.515,
+              0.0945
+            ],
+            "max": [
+              0.0428,
+              1.5606,
+              0.1854
+            ]
+          }
+        },
+        {
+          "id": "ganglio-ciliar-d",
+          "nodo": "ganglio-ciliar-d",
+          "tipo": "nervio",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA53549",
+            "FMA52673"
+          ],
+          "elementos": [
+            "FJ1339",
+            "FJ1362"
+          ],
+          "nombresFuente": [
+            "Right ciliary ganglion",
+            "Communicating branch of right nasociliary nerve with right ciliary ganglion"
+          ],
+          "triangulos": 482,
+          "caja": {
+            "min": [
+              -0.027,
+              1.524,
+              0.1259
+            ],
+            "max": [
+              -0.0177,
+              1.5291,
+              0.1341
+            ]
+          }
+        },
+        {
+          "id": "ganglio-ciliar-i",
+          "nodo": "ganglio-ciliar-i",
+          "tipo": "nervio",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA53550",
+            "FMA52674"
+          ],
+          "elementos": [
+            "FJ1288",
+            "FJ1311"
+          ],
+          "nombresFuente": [
+            "Left ciliary ganglion",
+            "Communicating branch of left nasociliary nerve with left ciliary ganglion"
+          ],
+          "triangulos": 408,
+          "caja": {
+            "min": [
+              0.0164,
+              1.5239,
+              0.1259
+            ],
+            "max": [
+              0.0257,
+              1.5291,
+              0.134
+            ]
+          }
+        },
+        {
+          "id": "medula-espinal",
+          "nodo": null,
+          "tipo": "organo",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 solo incluye el conducto central de la médula, no la médula. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "nervio-olfatorio",
+          "nodo": null,
+          "tipo": "nervio",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye este nervio. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "nervio-trigemino",
+          "nodo": null,
+          "tipo": "nervio",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye este nervio. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "nervio-abducens",
+          "nodo": null,
+          "tipo": "nervio",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye este nervio. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "nervio-facial",
+          "nodo": null,
+          "tipo": "nervio",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye este nervio. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "nervio-vestibulococlear",
+          "nodo": null,
+          "tipo": "nervio",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye este nervio. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "nervio-glosofaringeo",
+          "nodo": null,
+          "tipo": "nervio",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye este nervio. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "nervio-vago",
+          "nodo": null,
+          "tipo": "nervio",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye este nervio. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "nervio-accesorio",
+          "nodo": null,
+          "tipo": "nervio",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye este nervio. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "nervio-hipogloso",
+          "nodo": null,
+          "tipo": "nervio",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye este nervio. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "plexo-braquial",
+          "nodo": null,
+          "tipo": "nervio",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye este nervio. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "plexo-lumbar",
+          "nodo": null,
+          "tipo": "nervio",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye este nervio. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "plexo-sacro",
+          "nodo": null,
+          "tipo": "nervio",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye este nervio. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "nervio-ciatico",
+          "nodo": null,
+          "tipo": "nervio",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye este nervio. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "nervio-femoral",
+          "nodo": null,
+          "tipo": "nervio",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye este nervio. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "nervio-mediano",
+          "nodo": null,
+          "tipo": "nervio",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye este nervio. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "nervio-cubital",
+          "nodo": null,
+          "tipo": "nervio",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye este nervio. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "nervio-radial",
+          "nodo": null,
+          "tipo": "nervio",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye este nervio. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "nervio-frenico",
+          "nodo": null,
+          "tipo": "nervio",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye este nervio. Candidato: Z-Anatomy."
+        }
+      ]
+    },
+    "reproductor": {
+      "archivo": "models/reproductor.glb",
+      "bytes": 57580,
+      "triangulos": 5130,
+      "estructuras": [
+        {
+          "id": "testiculo-d",
+          "nodo": "testiculo-d",
+          "tipo": "glandula",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA7211"
+          ],
+          "elementos": [
+            "FJ3142"
+          ],
+          "nombresFuente": [
+            "Right testis"
+          ],
+          "triangulos": 212,
+          "caja": {
+            "min": [
+              -0.0308,
+              0.6906,
+              0.1412
+            ],
+            "max": [
+              -0.0105,
+              0.719,
+              0.1634
+            ]
+          }
+        },
+        {
+          "id": "testiculo-i",
+          "nodo": "testiculo-i",
+          "tipo": "glandula",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA7212"
+          ],
+          "elementos": [
+            "FJ3138"
+          ],
+          "nombresFuente": [
+            "Left testis"
+          ],
+          "triangulos": 210,
+          "caja": {
+            "min": [
+              0.0075,
+              0.6898,
+              0.1414
+            ],
+            "max": [
+              0.0276,
+              0.7187,
+              0.1635
+            ]
+          }
+        },
+        {
+          "id": "epididimo-d",
+          "nodo": "epididimo-d",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA18256"
+          ],
+          "elementos": [
+            "FJ3141"
+          ],
+          "nombresFuente": [
+            "Right epididymis"
+          ],
+          "triangulos": 76,
+          "caja": {
+            "min": [
+              -0.0261,
+              0.7007,
+              0.1402
+            ],
+            "max": [
+              -0.0167,
+              0.7249,
+              0.1594
+            ]
+          }
+        },
+        {
+          "id": "epididimo-i",
+          "nodo": "epididimo-i",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA18257"
+          ],
+          "elementos": [
+            "FJ3136"
+          ],
+          "nombresFuente": [
+            "Left epididymis"
+          ],
+          "triangulos": 238,
+          "caja": {
+            "min": [
+              0.013,
+              0.6993,
+              0.1393
+            ],
+            "max": [
+              0.0239,
+              0.725,
+              0.1596
+            ]
+          }
+        },
+        {
+          "id": "vesicula-seminal-d",
+          "nodo": "vesicula-seminal-d",
+          "tipo": "glandula",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA19387"
+          ],
+          "elementos": [
+            "FJ3143"
+          ],
+          "nombresFuente": [
+            "Right seminal vesicle"
+          ],
+          "triangulos": 360,
+          "caja": {
+            "min": [
+              -0.0353,
+              0.7889,
+              0.0549
+            ],
+            "max": [
+              -0.0036,
+              0.8183,
+              0.0751
+            ]
+          }
+        },
+        {
+          "id": "vesicula-seminal-i",
+          "nodo": "vesicula-seminal-i",
+          "tipo": "glandula",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA19388"
+          ],
+          "elementos": [
+            "FJ3137"
+          ],
+          "nombresFuente": [
+            "Left seminal vesicle"
+          ],
+          "triangulos": 370,
+          "caja": {
+            "min": [
+              0.0024,
+              0.7888,
+              0.0552
+            ],
+            "max": [
+              0.034,
+              0.8183,
+              0.075
+            ]
+          }
+        },
+        {
+          "id": "prostata",
+          "nodo": "prostata",
+          "tipo": "glandula",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA9600"
+          ],
+          "elementos": [
+            "FJ3139"
+          ],
+          "nombresFuente": [
+            "Prostate"
+          ],
+          "triangulos": 442,
+          "caja": {
+            "min": [
+              -0.0178,
+              0.7721,
+              0.0645
+            ],
+            "max": [
+              0.0165,
+              0.7924,
+              0.0965
+            ]
+          }
+        },
+        {
+          "id": "cuerpos-cavernosos",
+          "nodo": "cuerpos-cavernosos",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA19618"
+          ],
+          "elementos": [
+            "FJ3132"
+          ],
+          "nombresFuente": [
+            "Corpus cavernosum of penis"
+          ],
+          "triangulos": 1272,
+          "caja": {
+            "min": [
+              -0.0321,
+              0.7084,
+              0.0645
+            ],
+            "max": [
+              0.0311,
+              0.7887,
+              0.1956
+            ]
+          }
+        },
+        {
+          "id": "cuerpo-esponjoso",
+          "nodo": "cuerpo-esponjoso",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA19617"
+          ],
+          "elementos": [
+            "FJ3133"
+          ],
+          "nombresFuente": [
+            "Corpus spongiosum of penis"
+          ],
+          "triangulos": 576,
+          "caja": {
+            "min": [
+              -0.0113,
+              0.7089,
+              0.075
+            ],
+            "max": [
+              0.01,
+              0.7802,
+              0.1871
+            ]
+          }
+        },
+        {
+          "id": "glande",
+          "nodo": "glande",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA18247"
+          ],
+          "elementos": [
+            "FJ3134"
+          ],
+          "nombresFuente": [
+            "Glans penis"
+          ],
+          "triangulos": 1374,
+          "caja": {
+            "min": [
+              -0.0155,
+              0.7076,
+              0.1761
+            ],
+            "max": [
+              0.0142,
+              0.7381,
+              0.2009
+            ]
+          }
+        },
+        {
+          "id": "conducto-deferente",
+          "nodo": null,
+          "tipo": "organo",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye esta estructura. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "ovarios",
+          "nodo": null,
+          "tipo": "glandula",
+          "estado": "pendiente",
+          "motivo": "El modelo de BodyParts3D es masculino y no incluye el aparato genital femenino. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "trompas-uterinas",
+          "nodo": null,
+          "tipo": "organo",
+          "estado": "pendiente",
+          "motivo": "El modelo de BodyParts3D es masculino y no incluye el aparato genital femenino. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "utero",
+          "nodo": null,
+          "tipo": "organo",
+          "estado": "pendiente",
+          "motivo": "El modelo de BodyParts3D es masculino y no incluye el aparato genital femenino. Candidato: Z-Anatomy."
+        },
+        {
+          "id": "vagina",
+          "nodo": null,
+          "tipo": "organo",
+          "estado": "pendiente",
+          "motivo": "El modelo de BodyParts3D es masculino y no incluye el aparato genital femenino. Candidato: Z-Anatomy."
+        }
+      ]
+    },
     "respiratorio": {
       "archivo": "models/respiratorio.glb",
       "bytes": 2797632,
@@ -17707,6 +21459,870 @@
           "motivo": "BodyParts3D 4.0 no incluye el parénquima pulmonar (solo el árbol bronquial). Candidato: Z-Anatomy."
         }
       ]
+    },
+    "sentidos": {
+      "archivo": "models/sentidos.glb",
+      "bytes": 969732,
+      "triangulos": 131172,
+      "estructuras": [
+        {
+          "id": "cornea-d",
+          "nodo": "cornea-d",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA58239"
+          ],
+          "elementos": [
+            "FJ1340"
+          ],
+          "nombresFuente": [
+            "Right cornea"
+          ],
+          "triangulos": 2302,
+          "caja": {
+            "min": [
+              -0.0382,
+              1.5107,
+              0.1612
+            ],
+            "max": [
+              0.0309,
+              1.5248,
+              0.1661
+            ]
+          }
+        },
+        {
+          "id": "cornea-i",
+          "nodo": "cornea-i",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA58240"
+          ],
+          "elementos": [
+            "FJ1289"
+          ],
+          "nombresFuente": [
+            "Left cornea"
+          ],
+          "triangulos": 2300,
+          "caja": {
+            "min": [
+              0.0228,
+              1.5107,
+              0.1612
+            ],
+            "max": [
+              0.0368,
+              1.5248,
+              0.166
+            ]
+          }
+        },
+        {
+          "id": "esclera-d",
+          "nodo": "esclera-d",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA58271"
+          ],
+          "elementos": [
+            "FJ1368"
+          ],
+          "nombresFuente": [
+            "Right sclera"
+          ],
+          "triangulos": 19762,
+          "caja": {
+            "min": [
+              -0.0436,
+              1.505,
+              0.1388
+            ],
+            "max": [
+              0.0313,
+              1.5312,
+              0.1635
+            ]
+          }
+        },
+        {
+          "id": "esclera-i",
+          "nodo": "esclera-i",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA58272"
+          ],
+          "elementos": [
+            "FJ1317"
+          ],
+          "nombresFuente": [
+            "Left sclera"
+          ],
+          "triangulos": 19752,
+          "caja": {
+            "min": [
+              0.016,
+              1.505,
+              0.1388
+            ],
+            "max": [
+              0.0423,
+              1.5312,
+              0.1635
+            ]
+          }
+        },
+        {
+          "id": "coroides-d",
+          "nodo": "coroides-d",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA58299"
+          ],
+          "elementos": [
+            "FJ1336",
+            "FJ1337"
+          ],
+          "nombresFuente": [
+            "Right choroid"
+          ],
+          "triangulos": 17792,
+          "caja": {
+            "min": [
+              -0.0425,
+              1.5061,
+              0.14
+            ],
+            "max": [
+              0.0346,
+              1.53,
+              0.1624
+            ]
+          }
+        },
+        {
+          "id": "coroides-i",
+          "nodo": "coroides-i",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA58300"
+          ],
+          "elementos": [
+            "FJ1285",
+            "FJ1286"
+          ],
+          "nombresFuente": [
+            "Left choroid"
+          ],
+          "triangulos": 17810,
+          "caja": {
+            "min": [
+              0.0172,
+              1.5061,
+              0.14
+            ],
+            "max": [
+              0.0411,
+              1.53,
+              0.1624
+            ]
+          }
+        },
+        {
+          "id": "iris-d",
+          "nodo": "iris-d",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA58236"
+          ],
+          "elementos": [
+            "FJ1348"
+          ],
+          "nombresFuente": [
+            "Right iris"
+          ],
+          "triangulos": 1778,
+          "caja": {
+            "min": [
+              -0.0375,
+              1.5113,
+              0.1596
+            ],
+            "max": [
+              -0.0246,
+              1.5242,
+              0.1627
+            ]
+          }
+        },
+        {
+          "id": "iris-i",
+          "nodo": "iris-i",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA58237"
+          ],
+          "elementos": [
+            "FJ1297"
+          ],
+          "nombresFuente": [
+            "Left iris"
+          ],
+          "triangulos": 1746,
+          "caja": {
+            "min": [
+              0.0233,
+              1.5113,
+              0.1596
+            ],
+            "max": [
+              0.0362,
+              1.5242,
+              0.1627
+            ]
+          }
+        },
+        {
+          "id": "cristalino-d",
+          "nodo": "cristalino-d",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA58242"
+          ],
+          "elementos": [
+            "FJ1356"
+          ],
+          "nombresFuente": [
+            "Right lens"
+          ],
+          "triangulos": 1520,
+          "caja": {
+            "min": [
+              -0.0361,
+              1.5127,
+              0.1568
+            ],
+            "max": [
+              -0.0258,
+              1.5231,
+              0.1616
+            ]
+          }
+        },
+        {
+          "id": "cristalino-i",
+          "nodo": "cristalino-i",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA58243"
+          ],
+          "elementos": [
+            "FJ1305"
+          ],
+          "nombresFuente": [
+            "Left lens"
+          ],
+          "triangulos": 1500,
+          "caja": {
+            "min": [
+              0.0245,
+              1.5127,
+              0.1568
+            ],
+            "max": [
+              0.0348,
+              1.5231,
+              0.1616
+            ]
+          }
+        },
+        {
+          "id": "zonula-d",
+          "nodo": "zonula-d",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA58839"
+          ],
+          "elementos": [
+            "FJ1371"
+          ],
+          "nombresFuente": [
+            "Suspensory ligament of right lens"
+          ],
+          "triangulos": 3688,
+          "caja": {
+            "min": [
+              -0.0391,
+              1.5096,
+              0.1585
+            ],
+            "max": [
+              0.0374,
+              1.526,
+              0.1611
+            ]
+          }
+        },
+        {
+          "id": "zonula-i",
+          "nodo": "zonula-i",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA58840"
+          ],
+          "elementos": [
+            "FJ1320"
+          ],
+          "nombresFuente": [
+            "Suspensory ligament of left lens"
+          ],
+          "triangulos": 3844,
+          "caja": {
+            "min": [
+              0.0215,
+              1.5097,
+              0.1585
+            ],
+            "max": [
+              0.0378,
+              1.526,
+              0.1611
+            ]
+          }
+        },
+        {
+          "id": "cuerpo-vitreo-d",
+          "nodo": "cuerpo-vitreo-d",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA58828"
+          ],
+          "elementos": [
+            "FJ1382"
+          ],
+          "nombresFuente": [
+            "Right vitreous body"
+          ],
+          "triangulos": 2718,
+          "caja": {
+            "min": [
+              -0.0407,
+              1.5079,
+              0.1418
+            ],
+            "max": [
+              -0.0203,
+              1.5282,
+              0.1595
+            ]
+          }
+        },
+        {
+          "id": "cuerpo-vitreo-i",
+          "nodo": "cuerpo-vitreo-i",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA58829"
+          ],
+          "elementos": [
+            "FJ1331"
+          ],
+          "nombresFuente": [
+            "Left vitreous body"
+          ],
+          "triangulos": 2724,
+          "caja": {
+            "min": [
+              0.019,
+              1.5079,
+              0.1418
+            ],
+            "max": [
+              0.0393,
+              1.5282,
+              0.1595
+            ]
+          }
+        },
+        {
+          "id": "retina-d",
+          "nodo": "retina-d",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA58607"
+          ],
+          "elementos": [
+            "FJ1367"
+          ],
+          "nombresFuente": [
+            "Optic part of right retina"
+          ],
+          "triangulos": 11696,
+          "caja": {
+            "min": [
+              -0.0414,
+              1.5072,
+              0.141
+            ],
+            "max": [
+              -0.0195,
+              1.529,
+              0.1585
+            ]
+          }
+        },
+        {
+          "id": "retina-i",
+          "nodo": "retina-i",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA58608"
+          ],
+          "elementos": [
+            "FJ1316"
+          ],
+          "nombresFuente": [
+            "Optic part of left retina"
+          ],
+          "triangulos": 11704,
+          "caja": {
+            "min": [
+              0.0182,
+              1.5072,
+              0.141
+            ],
+            "max": [
+              0.0401,
+              1.529,
+              0.1585
+            ]
+          }
+        },
+        {
+          "id": "camara-anterior-d",
+          "nodo": "camara-anterior-d",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA58081"
+          ],
+          "elementos": [
+            "FJ1332"
+          ],
+          "nombresFuente": [
+            "Anterior chamber of right eyeball"
+          ],
+          "triangulos": 1506,
+          "caja": {
+            "min": [
+              -0.0375,
+              1.5114,
+              0.1615
+            ],
+            "max": [
+              -0.0247,
+              1.5242,
+              0.1652
+            ]
+          }
+        },
+        {
+          "id": "camara-anterior-i",
+          "nodo": "camara-anterior-i",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA58082"
+          ],
+          "elementos": [
+            "FJ1282"
+          ],
+          "nombresFuente": [
+            "Anterior chamber of left eyeball"
+          ],
+          "triangulos": 1532,
+          "caja": {
+            "min": [
+              0.0234,
+              1.5114,
+              0.1615
+            ],
+            "max": [
+              0.0362,
+              1.5242,
+              0.1652
+            ]
+          }
+        },
+        {
+          "id": "glandula-lagrimal-d",
+          "nodo": "glandula-lagrimal-d",
+          "tipo": "glandula",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA59102"
+          ],
+          "elementos": [
+            "FJ1350"
+          ],
+          "nombresFuente": [
+            "Right lacrimal gland"
+          ],
+          "triangulos": 1510,
+          "caja": {
+            "min": [
+              -0.0478,
+              1.5202,
+              0.149
+            ],
+            "max": [
+              -0.033,
+              1.5354,
+              0.1614
+            ]
+          }
+        },
+        {
+          "id": "glandula-lagrimal-i",
+          "nodo": "glandula-lagrimal-i",
+          "tipo": "glandula",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA59103"
+          ],
+          "elementos": [
+            "FJ1299"
+          ],
+          "nombresFuente": [
+            "Left lacrimal gland"
+          ],
+          "triangulos": 1426,
+          "caja": {
+            "min": [
+              0.0317,
+              1.5202,
+              0.149
+            ],
+            "max": [
+              0.0465,
+              1.5353,
+              0.1614
+            ]
+          }
+        },
+        {
+          "id": "canaliculos-lagrimales-d",
+          "nodo": "canaliculos-lagrimales-d",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA59582"
+          ],
+          "elementos": [
+            "FJ1349"
+          ],
+          "nombresFuente": [
+            "Right lacrimal canaliculus"
+          ],
+          "triangulos": 518,
+          "caja": {
+            "min": [
+              -0.0204,
+              1.5132,
+              0.1634
+            ],
+            "max": [
+              -0.0146,
+              1.5174,
+              0.1644
+            ]
+          }
+        },
+        {
+          "id": "canaliculos-lagrimales-i",
+          "nodo": "canaliculos-lagrimales-i",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA59583"
+          ],
+          "elementos": [
+            "FJ1298"
+          ],
+          "nombresFuente": [
+            "Left lacrimal canaliculus"
+          ],
+          "triangulos": 590,
+          "caja": {
+            "min": [
+              0.0133,
+              1.5132,
+              0.1634
+            ],
+            "max": [
+              0.0191,
+              1.5173,
+              0.1644
+            ]
+          }
+        },
+        {
+          "id": "oido-externo",
+          "nodo": "oido-externo",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA52781"
+          ],
+          "elementos": [
+            "FJ2811"
+          ],
+          "nombresFuente": [
+            "External ear"
+          ],
+          "triangulos": 1454,
+          "caja": {
+            "min": [
+              -0.0844,
+              1.4797,
+              0.0666
+            ],
+            "max": [
+              0.0831,
+              1.5367,
+              0.1038
+            ]
+          }
+        },
+        {
+          "id": "oido-interno",
+          "nodo": null,
+          "tipo": "organo",
+          "estado": "pendiente",
+          "motivo": "BodyParts3D 4.0 no incluye el oído medio ni el interno. Candidato: Z-Anatomy."
+        }
+      ]
+    },
+    "urinario": {
+      "archivo": "models/urinario.glb",
+      "bytes": 78772,
+      "triangulos": 9944,
+      "estructuras": [
+        {
+          "id": "rinon-d",
+          "nodo": "rinon-d",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA7204"
+          ],
+          "elementos": [
+            "FJ3147"
+          ],
+          "nombresFuente": [
+            "Right kidney"
+          ],
+          "triangulos": 2310,
+          "caja": {
+            "min": [
+              -0.0876,
+              0.9668,
+              0.0647
+            ],
+            "max": [
+              -0.0304,
+              1.0712,
+              0.1119
+            ]
+          }
+        },
+        {
+          "id": "rinon-i",
+          "nodo": "rinon-i",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA7205"
+          ],
+          "elementos": [
+            "FJ3145"
+          ],
+          "nombresFuente": [
+            "Left kidney"
+          ],
+          "triangulos": 2982,
+          "caja": {
+            "min": [
+              0.0328,
+              0.9845,
+              0.0596
+            ],
+            "max": [
+              0.0904,
+              1.0904,
+              0.1002
+            ]
+          }
+        },
+        {
+          "id": "ureter-d",
+          "nodo": "ureter-d",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA15571"
+          ],
+          "elementos": [
+            "FJ3146"
+          ],
+          "nombresFuente": [
+            "Right ureter"
+          ],
+          "triangulos": 1924,
+          "caja": {
+            "min": [
+              -0.0728,
+              0.8112,
+              0.0603
+            ],
+            "max": [
+              -0.0094,
+              1.057,
+              0.119
+            ]
+          }
+        },
+        {
+          "id": "ureter-i",
+          "nodo": "ureter-i",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA15572"
+          ],
+          "elementos": [
+            "FJ3144"
+          ],
+          "nombresFuente": [
+            "Left ureter"
+          ],
+          "triangulos": 2062,
+          "caja": {
+            "min": [
+              0.0233,
+              0.818,
+              0.0616
+            ],
+            "max": [
+              0.0794,
+              1.0726,
+              0.1198
+            ]
+          }
+        },
+        {
+          "id": "vejiga",
+          "nodo": "vejiga",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA15900"
+          ],
+          "elementos": [
+            "FJ3149"
+          ],
+          "nombresFuente": [
+            "Urinary bladder"
+          ],
+          "triangulos": 226,
+          "caja": {
+            "min": [
+              -0.0341,
+              0.7897,
+              0.0565
+            ],
+            "max": [
+              0.0326,
+              0.83,
+              0.1282
+            ]
+          }
+        },
+        {
+          "id": "uretra",
+          "nodo": "uretra",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA19667"
+          ],
+          "elementos": [
+            "FJ3148"
+          ],
+          "nombresFuente": [
+            "Urethra"
+          ],
+          "triangulos": 440,
+          "caja": {
+            "min": [
+              -0.0016,
+              0.7086,
+              0.08
+            ],
+            "max": [
+              0.0003,
+              0.7925,
+              0.1842
+            ]
+          }
+        }
+      ]
     }
   },
   "unidades": "m",
@@ -17726,5 +22342,5 @@
       "nota": "Licencia vigente desde el 25/02/2025; antes CC BY-SA 2.1 JP (los OBJ conservan la cabecera antigua)."
     }
   },
-  "bytesTotales": 14558916
+  "bytesTotales": 19476664
 }

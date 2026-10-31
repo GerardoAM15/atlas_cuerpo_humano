@@ -1,0 +1,158 @@
+[
+  {
+    "id": "bazo",
+    "nodoModelo": "bazo",
+    "tipo": "organo",
+    "sistema": "linfatico",
+    "region": "organos-linfoides",
+    "nombre": "Bazo",
+    "latin": "Splen (lien)",
+    "ingles": "Spleen",
+    "descripcion": "El mayor órgano linfoide, del tamaño de un puño, con pulpa roja (filtro de la sangre) y pulpa blanca (tejido linfoide).",
+    "funcion": "Elimina hematíes envejecidos y bacterias encapsuladas de la sangre y genera respuestas inmunes frente a antígenos sanguíneos.",
+    "ubicacion": "Hipocondrio izquierdo, protegido por las costillas 9.ª a 11.ª.",
+    "datosClinicos": "Es el órgano abdominal que más se rompe en traumatismos; sin bazo aumenta el riesgo de infecciones graves por neumococo.",
+    "relaciones": [
+      "estomago",
+      "rinon-i",
+      "pancreas",
+      "vena-esplenica",
+      "diafragma",
+      "costilla-10-i"
+    ]
+  },
+  {
+    "id": "timo-d",
+    "nodoModelo": "timo-d",
+    "tipo": "organo",
+    "sistema": "linfatico",
+    "lado": "derecho",
+    "region": "organos-linfoides",
+    "nombre": "Lóbulo derecho del timo",
+    "latin": "Lobus thymi",
+    "ingles": "Right lobe of thymus",
+    "descripcion": "Uno de los dos lóbulos del timo, órgano linfoide primario muy desarrollado en la infancia que en el adulto se sustituye en gran parte por grasa.",
+    "funcion": "En él maduran los linfocitos T y aprenden a no atacar los tejidos propios (tolerancia central).",
+    "ubicacion": "Mediastino superior y anterior, detrás del manubrio del esternón.",
+    "datosClinicos": "Los timomas se asocian a la miastenia gravis; su ausencia congénita (síndrome de DiGeorge) causa inmunodeficiencia.",
+    "relaciones": [
+      "timo-i",
+      "esternon",
+      "pared-auricula-derecha",
+      "vena-braquiocefalica-i"
+    ]
+  },
+  {
+    "id": "timo-i",
+    "nodoModelo": "timo-i",
+    "tipo": "organo",
+    "sistema": "linfatico",
+    "lado": "izquierdo",
+    "region": "organos-linfoides",
+    "nombre": "Lóbulo izquierdo del timo",
+    "latin": "Lobus thymi",
+    "ingles": "Left lobe of thymus",
+    "descripcion": "Uno de los dos lóbulos del timo, órgano linfoide primario muy desarrollado en la infancia que en el adulto se sustituye en gran parte por grasa.",
+    "funcion": "En él maduran los linfocitos T y aprenden a no atacar los tejidos propios (tolerancia central).",
+    "ubicacion": "Mediastino superior y anterior, detrás del manubrio del esternón.",
+    "datosClinicos": "Los timomas se asocian a la miastenia gravis; su ausencia congénita (síndrome de DiGeorge) causa inmunodeficiencia.",
+    "relaciones": [
+      "timo-d",
+      "esternon",
+      "pared-auricula-derecha",
+      "vena-braquiocefalica-i"
+    ]
+  },
+  {
+    "id": "ganglios-cervicales",
+    "nodoModelo": null,
+    "tipo": "organo",
+    "sistema": "linfatico",
+    "region": "ganglios-conductos",
+    "nombre": "Ganglios linfáticos cervicales",
+    "latin": "Nodi lymphoidei cervicales",
+    "ingles": "Cervical lymph nodes",
+    "funcion": "Filtran la linfa y en ellos los linfocitos se encuentran con los antígenos y se activan.",
+    "descripcion": "Cadenas de ganglios del cuello, sobre todo a lo largo de la vena yugular interna (cadena yugular profunda).",
+    "ubicacion": "Cuello, en torno al esternocleidomastoideo y la vaina carotídea.",
+    "datosClinicos": "Se agrandan en las infecciones de garganta; un ganglio duro y fijo puede indicar metástasis de un cáncer de cabeza y cuello.",
+    "relaciones": [
+      "yugular-interna-d",
+      "esternocleidomastoideo-d"
+    ]
+  },
+  {
+    "id": "ganglios-axilares",
+    "nodoModelo": null,
+    "tipo": "organo",
+    "sistema": "linfatico",
+    "region": "ganglios-conductos",
+    "nombre": "Ganglios linfáticos axilares",
+    "latin": "Nodi lymphoidei axillares",
+    "ingles": "Axillary lymph nodes",
+    "funcion": "Filtran la linfa y en ellos los linfocitos se encuentran con los antígenos y se activan.",
+    "descripcion": "Entre 20 y 30 ganglios agrupados en la axila alrededor de los vasos axilares.",
+    "ubicacion": "Axila.",
+    "datosClinicos": "Reciben la mayor parte de la linfa de la mama: la biopsia del ganglio centinela axilar orienta el tratamiento del cáncer de mama.",
+    "relaciones": [
+      "arteria-axilar-d",
+      "pectoral-menor-d"
+    ]
+  },
+  {
+    "id": "ganglios-inguinales",
+    "nodoModelo": null,
+    "tipo": "organo",
+    "sistema": "linfatico",
+    "region": "ganglios-conductos",
+    "nombre": "Ganglios linfáticos inguinales",
+    "latin": "Nodi lymphoidei inguinales",
+    "ingles": "Inguinal lymph nodes",
+    "funcion": "Filtran la linfa y en ellos los linfocitos se encuentran con los antígenos y se activan.",
+    "descripcion": "Grupos superficial y profundo de ganglios en la ingle, en torno a la desembocadura de la vena safena mayor.",
+    "ubicacion": "Región inguinal, bajo el ligamento inguinal.",
+    "datosClinicos": "Drenan el miembro inferior, el periné y los genitales externos (no los testículos, que drenan a los ganglios lumbares).",
+    "relaciones": [
+      "vena-femoral-d",
+      "vena-safena-mayor-d"
+    ]
+  },
+  {
+    "id": "conducto-toracico",
+    "nodoModelo": null,
+    "tipo": "vaso",
+    "sistema": "linfatico",
+    "region": "ganglios-conductos",
+    "nombre": "Conducto torácico",
+    "latin": "Ductus thoracicus",
+    "ingles": "Thoracic duct",
+    "descripcion": "El mayor vaso linfático, de unos 40 cm; comienza en la cisterna del quilo (L1–L2) y asciende por el mediastino posterior.",
+    "funcion": "Devuelve a la sangre la linfa de casi todo el cuerpo (excepto el lado derecho de la cabeza, el cuello, el tórax y el miembro superior derecho).",
+    "ubicacion": "Desde el abdomen, a través del hiato aórtico, hasta la unión de las venas yugular interna y subclavia izquierdas.",
+    "datosClinicos": "Su lesión en cirugía torácica produce quilotórax (linfa lechosa en la pleura).",
+    "relaciones": [
+      "aorta-toracica",
+      "vena-acigos",
+      "vena-subclavia-i",
+      "yugular-interna-i"
+    ]
+  },
+  {
+    "id": "amigdalas-palatinas",
+    "nodoModelo": null,
+    "tipo": "organo",
+    "sistema": "linfatico",
+    "region": "ganglios-conductos",
+    "nombre": "Amígdalas palatinas",
+    "latin": "Tonsillae palatinae",
+    "ingles": "Palatine tonsils",
+    "descripcion": "Masas de tejido linfoide con criptas, situadas a ambos lados de la orofaringe.",
+    "funcion": "Forman parte del anillo linfático de Waldeyer, primera defensa frente a los microorganismos que entran por la boca.",
+    "ubicacion": "Fosas amigdalinas, entre los pilares anterior y posterior del velo del paladar.",
+    "datosClinicos": "La amigdalitis por estreptococo debe tratarse para prevenir la fiebre reumática.",
+    "relaciones": [
+      "paladar-blando",
+      "lengua"
+    ]
+  }
+]

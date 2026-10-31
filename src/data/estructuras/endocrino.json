@@ -1,0 +1,153 @@
+[
+  {
+    "id": "hipofisis",
+    "nodoModelo": "hipofisis",
+    "tipo": "glandula",
+    "sistema": "endocrino",
+    "region": "glandulas-craneales",
+    "nombre": "Hipófisis",
+    "latin": "Hypophysis (glandula pituitaria)",
+    "ingles": "Pituitary gland",
+    "descripcion": "Glándula del tamaño de un garbanzo, con un lóbulo anterior (adenohipófisis) y otro posterior (neurohipófisis), unida al hipotálamo por el tallo.",
+    "funcion": "La adenohipófisis secreta GH, prolactina, TSH, ACTH, FSH y LH; la neurohipófisis libera la oxitocina y la vasopresina (ADH) producidas en el hipotálamo.",
+    "ubicacion": "Silla turca del esfenoides, bajo el quiasma óptico.",
+    "datosClinicos": "Los adenomas hipofisarios pueden secretar hormonas en exceso (acromegalia, Cushing) o comprimir el quiasma.",
+    "relaciones": [
+      "hipotalamo",
+      "quiasma-optico",
+      "esfenoides"
+    ]
+  },
+  {
+    "id": "glandula-pineal",
+    "nodoModelo": "glandula-pineal",
+    "tipo": "glandula",
+    "sistema": "endocrino",
+    "region": "glandulas-craneales",
+    "nombre": "Glándula pineal (epífisis)",
+    "latin": "Glandula pinealis (corpus pineale)",
+    "ingles": "Pineal gland",
+    "descripcion": "Pequeña glándula impar con forma de piña, en el techo del tercer ventrículo.",
+    "funcion": "Secreta melatonina por la noche y ayuda a regular el ritmo de sueño y vigilia.",
+    "ubicacion": "Línea media, sobre los colículos superiores del mesencéfalo.",
+    "datosClinicos": "Se calcifica con la edad y sirve de referencia de la línea media en las radiografías y el TC.",
+    "relaciones": [
+      "tercer-ventriculo",
+      "mesencefalo"
+    ]
+  },
+  {
+    "id": "tiroides",
+    "nodoModelo": null,
+    "tipo": "glandula",
+    "sistema": "endocrino",
+    "region": "glandulas-cervicales",
+    "nombre": "Glándula tiroides",
+    "latin": "Glandula thyroidea",
+    "ingles": "Thyroid gland",
+    "descripcion": "Glándula en forma de H o de mariposa con dos lóbulos unidos por un istmo, envuelta por la fascia pretraqueal.",
+    "funcion": "Produce las hormonas tiroideas (T4 y T3), que regulan el metabolismo, y la calcitonina.",
+    "ubicacion": "Cara anterior del cuello; el istmo está sobre el 2.º–4.º anillo traqueal.",
+    "datosClinicos": "El hipotiroidismo y el hipertiroidismo son muy frecuentes; el nervio laríngeo recurrente pasa junto a sus lóbulos y puede lesionarse al operarla.",
+    "relaciones": [
+      "traquea",
+      "cartilago-cricoides",
+      "esternotiroideo-d",
+      "paratiroides"
+    ]
+  },
+  {
+    "id": "paratiroides",
+    "nodoModelo": null,
+    "tipo": "glandula",
+    "sistema": "endocrino",
+    "region": "glandulas-cervicales",
+    "nombre": "Glándulas paratiroides",
+    "latin": "Glandulae parathyroideae",
+    "ingles": "Parathyroid glands",
+    "descripcion": "Habitualmente cuatro glándulas del tamaño de una lenteja, dos superiores y dos inferiores, en la cara posterior de la tiroides.",
+    "funcion": "Secretan parathormona (PTH), que eleva el calcio en sangre.",
+    "ubicacion": "Cara posterior de los lóbulos tiroideos; las inferiores tienen una posición más variable.",
+    "datosClinicos": "Su extirpación accidental en la tiroidectomía provoca hipocalcemia (hormigueos, tetania).",
+    "relaciones": [
+      "tiroides"
+    ]
+  },
+  {
+    "id": "glandula-suprarrenal-d",
+    "nodoModelo": "glandula-suprarrenal-d",
+    "tipo": "glandula",
+    "sistema": "endocrino",
+    "lado": "derecho",
+    "region": "glandulas-abdominales",
+    "nombre": "Glándula suprarrenal derecha",
+    "latin": "Glandula suprarenalis",
+    "ingles": "Right adrenal gland",
+    "descripcion": "Glándula situada sobre el polo superior del riñón, con una corteza externa y una médula interna; la derecha es piramidal y la izquierda semilunar.",
+    "funcion": "La corteza produce cortisol, aldosterona y andrógenos; la médula, adrenalina y noradrenalina.",
+    "ubicacion": "Retroperitoneo, sobre el polo superior de cada riñón.",
+    "datosClinicos": "Su insuficiencia causa la enfermedad de Addison; el feocromocitoma de la médula produce crisis de hipertensión.",
+    "relaciones": [
+      "rinon-d",
+      "vena-cava-inferior",
+      "diafragma"
+    ]
+  },
+  {
+    "id": "glandula-suprarrenal-i",
+    "nodoModelo": "glandula-suprarrenal-i",
+    "tipo": "glandula",
+    "sistema": "endocrino",
+    "lado": "izquierdo",
+    "region": "glandulas-abdominales",
+    "nombre": "Glándula suprarrenal izquierda",
+    "latin": "Glandula suprarenalis",
+    "ingles": "Left adrenal gland",
+    "descripcion": "Glándula situada sobre el polo superior del riñón, con una corteza externa y una médula interna; la derecha es piramidal y la izquierda semilunar.",
+    "funcion": "La corteza produce cortisol, aldosterona y andrógenos; la médula, adrenalina y noradrenalina.",
+    "ubicacion": "Retroperitoneo, sobre el polo superior de cada riñón.",
+    "datosClinicos": "Su insuficiencia causa la enfermedad de Addison; el feocromocitoma de la médula produce crisis de hipertensión.",
+    "relaciones": [
+      "rinon-i",
+      "vena-cava-inferior",
+      "diafragma"
+    ]
+  },
+  {
+    "id": "islotes-pancreaticos",
+    "nodoModelo": null,
+    "tipo": "glandula",
+    "sistema": "endocrino",
+    "region": "glandulas-abdominales",
+    "nombre": "Islotes pancreáticos (páncreas endocrino)",
+    "latin": "Insulae pancreaticae",
+    "ingles": "Pancreatic islets",
+    "descripcion": "Alrededor de un millón de agrupaciones celulares dispersas por el páncreas, más abundantes en la cola.",
+    "funcion": "Las células beta secretan insulina, las alfa glucagón y las delta somatostatina: regulan la glucemia.",
+    "ubicacion": "Dentro del tejido pancreático.",
+    "datosClinicos": "La destrucción autoinmune de las células beta causa la diabetes de tipo 1.",
+    "relaciones": [
+      "pancreas"
+    ]
+  },
+  {
+    "id": "gonadas",
+    "nodoModelo": null,
+    "tipo": "glandula",
+    "sistema": "endocrino",
+    "region": "glandulas-abdominales",
+    "nombre": "Gónadas (testículos y ovarios)",
+    "latin": "Gonades",
+    "ingles": "Gonads",
+    "descripcion": "Glándulas sexuales que, además de producir gametos, tienen función endocrina.",
+    "funcion": "Los testículos producen testosterona (células de Leydig); los ovarios, estrógenos y progesterona.",
+    "ubicacion": "Testículos en el escroto; ovarios en la pelvis, junto a las paredes laterales.",
+    "datosClinicos": "Su función depende de la FSH y la LH hipofisarias; el hipogonadismo puede ser primario (gonadal) o central (hipotálamo-hipófisis).",
+    "relaciones": [
+      "testiculo-d",
+      "testiculo-i",
+      "ovarios",
+      "hipofisis"
+    ]
+  }
+]

@@ -1,0 +1,299 @@
+[
+  {
+    "id": "testiculo-d",
+    "nodoModelo": "testiculo-d",
+    "tipo": "glandula",
+    "sistema": "reproductor",
+    "lado": "derecho",
+    "region": "masculino",
+    "nombre": "Testículo derecho",
+    "latin": "Testis",
+    "ingles": "Right testis",
+    "descripcion": "Gónada masculina ovoide de unos 4–5 cm, envuelta por la túnica albugínea y dividida en lobulillos con túbulos seminíferos.",
+    "funcion": "Produce espermatozoides (túbulos seminíferos) y testosterona (células de Leydig).",
+    "ubicacion": "Escroto, fuera de la cavidad abdominal, a una temperatura unos 2–3 °C inferior a la corporal.",
+    "datosClinicos": "La torsión testicular es una urgencia quirúrgica; el testículo no descendido (criptorquidia) aumenta el riesgo de infertilidad y de cáncer.",
+    "curiosidad": "Se forma en el abdomen y desciende al escroto antes del nacimiento a través del conducto inguinal.",
+    "relaciones": [
+      "epididimo-d",
+      "conducto-deferente",
+      "gonadas"
+    ]
+  },
+  {
+    "id": "testiculo-i",
+    "nodoModelo": "testiculo-i",
+    "tipo": "glandula",
+    "sistema": "reproductor",
+    "lado": "izquierdo",
+    "region": "masculino",
+    "nombre": "Testículo izquierdo",
+    "latin": "Testis",
+    "ingles": "Left testis",
+    "descripcion": "Gónada masculina ovoide de unos 4–5 cm, envuelta por la túnica albugínea y dividida en lobulillos con túbulos seminíferos.",
+    "funcion": "Produce espermatozoides (túbulos seminíferos) y testosterona (células de Leydig).",
+    "ubicacion": "Escroto, fuera de la cavidad abdominal, a una temperatura unos 2–3 °C inferior a la corporal.",
+    "datosClinicos": "La torsión testicular es una urgencia quirúrgica; el testículo no descendido (criptorquidia) aumenta el riesgo de infertilidad y de cáncer.",
+    "curiosidad": "Se forma en el abdomen y desciende al escroto antes del nacimiento a través del conducto inguinal.",
+    "relaciones": [
+      "epididimo-i",
+      "conducto-deferente",
+      "gonadas"
+    ]
+  },
+  {
+    "id": "epididimo-d",
+    "nodoModelo": "epididimo-d",
+    "tipo": "organo",
+    "sistema": "reproductor",
+    "lado": "derecho",
+    "region": "masculino",
+    "nombre": "Epidídimo derecho",
+    "latin": "Epididymis",
+    "ingles": "Right epididymis",
+    "descripcion": "Estructura en forma de coma con cabeza, cuerpo y cola, formada por un conducto muy enrollado de unos 6 m.",
+    "funcion": "Almacena los espermatozoides, donde maduran y adquieren movilidad.",
+    "ubicacion": "Borde posterior del testículo.",
+    "datosClinicos": "La epididimitis causa dolor escrotal que, a diferencia de la torsión, suele aliviarse al elevar el testículo.",
+    "relaciones": [
+      "testiculo-d",
+      "conducto-deferente"
+    ]
+  },
+  {
+    "id": "epididimo-i",
+    "nodoModelo": "epididimo-i",
+    "tipo": "organo",
+    "sistema": "reproductor",
+    "lado": "izquierdo",
+    "region": "masculino",
+    "nombre": "Epidídimo izquierdo",
+    "latin": "Epididymis",
+    "ingles": "Left epididymis",
+    "descripcion": "Estructura en forma de coma con cabeza, cuerpo y cola, formada por un conducto muy enrollado de unos 6 m.",
+    "funcion": "Almacena los espermatozoides, donde maduran y adquieren movilidad.",
+    "ubicacion": "Borde posterior del testículo.",
+    "datosClinicos": "La epididimitis causa dolor escrotal que, a diferencia de la torsión, suele aliviarse al elevar el testículo.",
+    "relaciones": [
+      "testiculo-i",
+      "conducto-deferente"
+    ]
+  },
+  {
+    "id": "conducto-deferente",
+    "nodoModelo": null,
+    "tipo": "organo",
+    "sistema": "reproductor",
+    "region": "masculino",
+    "nombre": "Conductos deferentes",
+    "latin": "Ductus deferens",
+    "ingles": "Ductus deferens",
+    "descripcion": "Conductos musculares de unos 45 cm que siguen al epidídimo, recorren el cordón espermático y se unen a las vesículas seminales.",
+    "funcion": "Transportan los espermatozoides durante la eyaculación.",
+    "ubicacion": "Cordón espermático, conducto inguinal y pelvis, por detrás de la vejiga.",
+    "datosClinicos": "Su sección y ligadura (vasectomía) es un método anticonceptivo definitivo.",
+    "relaciones": [
+      "epididimo-d",
+      "epididimo-i",
+      "vesicula-seminal-d",
+      "vesicula-seminal-i",
+      "prostata"
+    ]
+  },
+  {
+    "id": "vesicula-seminal-d",
+    "nodoModelo": "vesicula-seminal-d",
+    "tipo": "glandula",
+    "sistema": "reproductor",
+    "lado": "derecho",
+    "region": "masculino",
+    "nombre": "Vesícula seminal derecha",
+    "latin": "Glandula vesiculosa (vesicula seminalis)",
+    "ingles": "Right seminal vesicle",
+    "descripcion": "Glándula tubular enrollada, de unos 5 cm, situada entre el fondo de la vejiga y el recto.",
+    "funcion": "Produce la mayor parte del volumen del semen, un líquido rico en fructosa que nutre a los espermatozoides.",
+    "ubicacion": "Cara posterior de la vejiga, por encima de la próstata.",
+    "datosClinicos": "Su conducto se une al deferente para formar el conducto eyaculador, que atraviesa la próstata.",
+    "relaciones": [
+      "vejiga",
+      "prostata",
+      "recto",
+      "conducto-deferente"
+    ]
+  },
+  {
+    "id": "vesicula-seminal-i",
+    "nodoModelo": "vesicula-seminal-i",
+    "tipo": "glandula",
+    "sistema": "reproductor",
+    "lado": "izquierdo",
+    "region": "masculino",
+    "nombre": "Vesícula seminal izquierda",
+    "latin": "Glandula vesiculosa (vesicula seminalis)",
+    "ingles": "Left seminal vesicle",
+    "descripcion": "Glándula tubular enrollada, de unos 5 cm, situada entre el fondo de la vejiga y el recto.",
+    "funcion": "Produce la mayor parte del volumen del semen, un líquido rico en fructosa que nutre a los espermatozoides.",
+    "ubicacion": "Cara posterior de la vejiga, por encima de la próstata.",
+    "datosClinicos": "Su conducto se une al deferente para formar el conducto eyaculador, que atraviesa la próstata.",
+    "relaciones": [
+      "vejiga",
+      "prostata",
+      "recto",
+      "conducto-deferente"
+    ]
+  },
+  {
+    "id": "prostata",
+    "nodoModelo": "prostata",
+    "tipo": "glandula",
+    "sistema": "reproductor",
+    "region": "masculino",
+    "nombre": "Próstata",
+    "latin": "Prostata",
+    "ingles": "Prostate",
+    "descripcion": "Glándula del tamaño de una castaña que rodea la primera porción de la uretra; tiene zonas periférica, central y de transición.",
+    "funcion": "Produce un líquido ligeramente ácido que forma parte del semen y contiene el antígeno prostático específico (PSA).",
+    "ubicacion": "Bajo la vejiga y delante del recto, a través del cual puede palparse.",
+    "datosClinicos": "La hiperplasia benigna (zona de transición) causa dificultad para orinar; el cáncer de próstata nace sobre todo en la zona periférica.",
+    "relaciones": [
+      "vejiga",
+      "uretra",
+      "recto",
+      "vesicula-seminal-d",
+      "vesicula-seminal-i"
+    ]
+  },
+  {
+    "id": "cuerpos-cavernosos",
+    "nodoModelo": "cuerpos-cavernosos",
+    "tipo": "organo",
+    "sistema": "reproductor",
+    "region": "masculino",
+    "nombre": "Cuerpos cavernosos del pene",
+    "latin": "Corpora cavernosa penis",
+    "ingles": "Corpora cavernosa of penis",
+    "descripcion": "Dos cilindros de tejido eréctil situados en la parte dorsal del pene, envueltos por la túnica albugínea.",
+    "funcion": "Se llenan de sangre durante la erección y dan rigidez al pene.",
+    "ubicacion": "Dorso del pene; sus raíces (pilares) se fijan a las ramas isquiopúbicas.",
+    "datosClinicos": "La disfunción eréctil se asocia a menudo a enfermedad vascular; la enfermedad de Peyronie forma placas fibrosas en su albugínea.",
+    "relaciones": [
+      "cuerpo-esponjoso",
+      "glande",
+      "coxal-d",
+      "coxal-i"
+    ]
+  },
+  {
+    "id": "cuerpo-esponjoso",
+    "nodoModelo": "cuerpo-esponjoso",
+    "tipo": "organo",
+    "sistema": "reproductor",
+    "region": "masculino",
+    "nombre": "Cuerpo esponjoso del pene",
+    "latin": "Corpus spongiosum penis",
+    "ingles": "Corpus spongiosum of penis",
+    "descripcion": "Cilindro de tejido eréctil en la cara ventral del pene que contiene la uretra; se ensancha atrás en el bulbo y delante en el glande.",
+    "funcion": "Protege la uretra y, al no ponerse tan rígido, permite el paso del semen durante la erección.",
+    "ubicacion": "Cara ventral del pene, entre los cuerpos cavernosos.",
+    "datosClinicos": "Las estenosis de la uretra esponjosa suelen deberse a traumatismos o infecciones.",
+    "relaciones": [
+      "uretra",
+      "cuerpos-cavernosos",
+      "glande"
+    ]
+  },
+  {
+    "id": "glande",
+    "nodoModelo": "glande",
+    "tipo": "organo",
+    "sistema": "reproductor",
+    "region": "masculino",
+    "nombre": "Glande",
+    "latin": "Glans penis",
+    "ingles": "Glans penis",
+    "descripcion": "Extremo distal ensanchado del cuerpo esponjoso, en cuyo vértice se abre el meato urinario.",
+    "funcion": "Es la zona más sensible del pene.",
+    "ubicacion": "Extremo distal del pene, cubierto por el prepucio.",
+    "datosClinicos": "En el hipospadias el meato se abre en la cara ventral del pene en lugar de en el vértice del glande.",
+    "relaciones": [
+      "cuerpo-esponjoso",
+      "uretra"
+    ]
+  },
+  {
+    "id": "ovarios",
+    "nodoModelo": null,
+    "tipo": "glandula",
+    "sistema": "reproductor",
+    "region": "femenino",
+    "nombre": "Ovarios",
+    "latin": "Ovaria",
+    "ingles": "Ovaries",
+    "descripcion": "Gónadas femeninas, de forma almendrada y unos 3 cm, que contienen los folículos con los ovocitos.",
+    "funcion": "Producen ovocitos y las hormonas estrógenos y progesterona.",
+    "ubicacion": "Fosas ováricas, en la pared lateral de la pelvis, unidos al útero por el ligamento propio del ovario.",
+    "datosClinicos": "El síndrome de ovario poliquístico es la causa endocrina más frecuente de infertilidad femenina.",
+    "relaciones": [
+      "trompas-uterinas",
+      "utero",
+      "gonadas"
+    ]
+  },
+  {
+    "id": "trompas-uterinas",
+    "nodoModelo": null,
+    "tipo": "organo",
+    "sistema": "reproductor",
+    "region": "femenino",
+    "nombre": "Trompas uterinas",
+    "latin": "Tubae uterinae",
+    "ingles": "Uterine tubes",
+    "descripcion": "Conductos de unos 10 cm con infundíbulo (con fimbrias), ampolla, istmo y porción uterina.",
+    "funcion": "Captan el ovocito; en la ampolla suele producirse la fecundación, y transportan el embrión al útero.",
+    "ubicacion": "Borde superior del ligamento ancho, entre el útero y el ovario.",
+    "datosClinicos": "Son la localización más frecuente del embarazo ectópico, que puede romperlas y causar una hemorragia grave.",
+    "relaciones": [
+      "ovarios",
+      "utero"
+    ]
+  },
+  {
+    "id": "utero",
+    "nodoModelo": null,
+    "tipo": "organo",
+    "sistema": "reproductor",
+    "region": "femenino",
+    "nombre": "Útero",
+    "latin": "Uterus",
+    "ingles": "Uterus",
+    "descripcion": "Órgano muscular hueco, piriforme, con fondo, cuerpo y cuello (cérvix); su pared tiene endometrio, miometrio y perimetrio.",
+    "funcion": "Aloja y nutre al embrión y al feto y lo expulsa en el parto; su endometrio se descama en la menstruación.",
+    "ubicacion": "Pelvis menor, entre la vejiga y el recto, habitualmente en anteversión y anteflexión.",
+    "datosClinicos": "Los miomas son los tumores benignos más frecuentes en la mujer; el cribado del cáncer de cuello se hace con citología y prueba del VPH.",
+    "relaciones": [
+      "vejiga",
+      "recto",
+      "trompas-uterinas",
+      "vagina"
+    ]
+  },
+  {
+    "id": "vagina",
+    "nodoModelo": null,
+    "tipo": "organo",
+    "sistema": "reproductor",
+    "region": "femenino",
+    "nombre": "Vagina",
+    "latin": "Vagina",
+    "ingles": "Vagina",
+    "descripcion": "Conducto fibromuscular de unos 8–10 cm que se extiende desde el cuello uterino hasta el vestíbulo vulvar.",
+    "funcion": "Órgano de la cópula, canal del parto y vía de salida del flujo menstrual.",
+    "ubicacion": "Pelvis, entre la vejiga y la uretra por delante y el recto por detrás.",
+    "datosClinicos": "Su pH ácido, mantenido por los lactobacilos, protege frente a infecciones.",
+    "relaciones": [
+      "utero",
+      "vejiga",
+      "recto"
+    ]
+  }
+]

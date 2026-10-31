@@ -27,6 +27,21 @@ const MATERIALES = {
   vena: { color: [0.2, 0.33, 0.78, 1], rugosidad: 0.45 },
   'via-aerea': { color: [0.9, 0.76, 0.72, 1], rugosidad: 0.55 },
   organo: { color: [0.78, 0.5, 0.45, 1], rugosidad: 0.6 },
+  encefalo: { color: [0.86, 0.72, 0.7, 1], rugosidad: 0.7 },
+  'sustancia-blanca': { color: [0.93, 0.91, 0.86, 1], rugosidad: 0.7 },
+  nervio: { color: [0.96, 0.84, 0.32, 1], rugosidad: 0.5 },
+  liquido: { color: [0.5, 0.74, 0.96, 1], rugosidad: 0.3 },
+  glandula: { color: [0.86, 0.6, 0.38, 1], rugosidad: 0.6 },
+  diente: { color: [0.97, 0.95, 0.88, 1], rugosidad: 0.35 },
+  digestivo: { color: [0.86, 0.56, 0.5, 1], rugosidad: 0.55 },
+  higado: { color: [0.55, 0.24, 0.2, 1], rugosidad: 0.5 },
+  biliar: { color: [0.38, 0.6, 0.3, 1], rugosidad: 0.5 },
+  renal: { color: [0.62, 0.3, 0.26, 1], rugosidad: 0.55 },
+  linfatico: { color: [0.52, 0.74, 0.44, 1], rugosidad: 0.6 },
+  ojo: { color: [0.94, 0.94, 0.96, 1], rugosidad: 0.4 },
+  iris: { color: [0.33, 0.45, 0.62, 1], rugosidad: 0.5 },
+  // Medios transparentes del ojo (córnea, cristalino, vítreo): alfa propio, se combina con la opacidad del sistema.
+  transparente: { color: [0.78, 0.88, 0.97, 0.35], rugosidad: 0.1 },
 };
 
 /**
@@ -48,7 +63,12 @@ export async function agruparSistema(sistema, estructuras, rutasGlb) {
       const m = MATERIALES[tipo] ?? MATERIALES.hueso;
       materiales.set(
         tipo,
-        doc.createMaterial(tipo).setBaseColorFactor(m.color).setMetallicFactor(0).setRoughnessFactor(m.rugosidad),
+        doc
+          .createMaterial(tipo)
+          .setBaseColorFactor(m.color)
+          .setMetallicFactor(0)
+          .setRoughnessFactor(m.rugosidad)
+          .setAlphaMode(m.color[3] < 1 ? 'BLEND' : 'OPAQUE'),
       );
     }
     return materiales.get(tipo);

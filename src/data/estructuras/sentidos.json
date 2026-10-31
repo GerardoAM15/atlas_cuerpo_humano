@@ -1,0 +1,484 @@
+[
+  {
+    "id": "cornea-d",
+    "nodoModelo": "cornea-d",
+    "tipo": "organo",
+    "sistema": "sentidos",
+    "lado": "derecho",
+    "region": "ojo",
+    "nombre": "Córnea derecha",
+    "latin": "Cornea",
+    "ingles": "Right cornea",
+    "descripcion": "Parte anterior y transparente de la capa externa del ojo, avascular y muy inervada; se continúa con la esclera en el limbo.",
+    "funcion": "Deja pasar la luz y aporta unas dos terceras partes del poder de refracción del ojo (unas 40 dioptrías).",
+    "ubicacion": "Polo anterior del globo ocular.",
+    "datosClinicos": "La cirugía refractiva (LASIK) remodela la córnea para corregir la miopía; el reflejo corneal explora los pares V y VII.",
+    "relaciones": [
+      "esclera-d",
+      "iris-d",
+      "camara-anterior-d"
+    ]
+  },
+  {
+    "id": "cornea-i",
+    "nodoModelo": "cornea-i",
+    "tipo": "organo",
+    "sistema": "sentidos",
+    "lado": "izquierdo",
+    "region": "ojo",
+    "nombre": "Córnea izquierda",
+    "latin": "Cornea",
+    "ingles": "Left cornea",
+    "descripcion": "Parte anterior y transparente de la capa externa del ojo, avascular y muy inervada; se continúa con la esclera en el limbo.",
+    "funcion": "Deja pasar la luz y aporta unas dos terceras partes del poder de refracción del ojo (unas 40 dioptrías).",
+    "ubicacion": "Polo anterior del globo ocular.",
+    "datosClinicos": "La cirugía refractiva (LASIK) remodela la córnea para corregir la miopía; el reflejo corneal explora los pares V y VII.",
+    "relaciones": [
+      "esclera-i",
+      "iris-i",
+      "camara-anterior-i"
+    ]
+  },
+  {
+    "id": "esclera-d",
+    "nodoModelo": "esclera-d",
+    "tipo": "organo",
+    "sistema": "sentidos",
+    "lado": "derecho",
+    "region": "ojo",
+    "nombre": "Esclera derecha",
+    "latin": "Sclera",
+    "ingles": "Right sclera",
+    "descripcion": "Capa fibrosa blanca y resistente que forma las cinco sextas partes posteriores de la túnica externa del ojo.",
+    "funcion": "Protege el ojo, mantiene su forma y sirve de inserción a los músculos extraoculares.",
+    "ubicacion": "Cubierta externa del globo ocular, salvo la córnea.",
+    "datosClinicos": "Se ve amarillenta en la ictericia y azulada en la osteogénesis imperfecta.",
+    "relaciones": [
+      "cornea-d",
+      "coroides-d",
+      "recto-superior-d",
+      "nervio-optico-d"
+    ]
+  },
+  {
+    "id": "esclera-i",
+    "nodoModelo": "esclera-i",
+    "tipo": "organo",
+    "sistema": "sentidos",
+    "lado": "izquierdo",
+    "region": "ojo",
+    "nombre": "Esclera izquierda",
+    "latin": "Sclera",
+    "ingles": "Left sclera",
+    "descripcion": "Capa fibrosa blanca y resistente que forma las cinco sextas partes posteriores de la túnica externa del ojo.",
+    "funcion": "Protege el ojo, mantiene su forma y sirve de inserción a los músculos extraoculares.",
+    "ubicacion": "Cubierta externa del globo ocular, salvo la córnea.",
+    "datosClinicos": "Se ve amarillenta en la ictericia y azulada en la osteogénesis imperfecta.",
+    "relaciones": [
+      "cornea-i",
+      "coroides-i",
+      "recto-superior-i",
+      "nervio-optico-i"
+    ]
+  },
+  {
+    "id": "coroides-d",
+    "nodoModelo": "coroides-d",
+    "tipo": "organo",
+    "sistema": "sentidos",
+    "lado": "derecho",
+    "region": "ojo",
+    "nombre": "Coroides derecha",
+    "latin": "Choroidea",
+    "ingles": "Right choroid",
+    "descripcion": "Capa vascular y pigmentada situada entre la esclera y la retina; forma parte de la úvea con el cuerpo ciliar y el iris.",
+    "funcion": "Nutre las capas externas de la retina y absorbe la luz sobrante.",
+    "ubicacion": "Capa media de la parte posterior del globo ocular.",
+    "datosClinicos": "El melanoma de coroides es el tumor intraocular primario más frecuente del adulto.",
+    "relaciones": [
+      "esclera-d",
+      "retina-d",
+      "iris-d"
+    ]
+  },
+  {
+    "id": "coroides-i",
+    "nodoModelo": "coroides-i",
+    "tipo": "organo",
+    "sistema": "sentidos",
+    "lado": "izquierdo",
+    "region": "ojo",
+    "nombre": "Coroides izquierda",
+    "latin": "Choroidea",
+    "ingles": "Left choroid",
+    "descripcion": "Capa vascular y pigmentada situada entre la esclera y la retina; forma parte de la úvea con el cuerpo ciliar y el iris.",
+    "funcion": "Nutre las capas externas de la retina y absorbe la luz sobrante.",
+    "ubicacion": "Capa media de la parte posterior del globo ocular.",
+    "datosClinicos": "El melanoma de coroides es el tumor intraocular primario más frecuente del adulto.",
+    "relaciones": [
+      "esclera-i",
+      "retina-i",
+      "iris-i"
+    ]
+  },
+  {
+    "id": "iris-d",
+    "nodoModelo": "iris-d",
+    "tipo": "organo",
+    "sistema": "sentidos",
+    "lado": "derecho",
+    "region": "ojo",
+    "nombre": "Iris derecho",
+    "latin": "Iris",
+    "ingles": "Right iris",
+    "descripcion": "Disco pigmentado con un orificio central (pupila) y dos músculos lisos: esfínter de la pupila y dilatador.",
+    "funcion": "Regula la cantidad de luz que entra en el ojo, como el diafragma de una cámara.",
+    "ubicacion": "Entre la córnea y el cristalino, separando las cámaras anterior y posterior.",
+    "datosClinicos": "Una pupila dilatada que no reacciona puede indicar compresión del III par; las pupilas puntiformes, intoxicación por opiáceos.",
+    "curiosidad": "El color de ojos depende de la cantidad de melanina en el estroma del iris.",
+    "relaciones": [
+      "cornea-d",
+      "cristalino-d",
+      "camara-anterior-d",
+      "ganglio-ciliar-d"
+    ]
+  },
+  {
+    "id": "iris-i",
+    "nodoModelo": "iris-i",
+    "tipo": "organo",
+    "sistema": "sentidos",
+    "lado": "izquierdo",
+    "region": "ojo",
+    "nombre": "Iris izquierdo",
+    "latin": "Iris",
+    "ingles": "Left iris",
+    "descripcion": "Disco pigmentado con un orificio central (pupila) y dos músculos lisos: esfínter de la pupila y dilatador.",
+    "funcion": "Regula la cantidad de luz que entra en el ojo, como el diafragma de una cámara.",
+    "ubicacion": "Entre la córnea y el cristalino, separando las cámaras anterior y posterior.",
+    "datosClinicos": "Una pupila dilatada que no reacciona puede indicar compresión del III par; las pupilas puntiformes, intoxicación por opiáceos.",
+    "curiosidad": "El color de ojos depende de la cantidad de melanina en el estroma del iris.",
+    "relaciones": [
+      "cornea-i",
+      "cristalino-i",
+      "camara-anterior-i",
+      "ganglio-ciliar-i"
+    ]
+  },
+  {
+    "id": "cristalino-d",
+    "nodoModelo": "cristalino-d",
+    "tipo": "organo",
+    "sistema": "sentidos",
+    "lado": "derecho",
+    "region": "ojo",
+    "nombre": "Cristalino derecho",
+    "latin": "Lens",
+    "ingles": "Right lens",
+    "descripcion": "Lente biconvexa, transparente y elástica, sin vasos ni nervios, suspendida por la zónula ciliar.",
+    "funcion": "Enfoca la imagen en la retina cambiando su curvatura (acomodación) al mirar de cerca.",
+    "ubicacion": "Detrás del iris y delante del cuerpo vítreo.",
+    "datosClinicos": "Su opacificación es la catarata, causa principal de ceguera tratable; su pérdida de elasticidad con la edad causa la presbicia.",
+    "relaciones": [
+      "zonula-d",
+      "iris-d",
+      "cuerpo-vitreo-d"
+    ]
+  },
+  {
+    "id": "cristalino-i",
+    "nodoModelo": "cristalino-i",
+    "tipo": "organo",
+    "sistema": "sentidos",
+    "lado": "izquierdo",
+    "region": "ojo",
+    "nombre": "Cristalino izquierdo",
+    "latin": "Lens",
+    "ingles": "Left lens",
+    "descripcion": "Lente biconvexa, transparente y elástica, sin vasos ni nervios, suspendida por la zónula ciliar.",
+    "funcion": "Enfoca la imagen en la retina cambiando su curvatura (acomodación) al mirar de cerca.",
+    "ubicacion": "Detrás del iris y delante del cuerpo vítreo.",
+    "datosClinicos": "Su opacificación es la catarata, causa principal de ceguera tratable; su pérdida de elasticidad con la edad causa la presbicia.",
+    "relaciones": [
+      "zonula-i",
+      "iris-i",
+      "cuerpo-vitreo-i"
+    ]
+  },
+  {
+    "id": "zonula-d",
+    "nodoModelo": "zonula-d",
+    "tipo": "organo",
+    "sistema": "sentidos",
+    "lado": "derecho",
+    "region": "ojo",
+    "nombre": "Zónula ciliar derecha",
+    "latin": "Zonula ciliaris",
+    "ingles": "Right ciliary zonule",
+    "descripcion": "Conjunto de fibras finas que van del cuerpo ciliar al ecuador del cristalino (ligamento suspensorio).",
+    "funcion": "Sostiene el cristalino; al contraerse el músculo ciliar se relaja y el cristalino se abomba para enfocar de cerca.",
+    "ubicacion": "Alrededor del ecuador del cristalino.",
+    "datosClinicos": "En el síndrome de Marfan sus fibras son débiles y el cristalino puede desplazarse (ectopia lentis).",
+    "relaciones": [
+      "cristalino-d",
+      "coroides-d"
+    ]
+  },
+  {
+    "id": "zonula-i",
+    "nodoModelo": "zonula-i",
+    "tipo": "organo",
+    "sistema": "sentidos",
+    "lado": "izquierdo",
+    "region": "ojo",
+    "nombre": "Zónula ciliar izquierda",
+    "latin": "Zonula ciliaris",
+    "ingles": "Left ciliary zonule",
+    "descripcion": "Conjunto de fibras finas que van del cuerpo ciliar al ecuador del cristalino (ligamento suspensorio).",
+    "funcion": "Sostiene el cristalino; al contraerse el músculo ciliar se relaja y el cristalino se abomba para enfocar de cerca.",
+    "ubicacion": "Alrededor del ecuador del cristalino.",
+    "datosClinicos": "En el síndrome de Marfan sus fibras son débiles y el cristalino puede desplazarse (ectopia lentis).",
+    "relaciones": [
+      "cristalino-i",
+      "coroides-i"
+    ]
+  },
+  {
+    "id": "cuerpo-vitreo-d",
+    "nodoModelo": "cuerpo-vitreo-d",
+    "tipo": "organo",
+    "sistema": "sentidos",
+    "lado": "derecho",
+    "region": "ojo",
+    "nombre": "Cuerpo vítreo derecho",
+    "latin": "Corpus vitreum",
+    "ingles": "Right vitreous body",
+    "descripcion": "Gel transparente formado en un 99 % por agua, que ocupa los cuatro quintos posteriores del globo ocular.",
+    "funcion": "Mantiene la forma del ojo, sostiene la retina y deja pasar la luz.",
+    "ubicacion": "Cavidad vítrea, entre el cristalino y la retina.",
+    "datosClinicos": "Su desprendimiento con la edad produce «moscas volantes»; si tira de la retina puede desgarrarla.",
+    "relaciones": [
+      "cristalino-d",
+      "retina-d"
+    ]
+  },
+  {
+    "id": "cuerpo-vitreo-i",
+    "nodoModelo": "cuerpo-vitreo-i",
+    "tipo": "organo",
+    "sistema": "sentidos",
+    "lado": "izquierdo",
+    "region": "ojo",
+    "nombre": "Cuerpo vítreo izquierdo",
+    "latin": "Corpus vitreum",
+    "ingles": "Left vitreous body",
+    "descripcion": "Gel transparente formado en un 99 % por agua, que ocupa los cuatro quintos posteriores del globo ocular.",
+    "funcion": "Mantiene la forma del ojo, sostiene la retina y deja pasar la luz.",
+    "ubicacion": "Cavidad vítrea, entre el cristalino y la retina.",
+    "datosClinicos": "Su desprendimiento con la edad produce «moscas volantes»; si tira de la retina puede desgarrarla.",
+    "relaciones": [
+      "cristalino-i",
+      "retina-i"
+    ]
+  },
+  {
+    "id": "retina-d",
+    "nodoModelo": "retina-d",
+    "tipo": "organo",
+    "sistema": "sentidos",
+    "lado": "derecho",
+    "region": "ojo",
+    "nombre": "Retina derecha (porción óptica)",
+    "latin": "Retina (pars optica)",
+    "ingles": "Optic part of right retina",
+    "descripcion": "Capa nerviosa interna del ojo, con fotorreceptores (conos y bastones); en ella destacan la papila óptica y la mácula con la fóvea.",
+    "funcion": "Transforma la luz en impulsos nerviosos que salen por el nervio óptico.",
+    "ubicacion": "Capa interna de la parte posterior del globo ocular.",
+    "datosClinicos": "La retinopatía diabética y la degeneración macular asociada a la edad son causas principales de ceguera en los países desarrollados.",
+    "curiosidad": "En la papila óptica no hay fotorreceptores: es el punto ciego de cada ojo.",
+    "relaciones": [
+      "coroides-d",
+      "cuerpo-vitreo-d",
+      "nervio-optico-d"
+    ]
+  },
+  {
+    "id": "retina-i",
+    "nodoModelo": "retina-i",
+    "tipo": "organo",
+    "sistema": "sentidos",
+    "lado": "izquierdo",
+    "region": "ojo",
+    "nombre": "Retina izquierda (porción óptica)",
+    "latin": "Retina (pars optica)",
+    "ingles": "Optic part of left retina",
+    "descripcion": "Capa nerviosa interna del ojo, con fotorreceptores (conos y bastones); en ella destacan la papila óptica y la mácula con la fóvea.",
+    "funcion": "Transforma la luz en impulsos nerviosos que salen por el nervio óptico.",
+    "ubicacion": "Capa interna de la parte posterior del globo ocular.",
+    "datosClinicos": "La retinopatía diabética y la degeneración macular asociada a la edad son causas principales de ceguera en los países desarrollados.",
+    "curiosidad": "En la papila óptica no hay fotorreceptores: es el punto ciego de cada ojo.",
+    "relaciones": [
+      "coroides-i",
+      "cuerpo-vitreo-i",
+      "nervio-optico-i"
+    ]
+  },
+  {
+    "id": "camara-anterior-d",
+    "nodoModelo": "camara-anterior-d",
+    "tipo": "organo",
+    "sistema": "sentidos",
+    "lado": "derecho",
+    "region": "ojo",
+    "nombre": "Cámara anterior del ojo derecha",
+    "latin": "Camera anterior bulbi",
+    "ingles": "Anterior chamber of right eyeball",
+    "descripcion": "Espacio entre la córnea y el iris lleno de humor acuoso; en su ángulo está la red trabecular de drenaje.",
+    "funcion": "El humor acuoso nutre la córnea y el cristalino y mantiene la presión intraocular.",
+    "ubicacion": "Parte anterior del globo ocular, detrás de la córnea.",
+    "datosClinicos": "El mal drenaje del humor acuoso eleva la presión intraocular y causa glaucoma, que daña el nervio óptico.",
+    "relaciones": [
+      "cornea-d",
+      "iris-d"
+    ]
+  },
+  {
+    "id": "camara-anterior-i",
+    "nodoModelo": "camara-anterior-i",
+    "tipo": "organo",
+    "sistema": "sentidos",
+    "lado": "izquierdo",
+    "region": "ojo",
+    "nombre": "Cámara anterior del ojo izquierda",
+    "latin": "Camera anterior bulbi",
+    "ingles": "Anterior chamber of left eyeball",
+    "descripcion": "Espacio entre la córnea y el iris lleno de humor acuoso; en su ángulo está la red trabecular de drenaje.",
+    "funcion": "El humor acuoso nutre la córnea y el cristalino y mantiene la presión intraocular.",
+    "ubicacion": "Parte anterior del globo ocular, detrás de la córnea.",
+    "datosClinicos": "El mal drenaje del humor acuoso eleva la presión intraocular y causa glaucoma, que daña el nervio óptico.",
+    "relaciones": [
+      "cornea-i",
+      "iris-i"
+    ]
+  },
+  {
+    "id": "glandula-lagrimal-d",
+    "nodoModelo": "glandula-lagrimal-d",
+    "tipo": "glandula",
+    "sistema": "sentidos",
+    "lado": "derecho",
+    "region": "anexos-oculares",
+    "nombre": "Glándula lagrimal derecha",
+    "latin": "Glandula lacrimalis",
+    "ingles": "Right lacrimal gland",
+    "descripcion": "Glándula del tamaño de una almendra dividida por el tendón del elevador del párpado en porciones orbitaria y palpebral.",
+    "funcion": "Produce la parte acuosa de las lágrimas, que lubrican y protegen la córnea.",
+    "ubicacion": "Fosa lagrimal del frontal, en la parte superolateral de la órbita.",
+    "datosClinicos": "Su función disminuye en el síndrome de Sjögren, que causa ojo seco.",
+    "relaciones": [
+      "frontal",
+      "elevador-parpado-d",
+      "nervio-oftalmico-d"
+    ]
+  },
+  {
+    "id": "glandula-lagrimal-i",
+    "nodoModelo": "glandula-lagrimal-i",
+    "tipo": "glandula",
+    "sistema": "sentidos",
+    "lado": "izquierdo",
+    "region": "anexos-oculares",
+    "nombre": "Glándula lagrimal izquierda",
+    "latin": "Glandula lacrimalis",
+    "ingles": "Left lacrimal gland",
+    "descripcion": "Glándula del tamaño de una almendra dividida por el tendón del elevador del párpado en porciones orbitaria y palpebral.",
+    "funcion": "Produce la parte acuosa de las lágrimas, que lubrican y protegen la córnea.",
+    "ubicacion": "Fosa lagrimal del frontal, en la parte superolateral de la órbita.",
+    "datosClinicos": "Su función disminuye en el síndrome de Sjögren, que causa ojo seco.",
+    "relaciones": [
+      "frontal",
+      "elevador-parpado-i",
+      "nervio-oftalmico-i"
+    ]
+  },
+  {
+    "id": "canaliculos-lagrimales-d",
+    "nodoModelo": "canaliculos-lagrimales-d",
+    "tipo": "organo",
+    "sistema": "sentidos",
+    "lado": "derecho",
+    "region": "anexos-oculares",
+    "nombre": "Canalículos lagrimales derecho",
+    "latin": "Canaliculi lacrimales",
+    "ingles": "Right lacrimal canaliculi",
+    "descripcion": "Conductos finos que nacen en los puntos lagrimales del borde de los párpados, cerca del ángulo interno del ojo.",
+    "funcion": "Recogen las lágrimas y las llevan al saco lagrimal, desde donde pasan a la nariz.",
+    "ubicacion": "Párpados superior e inferior, junto al ángulo interno del ojo.",
+    "datosClinicos": "Su obstrucción causa lagrimeo constante (epífora).",
+    "relaciones": [
+      "lagrimal-d",
+      "glandula-lagrimal-d"
+    ]
+  },
+  {
+    "id": "canaliculos-lagrimales-i",
+    "nodoModelo": "canaliculos-lagrimales-i",
+    "tipo": "organo",
+    "sistema": "sentidos",
+    "lado": "izquierdo",
+    "region": "anexos-oculares",
+    "nombre": "Canalículos lagrimales izquierdo",
+    "latin": "Canaliculi lacrimales",
+    "ingles": "Left lacrimal canaliculi",
+    "descripcion": "Conductos finos que nacen en los puntos lagrimales del borde de los párpados, cerca del ángulo interno del ojo.",
+    "funcion": "Recogen las lágrimas y las llevan al saco lagrimal, desde donde pasan a la nariz.",
+    "ubicacion": "Párpados superior e inferior, junto al ángulo interno del ojo.",
+    "datosClinicos": "Su obstrucción causa lagrimeo constante (epífora).",
+    "relaciones": [
+      "lagrimal-i",
+      "glandula-lagrimal-i"
+    ]
+  },
+  {
+    "id": "oido-externo",
+    "nodoModelo": "oido-externo",
+    "tipo": "organo",
+    "sistema": "sentidos",
+    "region": "oido",
+    "nombre": "Oído externo (pabellones auriculares)",
+    "latin": "Auris externa",
+    "ingles": "External ear",
+    "descripcion": "Pabellón auricular de cartílago elástico cubierto de piel y conducto auditivo externo, que termina en la membrana timpánica.",
+    "funcion": "Capta y conduce las ondas sonoras hacia el tímpano y ayuda a localizar el origen de los sonidos.",
+    "ubicacion": "A ambos lados de la cabeza, sobre el hueso temporal.",
+    "datosClinicos": "Los traumatismos del pabellón pueden formar un hematoma que, sin drenar, deforma el cartílago («oreja de coliflor»).",
+    "revisar": "BodyParts3D modela los dos pabellones auriculares en una sola malla, por lo que no se pueden seleccionar por separado.",
+    "relaciones": [
+      "temporal-d",
+      "temporal-i",
+      "oido-interno"
+    ]
+  },
+  {
+    "id": "oido-interno",
+    "nodoModelo": null,
+    "tipo": "organo",
+    "sistema": "sentidos",
+    "region": "oido",
+    "nombre": "Oído interno (cóclea y vestíbulo)",
+    "latin": "Auris interna",
+    "ingles": "Inner ear",
+    "descripcion": "Laberinto óseo excavado en el peñasco del temporal que contiene la cóclea, el vestíbulo y los tres conductos semicirculares.",
+    "funcion": "La cóclea transforma el sonido en impulsos nerviosos; el vestíbulo y los conductos semicirculares detectan la posición y la rotación de la cabeza.",
+    "ubicacion": "Porción petrosa del hueso temporal.",
+    "datosClinicos": "El vértigo posicional paroxístico benigno, causado por otolitos desplazados, es la causa más frecuente de vértigo.",
+    "curiosidad": "La cóclea da unas dos vueltas y media sobre sí misma, como la concha de un caracol.",
+    "relaciones": [
+      "temporal-d",
+      "temporal-i",
+      "estribo-d",
+      "estribo-i",
+      "nervio-vestibulococlear"
+    ]
+  }
+]

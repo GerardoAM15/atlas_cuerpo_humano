@@ -25,6 +25,7 @@ const TIPO: Record<string, string> = {
   valvula: 'Válvula',
   nervio: 'Nervio',
   glandula: 'Glándula',
+  diente: 'Diente',
   otro: 'Estructura',
 };
 const SANGRE: Record<string, string> = { oxigenada: 'sangre oxigenada', desoxigenada: 'sangre desoxigenada', mixta: 'sangre mixta' };

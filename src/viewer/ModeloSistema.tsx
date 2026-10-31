@@ -53,6 +53,8 @@ function construirRegistro(escena: THREE.Object3D, sistema: SistemaId) {
         const hover = base.clone();
         hover.emissive = new THREE.Color(COLOR_HOVER);
         hover.emissiveIntensity = 0.25;
+        // Opacidad propia del material (p. ej. el cristalino); la del sistema se multiplica por ella.
+        for (const mat of [base, seleccion, hover]) mat.userData.opacidadBase = base.opacity;
         materiales.set(base, { base, seleccion, hover });
       }
       m.userData.materiales = materiales.get(base);
@@ -113,9 +115,10 @@ export default function ModeloSistema({ sistema }: { sistema: SistemaId }) {
     const op = opacidad ?? 1;
     for (const grupo of materiales) {
       for (const mat of [grupo.base, grupo.seleccion, grupo.hover]) {
-        mat.transparent = op < 1;
-        mat.opacity = op;
-        mat.depthWrite = op >= 0.999;
+        const opacidad = op * ((mat.userData.opacidadBase as number | undefined) ?? 1);
+        mat.transparent = opacidad < 1;
+        mat.opacity = opacidad;
+        mat.depthWrite = opacidad >= 0.999;
         mat.clippingPlanes = corteActivo ? [PLANO_CORTE] : [];
         // Con corte se ve el interior hueco de la malla en lugar de un agujero.
         mat.side = corteActivo ? THREE.DoubleSide : THREE.FrontSide;

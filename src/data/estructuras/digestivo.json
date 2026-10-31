@@ -1,0 +1,813 @@
+[
+  {
+    "id": "lengua",
+    "nodoModelo": "lengua",
+    "tipo": "organo",
+    "sistema": "digestivo",
+    "region": "boca",
+    "nombre": "Lengua",
+    "latin": "Lingua",
+    "ingles": "Tongue",
+    "descripcion": "Órgano muscular cubierto de mucosa con papilas; tiene un cuerpo (dos tercios anteriores, en la boca) y una raíz (tercio posterior, en la faringe).",
+    "funcion": "Mueve el alimento al masticar, inicia la deglución, percibe el gusto y es esencial para articular el habla.",
+    "ubicacion": "Suelo de la cavidad oral y pared anterior de la orofaringe.",
+    "datosClinicos": "El carcinoma de lengua suele asentar en sus bordes laterales; la lengua se desvía hacia el lado de una lesión del hipogloso.",
+    "curiosidad": "El «mapa del gusto» por zonas es un mito: todos los sabores se perciben en toda la lengua.",
+    "relaciones": [
+      "hioides",
+      "mandibula",
+      "geniohioideo-d",
+      "milohioideo-d",
+      "paladar-blando"
+    ]
+  },
+  {
+    "id": "paladar-blando",
+    "nodoModelo": "paladar-blando",
+    "tipo": "organo",
+    "sistema": "digestivo",
+    "region": "boca",
+    "nombre": "Paladar blando",
+    "latin": "Palatum molle",
+    "ingles": "Soft palate",
+    "descripcion": "Pliegue musculomembranoso que continúa hacia atrás el paladar duro y termina en la úvula; lo forman cinco pares de músculos.",
+    "funcion": "Se eleva al tragar y al hablar para cerrar el paso entre la boca y la nasofaringe.",
+    "ubicacion": "Parte posterior del techo de la boca.",
+    "datosClinicos": "Su debilidad deja escapar aire y alimento hacia la nariz (voz nasal, regurgitación nasal); participa en el ronquido.",
+    "relaciones": [
+      "palatino-d",
+      "palatino-i",
+      "lengua"
+    ]
+  },
+  {
+    "id": "glandula-submandibular-d",
+    "nodoModelo": "glandula-submandibular-d",
+    "tipo": "glandula",
+    "sistema": "digestivo",
+    "lado": "derecho",
+    "region": "boca",
+    "nombre": "Glándula submandibular derecha",
+    "latin": "Glandula submandibularis",
+    "ingles": "Right submandibular gland",
+    "descripcion": "Glándula salival mixta del tamaño de una nuez, que rodea el borde posterior del milohioideo.",
+    "funcion": "Produce aproximadamente el 70 % de la saliva en reposo, que vierte por el conducto submandibular junto al frenillo de la lengua.",
+    "ubicacion": "Triángulo submandibular, bajo el cuerpo de la mandíbula.",
+    "datosClinicos": "Es la glándula donde más se forman cálculos salivales (sialolitiasis), que la inflaman al comer.",
+    "relaciones": [
+      "mandibula",
+      "milohioideo-d",
+      "digastrico-d"
+    ]
+  },
+  {
+    "id": "glandula-submandibular-i",
+    "nodoModelo": "glandula-submandibular-i",
+    "tipo": "glandula",
+    "sistema": "digestivo",
+    "lado": "izquierdo",
+    "region": "boca",
+    "nombre": "Glándula submandibular izquierda",
+    "latin": "Glandula submandibularis",
+    "ingles": "Left submandibular gland",
+    "descripcion": "Glándula salival mixta del tamaño de una nuez, que rodea el borde posterior del milohioideo.",
+    "funcion": "Produce aproximadamente el 70 % de la saliva en reposo, que vierte por el conducto submandibular junto al frenillo de la lengua.",
+    "ubicacion": "Triángulo submandibular, bajo el cuerpo de la mandíbula.",
+    "datosClinicos": "Es la glándula donde más se forman cálculos salivales (sialolitiasis), que la inflaman al comer.",
+    "relaciones": [
+      "mandibula",
+      "milohioideo-i",
+      "digastrico-i"
+    ]
+  },
+  {
+    "id": "glandula-sublingual-d",
+    "nodoModelo": "glandula-sublingual-d",
+    "tipo": "glandula",
+    "sistema": "digestivo",
+    "lado": "derecho",
+    "region": "boca",
+    "nombre": "Glándula sublingual derecha",
+    "latin": "Glandula sublingualis",
+    "ingles": "Right sublingual gland",
+    "descripcion": "La menor de las glándulas salivales mayores; vierte su saliva mucosa por múltiples conductos pequeños.",
+    "funcion": "Produce saliva sobre todo mucosa que lubrica el alimento.",
+    "ubicacion": "Suelo de la boca, bajo la mucosa y sobre el milohioideo.",
+    "datosClinicos": "La obstrucción de sus conductos forma la ránula, un quiste azulado en el suelo de la boca.",
+    "relaciones": [
+      "milohioideo-d",
+      "lengua",
+      "mandibula"
+    ]
+  },
+  {
+    "id": "glandula-sublingual-i",
+    "nodoModelo": "glandula-sublingual-i",
+    "tipo": "glandula",
+    "sistema": "digestivo",
+    "lado": "izquierdo",
+    "region": "boca",
+    "nombre": "Glándula sublingual izquierda",
+    "latin": "Glandula sublingualis",
+    "ingles": "Left sublingual gland",
+    "descripcion": "La menor de las glándulas salivales mayores; vierte su saliva mucosa por múltiples conductos pequeños.",
+    "funcion": "Produce saliva sobre todo mucosa que lubrica el alimento.",
+    "ubicacion": "Suelo de la boca, bajo la mucosa y sobre el milohioideo.",
+    "datosClinicos": "La obstrucción de sus conductos forma la ránula, un quiste azulado en el suelo de la boca.",
+    "relaciones": [
+      "milohioideo-i",
+      "lengua",
+      "mandibula"
+    ]
+  },
+  {
+    "id": "glandula-parotida",
+    "nodoModelo": null,
+    "tipo": "glandula",
+    "sistema": "digestivo",
+    "region": "boca",
+    "nombre": "Glándulas parótidas",
+    "latin": "Glandula parotidea",
+    "ingles": "Parotid glands",
+    "descripcion": "Las mayores glándulas salivales, serosas; su conducto (de Stensen) desemboca frente al segundo molar superior.",
+    "funcion": "Producen saliva serosa rica en amilasa, sobre todo al comer.",
+    "ubicacion": "Delante de la oreja y sobre la rama de la mandíbula; el nervio facial la atraviesa.",
+    "datosClinicos": "Se inflaman en las paperas (parotiditis); la mayoría de sus tumores son benignos (adenoma pleomorfo).",
+    "relaciones": [
+      "mandibula",
+      "masetero-d",
+      "nervio-facial"
+    ]
+  },
+  {
+    "id": "incisivos-superiores",
+    "nodoModelo": "incisivos-superiores",
+    "tipo": "diente",
+    "sistema": "digestivo",
+    "region": "boca",
+    "nombre": "Incisivos superiores",
+    "latin": "Dentes incisivi maxillares",
+    "ingles": "Upper incisors",
+    "descripcion": "Cuatro dientes por arcada (centrales y laterales), con corona en forma de pala y una sola raíz.",
+    "funcion": "Cortan los alimentos.",
+    "ubicacion": "Arcada dentaria superiores, en los alvéolos de los maxilares.",
+    "datosClinicos": "Los incisivos centrales superiores son los dientes que más se fracturan en traumatismos.",
+    "relaciones": [
+      "maxilar-d",
+      "maxilar-i",
+      "lengua"
+    ]
+  },
+  {
+    "id": "caninos-superiores",
+    "nodoModelo": "caninos-superiores",
+    "tipo": "diente",
+    "sistema": "digestivo",
+    "region": "boca",
+    "nombre": "Caninos superiores",
+    "latin": "Dentes canini maxillares",
+    "ingles": "Upper canines",
+    "descripcion": "Un diente por hemiarcada, con corona puntiaguda y la raíz más larga de la dentición.",
+    "funcion": "Desgarran los alimentos y guían los movimientos laterales de la mandíbula.",
+    "ubicacion": "Arcada dentaria superiores, en los alvéolos de los maxilares.",
+    "datosClinicos": "Tras los terceros molares, el canino superior es el diente que con más frecuencia queda retenido (incluido) en el hueso.",
+    "relaciones": [
+      "maxilar-d",
+      "maxilar-i",
+      "lengua"
+    ]
+  },
+  {
+    "id": "premolares-superiores",
+    "nodoModelo": "premolares-superiores",
+    "tipo": "diente",
+    "sistema": "digestivo",
+    "region": "boca",
+    "nombre": "Premolares superiores",
+    "latin": "Dentes premolares maxillares",
+    "ingles": "Upper premolars",
+    "descripcion": "Dos dientes por hemiarcada, con dos cúspides; no existen en la dentición temporal.",
+    "funcion": "Trituran los alimentos.",
+    "ubicacion": "Arcada dentaria superiores, en los alvéolos de los maxilares.",
+    "datosClinicos": "Son los dientes que más se extraen por motivos ortodóncicos.",
+    "relaciones": [
+      "maxilar-d",
+      "maxilar-i",
+      "lengua"
+    ]
+  },
+  {
+    "id": "molares-superiores",
+    "nodoModelo": "molares-superiores",
+    "tipo": "diente",
+    "sistema": "digestivo",
+    "region": "boca",
+    "nombre": "Molares superiores (primero y segundo)",
+    "latin": "Dentes molares maxillares",
+    "ingles": "Upper molars (first and second)",
+    "descripcion": "Dientes con corona ancha de varias cúspides y dos o tres raíces; el modelo no incluye los terceros molares (muelas del juicio).",
+    "funcion": "Muelen los alimentos; soportan las mayores fuerzas de masticación.",
+    "ubicacion": "Arcada dentaria superiores, en los alvéolos de los maxilares.",
+    "datosClinicos": "El primer molar es el diente permanente que antes sale (hacia los 6 años) y el que con más frecuencia tiene caries.",
+    "revisar": "BodyParts3D no incluye los terceros molares.",
+    "relaciones": [
+      "maxilar-d",
+      "maxilar-i",
+      "lengua"
+    ]
+  },
+  {
+    "id": "incisivos-inferiores",
+    "nodoModelo": "incisivos-inferiores",
+    "tipo": "diente",
+    "sistema": "digestivo",
+    "region": "boca",
+    "nombre": "Incisivos inferiores",
+    "latin": "Dentes incisivi mandibulares",
+    "ingles": "Lower incisors",
+    "descripcion": "Cuatro dientes por arcada (centrales y laterales), con corona en forma de pala y una sola raíz.",
+    "funcion": "Cortan los alimentos.",
+    "ubicacion": "Arcada dentaria inferiores, en los alvéolos de la mandíbula.",
+    "datosClinicos": "Los incisivos centrales superiores son los dientes que más se fracturan en traumatismos.",
+    "relaciones": [
+      "mandibula",
+      "lengua"
+    ]
+  },
+  {
+    "id": "caninos-inferiores",
+    "nodoModelo": "caninos-inferiores",
+    "tipo": "diente",
+    "sistema": "digestivo",
+    "region": "boca",
+    "nombre": "Caninos inferiores",
+    "latin": "Dentes canini mandibulares",
+    "ingles": "Lower canines",
+    "descripcion": "Un diente por hemiarcada, con corona puntiaguda y la raíz más larga de la dentición.",
+    "funcion": "Desgarran los alimentos y guían los movimientos laterales de la mandíbula.",
+    "ubicacion": "Arcada dentaria inferiores, en los alvéolos de la mandíbula.",
+    "datosClinicos": "Su larga raíz lo convierte en un buen pilar para prótesis dentales.",
+    "relaciones": [
+      "mandibula",
+      "lengua"
+    ]
+  },
+  {
+    "id": "premolares-inferiores",
+    "nodoModelo": "premolares-inferiores",
+    "tipo": "diente",
+    "sistema": "digestivo",
+    "region": "boca",
+    "nombre": "Premolares inferiores",
+    "latin": "Dentes premolares mandibulares",
+    "ingles": "Lower premolars",
+    "descripcion": "Dos dientes por hemiarcada, con dos cúspides; no existen en la dentición temporal.",
+    "funcion": "Trituran los alimentos.",
+    "ubicacion": "Arcada dentaria inferiores, en los alvéolos de la mandíbula.",
+    "datosClinicos": "Son los dientes que más se extraen por motivos ortodóncicos.",
+    "relaciones": [
+      "mandibula",
+      "lengua"
+    ]
+  },
+  {
+    "id": "molares-inferiores",
+    "nodoModelo": "molares-inferiores",
+    "tipo": "diente",
+    "sistema": "digestivo",
+    "region": "boca",
+    "nombre": "Molares inferiores (primero y segundo)",
+    "latin": "Dentes molares mandibulares",
+    "ingles": "Lower molars (first and second)",
+    "descripcion": "Dientes con corona ancha de varias cúspides y dos o tres raíces; el modelo no incluye los terceros molares (muelas del juicio).",
+    "funcion": "Muelen los alimentos; soportan las mayores fuerzas de masticación.",
+    "ubicacion": "Arcada dentaria inferiores, en los alvéolos de la mandíbula.",
+    "datosClinicos": "El primer molar es el diente permanente que antes sale (hacia los 6 años) y el que con más frecuencia tiene caries.",
+    "revisar": "BodyParts3D no incluye los terceros molares.",
+    "relaciones": [
+      "mandibula",
+      "lengua"
+    ]
+  },
+  {
+    "id": "esofago",
+    "nodoModelo": "esofago",
+    "tipo": "organo",
+    "sistema": "digestivo",
+    "region": "tubo-digestivo",
+    "nombre": "Esófago",
+    "latin": "Oesophagus",
+    "ingles": "Esophagus",
+    "descripcion": "Tubo muscular de unos 25 cm, con músculo estriado en su tercio superior y liso en el inferior; tiene esfínteres superior e inferior.",
+    "funcion": "Transporta el bolo desde la faringe al estómago mediante ondas peristálticas.",
+    "ubicacion": "Desde C6 hasta el estómago, por detrás de la tráquea y de la aurícula izquierda; atraviesa el diafragma a nivel de T10.",
+    "datosClinicos": "El reflujo gastroesofágico crónico puede transformar su epitelio (esófago de Barrett), lesión precancerosa.",
+    "relaciones": [
+      "traquea",
+      "pared-auricula-izquierda",
+      "aorta-toracica",
+      "diafragma",
+      "estomago"
+    ]
+  },
+  {
+    "id": "estomago",
+    "nodoModelo": "estomago",
+    "tipo": "organo",
+    "sistema": "digestivo",
+    "region": "tubo-digestivo",
+    "nombre": "Estómago",
+    "latin": "Gaster",
+    "ingles": "Stomach",
+    "descripcion": "Porción más dilatada del tubo digestivo, con cardias, fundus, cuerpo y región pilórica; su mucosa forma pliegues.",
+    "funcion": "Almacena y mezcla el alimento con el jugo gástrico (ácido clorhídrico y pepsina) e inicia la digestión de las proteínas.",
+    "ubicacion": "Epigastrio e hipocondrio izquierdo, bajo el diafragma.",
+    "datosClinicos": "La úlcera péptica se asocia sobre todo a Helicobacter pylori y a antiinflamatorios no esteroideos.",
+    "curiosidad": "Vacío tiene unos 50 ml de capacidad, pero puede distenderse hasta 1,5–2 litros.",
+    "relaciones": [
+      "esofago",
+      "duodeno",
+      "higado-segmento-2",
+      "bazo",
+      "pancreas",
+      "tronco-celiaco"
+    ]
+  },
+  {
+    "id": "duodeno",
+    "nodoModelo": "duodeno",
+    "tipo": "organo",
+    "sistema": "digestivo",
+    "region": "tubo-digestivo",
+    "nombre": "Duodeno",
+    "latin": "Duodenum",
+    "ingles": "Duodenum",
+    "descripcion": "Primera porción del intestino delgado, de unos 25 cm, en forma de C alrededor de la cabeza del páncreas; casi todo es retroperitoneal.",
+    "funcion": "Recibe la bilis y el jugo pancreático (en la papila mayor de su segunda porción) y neutraliza el ácido gástrico.",
+    "ubicacion": "Desde el píloro hasta el ángulo duodenoyeyunal, a nivel de L1–L3.",
+    "datosClinicos": "La mayoría de las úlceras pépticas asientan en su primera porción (bulbo duodenal).",
+    "relaciones": [
+      "estomago",
+      "pancreas",
+      "yeyuno",
+      "vesicula-biliar",
+      "arteria-mesenterica-superior"
+    ]
+  },
+  {
+    "id": "yeyuno",
+    "nodoModelo": "yeyuno",
+    "tipo": "organo",
+    "sistema": "digestivo",
+    "region": "tubo-digestivo",
+    "nombre": "Yeyuno",
+    "latin": "Jejunum",
+    "ingles": "Jejunum",
+    "descripcion": "Dos quintos proximales del intestino delgado móvil, de pared gruesa, muy vascularizado y con pliegues circulares altos.",
+    "funcion": "Es el principal lugar de absorción de nutrientes.",
+    "ubicacion": "Parte superior izquierda de la cavidad abdominal, sujeto por el mesenterio.",
+    "datosClinicos": "Su gran superficie de absorción hace que las resecciones extensas causen un síndrome de intestino corto.",
+    "relaciones": [
+      "duodeno",
+      "ileon",
+      "arteria-mesenterica-superior"
+    ]
+  },
+  {
+    "id": "ileon",
+    "nodoModelo": "ileon",
+    "tipo": "organo",
+    "sistema": "digestivo",
+    "region": "tubo-digestivo",
+    "nombre": "Íleon",
+    "latin": "Ileum",
+    "ingles": "Ileum",
+    "descripcion": "Tres quintos distales del intestino delgado móvil, de pared más fina y con abundante tejido linfoide (placas de Peyer).",
+    "funcion": "Absorbe la vitamina B12 y las sales biliares en su porción terminal.",
+    "ubicacion": "Parte inferior derecha de la cavidad abdominal y pelvis; termina en la válvula ileocecal.",
+    "datosClinicos": "La enfermedad de Crohn afecta con frecuencia al íleon terminal; el divertículo de Meckel se sitúa en el íleon.",
+    "relaciones": [
+      "yeyuno",
+      "ciego",
+      "arteria-mesenterica-superior"
+    ]
+  },
+  {
+    "id": "ciego",
+    "nodoModelo": "ciego",
+    "tipo": "organo",
+    "sistema": "digestivo",
+    "region": "tubo-digestivo",
+    "nombre": "Ciego",
+    "latin": "Caecum",
+    "ingles": "Cecum",
+    "descripcion": "Fondo de saco con el que comienza el intestino grueso, por debajo de la desembocadura del íleon.",
+    "funcion": "Recibe el contenido del íleon e inicia la absorción de agua y electrolitos.",
+    "ubicacion": "Fosa ilíaca derecha.",
+    "datosClinicos": "Por su diámetro es la parte del colon con mayor riesgo de perforación en las obstrucciones distales.",
+    "relaciones": [
+      "ileon",
+      "apendice",
+      "colon-ascendente"
+    ]
+  },
+  {
+    "id": "apendice",
+    "nodoModelo": "apendice",
+    "tipo": "organo",
+    "sistema": "digestivo",
+    "region": "tubo-digestivo",
+    "nombre": "Apéndice vermiforme",
+    "latin": "Appendix vermiformis",
+    "ingles": "Appendix",
+    "descripcion": "Divertículo estrecho y ciego de unos 6–10 cm que sale del ciego; su posición es muy variable.",
+    "funcion": "Contiene abundante tejido linfoide y podría servir de reservorio de la flora intestinal.",
+    "ubicacion": "Fosa ilíaca derecha; su base se proyecta en el punto de McBurney.",
+    "datosClinicos": "La apendicitis aguda es la urgencia quirúrgica abdominal más frecuente.",
+    "relaciones": [
+      "ciego"
+    ]
+  },
+  {
+    "id": "colon-ascendente",
+    "nodoModelo": "colon-ascendente",
+    "tipo": "organo",
+    "sistema": "digestivo",
+    "region": "tubo-digestivo",
+    "nombre": "Colon ascendente",
+    "latin": "Colon ascendens",
+    "ingles": "Ascending colon",
+    "descripcion": "Porción del colon que asciende por el flanco derecho hasta la flexura hepática; es retroperitoneal.",
+    "funcion": "Absorbe agua y electrolitos del contenido intestinal.",
+    "ubicacion": "Flanco derecho, desde el ciego hasta bajo el hígado.",
+    "datosClinicos": "Los cánceres del colon derecho suelen manifestarse con anemia más que con obstrucción.",
+    "relaciones": [
+      "ciego",
+      "colon-transverso",
+      "rinon-d"
+    ]
+  },
+  {
+    "id": "colon-transverso",
+    "nodoModelo": "colon-transverso",
+    "tipo": "organo",
+    "sistema": "digestivo",
+    "region": "tubo-digestivo",
+    "nombre": "Colon transverso",
+    "latin": "Colon transversum",
+    "ingles": "Transverse colon",
+    "descripcion": "Porción más larga y móvil del colon, suspendida por el mesocolon transverso entre las flexuras hepática y esplénica.",
+    "funcion": "Absorbe agua y forma las heces.",
+    "ubicacion": "Cruza el abdomen de derecha a izquierda, bajo el estómago.",
+    "datosClinicos": "Su irrigación procede de las dos mesentéricas; la flexura esplénica es una zona limítrofe sensible a la isquemia.",
+    "relaciones": [
+      "colon-ascendente",
+      "colon-descendente",
+      "estomago"
+    ]
+  },
+  {
+    "id": "colon-descendente",
+    "nodoModelo": "colon-descendente",
+    "tipo": "organo",
+    "sistema": "digestivo",
+    "region": "tubo-digestivo",
+    "nombre": "Colon descendente",
+    "latin": "Colon descendens",
+    "ingles": "Descending colon",
+    "descripcion": "Porción retroperitoneal del colon que desciende por el flanco izquierdo desde la flexura esplénica.",
+    "funcion": "Almacena y concentra las heces.",
+    "ubicacion": "Flanco izquierdo, hasta la fosa ilíaca izquierda.",
+    "datosClinicos": "Los cánceres del colon izquierdo, de luz más estrecha, tienden a obstruir.",
+    "relaciones": [
+      "colon-transverso",
+      "colon-sigmoide",
+      "rinon-i"
+    ]
+  },
+  {
+    "id": "colon-sigmoide",
+    "nodoModelo": null,
+    "tipo": "organo",
+    "sistema": "digestivo",
+    "region": "tubo-digestivo",
+    "nombre": "Colon sigmoide",
+    "latin": "Colon sigmoideum",
+    "ingles": "Sigmoid colon",
+    "descripcion": "Porción del colon en forma de S, móvil y con mesocolon propio, entre el colon descendente y el recto.",
+    "funcion": "Almacena las heces antes de pasar al recto.",
+    "ubicacion": "Fosa ilíaca izquierda y pelvis.",
+    "datosClinicos": "Es el lugar más frecuente de diverticulosis y diverticulitis, y puede torsionarse (vólvulo de sigma).",
+    "relaciones": [
+      "colon-descendente",
+      "recto"
+    ]
+  },
+  {
+    "id": "recto",
+    "nodoModelo": "recto",
+    "tipo": "organo",
+    "sistema": "digestivo",
+    "region": "tubo-digestivo",
+    "nombre": "Recto",
+    "latin": "Rectum",
+    "ingles": "Rectum",
+    "descripcion": "Porción terminal del intestino grueso, de unos 12–15 cm, que sigue la curvatura del sacro y termina en el conducto anal.",
+    "funcion": "Almacena las heces y desencadena el deseo de defecar al distenderse.",
+    "ubicacion": "Pelvis, delante del sacro y del cóccix; en el varón, detrás de la vejiga y la próstata.",
+    "datosClinicos": "El tacto rectal permite palpar la próstata y detectar tumores del recto bajo.",
+    "relaciones": [
+      "sacro",
+      "vejiga",
+      "prostata",
+      "esfinter-anal-externo"
+    ]
+  },
+  {
+    "id": "esfinter-anal-externo",
+    "nodoModelo": "esfinter-anal-externo",
+    "tipo": "musculo",
+    "sistema": "digestivo",
+    "region": "tubo-digestivo",
+    "nombre": "Esfínter anal externo",
+    "latin": "Musculus sphincter ani externus",
+    "ingles": "External anal sphincter",
+    "descripcion": "Anillo de músculo estriado que rodea los dos tercios inferiores del conducto anal, con porciones subcutánea, superficial y profunda.",
+    "funcion": "Permite contener las heces de forma voluntaria.",
+    "ubicacion": "Alrededor del conducto anal, en el periné.",
+    "origen": "Cuerpo perineal y ligamento anococcígeo (porción superficial).",
+    "insercion": "Rodea el conducto anal y se continúa con el puborrectal.",
+    "inervacion": "Nervio rectal inferior, rama del nervio pudendo (S2–S4).",
+    "irrigacion": "Arterias rectales inferiores.",
+    "accion": "Cierra el conducto anal de forma voluntaria.",
+    "datosClinicos": "Puede desgarrarse en partos vaginales y causar incontinencia fecal.",
+    "relaciones": [
+      "recto",
+      "coccix",
+      "conducto-anal"
+    ]
+  },
+  {
+    "id": "conducto-anal",
+    "nodoModelo": null,
+    "tipo": "organo",
+    "sistema": "digestivo",
+    "region": "tubo-digestivo",
+    "nombre": "Conducto anal",
+    "latin": "Canalis analis",
+    "ingles": "Anal canal",
+    "descripcion": "Tramo final del tubo digestivo, de unos 3–4 cm, rodeado por los esfínteres interno (liso) y externo (estriado).",
+    "funcion": "Controla la continencia y la expulsión de las heces.",
+    "ubicacion": "Periné, desde el recto hasta el ano.",
+    "datosClinicos": "Por encima de la línea pectínea las hemorroides son internas e indoloras; por debajo, externas y dolorosas.",
+    "relaciones": [
+      "recto",
+      "esfinter-anal-externo"
+    ]
+  },
+  {
+    "id": "higado-segmento-1",
+    "nodoModelo": "higado-segmento-1",
+    "tipo": "organo",
+    "sistema": "digestivo",
+    "region": "higado-vias-biliares",
+    "nombre": "Hígado: lóbulo caudado (segmento I)",
+    "latin": "Segmentum hepatis I",
+    "ingles": "Liver segment I",
+    "funcion": "Como todo el hígado, metaboliza nutrientes, sintetiza proteínas plasmáticas, almacena glucógeno, produce bilis y depura fármacos y toxinas.",
+    "datosClinicos": "Drena directamente a la vena cava inferior; por eso se hipertrofia en el síndrome de Budd-Chiari (obstrucción de las venas hepáticas).",
+    "descripcion": "Lóbulo situado entre la vena cava inferior y el ligamento venoso; recibe sangre de ambas ramas portales.",
+    "ubicacion": "Cara posterior del hígado, junto a la vena cava inferior.",
+    "revisar": "Incluye la malla «Hepatovenous segment IX» de BodyParts3D, que algunas clasificaciones consideran parte del caudado.",
+    "relaciones": [
+      "vena-cava-inferior",
+      "vena-porta"
+    ]
+  },
+  {
+    "id": "higado-segmento-2",
+    "nodoModelo": "higado-segmento-2",
+    "tipo": "organo",
+    "sistema": "digestivo",
+    "region": "higado-vias-biliares",
+    "nombre": "Hígado: segmento II",
+    "latin": "Segmentum hepatis II",
+    "ingles": "Liver segment II",
+    "funcion": "Como todo el hígado, metaboliza nutrientes, sintetiza proteínas plasmáticas, almacena glucógeno, produce bilis y depura fármacos y toxinas.",
+    "datosClinicos": "Cada segmento tiene su propio pedículo portal y drenaje biliar, por lo que puede extirparse por separado (segmentectomía) sin dañar el resto.",
+    "descripcion": "Segmento posterosuperior del lóbulo izquierdo lateral.",
+    "ubicacion": "Lóbulo izquierdo, parte posterior y superior.",
+    "relaciones": [
+      "vena-porta",
+      "vesicula-biliar"
+    ]
+  },
+  {
+    "id": "higado-segmento-3",
+    "nodoModelo": "higado-segmento-3",
+    "tipo": "organo",
+    "sistema": "digestivo",
+    "region": "higado-vias-biliares",
+    "nombre": "Hígado: segmento III",
+    "latin": "Segmentum hepatis III",
+    "ingles": "Liver segment III",
+    "funcion": "Como todo el hígado, metaboliza nutrientes, sintetiza proteínas plasmáticas, almacena glucógeno, produce bilis y depura fármacos y toxinas.",
+    "datosClinicos": "Cada segmento tiene su propio pedículo portal y drenaje biliar, por lo que puede extirparse por separado (segmentectomía) sin dañar el resto.",
+    "descripcion": "Segmento anteroinferior del lóbulo izquierdo lateral.",
+    "ubicacion": "Lóbulo izquierdo, parte anterior e inferior.",
+    "relaciones": [
+      "vena-porta",
+      "vesicula-biliar"
+    ]
+  },
+  {
+    "id": "higado-segmento-4",
+    "nodoModelo": "higado-segmento-4",
+    "tipo": "organo",
+    "sistema": "digestivo",
+    "region": "higado-vias-biliares",
+    "nombre": "Hígado: segmento IV",
+    "latin": "Segmentum hepatis IV",
+    "ingles": "Liver segment IV",
+    "funcion": "Como todo el hígado, metaboliza nutrientes, sintetiza proteínas plasmáticas, almacena glucógeno, produce bilis y depura fármacos y toxinas.",
+    "datosClinicos": "Cada segmento tiene su propio pedículo portal y drenaje biliar, por lo que puede extirparse por separado (segmentectomía) sin dañar el resto.",
+    "descripcion": "Segmento medial izquierdo, entre la vena hepática media y el ligamento falciforme; incluye el lóbulo cuadrado.",
+    "ubicacion": "Centro del hígado, junto a la vesícula biliar.",
+    "relaciones": [
+      "vena-porta",
+      "vesicula-biliar"
+    ]
+  },
+  {
+    "id": "higado-segmento-5",
+    "nodoModelo": "higado-segmento-5",
+    "tipo": "organo",
+    "sistema": "digestivo",
+    "region": "higado-vias-biliares",
+    "nombre": "Hígado: segmento V",
+    "latin": "Segmentum hepatis V",
+    "ingles": "Liver segment V",
+    "funcion": "Como todo el hígado, metaboliza nutrientes, sintetiza proteínas plasmáticas, almacena glucógeno, produce bilis y depura fármacos y toxinas.",
+    "datosClinicos": "Cada segmento tiene su propio pedículo portal y drenaje biliar, por lo que puede extirparse por separado (segmentectomía) sin dañar el resto.",
+    "descripcion": "Segmento anteroinferior del lóbulo derecho, junto al lecho de la vesícula.",
+    "ubicacion": "Lóbulo derecho, parte anterior e inferior.",
+    "relaciones": [
+      "vena-porta",
+      "vesicula-biliar"
+    ]
+  },
+  {
+    "id": "higado-segmento-6",
+    "nodoModelo": "higado-segmento-6",
+    "tipo": "organo",
+    "sistema": "digestivo",
+    "region": "higado-vias-biliares",
+    "nombre": "Hígado: segmento VI",
+    "latin": "Segmentum hepatis VI",
+    "ingles": "Liver segment VI",
+    "funcion": "Como todo el hígado, metaboliza nutrientes, sintetiza proteínas plasmáticas, almacena glucógeno, produce bilis y depura fármacos y toxinas.",
+    "datosClinicos": "Cada segmento tiene su propio pedículo portal y drenaje biliar, por lo que puede extirparse por separado (segmentectomía) sin dañar el resto.",
+    "descripcion": "Segmento posteroinferior del lóbulo derecho.",
+    "ubicacion": "Lóbulo derecho, parte posterior e inferior, sobre el riñón derecho.",
+    "relaciones": [
+      "vena-porta",
+      "rinon-d"
+    ]
+  },
+  {
+    "id": "higado-segmento-7",
+    "nodoModelo": "higado-segmento-7",
+    "tipo": "organo",
+    "sistema": "digestivo",
+    "region": "higado-vias-biliares",
+    "nombre": "Hígado: segmento VII",
+    "latin": "Segmentum hepatis VII",
+    "ingles": "Liver segment VII",
+    "funcion": "Como todo el hígado, metaboliza nutrientes, sintetiza proteínas plasmáticas, almacena glucógeno, produce bilis y depura fármacos y toxinas.",
+    "datosClinicos": "Cada segmento tiene su propio pedículo portal y drenaje biliar, por lo que puede extirparse por separado (segmentectomía) sin dañar el resto.",
+    "descripcion": "Segmento posterosuperior del lóbulo derecho.",
+    "ubicacion": "Lóbulo derecho, parte posterior y superior, bajo el diafragma.",
+    "relaciones": [
+      "vena-porta",
+      "diafragma"
+    ]
+  },
+  {
+    "id": "higado-segmento-8",
+    "nodoModelo": "higado-segmento-8",
+    "tipo": "organo",
+    "sistema": "digestivo",
+    "region": "higado-vias-biliares",
+    "nombre": "Hígado: segmento VIII",
+    "latin": "Segmentum hepatis VIII",
+    "ingles": "Liver segment VIII",
+    "funcion": "Como todo el hígado, metaboliza nutrientes, sintetiza proteínas plasmáticas, almacena glucógeno, produce bilis y depura fármacos y toxinas.",
+    "datosClinicos": "Cada segmento tiene su propio pedículo portal y drenaje biliar, por lo que puede extirparse por separado (segmentectomía) sin dañar el resto.",
+    "descripcion": "Segmento anterosuperior del lóbulo derecho.",
+    "ubicacion": "Lóbulo derecho, parte anterior y superior, bajo el diafragma.",
+    "relaciones": [
+      "vena-porta",
+      "diafragma"
+    ]
+  },
+  {
+    "id": "vesicula-biliar",
+    "nodoModelo": "vesicula-biliar",
+    "tipo": "organo",
+    "sistema": "digestivo",
+    "region": "higado-vias-biliares",
+    "nombre": "Vesícula biliar",
+    "latin": "Vesica biliaris (fellea)",
+    "ingles": "Gallbladder",
+    "descripcion": "Saco piriforme de unos 30–50 ml con fondo, cuerpo y cuello, adherido a la cara inferior del hígado.",
+    "funcion": "Almacena y concentra la bilis y la vierte al duodeno al comer (estímulo de la colecistocinina).",
+    "ubicacion": "Fosa de la vesícula, entre los segmentos IV y V; su fondo se proyecta en la punta del 9.º cartílago costal derecho.",
+    "datosClinicos": "Los cálculos biliares son muy frecuentes; la colecistitis aguda produce dolor bajo el reborde costal derecho que aumenta al inspirar (signo de Murphy).",
+    "relaciones": [
+      "higado-segmento-4",
+      "higado-segmento-5",
+      "conducto-cistico",
+      "duodeno"
+    ]
+  },
+  {
+    "id": "conducto-cistico",
+    "nodoModelo": "conducto-cistico",
+    "tipo": "organo",
+    "sistema": "digestivo",
+    "region": "higado-vias-biliares",
+    "nombre": "Conducto cístico",
+    "latin": "Ductus cysticus",
+    "ingles": "Cystic duct",
+    "descripcion": "Conducto de unos 3–4 cm con pliegues en espiral que une el cuello de la vesícula con el conducto hepático común.",
+    "funcion": "Permite la entrada y la salida de la bilis de la vesícula.",
+    "ubicacion": "Ligamento hepatoduodenal, junto al cuello de la vesícula.",
+    "datosClinicos": "Se liga y corta en la colecistectomía; un cálculo impactado en él causa colecistitis.",
+    "relaciones": [
+      "vesicula-biliar",
+      "coledoco"
+    ]
+  },
+  {
+    "id": "coledoco",
+    "nodoModelo": null,
+    "tipo": "organo",
+    "sistema": "digestivo",
+    "region": "higado-vias-biliares",
+    "nombre": "Colédoco (conducto biliar común)",
+    "latin": "Ductus choledochus (biliaris)",
+    "ingles": "Common bile duct",
+    "descripcion": "Conducto de unos 7 cm formado por la unión del hepático común y el cístico; desemboca con el conducto pancreático en la papila duodenal mayor.",
+    "funcion": "Lleva la bilis al duodeno.",
+    "ubicacion": "Ligamento hepatoduodenal, detrás de la primera porción del duodeno y a través de la cabeza del páncreas.",
+    "datosClinicos": "Un cálculo o un tumor de la cabeza del páncreas que lo obstruye produce ictericia.",
+    "relaciones": [
+      "conducto-cistico",
+      "duodeno",
+      "pancreas",
+      "vena-porta"
+    ]
+  },
+  {
+    "id": "pancreas",
+    "nodoModelo": "pancreas",
+    "tipo": "glandula",
+    "sistema": "digestivo",
+    "region": "pancreas",
+    "nombre": "Páncreas",
+    "latin": "Pancreas",
+    "ingles": "Pancreas",
+    "descripcion": "Glándula alargada y retroperitoneal con cabeza, cuello, cuerpo y cola; tiene una parte exocrina (acinos) y otra endocrina (islotes).",
+    "funcion": "Exocrina: produce enzimas digestivas (tripsina, lipasa, amilasa) y bicarbonato. Endocrina: los islotes liberan insulina y glucagón.",
+    "ubicacion": "Retroperitoneo, a la altura de L1–L2; la cabeza en el marco duodenal y la cola junto al bazo.",
+    "datosClinicos": "La pancreatitis aguda se debe sobre todo a cálculos biliares y al alcohol; el cáncer de páncreas suele diagnosticarse tarde.",
+    "relaciones": [
+      "duodeno",
+      "conducto-pancreatico",
+      "bazo",
+      "vena-esplenica",
+      "arteria-mesenterica-superior",
+      "islotes-pancreaticos"
+    ]
+  },
+  {
+    "id": "conducto-pancreatico",
+    "nodoModelo": "conducto-pancreatico",
+    "tipo": "organo",
+    "sistema": "digestivo",
+    "region": "pancreas",
+    "nombre": "Conducto pancreático y sus ramas",
+    "latin": "Ductus pancreaticus",
+    "ingles": "Pancreatic duct tree",
+    "descripcion": "Conducto principal (de Wirsung) que recorre el páncreas de la cola a la cabeza y recibe numerosos conductillos.",
+    "funcion": "Lleva el jugo pancreático al duodeno, junto con el colédoco, por la papila mayor.",
+    "ubicacion": "Interior del páncreas, a lo largo de su eje.",
+    "datosClinicos": "Su dilatación en una prueba de imagen sugiere una obstrucción en la cabeza del páncreas.",
+    "revisar": "BodyParts3D tiene además las mallas «Pancreatic duct» y «Parenchyma of pancreas»; aquí se usan «Pancreas» y «Pancreatic duct tree».",
+    "relaciones": [
+      "pancreas",
+      "duodeno",
+      "coledoco"
+    ]
+  }
+]

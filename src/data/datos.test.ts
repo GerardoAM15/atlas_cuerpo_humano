@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { ArchivoEstructuras } from './esquemas';
 import { ESTRUCTURAS, MANIFEST, POR_ID, estructurasDe } from './catalogo';
 import { REGIONES } from './regiones';
+import { SISTEMAS } from './sistemas';
 import esqueletico from './estructuras/esqueletico.json';
 
 describe('datos de estructuras', () => {
@@ -85,6 +86,17 @@ describe('datos de estructuras', () => {
   it('los pulmones figuran como pendientes de modelo (BodyParts3D no los incluye)', () => {
     expect(POR_ID.get('pulmon-d')?.nodoModelo).toBeNull();
     expect(POR_ID.get('pulmon-i')?.nodoModelo).toBeNull();
+  });
+
+  it('los 11 sistemas tienen fichas y modelo 3D', () => {
+    for (const s of SISTEMAS) {
+      expect(estructurasDe(s.id).length, s.id).toBeGreaterThan(0);
+      expect(MANIFEST.sistemas[s.id], s.id).toBeDefined();
+    }
+  });
+
+  it('el aparato genital femenino figura como pendiente (el modelo de BodyParts3D es masculino)', () => {
+    for (const id of ['ovarios', 'trompas-uterinas', 'utero', 'vagina']) expect(POR_ID.get(id)?.nodoModelo, id).toBeNull();
   });
 
   it('las estructuras pares están completas (derecha e izquierda)', () => {

@@ -29,6 +29,7 @@ export const TipoEstructura = z.enum([
   'valvula',
   'nervio',
   'glandula',
+  'diente',
   'otro',
 ]);
 
