@@ -4,7 +4,14 @@ Aplicación web para estudiar anatomía y fisiología: explorar el cuerpo en 3D 
 cualquier estructura para ver su ficha (español, latín e inglés), ver simulaciones fisiológicas animadas y
 practicar con quizzes.
 
+**Web:** https://gerardoam15.github.io/atlas_cuerpo_humano/
+
 > Proyecto en desarrollo por fases. Ver [CLAUDE.md](CLAUDE.md) para el plan y las reglas.
+
+## Despliegue
+Cada push a `main` ejecuta los tests, compila y publica `dist/` en GitHub Pages
+([.github/workflows/deploy.yml](.github/workflows/deploy.yml)). Gracias a `HashRouter` y a `base: './'`, la app funciona
+bajo `/atlas_cuerpo_humano/` sin configuración adicional.
 
 ## Requisitos
 - Node.js 20 o superior.
