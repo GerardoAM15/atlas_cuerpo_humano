@@ -7,7 +7,7 @@ practicar con quizzes y repetición espaciada. Se puede instalar como aplicació
 **Web:** https://gerardoam15.github.io/atlas_cuerpo_humano/
 
 ## Qué incluye
-- **Atlas 3D** con 11 sistemas y 818 estructuras (757 con modelo 3D real de BodyParts3D, 19,4 MB en total):
+- **Atlas 3D** con 11 sistemas y 825 estructuras (762 con modelo 3D real de BodyParts3D y Z-Anatomy, 19,6 MB en total):
   búsqueda difusa en tres idiomas, árbol por regiones, ficha de cada estructura, cortes anatómicos, modo explosión,
   pines numerados, vistas rápidas y medidor de FPS.
 - **Simulaciones** esquemáticas: ciclo cardíaco, respiración, impulso nervioso, contracción muscular, digestión y
@@ -25,13 +25,16 @@ practicar con quizzes y repetición espaciada. Se puede instalar como aplicació
 | Digestivo | 42 | 38 |
 | Respiratorio | 33 | 31 |
 | Órganos de los sentidos | 24 | 23 |
-| Reproductor | 23 | 18 |
-| Urinario | 16 | 16 |
-| Endocrino | 16 | 12 |
-| Linfático e inmune | 9 | 4 |
+| Reproductor | 26 | 19 |
+| Urinario | 18 | 16 |
+| Endocrino | 18 | 12 |
+| Linfático e inmune | 9 | 8 |
 
-Las estructuras sin modelo (BodyParts3D 4.0 no las incluye: pulmones, tiroides, ganglios linfáticos, aparato genital
-femenino…) tienen ficha completa y figuran como «sin modelo» con el motivo; la lista está en la página de créditos.
+Lo que BodyParts3D no tiene se completa con Z-Anatomy (CC BY-SA 4.0) cuando existe y es fiable: ganglios linfáticos,
+amígdalas palatinas y conductos deferentes. Se revisaron y descartaron la tiroides y las paratiroides de Z-Anatomy (mal
+situadas) y su pelvis renal (posible origen con licencia no comercial); ver docs/PIPELINE.md. Lo que no tiene modelo
+(pulmones, tiroides, aparato genital femenino, conducto torácico…) tiene ficha completa y figura como «sin modelo» con el
+motivo; la lista está en la página de créditos.
 
 ## Uso
 Requisitos: Node.js 20 o superior.
@@ -44,6 +47,7 @@ npm run build     # typecheck + build de producción (incluye el service worker)
 npm run preview   # sirve dist/ (para probar la PWA y el modo sin conexión)
 npm run datos     # regenera las fichas JSON, el índice y el resumen de modelos
 npm run modelos   # regenera los .glb (requiere npm run modelos:descargar)
+npm run modelos:zanatomy   # exporta de Z-Anatomy con Blender CLI (ver docs/PIPELINE.md)
 ```
 
 ## Arquitectura
@@ -85,5 +89,6 @@ funciona bajo `/atlas_cuerpo_humano/` sin configuración adicional.
 - [docs/LICENCIAS.md](docs/LICENCIAS.md): licencias de modelos, texto y software.
 - Datos de estructuras: la fuente está en `scripts/datos/` y se generan con `npm run datos` (ver CLAUDE.md).
 
-Modelos 3D: «BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International».
+Modelos 3D: «BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International» y
+«Z-Anatomy — The libre 3D atlas of anatomy — CC BY-SA 4.0».
 Contenido educativo; no sustituye la consulta médica.

@@ -63,6 +63,8 @@ const base = z.object({
   curiosidad: texto.optional(),
   /** Nota cuando un dato necesita revisión (no se inventa: se marca). */
   revisar: texto.optional(),
+  /** Aviso sobre el modelo 3D (p. ej. representación esquemática en Z-Anatomy). */
+  notaModelo: texto.optional(),
 });
 
 export const EstructuraHueso = base.extend({
@@ -119,8 +121,12 @@ export const ResumenEstructura = z.object({
   caja: z.object({ min: Vec3Indice, max: Vec3Indice }).optional(),
   /** Motivo por el que el modelo está pendiente. */
   motivo: z.string().optional(),
-  /** Conceptos FMA del modelo. */
+  /** Fuente del modelo 3D. */
+  fuenteModelo: z.enum(['bodyparts3d', 'z-anatomy']).optional(),
+  /** Conceptos FMA del modelo (solo BodyParts3D). */
   fma: z.array(z.string()).optional(),
+  /** Aviso sobre el modelo 3D. */
+  notaModelo: z.string().optional(),
 });
 export const Indice = z.array(ResumenEstructura);
 export type ResumenEstructura = z.infer<typeof ResumenEstructura>;

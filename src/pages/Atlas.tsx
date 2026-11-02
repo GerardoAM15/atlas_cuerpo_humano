@@ -74,7 +74,7 @@ export default function Atlas() {
         <div className="pointer-events-none absolute bottom-2 right-3 text-right text-[11px] text-slate-400">
           <p className="hidden sm:block">Arrastrar: girar · Rueda: zoom · Clic derecho: desplazar · Esc: deseleccionar</p>
           <p>
-            Modelos: BodyParts3D © DBCLS (CC BY 4.0) ·{' '}
+            Modelos: BodyParts3D © DBCLS (CC BY 4.0) y Z-Anatomy (CC BY-SA 4.0) ·{' '}
             <Link to="/creditos" className="pointer-events-auto underline hover:text-slate-200">
               créditos
             </Link>

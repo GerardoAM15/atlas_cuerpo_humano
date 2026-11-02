@@ -107,3 +107,4 @@ docs/           README técnico, fuentes, licencias
 - `npm run preview` — sirve `dist/`
 - `npm run datos` — regenera `src/data/estructuras/*.json`, `indice.json` y `modelos.json` (también tras `npm run modelos`)
 - `npm run modelos` — regenera los `.glb` y el manifest (requiere `npm run modelos:descargar`)
+- `npm run modelos:descargar-zanatomy` y `npm run modelos:zanatomy` — Z-Anatomy con Blender CLI (ver `docs/PIPELINE.md`)

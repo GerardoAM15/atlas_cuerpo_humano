@@ -4,7 +4,13 @@
 import { datosVaso, par, unica } from '../util.mjs';
 
 const GL = { tipo: 'glandula', material: 'glandula' };
-const SIN_MODELO = 'BodyParts3D 4.0 no incluye esta glándula. Candidato: Z-Anatomy.';
+const SIN_MODELO = 'No está en BodyParts3D 4.0 ni en Z-Anatomy.';
+// Z-Anatomy tiene una glándula tiroides, pero mal situada: sus lóbulos envuelven el cartílago tiroides y el istmo
+// queda sobre el cricoides. Sus paratiroides están colocadas respecto a esa glándula. No se desplazan a mano.
+const TIROIDES_MAL_SITUADA =
+  'No está en BodyParts3D 4.0. La de Z-Anatomy no se usa porque está mal situada (envuelve el cartílago tiroides, con el istmo sobre el cricoides y no sobre los anillos traqueales 2.º–4.º).';
+const PARATIROIDES_MAL_SITUADAS =
+  'No están en BodyParts3D 4.0. Las de Z-Anatomy no se usan: están colocadas respecto a su glándula tiroides, que está mal situada (demasiado alta).';
 
 export default [
   unica('hipofisis', {
@@ -37,7 +43,7 @@ export default [
   unica('tiroides', {
     ...GL,
     region: 'glandulas-cervicales',
-    pendienteModelo: SIN_MODELO,
+    pendienteModelo: TIROIDES_MAL_SITUADA,
     nombre: 'Glándula tiroides',
     latin: 'Glandula thyroidea',
     ingles: 'Thyroid gland',
@@ -50,7 +56,7 @@ export default [
   unica('paratiroides', {
     ...GL,
     region: 'glandulas-cervicales',
-    pendienteModelo: SIN_MODELO,
+    pendienteModelo: PARATIROIDES_MAL_SITUADAS,
     nombre: 'Glándulas paratiroides',
     latin: 'Glandulae parathyroideae',
     ingles: 'Parathyroid glands',
@@ -114,6 +120,19 @@ export default [
     relacionesExtra: ['arteria-subclavia~', 'carotida-comun~', 'tiroides', 'paratiroides', 'traquea', 'esofago'],
     datosClinicos:
       'Cerca del polo inferior de la tiroides se cruza con el nervio laríngeo recurrente; en la tiroidectomía se liga lejos de la glándula para no lesionarlo ni dejar sin riego a las paratiroides.',
+  }),
+  ...par('arteria-suprarrenal-superior', 'f', {
+    ...datosVaso('arteria'),
+    region: 'glandulas-abdominales',
+    pendienteModelo: SIN_MODELO,
+    nombre: 'Arterias suprarrenales superiores {lado}s',
+    latin: 'Arteriae suprarenales superiores',
+    ingles: '{Side} superior suprarenal arteries',
+    descripcion: 'Varias ramas finas (habitualmente 6–8) de la arteria frénica inferior que descienden hasta el borde superior de la glándula suprarrenal.',
+    funcion: 'Irrigan la porción superior de la suprarrenal, junto con las arterias suprarrenales media e inferior.',
+    ubicacion: 'Retroperitoneo, bajo el diafragma, sobre la suprarrenal.',
+    relacionesExtra: ['glandula-suprarrenal~', 'arteria-suprarrenal-media~', 'arteria-suprarrenal-inferior~', 'diafragma'],
+    datosClinicos: 'Su número y su calibre son muy variables; nacen de la arteria frénica inferior, que a su vez sale de la aorta o del tronco celíaco.',
   }),
   ...par('arteria-suprarrenal-media', 'f', {
     ...datosVaso('arteria'),

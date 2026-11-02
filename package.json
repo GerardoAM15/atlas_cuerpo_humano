@@ -14,7 +14,9 @@
     "modelos:descargar": "node scripts/descargar-bodyparts3d.mjs",
     "modelos": "node scripts/construir-modelos.mjs",
     "modelos:inspeccionar": "gltf-transform inspect public/models/esqueletico.glb",
-    "datos": "node scripts/generar-datos.mjs"
+    "datos": "node scripts/generar-datos.mjs",
+    "modelos:descargar-zanatomy": "node scripts/descargar-zanatomy.mjs",
+    "modelos:zanatomy": "node scripts/exportar-zanatomy.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^9.122.0",

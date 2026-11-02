@@ -1,5 +1,8 @@
 // Resuelve la configuración de un sistema contra los OBJ disponibles de BodyParts3D.
+import fs from 'node:fs';
+import path from 'node:path';
 import { geometriaObj } from './bodyparts3d.mjs';
+import { DIR_ZANATOMY_GLB } from './rutas.mjs';
 
 /**
  * @typedef {{ elemento: string, fma: string, nombre: string, bytes: number }} Elemento
@@ -26,8 +29,27 @@ export function resolver(estructuras, indice, compuestos = new Map()) {
     if (ids.has(e.id)) throw new Error(`Id duplicado en la configuración: ${e.id}`);
     ids.add(e.id);
 
-    if (e.pendiente || !e.fuente?.length) {
+    if (e.pendiente || !(e.fuente?.length || e.fuenteZA?.length)) {
       pendientes.push({ id: e.id, tipo: e.tipo, motivo: e.pendiente ?? 'Sin fuente definida.' });
+      continue;
+    }
+
+    // Z-Anatomy: un .glb por estructura, ya alineado y en metros (scripts/exportar-zanatomy.mjs).
+    if (e.fuenteZA?.length && !e.fuente?.length) {
+      const ruta = path.join(DIR_ZANATOMY_GLB, `${e.id}.glb`);
+      if (!fs.existsSync(ruta)) {
+        pendientes.push({ id: e.id, tipo: e.tipo, motivo: 'Falta exportarla de Z-Anatomy: npm run modelos:zanatomy.' });
+        continue;
+      }
+      resueltas.push({
+        id: e.id,
+        tipo: e.tipo,
+        fuente: 'z-anatomy',
+        elementos: [{ elemento: `za-${e.id}`, fma: null, nombre: e.fuenteZA.join(', '), ruta, unidad: 'm', fuente: 'z-anatomy' }],
+        nombresFuente: e.fuenteZA,
+        ...(e.material ? { material: e.material } : {}),
+        ...(e.revisar ? { revisar: e.revisar } : {}),
+      });
       continue;
     }
 
@@ -65,6 +87,7 @@ export function resolver(estructuras, indice, compuestos = new Map()) {
     resueltas.push({
       id: e.id,
       tipo: e.tipo,
+      fuente: 'bodyparts3d',
       elementos: unicos,
       ...(e.material ? { material: e.material } : {}),
       ...(e.revisar ? { revisar: e.revisar } : {}),

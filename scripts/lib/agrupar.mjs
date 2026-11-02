@@ -84,7 +84,9 @@ export async function agruparSistema(sistema, estructuras, rutasGlb) {
       const prims = origen.getRoot().listMeshes().flatMap((m) => m.listPrimitives());
       const nombre = variasMallas ? `${est.id}__${el.elemento}` : est.id;
       const malla = doc.createMesh(nombre);
-      for (const p of prims) malla.addPrimitive(copiarPrimitiva(doc, p, material(est.material ?? est.tipo)));
+      // Los .glb de Z-Anatomy ya están en metros; los de BodyParts3D, en mm.
+      const factor = el.unidad === 'm' ? 1 : MM_A_M;
+      for (const p of prims) malla.addPrimitive(copiarPrimitiva(doc, p, material(est.material ?? est.tipo), factor));
 
       if (variasMallas) {
         nodo.addChild(doc.createNode(nombre).setMesh(malla).setExtras({ elemento: el.elemento, fma: el.fma }));
@@ -96,13 +98,13 @@ export async function agruparSistema(sistema, estructuras, rutasGlb) {
   return doc;
 }
 
-/** Copia una primitiva de otro documento, pasando posiciones de mm a m. */
-function copiarPrimitiva(doc, prim, material) {
+/** Copia una primitiva de otro documento, escalando las posiciones (mm → m con el factor por defecto). */
+function copiarPrimitiva(doc, prim, material, factor = MM_A_M) {
   const buffer = doc.getRoot().listBuffers()[0];
   const nueva = doc.createPrimitive().setMaterial(material);
 
   const pos = prim.getAttribute('POSITION');
-  const posM = Float32Array.from(pos.getArray(), (v) => v * MM_A_M);
+  const posM = Float32Array.from(pos.getArray(), (v) => v * factor);
   nueva.setAttribute('POSITION', doc.createAccessor().setType('VEC3').setArray(posM).setBuffer(buffer));
 
   const normal = prim.getAttribute('NORMAL');

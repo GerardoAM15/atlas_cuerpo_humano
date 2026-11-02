@@ -83,7 +83,9 @@ cámara y colocar etiquetas sin recorrer la geometría. Los ids son **únicos en
 
 Total: 18,6 MB de modelos (límite 80 MB). Los sistemas pequeños no se simplifican (`simplificar: 1`).
 
-### Carencias de BodyParts3D 4.0 (pendientes; candidato: Z-Anatomy)
+### Carencias de BodyParts3D 4.0
+De esta lista, se han completado con Z-Anatomy los ganglios (cervicales, axilares, inguinales), las amígdalas
+palatinas y los conductos deferentes (ver la sección «Z-Anatomy»). El resto sigue pendiente.
 - **Esquelético:** martillo, yunque y estribo (×2) y cóccix. A la vista, la malla del sacro parece incluir el cóccix fusionado.
 - **Muscular:** masetero, temporal, dorsal ancho, recto del abdomen, oblicuo interno, transverso del abdomen y
   cuadrado lumbar (×2). Tienen ficha completa, sin modelo.
@@ -122,3 +124,37 @@ zip grande, se puede reanudar con `curl -C - -L -o <archivo> <url>`.
 2. Crea `scripts/config/<sistema>.mjs` con `configDesdeDatos('<sistema>', datos)`.
 3. Añade sus regiones en `src/data/regiones.ts`.
 4. `npm run modelos -- <sistema>` (revisa los avisos de pendientes y presupuesto) y después `npm run datos`.
+
+## Z-Anatomy (estructuras que BodyParts3D no tiene)
+Requiere Blender (probado con 5.2 LTS: `winget install BlenderFoundation.Blender`).
+
+```bash
+npm run modelos:descargar-zanatomy   # Z-Anatomy.zip (87 MB) del commit fijado en scripts/zanatomy-version.mjs → assets-raw/z-anatomy/
+npm run modelos:zanatomy             # alinea y exporta con Blender CLI → assets-raw/z-anatomy/exportado/<id>.glb
+npm run modelos -- <sistemas>        # los usa como fuente junto a los OBJ de BodyParts3D
+npm run datos
+```
+
+- En las fichas, `fuenteZA` lista los objetos del `.blend` (se unen en una malla; `zaLados()` añade `.l`/`.r`) y `refZA`
+  los pares [objeto de Z-Anatomy, id del atlas] usados para alinear (`REF_ZA` en `scripts/datos/util.mjs`).
+- **Alineación** (`scripts/lib/alineacion-zanatomy.mjs`): Z-Anatomy deriva de BodyParts3D pero lo reescala por regiones
+  (un ajuste global deja errores de 1–2 cm). Para cada estructura se ajustan escala uniforme y traslación por mínimos
+  cuadrados con las cajas de piezas rígidas vecinas presentes en ambos modelos. Errores de las referencias: 2,4–4,5 mm.
+  Se descartan como referencia el paladar blando y el sacro (otra forma) y clavículas y fémures (otra postura).
+- `scripts/blender/inspeccionar.py` inventaría el `.blend` (`objetos.tsv`); `scripts/blender/exportar.py` aplica
+  modificadores, convierte curvas en mallas, alinea, une y exporta cada estructura a `.glb` (metros, Y arriba).
+- Las estructuras quedan en el manifest con `fuente: 'z-anatomy'` y la ficha muestra la licencia **CC BY-SA 4.0**.
+- Convenciones del `.blend`: `.l`/`.r` = lado; los objetos con sufijo `.j`, `.t`, `.g`, `.s`, `.i` son líneas y textos
+  de etiquetas. Los ganglios y las amígdalas de Z-Anatomy son esferas/ovoides esquemáticos (se indica en la ficha).
+- `scripts/blender/vista_previa.py` y `scripts/blender/comparar.py` renderizan objetos del `.blend` para revisarlos antes
+  de usarlos.
+
+### Revisado y descartado
+| Estructura | Motivo |
+|---|---|
+| Pelvis renal y cálices | **Licencia.** Z-Anatomy declara que adaptó un riñón de Lissie Cowley con licencia CC BY-NC 4.0. Su riñón es idéntico al de BodyParts3D, así que la pelvis con los cálices es lo añadido y podría derivar de ese modelo no comercial, incompatible con CC BY-SA. |
+| Glándula tiroides | **Posición.** La única malla de la glándula («Thyroid gland», 84 vértices) envuelve las láminas del cartílago tiroides, con el istmo sobre el cricoides y no sobre los anillos traqueales 2.º–4.º. No se desplaza a mano. El cartílago tiroides ya viene de BodyParts3D. |
+| Paratiroides | **Posición.** Están colocadas respecto a esa glándula alta (las superiores a la altura del cartílago tiroides). |
+
+No están en ninguno de los dos modelos: aparato genital femenino (BodyParts3D y Z-Anatomy son masculinos), conducto
+torácico, escroto, glándulas bulbouretrales y arterias suprarrenales superiores.

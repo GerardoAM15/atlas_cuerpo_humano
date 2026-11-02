@@ -205,6 +205,56 @@
     ]
   },
   {
+    "id": "arteria-suprarrenal-superior-d",
+    "nodoModelo": null,
+    "tipo": "vaso",
+    "sistema": "endocrino",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "glandulas-abdominales",
+    "nombre": "Arterias suprarrenales superiores derechas",
+    "latin": "Arteriae suprarenales superiores",
+    "ingles": "Right superior suprarenal arteries",
+    "descripcion": "Varias ramas finas (habitualmente 6–8) de la arteria frénica inferior que descienden hasta el borde superior de la glándula suprarrenal.",
+    "funcion": "Irrigan la porción superior de la suprarrenal, junto con las arterias suprarrenales media e inferior.",
+    "ubicacion": "Retroperitoneo, bajo el diafragma, sobre la suprarrenal.",
+    "datosClinicos": "Su número y su calibre son muy variables; nacen de la arteria frénica inferior, que a su vez sale de la aorta o del tronco celíaco.",
+    "relaciones": [
+      "glandula-suprarrenal-d",
+      "arteria-suprarrenal-media-d",
+      "arteria-suprarrenal-inferior-d",
+      "diafragma"
+    ]
+  },
+  {
+    "id": "arteria-suprarrenal-superior-i",
+    "nodoModelo": null,
+    "tipo": "vaso",
+    "sistema": "endocrino",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "glandulas-abdominales",
+    "nombre": "Arterias suprarrenales superiores izquierdas",
+    "latin": "Arteriae suprarenales superiores",
+    "ingles": "Left superior suprarenal arteries",
+    "descripcion": "Varias ramas finas (habitualmente 6–8) de la arteria frénica inferior que descienden hasta el borde superior de la glándula suprarrenal.",
+    "funcion": "Irrigan la porción superior de la suprarrenal, junto con las arterias suprarrenales media e inferior.",
+    "ubicacion": "Retroperitoneo, bajo el diafragma, sobre la suprarrenal.",
+    "datosClinicos": "Su número y su calibre son muy variables; nacen de la arteria frénica inferior, que a su vez sale de la aorta o del tronco celíaco.",
+    "relaciones": [
+      "glandula-suprarrenal-i",
+      "arteria-suprarrenal-media-i",
+      "arteria-suprarrenal-inferior-i",
+      "diafragma"
+    ]
+  },
+  {
     "id": "arteria-suprarrenal-media-d",
     "nodoModelo": "arteria-suprarrenal-media-d",
     "tipo": "vaso",

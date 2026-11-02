@@ -80,7 +80,7 @@ export default function Layout() {
 
       <footer className={`border-t border-slate-800 px-4 py-4 text-center text-xs text-slate-400 ${pantallaCompleta ? 'hidden' : ''}`}>
         Proyecto personal de estudio. Contenido educativo; no sustituye la consulta médica. Modelos 3D:
-        BodyParts3D © DBCLS (CC BY 4.0) —{' '}
+        BodyParts3D © DBCLS (CC BY 4.0) y Z-Anatomy (CC BY-SA 4.0) —{' '}
         <Link to="/creditos" className="underline hover:text-slate-300">
           ver créditos
         </Link>

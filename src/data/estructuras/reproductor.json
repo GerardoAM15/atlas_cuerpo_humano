@@ -81,7 +81,7 @@
   },
   {
     "id": "conducto-deferente",
-    "nodoModelo": null,
+    "nodoModelo": "conducto-deferente",
     "tipo": "organo",
     "sistema": "reproductor",
     "region": "masculino",
@@ -218,6 +218,66 @@
     "relaciones": [
       "cuerpo-esponjoso",
       "uretra"
+    ]
+  },
+  {
+    "id": "glandula-bulbouretral-d",
+    "nodoModelo": null,
+    "tipo": "glandula",
+    "sistema": "reproductor",
+    "lado": "derecho",
+    "region": "masculino",
+    "nombre": "Glándula bulbouretral derecha",
+    "latin": "Glandula bulbourethralis",
+    "ingles": "Right bulbourethral gland",
+    "descripcion": "Glándula del tamaño de un guisante (glándula de Cowper) situada en el espacio profundo del periné, junto a la uretra membranosa.",
+    "funcion": "Secreta un moco claro y alcalino (líquido preeyaculatorio) que lubrica la uretra y neutraliza su acidez.",
+    "ubicacion": "Espacio profundo del periné, a cada lado de la uretra membranosa; su conducto desemboca en la uretra esponjosa.",
+    "datosClinicos": "Su equivalente femenino son las glándulas vestibulares mayores (de Bartholin), en las que se forman quistes y abscesos.",
+    "relaciones": [
+      "uretra",
+      "prostata",
+      "cuerpo-esponjoso"
+    ]
+  },
+  {
+    "id": "glandula-bulbouretral-i",
+    "nodoModelo": null,
+    "tipo": "glandula",
+    "sistema": "reproductor",
+    "lado": "izquierdo",
+    "region": "masculino",
+    "nombre": "Glándula bulbouretral izquierda",
+    "latin": "Glandula bulbourethralis",
+    "ingles": "Left bulbourethral gland",
+    "descripcion": "Glándula del tamaño de un guisante (glándula de Cowper) situada en el espacio profundo del periné, junto a la uretra membranosa.",
+    "funcion": "Secreta un moco claro y alcalino (líquido preeyaculatorio) que lubrica la uretra y neutraliza su acidez.",
+    "ubicacion": "Espacio profundo del periné, a cada lado de la uretra membranosa; su conducto desemboca en la uretra esponjosa.",
+    "datosClinicos": "Su equivalente femenino son las glándulas vestibulares mayores (de Bartholin), en las que se forman quistes y abscesos.",
+    "relaciones": [
+      "uretra",
+      "prostata",
+      "cuerpo-esponjoso"
+    ]
+  },
+  {
+    "id": "escroto",
+    "nodoModelo": null,
+    "tipo": "organo",
+    "sistema": "reproductor",
+    "region": "masculino",
+    "nombre": "Escroto",
+    "latin": "Scrotum",
+    "ingles": "Scrotum",
+    "descripcion": "Bolsa de piel y músculo liso (dartos) dividida por un tabique en dos compartimentos, cada uno con un testículo.",
+    "funcion": "Aloja los testículos y los mantiene 2–3 °C por debajo de la temperatura corporal, necesario para la espermatogénesis (músculos dartos y cremáster).",
+    "ubicacion": "Debajo del pene, entre los muslos.",
+    "datosClinicos": "El hidrocele (líquido en la túnica vaginal) se transilumina; una hernia inguinal indirecta puede descender hasta el escroto.",
+    "relaciones": [
+      "testiculo-d",
+      "testiculo-i",
+      "epididimo-d",
+      "epididimo-i"
     ]
   },
   {

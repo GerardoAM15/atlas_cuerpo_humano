@@ -8,9 +8,18 @@
       "url": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
       "atribucion": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
       "nota": "Licencia vigente desde el 25/02/2025; antes CC BY-SA 2.1 JP (los OBJ conservan la cabecera antigua)."
+    },
+    "z-anatomy": {
+      "nombre": "Z-Anatomy",
+      "version": "plantilla de Blender (commit 7b91976)",
+      "licencia": "CC BY-SA 4.0",
+      "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "url": "https://github.com/Z-Anatomy/The-blend",
+      "atribucion": "Z-Anatomy — The libre 3D atlas of anatomy — CC BY-SA 4.0 (Gauthier Kervyn, Marcin Zielinski, Lluis Vinent; basado en BodyParts3D, DBCLS)",
+      "nota": "Las mallas tomadas de Z-Anatomy y sus derivados en este proyecto se distribuyen bajo CC BY-SA 4.0."
     }
   },
-  "bytesTotales": 20318724,
+  "bytesTotales": 20541492,
   "sistemas": {
     "cardiovascular": {
       "archivo": "models/cardiovascular.glb",
@@ -38,9 +47,9 @@
     },
     "linfatico": {
       "archivo": "models/linfatico.glb",
-      "bytes": 100832,
-      "triangulos": 9854,
-      "version": "336fa0d460"
+      "bytes": 262884,
+      "triangulos": 35054,
+      "version": "8a786b2a01"
     },
     "muscular": {
       "archivo": "models/muscular.glb",
@@ -56,9 +65,9 @@
     },
     "reproductor": {
       "archivo": "models/reproductor.glb",
-      "bytes": 508796,
-      "triangulos": 75634,
-      "version": "15607aa141"
+      "bytes": 569512,
+      "triangulos": 85426,
+      "version": "ea466dad32"
     },
     "respiratorio": {
       "archivo": "models/respiratorio.glb",

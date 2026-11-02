@@ -29,8 +29,8 @@ for (const sistema of sistemas) {
   const modelo = new Map((manifest.sistemas[sistema]?.estructuras ?? []).map((e) => [e.id, e]));
 
   const salida = fuente.map((e) => {
-    // fuente/material/pendienteModelo los usa solo el pipeline 3D (scripts/config).
-    const { relacionesExtra = [], fuente: _f, material: _m, pendienteModelo: _p, ...resto } = e;
+    // fuente/fuenteZA/refZA/material/pendienteModelo los usa solo el pipeline 3D (scripts/config).
+    const { relacionesExtra = [], fuente: _f, fuenteZA: _fz, refZA: _rz, material: _m, pendienteModelo: _p, ...resto } = e;
     const enModelo = modelo.get(e.id);
     const relaciones = [...new Set([...(e.articulaciones ?? []).flatMap((a) => a.con), ...relacionesExtra])].filter((r) => r !== e.id);
     const ordenado = {
@@ -76,7 +76,9 @@ const indice = fs
         lado: e.lado,
         caja: m?.estado === 'disponible' ? { min: redondear(m.caja.min), max: redondear(m.caja.max) } : undefined,
         motivo: m?.estado === 'pendiente' ? m.motivo : undefined,
-        fma: m?.estado === 'disponible' ? m.fma : undefined,
+        fuenteModelo: m?.estado === 'disponible' ? m.fuente : undefined,
+        fma: m?.estado === 'disponible' && m.fma.length ? m.fma : undefined,
+        notaModelo: e.notaModelo,
       }),
     );
   });

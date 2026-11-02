@@ -4717,14 +4717,14 @@
           "nodo": null,
           "tipo": "glandula",
           "estado": "pendiente",
-          "motivo": "BodyParts3D 4.0 no incluye esta glándula. Candidato: Z-Anatomy."
+          "motivo": "No está en BodyParts3D 4.0. La de Z-Anatomy no se usa porque está mal situada (envuelve el cartílago tiroides, con el istmo sobre el cricoides y no sobre los anillos traqueales 2.º–4.º)."
         },
         {
           "id": "paratiroides",
           "nodo": null,
           "tipo": "glandula",
           "estado": "pendiente",
-          "motivo": "BodyParts3D 4.0 no incluye esta glándula. Candidato: Z-Anatomy."
+          "motivo": "No están en BodyParts3D 4.0. Las de Z-Anatomy no se usan: están colocadas respecto a su glándula tiroides, que está mal situada (demasiado alta)."
         },
         {
           "id": "islotes-pancreaticos",
@@ -4739,6 +4739,20 @@
           "tipo": "glandula",
           "estado": "pendiente",
           "motivo": "Los testículos están en el sistema reproductor; el modelo de BodyParts3D es masculino y no incluye ovarios."
+        },
+        {
+          "id": "arteria-suprarrenal-superior-d",
+          "nodo": null,
+          "tipo": "vaso",
+          "estado": "pendiente",
+          "motivo": "No está en BodyParts3D 4.0 ni en Z-Anatomy."
+        },
+        {
+          "id": "arteria-suprarrenal-superior-i",
+          "nodo": null,
+          "tipo": "vaso",
+          "estado": "pendiente",
+          "motivo": "No está en BodyParts3D 4.0 ni en Z-Anatomy."
         }
       ]
     },
@@ -11651,8 +11665,8 @@
     },
     "linfatico": {
       "archivo": "models/linfatico.glb",
-      "bytes": 100832,
-      "triangulos": 9854,
+      "bytes": 262884,
+      "triangulos": 35054,
       "estructuras": [
         {
           "id": "bazo",
@@ -11742,6 +11756,154 @@
           }
         },
         {
+          "id": "ganglios-cervicales",
+          "nodo": "ganglios-cervicales",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "z-anatomy",
+          "fma": [],
+          "elementos": [
+            "za-ganglios-cervicales"
+          ],
+          "nombresFuente": [
+            "Superficial anterior cervical nodes",
+            "Paratracheal cervical nodes",
+            "Superficial lateral cervical nodes.l",
+            "Superficial lateral cervical nodes.r",
+            "Inferior deep lateral cervical nodes.l",
+            "Inferior deep lateral cervical nodes.r",
+            "Jugulodigastric node.l",
+            "Jugulodigastric node.r",
+            "Lateral superior jugular node.l",
+            "Lateral superior jugular node.r",
+            "Anterior inferior jugular nodes.l",
+            "Anterior inferior jugular nodes.r",
+            "Supraclavicular nodes.l",
+            "Supraclavicular nodes.r",
+            "Retropharyngeal nodes.l",
+            "Retropharyngeal nodes.r",
+            "Pretracheal nodes.l",
+            "Pretracheal nodes.r",
+            "Thyroid nodes.l",
+            "Thyroid nodes.r"
+          ],
+          "triangulos": 13104,
+          "caja": {
+            "min": [
+              -0.0646,
+              1.3418,
+              0.0723
+            ],
+            "max": [
+              0.0633,
+              1.4783,
+              0.1384
+            ]
+          }
+        },
+        {
+          "id": "ganglios-axilares",
+          "nodo": "ganglios-axilares",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "z-anatomy",
+          "fma": [],
+          "elementos": [
+            "za-ganglios-axilares"
+          ],
+          "nombresFuente": [
+            "Anterior axillary nodes.l",
+            "Anterior axillary nodes.r",
+            "Posterior axillary nodes.l",
+            "Posterior axillary nodes.r",
+            "Lateral axillary nodes.l",
+            "Lateral axillary nodes.r",
+            "Central axillary nodes.l",
+            "Central axillary nodes.r",
+            "Apical axillary nodes.l",
+            "Apical axillary nodes.r",
+            "Interpectoral nodes.l",
+            "Interpectoral nodes.r"
+          ],
+          "triangulos": 7728,
+          "caja": {
+            "min": [
+              -0.1669,
+              1.2354,
+              0.0652
+            ],
+            "max": [
+              0.1665,
+              1.3033,
+              0.1587
+            ]
+          }
+        },
+        {
+          "id": "ganglios-inguinales",
+          "nodo": "ganglios-inguinales",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "z-anatomy",
+          "fma": [],
+          "elementos": [
+            "za-ganglios-inguinales"
+          ],
+          "nombresFuente": [
+            "Superomedial superficial inguinal nodes.l",
+            "Superomedial superficial inguinal nodes.r",
+            "Superolateral superficial inguinal nodes.l",
+            "Superolateral superficial inguinal nodes.r",
+            "Inferior superficial inguinal nodes.l",
+            "Inferior superficial inguinal nodes.r",
+            "(Intermediate deep inguinal node).l",
+            "(Intermediate deep inguinal node).r",
+            "(Proximal deep inguinal node).l",
+            "(Proximal deep inguinal node).r"
+          ],
+          "triangulos": 4032,
+          "caja": {
+            "min": [
+              -0.0676,
+              0.7418,
+              0.1295
+            ],
+            "max": [
+              0.0676,
+              0.822,
+              0.1458
+            ]
+          }
+        },
+        {
+          "id": "amigdalas-palatinas",
+          "nodo": "amigdalas-palatinas",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "z-anatomy",
+          "fma": [],
+          "elementos": [
+            "za-amigdalas-palatinas"
+          ],
+          "nombresFuente": [
+            "Palatine tonsil.l",
+            "Palatine tonsil.r"
+          ],
+          "triangulos": 336,
+          "caja": {
+            "min": [
+              -0.032,
+              1.4795,
+              0.1147
+            ],
+            "max": [
+              0.0308,
+              1.4893,
+              0.1244
+            ]
+          }
+        },
+        {
           "id": "arteria-esplenica",
           "nodo": "arteria-esplenica",
           "tipo": "vaso",
@@ -11774,39 +11936,11 @@
           }
         },
         {
-          "id": "ganglios-cervicales",
-          "nodo": null,
-          "tipo": "organo",
-          "estado": "pendiente",
-          "motivo": "BodyParts3D 4.0 no incluye esta estructura. Candidato: Z-Anatomy."
-        },
-        {
-          "id": "ganglios-axilares",
-          "nodo": null,
-          "tipo": "organo",
-          "estado": "pendiente",
-          "motivo": "BodyParts3D 4.0 no incluye esta estructura. Candidato: Z-Anatomy."
-        },
-        {
-          "id": "ganglios-inguinales",
-          "nodo": null,
-          "tipo": "organo",
-          "estado": "pendiente",
-          "motivo": "BodyParts3D 4.0 no incluye esta estructura. Candidato: Z-Anatomy."
-        },
-        {
           "id": "conducto-toracico",
           "nodo": null,
           "tipo": "vaso",
           "estado": "pendiente",
-          "motivo": "BodyParts3D 4.0 no incluye esta estructura. Candidato: Z-Anatomy."
-        },
-        {
-          "id": "amigdalas-palatinas",
-          "nodo": null,
-          "tipo": "organo",
-          "estado": "pendiente",
-          "motivo": "BodyParts3D 4.0 no incluye esta estructura. Candidato: Z-Anatomy."
+          "motivo": "No está en BodyParts3D 4.0 ni en Z-Anatomy."
         }
       ]
     },
@@ -20343,8 +20477,8 @@
     },
     "reproductor": {
       "archivo": "models/reproductor.glb",
-      "bytes": 508796,
-      "triangulos": 75634,
+      "bytes": 569512,
+      "triangulos": 85426,
       "estructuras": [
         {
           "id": "testiculo-d",
@@ -20459,6 +20593,34 @@
               0.0239,
               0.725,
               0.1596
+            ]
+          }
+        },
+        {
+          "id": "conducto-deferente",
+          "nodo": "conducto-deferente",
+          "tipo": "organo",
+          "estado": "disponible",
+          "fuente": "z-anatomy",
+          "fma": [],
+          "elementos": [
+            "za-conducto-deferente"
+          ],
+          "nombresFuente": [
+            "Ductus deferens.l",
+            "Ductus deferens.r"
+          ],
+          "triangulos": 9792,
+          "caja": {
+            "min": [
+              -0.0556,
+              0.6964,
+              0.0647
+            ],
+            "max": [
+              0.0533,
+              0.8507,
+              0.153
             ]
           }
         },
@@ -20871,39 +21033,53 @@
           }
         },
         {
-          "id": "conducto-deferente",
+          "id": "glandula-bulbouretral-d",
+          "nodo": null,
+          "tipo": "glandula",
+          "estado": "pendiente",
+          "motivo": "No está en BodyParts3D 4.0 ni en Z-Anatomy."
+        },
+        {
+          "id": "glandula-bulbouretral-i",
+          "nodo": null,
+          "tipo": "glandula",
+          "estado": "pendiente",
+          "motivo": "No está en BodyParts3D 4.0 ni en Z-Anatomy."
+        },
+        {
+          "id": "escroto",
           "nodo": null,
           "tipo": "organo",
           "estado": "pendiente",
-          "motivo": "BodyParts3D 4.0 no incluye esta estructura. Candidato: Z-Anatomy."
+          "motivo": "No está en BodyParts3D 4.0 ni en Z-Anatomy."
         },
         {
           "id": "ovarios",
           "nodo": null,
           "tipo": "glandula",
           "estado": "pendiente",
-          "motivo": "El modelo de BodyParts3D es masculino y no incluye el aparato genital femenino. Candidato: Z-Anatomy."
+          "motivo": "BodyParts3D 4.0 y Z-Anatomy modelan un varón: no incluyen el aparato genital femenino."
         },
         {
           "id": "trompas-uterinas",
           "nodo": null,
           "tipo": "organo",
           "estado": "pendiente",
-          "motivo": "El modelo de BodyParts3D es masculino y no incluye el aparato genital femenino. Candidato: Z-Anatomy."
+          "motivo": "BodyParts3D 4.0 y Z-Anatomy modelan un varón: no incluyen el aparato genital femenino."
         },
         {
           "id": "utero",
           "nodo": null,
           "tipo": "organo",
           "estado": "pendiente",
-          "motivo": "El modelo de BodyParts3D es masculino y no incluye el aparato genital femenino. Candidato: Z-Anatomy."
+          "motivo": "BodyParts3D 4.0 y Z-Anatomy modelan un varón: no incluyen el aparato genital femenino."
         },
         {
           "id": "vagina",
           "nodo": null,
           "tipo": "organo",
           "estado": "pendiente",
-          "motivo": "El modelo de BodyParts3D es masculino y no incluye el aparato genital femenino. Candidato: Z-Anatomy."
+          "motivo": "BodyParts3D 4.0 y Z-Anatomy modelan un varón: no incluyen el aparato genital femenino."
         }
       ]
     },
@@ -23131,6 +23307,20 @@
               0.1102
             ]
           }
+        },
+        {
+          "id": "pelvis-renal-d",
+          "nodo": null,
+          "tipo": "organo",
+          "estado": "pendiente",
+          "motivo": "No está en BodyParts3D 4.0. La de Z-Anatomy no se usa: podría derivar de un modelo de riñón con licencia CC BY-NC 4.0 (Lissie Cowley), incompatible con CC BY-SA."
+        },
+        {
+          "id": "pelvis-renal-i",
+          "nodo": null,
+          "tipo": "organo",
+          "estado": "pendiente",
+          "motivo": "No está en BodyParts3D 4.0. La de Z-Anatomy no se usa: podría derivar de un modelo de riñón con licencia CC BY-NC 4.0 (Lissie Cowley), incompatible con CC BY-SA."
         }
       ]
     }
@@ -23150,7 +23340,16 @@
       "url": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
       "atribucion": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
       "nota": "Licencia vigente desde el 25/02/2025; antes CC BY-SA 2.1 JP (los OBJ conservan la cabecera antigua)."
+    },
+    "z-anatomy": {
+      "nombre": "Z-Anatomy",
+      "version": "plantilla de Blender (commit 7b91976)",
+      "licencia": "CC BY-SA 4.0",
+      "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "url": "https://github.com/Z-Anatomy/The-blend",
+      "atribucion": "Z-Anatomy — The libre 3D atlas of anatomy — CC BY-SA 4.0 (Gauthier Kervyn, Marcin Zielinski, Lluis Vinent; basado en BodyParts3D, DBCLS)",
+      "nota": "Las mallas tomadas de Z-Anatomy y sus derivados en este proyecto se distribuyen bajo CC BY-SA 4.0."
     }
   },
-  "bytesTotales": 20318724
+  "bytesTotales": 20541492
 }

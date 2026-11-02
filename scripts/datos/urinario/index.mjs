@@ -1,7 +1,12 @@
-// Sistema urinario: riñones, uréteres, vejiga, uretra (modelo masculino) y ramas intrarrenales de la arteria renal.
+// Sistema urinario: riñones, uréteres, vejiga, uretra (modelo masculino) y ramas intrarrenales de la arteria renal
+// (BodyParts3D). Pelvis renal y cálices sin modelo (ver SIN_MODELO_PELVIS).
 import { datosVaso, par, unica } from '../util.mjs';
 
 const VR = 'vascularizacion-renal';
+// Z-Anatomy tiene una pelvis renal con cálices, pero no se usa: su riñón declara como fuente un modelo con
+// licencia no comercial y la pelvis podría derivar de él (ver docs/LICENCIAS.md).
+const SIN_MODELO_PELVIS =
+  'No está en BodyParts3D 4.0. La de Z-Anatomy no se usa: podría derivar de un modelo de riñón con licencia CC BY-NC 4.0 (Lissie Cowley), incompatible con CC BY-SA.';
 
 export default [
   ...par('rinon', 'm', {
@@ -20,6 +25,21 @@ export default [
     relacionesExtra: ['ureter~', 'arteria-renal~', 'vena-renal~', 'glandula-suprarrenal~', 'costilla-12~', 'psoas-mayor~'],
     datosClinicos: 'La insuficiencia renal crónica se debe sobre todo a la diabetes y la hipertensión; los cálculos renales causan cólicos muy dolorosos.',
     curiosidad: 'Los riñones filtran unos 180 litros de plasma al día, pero solo producen 1–2 litros de orina.',
+  }),
+  ...par('pelvis-renal', 'f', {
+    tipo: 'organo',
+    material: 'digestivo',
+    region: 'rinones',
+    pendienteModelo: SIN_MODELO_PELVIS,
+    nombre: 'Pelvis renal y cálices {lado}',
+    latin: 'Pelvis renalis et calices renales',
+    ingles: '{Side} renal pelvis and calyces',
+    descripcion:
+      'Embudo membranoso del seno renal que recoge la orina: los cálices menores rodean las papilas de las pirámides y confluyen en 2–3 cálices mayores, que forman la pelvis.',
+    funcion: 'Recoge la orina que sale de las papilas renales y la conduce al uréter mediante contracciones peristálticas.',
+    ubicacion: 'Seno e hilio renal; la pelvis se continúa con el uréter en la unión pieloureteral.',
+    relacionesExtra: ['rinon~', 'ureter~', 'division-anterior-arteria-renal~', 'division-posterior-arteria-renal~'],
+    datosClinicos: 'Los cálculos coraliformes ocupan la pelvis y los cálices; la obstrucción de la unión pieloureteral dilata la pelvis (hidronefrosis).',
   }),
   ...par('ureter', 'm', {
     tipo: 'organo',

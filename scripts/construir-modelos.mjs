@@ -1,4 +1,4 @@
-// Pipeline de modelos: OBJ de BodyParts3D → public/models/<sistema>.glb + manifest.json
+// Pipeline de modelos: OBJ de BodyParts3D (+ .glb exportados de Z-Anatomy) → public/models/<sistema>.glb + manifest.json
 //
 // Uso:
 //   npm run modelos:descargar           (una vez; descarga a assets-raw/)
@@ -9,10 +9,11 @@ import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { indexarElementos, leerCompuestos } from './lib/bodyparts3d.mjs';
 import { agruparSistema } from './lib/agrupar.mjs';
-import { convertirElementos } from './lib/convertir.mjs';
+import { claveElemento, convertirElementos } from './lib/convertir.mjs';
 import { crearIO, medir, optimizar } from './lib/optimizar.mjs';
 import { resolver } from './lib/resolver.mjs';
 import { DIR_AGRUPADO, DIR_MODELOS, RAIZ, RUTA_MANIFEST } from './lib/rutas.mjs';
+import { COMMIT_ZANATOMY } from './zanatomy-version.mjs';
 
 const PRESUPUESTO_SISTEMA = 8 * 1024 * 1024;
 const PRESUPUESTO_TOTAL = 80 * 1024 * 1024;
@@ -26,6 +27,15 @@ const FUENTES = {
     url: 'https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html',
     atribucion: 'BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International',
     nota: 'Licencia vigente desde el 25/02/2025; antes CC BY-SA 2.1 JP (los OBJ conservan la cabecera antigua).',
+  },
+  'z-anatomy': {
+    nombre: 'Z-Anatomy',
+    version: `plantilla de Blender (commit ${COMMIT_ZANATOMY.slice(0, 7)})`,
+    licencia: 'CC BY-SA 4.0',
+    urlLicencia: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    url: 'https://github.com/Z-Anatomy/The-blend',
+    atribucion: 'Z-Anatomy — The libre 3D atlas of anatomy — CC BY-SA 4.0 (Gauthier Kervyn, Marcin Zielinski, Lluis Vinent; basado en BodyParts3D, DBCLS)',
+    nota: 'Las mallas tomadas de Z-Anatomy y sus derivados en este proyecto se distribuyen bajo CC BY-SA 4.0.',
   },
 };
 
@@ -61,8 +71,10 @@ for (const sistema of sistemas) {
   const { resueltas, pendientes } = resolver(config.estructuras, indice, compuestos);
   console.log(`  ${resueltas.length} estructuras con modelo, ${pendientes.length} pendientes`);
 
+  // Los elementos de Z-Anatomy ya son .glb (exportados con Blender); solo los OBJ se convierten.
   const elementos = resueltas.flatMap((e) => e.elementos);
-  const rutasGlb = await convertirElementos(elementos);
+  const rutasGlb = await convertirElementos(elementos.filter((el) => el.fuente !== 'z-anatomy'));
+  for (const el of elementos.filter((x) => x.fuente === 'z-anatomy')) rutasGlb.set(claveElemento(el), el.ruta);
 
   const doc = await agruparSistema(sistema, resueltas, rutasGlb);
   await io.write(path.join(DIR_AGRUPADO, `${sistema}.glb`), doc);
@@ -84,10 +96,10 @@ for (const sistema of sistemas) {
         nodo: e.id,
         tipo: e.tipo,
         estado: 'disponible',
-        fuente: 'bodyparts3d',
-        fma: [...new Set(e.elementos.map((el) => el.fmaCompuesto ?? el.fma))],
+        fuente: e.fuente,
+        fma: [...new Set(e.elementos.map((el) => el.fmaCompuesto ?? el.fma).filter(Boolean))],
         elementos: e.elementos.map((el) => el.elemento),
-        nombresFuente: [...new Set(e.elementos.map((el) => el.nombreCompuesto ?? el.nombre))],
+        nombresFuente: e.nombresFuente ?? [...new Set(e.elementos.map((el) => el.nombreCompuesto ?? el.nombre))],
         triangulos: sumarTriangulos(despues.porNodo, e.id),
         caja: cajaDe(antes.porNodo, e.id),
         ...(e.revisar ? { revisar: e.revisar } : {}),

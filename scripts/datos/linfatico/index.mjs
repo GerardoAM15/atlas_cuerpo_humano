@@ -1,14 +1,16 @@
-// Sistema linfático e inmune: bazo, arteria esplénica y timo (con modelo); ganglios, conducto torácico y amígdalas (sin modelo).
-import { datosVaso, par, unica } from '../util.mjs';
+// Sistema linfático e inmune: bazo, arteria esplénica y timo (BodyParts3D); ganglios y amígdalas (Z-Anatomy);
+// conducto torácico (sin modelo).
+import { ESQUEMATICO_ZA, REF_ZA, datosVaso, par, unica, zaLados } from '../util.mjs';
 
-const SIN_MODELO = 'BodyParts3D 4.0 no incluye esta estructura. Candidato: Z-Anatomy.';
+const SIN_MODELO = 'No está en BodyParts3D 4.0 ni en Z-Anatomy.';
 const LIN = { material: 'linfatico' };
 
 const ganglios = (id, nombre, latin, ingles, datos) =>
   unica(id, {
     tipo: 'organo',
+    ...LIN,
     region: 'ganglios-conductos',
-    pendienteModelo: SIN_MODELO,
+    notaModelo: ESQUEMATICO_ZA,
     nombre,
     latin,
     ingles,
@@ -46,18 +48,26 @@ export default [
     datosClinicos: 'Los timomas se asocian a la miastenia gravis; su ausencia congénita (síndrome de DiGeorge) causa inmunodeficiencia.',
   }),
   ganglios('ganglios-cervicales', 'Ganglios linfáticos cervicales', 'Nodi lymphoidei cervicales', 'Cervical lymph nodes', {
+    // Grupos cervicales de la TA (anteriores y laterales, superficiales y profundos); sin los de la cabeza.
+    fuenteZA: ['Superficial anterior cervical nodes', 'Paratracheal cervical nodes', 'Superficial lateral cervical nodes.l', 'Superficial lateral cervical nodes.r', 'Inferior deep lateral cervical nodes.l', 'Inferior deep lateral cervical nodes.r', 'Jugulodigastric node.l', 'Jugulodigastric node.r', 'Lateral superior jugular node.l', 'Lateral superior jugular node.r', 'Anterior inferior jugular nodes.l', 'Anterior inferior jugular nodes.r', 'Supraclavicular nodes.l', 'Supraclavicular nodes.r', 'Retropharyngeal nodes.l', 'Retropharyngeal nodes.r', 'Pretracheal nodes.l', 'Pretracheal nodes.r', 'Thyroid nodes.l', 'Thyroid nodes.r'],
+    refZA: REF_ZA.cuelloAmplio,
     descripcion: 'Cadenas de ganglios del cuello, sobre todo a lo largo de la vena yugular interna (cadena yugular profunda).',
     ubicacion: 'Cuello, en torno al esternocleidomastoideo y la vaina carotídea.',
     relacionesExtra: ['yugular-interna-d', 'esternocleidomastoideo-d'],
     datosClinicos: 'Se agrandan en las infecciones de garganta; un ganglio duro y fijo puede indicar metástasis de un cáncer de cabeza y cuello.',
   }),
   ganglios('ganglios-axilares', 'Ganglios linfáticos axilares', 'Nodi lymphoidei axillares', 'Axillary lymph nodes', {
+    // Grupos pectoral (anterior), subescapular (posterior), humeral (lateral), central, apical e interpectoral.
+    fuenteZA: zaLados('Anterior axillary nodes', 'Posterior axillary nodes', 'Lateral axillary nodes', 'Central axillary nodes', 'Apical axillary nodes', 'Interpectoral nodes'),
+    refZA: REF_ZA.axila,
     descripcion: 'Entre 20 y 30 ganglios agrupados en la axila alrededor de los vasos axilares.',
     ubicacion: 'Axila.',
     relacionesExtra: ['arteria-axilar-d', 'pectoral-menor-d'],
     datosClinicos: 'Reciben la mayor parte de la linfa de la mama: la biopsia del ganglio centinela axilar orienta el tratamiento del cáncer de mama.',
   }),
   ganglios('ganglios-inguinales', 'Ganglios linfáticos inguinales', 'Nodi lymphoidei inguinales', 'Inguinal lymph nodes', {
+    fuenteZA: zaLados('Superomedial superficial inguinal nodes', 'Superolateral superficial inguinal nodes', 'Inferior superficial inguinal nodes', '(Intermediate deep inguinal node)', '(Proximal deep inguinal node)'),
+    refZA: REF_ZA.ingle,
     descripcion: 'Grupos superficial y profundo de ganglios en la ingle, en torno a la desembocadura de la vena safena mayor.',
     ubicacion: 'Región inguinal, bajo el ligamento inguinal.',
     relacionesExtra: ['vena-femoral-d', 'vena-safena-mayor-d'],
@@ -78,8 +88,11 @@ export default [
   }),
   unica('amigdalas-palatinas', {
     tipo: 'organo',
+    ...LIN,
     region: 'ganglios-conductos',
-    pendienteModelo: SIN_MODELO,
+    fuenteZA: zaLados('Palatine tonsil'),
+    refZA: REF_ZA.faringe,
+    notaModelo: 'Representación simplificada: Z-Anatomy modela cada amígdala palatina como un ovoide.',
     nombre: 'Amígdalas palatinas',
     latin: 'Tonsillae palatinae',
     ingles: 'Palatine tonsils',

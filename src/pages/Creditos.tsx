@@ -31,6 +31,8 @@ function Enlace({ href, children }: { href: string; children: string }) {
 
 export default function Creditos() {
   const bp3d = MODELOS.fuentes.bodyparts3d;
+  const za = MODELOS.fuentes['z-anatomy'];
+  const deZAnatomy = INDICE.filter((e) => e.fuenteModelo === 'z-anatomy' && !e.lado?.startsWith('izq'));
 
   return (
     <section className="mx-auto w-full max-w-3xl px-4 py-10">
@@ -52,13 +54,24 @@ export default function Creditos() {
           </article>
         )}
 
-        <article className="rounded-lg border border-slate-800 bg-slate-900/50 p-5">
-          <h2 className="text-lg font-semibold text-slate-100">Z-Anatomy</h2>
-          <p className="mt-2">
-            Por ahora el atlas no incluye ningún modelo de Z-Anatomy. Es el complemento previsto para las estructuras que BodyParts3D no tiene (marcadas
-            como «sin modelo»); lo que se incorpore de ahí se distribuirá bajo <Enlace href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</Enlace>.
-          </p>
-        </article>
+        {za && (
+          <article className="rounded-lg border border-slate-800 bg-slate-900/50 p-5">
+            <h2 className="text-lg font-semibold text-slate-100">Modelos 3D: {za.nombre}</h2>
+            <p className="mt-2">«{za.atribucion}».</p>
+            <p className="mt-2">
+              Licencia: <Enlace href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">{za.licencia}</Enlace> (Reconocimiento-CompartirIgual). Fuente:{' '}
+              <Enlace href={za.url}>Z-Anatomy/The-blend</Enlace>, {za.version}.
+            </p>
+            <p className="mt-2">
+              Se usa para las estructuras que BodyParts3D no tiene: {deZAnatomy.map((e) => e.nombre.replace(/ derech[oa]$/, '')).join(', ')}. Estas mallas y sus derivados en este
+              proyecto se distribuyen bajo CC BY-SA 4.0.
+            </p>
+            <p className="mt-2 text-sm text-slate-400">
+              Modificaciones: exportación a glTF con Blender (modificadores aplicados, curvas convertidas en mallas), alineación con BodyParts3D por
+              escala y traslación ajustadas con estructuras vecinas, agrupación por sistema y compresión meshopt.
+            </p>
+          </article>
+        )}
 
         <article className="rounded-lg border border-slate-800 bg-slate-900/50 p-5">
           <h2 className="text-lg font-semibold text-slate-100">Contenido textual</h2>
@@ -92,7 +105,7 @@ export default function Creditos() {
                   <ul className="mt-2 space-y-0.5 text-xs">
                     {conModelo.map((e) => (
                       <li key={e.id}>
-                        {e.nombre} <span className="text-slate-400">— {e.fma?.join(', ')}</span>
+                        {e.nombre} <span className="text-slate-400">— {e.fuenteModelo === 'z-anatomy' ? 'Z-Anatomy (CC BY-SA 4.0)' : e.fma?.join(', ')}</span>
                       </li>
                     ))}
                   </ul>

@@ -1,11 +1,11 @@
-// Sistema reproductor (contenido académico). BodyParts3D modela un varón adulto: el aparato
-// genital femenino no tiene modelo y queda pendiente.
-import { datosVaso, par, unica } from '../util.mjs';
+// Sistema reproductor (contenido académico). BodyParts3D y Z-Anatomy modelan un varón adulto: el aparato
+// genital femenino no tiene modelo y queda pendiente. Los conductos deferentes vienen de Z-Anatomy.
+import { REF_ZA, datosVaso, par, unica, zaLados } from '../util.mjs';
 
 const MASC = 'masculino';
 const FEM = 'femenino';
-const SIN_MODELO = 'BodyParts3D 4.0 no incluye esta estructura. Candidato: Z-Anatomy.';
-const SIN_FEMENINO = 'El modelo de BodyParts3D es masculino y no incluye el aparato genital femenino. Candidato: Z-Anatomy.';
+const SIN_MODELO = 'No está en BodyParts3D 4.0 ni en Z-Anatomy.';
+const SIN_FEMENINO = 'BodyParts3D 4.0 y Z-Anatomy modelan un varón: no incluyen el aparato genital femenino.';
 
 const masculino = [
   ...par('testiculo', 'm', {
@@ -39,8 +39,10 @@ const masculino = [
   }),
   unica('conducto-deferente', {
     tipo: 'organo',
+    material: 'organo',
     region: MASC,
-    pendienteModelo: SIN_MODELO,
+    fuenteZA: zaLados('Ductus deferens'),
+    refZA: REF_ZA.genitalMasculino,
     nombre: 'Conductos deferentes',
     latin: 'Ductus deferens',
     ingles: 'Ductus deferens',
@@ -119,6 +121,32 @@ const masculino = [
     ubicacion: 'Extremo distal del pene, cubierto por el prepucio.',
     relacionesExtra: ['cuerpo-esponjoso', 'uretra'],
     datosClinicos: 'En el hipospadias el meato se abre en la cara ventral del pene en lugar de en el vértice del glande.',
+  }),
+  ...par('glandula-bulbouretral', 'f', {
+    tipo: 'glandula',
+    region: MASC,
+    pendienteModelo: SIN_MODELO,
+    nombre: 'Glándula bulbouretral {lado}',
+    latin: 'Glandula bulbourethralis',
+    ingles: '{Side} bulbourethral gland',
+    descripcion: 'Glándula del tamaño de un guisante (glándula de Cowper) situada en el espacio profundo del periné, junto a la uretra membranosa.',
+    funcion: 'Secreta un moco claro y alcalino (líquido preeyaculatorio) que lubrica la uretra y neutraliza su acidez.',
+    ubicacion: 'Espacio profundo del periné, a cada lado de la uretra membranosa; su conducto desemboca en la uretra esponjosa.',
+    relacionesExtra: ['uretra', 'prostata', 'cuerpo-esponjoso'],
+    datosClinicos: 'Su equivalente femenino son las glándulas vestibulares mayores (de Bartholin), en las que se forman quistes y abscesos.',
+  }),
+  unica('escroto', {
+    tipo: 'organo',
+    region: MASC,
+    pendienteModelo: SIN_MODELO,
+    nombre: 'Escroto',
+    latin: 'Scrotum',
+    ingles: 'Scrotum',
+    descripcion: 'Bolsa de piel y músculo liso (dartos) dividida por un tabique en dos compartimentos, cada uno con un testículo.',
+    funcion: 'Aloja los testículos y los mantiene 2–3 °C por debajo de la temperatura corporal, necesario para la espermatogénesis (músculos dartos y cremáster).',
+    ubicacion: 'Debajo del pene, entre los muslos.',
+    relacionesExtra: ['testiculo-d', 'testiculo-i', 'epididimo-d', 'epididimo-i'],
+    datosClinicos: 'El hidrocele (líquido en la túnica vaginal) se transilumina; una hernia inguinal indirecta puede descender hasta el escroto.',
   }),
   // Vasos del testículo y del pene.
   ...par('arteria-testicular', 'f', {

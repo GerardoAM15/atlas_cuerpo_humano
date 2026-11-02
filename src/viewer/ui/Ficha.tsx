@@ -169,9 +169,10 @@ export default function Ficha({ onCerrar }: { onCerrar?: () => void }) {
         <DetalleFicha e={e} />
       )}
 
-      {!pendiente && r.fma && (
+      {!pendiente && (
         <p className="mt-4 text-[11px] text-slate-400">
-          Modelo: BodyParts3D · {r.fma.join(', ')}
+          {r.fuenteModelo === 'z-anatomy' ? 'Modelo: Z-Anatomy (CC BY-SA 4.0)' : `Modelo: BodyParts3D${r.fma ? ` · ${r.fma.join(', ')}` : ''}`}
+          {r.notaModelo && <span className="mt-1 block text-amber-200/90">{r.notaModelo}</span>}
         </p>
       )}
     </article>

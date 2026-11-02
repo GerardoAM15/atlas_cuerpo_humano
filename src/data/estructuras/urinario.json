@@ -48,6 +48,48 @@
     ]
   },
   {
+    "id": "pelvis-renal-d",
+    "nodoModelo": null,
+    "tipo": "organo",
+    "sistema": "urinario",
+    "lado": "derecho",
+    "region": "rinones",
+    "nombre": "Pelvis renal y cálices derecha",
+    "latin": "Pelvis renalis et calices renales",
+    "ingles": "Right renal pelvis and calyces",
+    "descripcion": "Embudo membranoso del seno renal que recoge la orina: los cálices menores rodean las papilas de las pirámides y confluyen en 2–3 cálices mayores, que forman la pelvis.",
+    "funcion": "Recoge la orina que sale de las papilas renales y la conduce al uréter mediante contracciones peristálticas.",
+    "ubicacion": "Seno e hilio renal; la pelvis se continúa con el uréter en la unión pieloureteral.",
+    "datosClinicos": "Los cálculos coraliformes ocupan la pelvis y los cálices; la obstrucción de la unión pieloureteral dilata la pelvis (hidronefrosis).",
+    "relaciones": [
+      "rinon-d",
+      "ureter-d",
+      "division-anterior-arteria-renal-d",
+      "division-posterior-arteria-renal-d"
+    ]
+  },
+  {
+    "id": "pelvis-renal-i",
+    "nodoModelo": null,
+    "tipo": "organo",
+    "sistema": "urinario",
+    "lado": "izquierdo",
+    "region": "rinones",
+    "nombre": "Pelvis renal y cálices izquierda",
+    "latin": "Pelvis renalis et calices renales",
+    "ingles": "Left renal pelvis and calyces",
+    "descripcion": "Embudo membranoso del seno renal que recoge la orina: los cálices menores rodean las papilas de las pirámides y confluyen en 2–3 cálices mayores, que forman la pelvis.",
+    "funcion": "Recoge la orina que sale de las papilas renales y la conduce al uréter mediante contracciones peristálticas.",
+    "ubicacion": "Seno e hilio renal; la pelvis se continúa con el uréter en la unión pieloureteral.",
+    "datosClinicos": "Los cálculos coraliformes ocupan la pelvis y los cálices; la obstrucción de la unión pieloureteral dilata la pelvis (hidronefrosis).",
+    "relaciones": [
+      "rinon-i",
+      "ureter-i",
+      "division-anterior-arteria-renal-i",
+      "division-posterior-arteria-renal-i"
+    ]
+  },
+  {
     "id": "ureter-d",
     "nodoModelo": "ureter-d",
     "tipo": "organo",

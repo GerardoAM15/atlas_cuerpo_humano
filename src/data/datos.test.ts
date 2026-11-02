@@ -152,3 +152,38 @@ describe('índice y resumen de modelos (lo que la app carga al inicio)', () => {
     for (const [id, s] of Object.entries(MANIFEST.sistemas)) expect(MODELOS.sistemas[id], id).toMatchObject({ archivo: s.archivo, bytes: s.bytes, triangulos: s.triangulos });
   });
 });
+
+describe('modelos de Z-Anatomy (CC BY-SA 4.0)', () => {
+  const deZA = Object.values(MANIFEST.sistemas).flatMap((s) => s.estructuras.filter((e) => e.estado === 'disponible' && e.fuente === 'z-anatomy'));
+
+  it('cada estructura disponible declara una fuente conocida con su licencia', () => {
+    for (const s of Object.values(MANIFEST.sistemas)) {
+      for (const e of s.estructuras) if (e.estado === 'disponible') expect(MANIFEST.fuentes[e.fuente], e.id).toBeDefined();
+    }
+    expect(MANIFEST.fuentes['z-anatomy']?.licencia).toBe('CC BY-SA 4.0');
+  });
+
+  it('el índice marca la fuente del modelo para la ficha y los créditos', () => {
+    expect(deZA.length).toBeGreaterThan(0);
+    for (const e of deZA) expect(INDICE_POR_ID.get(e.id)?.fuenteModelo, e.id).toBe('z-anatomy');
+  });
+
+  it('las estructuras de Z-Anatomy quedan alineadas en su región', () => {
+    const y = (id: string) => cajaDe(id)!;
+    // Amígdalas palatinas entre el hioides y el paladar; ganglios inguinales a la altura de los coxales.
+    expect(y('amigdalas-palatinas').min[1]).toBeGreaterThan(y('hioides').max[1]!);
+    expect(y('amigdalas-palatinas').max[1]).toBeLessThan(y('paladar-blando').max[1]! + 0.01);
+    expect(y('ganglios-inguinales').max[1]).toBeLessThan(y('coxal-d').max[1]!);
+    expect(y('ganglios-inguinales').min[1]).toBeGreaterThan(y('femur-d').min[1]!);
+    // Conductos deferentes: del epidídimo (abajo) a la próstata y las vesículas seminales.
+    expect(y('conducto-deferente').min[1]).toBeLessThan(y('epididimo-d').max[1]!);
+    expect(y('conducto-deferente').max[1]).toBeGreaterThan(y('vesicula-seminal-d').max[1]!);
+  });
+
+  it('no se usan los modelos de Z-Anatomy descartados (licencia o posición)', () => {
+    for (const id of ['tiroides', 'paratiroides', 'pelvis-renal-d', 'pelvis-renal-i']) {
+      expect(INDICE_POR_ID.get(id)?.nodoModelo, id).toBeNull();
+      expect(INDICE_POR_ID.get(id)?.motivo, id).toMatch(/Z-Anatomy/);
+    }
+  });
+});

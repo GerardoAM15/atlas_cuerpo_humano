@@ -7,7 +7,7 @@ Proyecto personal de estudio. Licencia del código: por definir por el autor.
 | Fuente | Licencia | Uso |
 |---|---|---|
 | BodyParts3D 4.0, © The Database Center for Life Science (DBCLS) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | Fuente principal (OBJ por estructura, IDs FMA) |
-| Z-Anatomy | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | Complemento (aún no usado) |
+| Z-Anatomy (plantilla de Blender, [Z-Anatomy/The-blend](https://github.com/Z-Anatomy/The-blend)) | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | Complemento: ganglios linfáticos, amígdalas palatinas y conductos deferentes |
 
 ### BodyParts3D
 Atribución exigida por el licenciante:
@@ -21,7 +21,14 @@ Atribución exigida por el licenciante:
   simplificaron y se comprimieron. Ver [PIPELINE.md](PIPELINE.md).
 
 ### Z-Anatomy
-Si se incorporan modelos de Z-Anatomy (p. ej. huesecillos del oído o cóccix), sus derivados deberán
+Atribución: «Z-Anatomy — The libre 3D atlas of anatomy — CC BY-SA 4.0». Los `.glb` que contienen mallas de Z-Anatomy
+(linfático y reproductor) y sus derivados se distribuyen bajo **CC BY-SA 4.0**. Ojo: Z-Anatomy
+declara haber adaptado modelos con licencia no comercial (riñón de Lissie Cowley, CC BY-NC 4.0; oído interno de la
+Universidad de Dundee, CC BY-NC-SA 4.0); no se debe tomar de Z-Anatomy nada que pueda derivar de ellos. Por eso **no se
+usa su pelvis renal con los cálices**: su riñón es idéntico al de BodyParts3D, y la pelvis, lo añadido, podría proceder
+del modelo no comercial.
+
+Si se incorporan más modelos de Z-Anatomy (p. ej. huesecillos del oído o cóccix), sus derivados deberán
 distribuirse bajo **CC BY-SA 4.0** (cláusula *CompartirIgual*) y añadirse a la página de créditos.
 
 ## Software
