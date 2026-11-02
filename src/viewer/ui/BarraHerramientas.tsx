@@ -53,6 +53,8 @@ export default function BarraHerramientas() {
   const setExplosion = useAtlasStore((s) => s.setExplosion);
   const etiquetas = useAtlasStore((s) => s.etiquetas);
   const setEtiquetas = useAtlasStore((s) => s.setEtiquetas);
+  const medirFps = useAtlasStore((s) => s.medirFps);
+  const setMedirFps = useAtlasStore((s) => s.setMedirFps);
   const ocultas = useAtlasStore((s) => s.ocultas);
   const aislar = useAtlasStore((s) => s.aislar);
   const mostrarTodas = useAtlasStore((s) => s.mostrarTodas);
@@ -151,6 +153,16 @@ export default function BarraHerramientas() {
 
       <button type="button" onClick={() => setEtiquetas(!etiquetas)} aria-pressed={etiquetas} className={boton(etiquetas)}>
         Etiquetas
+      </button>
+
+      <button
+        type="button"
+        onClick={() => setMedirFps(!medirFps)}
+        aria-pressed={medirFps}
+        title="Mide el rendimiento: gira la cámara sin parar y muestra los fotogramas por segundo"
+        className={boton(medirFps)}
+      >
+        FPS
       </button>
 
       {(ocultas.length > 0 || aislar) && (

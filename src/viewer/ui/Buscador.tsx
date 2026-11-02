@@ -1,10 +1,14 @@
-import { useId, useMemo, useState } from 'react';
-import { crearBuscador } from '@/data/busqueda';
-import { ESTRUCTURAS } from '@/data/catalogo';
+import { useEffect, useId, useMemo, useState } from 'react';
+import { INDICE } from '@/data/catalogo';
+import type { ResumenEstructura } from '@/data/esquemas';
 import { useAtlasStore } from '@/store/useAtlasStore';
 import { claveRegion } from '../escena';
 
-const buscar = crearBuscador(ESTRUCTURAS);
+type Buscar = (consulta: string, limite?: number) => ResumenEstructura[];
+
+// El índice de Fuse.js (y la propia librería) se crean la primera vez que se usa el buscador.
+let buscador: Promise<Buscar> | null = null;
+const cargarBuscador = () => (buscador ??= import('@/data/busqueda').then((m) => m.crearBuscador(INDICE)));
 
 /** Búsqueda difusa con autocompletado (español, latín e inglés). Patrón ARIA combobox. */
 export default function Buscador() {
@@ -13,7 +17,19 @@ export default function Buscador() {
   const [abierto, setAbierto] = useState(false);
   const seleccionar = useAtlasStore((s) => s.seleccionar);
   const idLista = useId();
-  const resultados = useMemo(() => buscar(texto, 8), [texto]);
+  const [buscar, setBuscar] = useState<Buscar | null>(null);
+  const resultados = useMemo(() => buscar?.(texto, 8) ?? [], [buscar, texto]);
+
+  useEffect(() => {
+    if (!abierto || buscar) return;
+    let vigente = true;
+    cargarBuscador()
+      .then((b) => vigente && setBuscar(() => b))
+      .catch((e: unknown) => console.error(e));
+    return () => {
+      vigente = false;
+    };
+  }, [abierto, buscar]);
 
   const elegir = (i: number) => {
     const e = resultados[i];
@@ -62,7 +78,7 @@ export default function Buscador() {
             setAbierto(false);
           }
         }}
-        className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500 focus:border-sky-500 focus:outline-none"
+        className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-400 focus:border-sky-500 focus:outline-none"
       />
       {mostrarLista && (
         <ul
@@ -70,7 +86,7 @@ export default function Buscador() {
           role="listbox"
           className="absolute z-30 mt-1 max-h-80 w-full overflow-auto rounded-lg border border-slate-700 bg-slate-900 py-1 shadow-xl"
         >
-          {resultados.length === 0 && <li className="px-3 py-2 text-sm text-slate-500">Sin resultados</li>}
+          {resultados.length === 0 && <li className="px-3 py-2 text-sm text-slate-400">{buscar ? 'Sin resultados' : 'Preparando la búsqueda…'}</li>}
           {resultados.map((e, i) => (
             <li
               key={e.id}
@@ -86,7 +102,7 @@ export default function Buscador() {
                 {e.nombre}
                 {e.nodoModelo === null && <span className="ml-2 text-[10px] text-amber-400">sin modelo</span>}
               </p>
-              <p className="text-xs text-slate-500">
+              <p className="text-xs text-slate-400">
                 <i>{e.latin}</i> · {e.ingles}
               </p>
             </li>

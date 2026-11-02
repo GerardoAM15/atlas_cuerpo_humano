@@ -245,7 +245,7 @@ export default function CicloCardiaco() {
             alto={220}
             ancho={400}
           />
-          <p className="text-[11px] text-slate-500">
+          <p className="text-[11px] text-slate-400">
             En el bucle: el lado derecho (vertical) es la contracción isovolumétrica, el superior la eyección, el izquierdo la relajación
             isovolumétrica y el inferior el llenado. El área encerrada es el trabajo sistólico.
           </p>
@@ -291,7 +291,7 @@ export default function CicloCardiaco() {
                 {(periodo - ((ts[1]!.fin - ts[1]!.inicio) + (ts[2]!.fin - ts[2]!.inicio))).toFixed(2)} s
               </dd>
             </dl>
-            <p className="mt-2 text-[11px] text-slate-500">
+            <p className="mt-2 text-[11px] text-slate-400">
               Modelo simplificado: el volumen sistólico se mantiene fijo al cambiar la frecuencia (en realidad depende del llenado y de la contractilidad).
             </p>
           </section>

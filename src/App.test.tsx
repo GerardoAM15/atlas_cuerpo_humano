@@ -18,6 +18,13 @@ describe('router', () => {
     expect(screen.getAllByRole('link', { name: 'Atlas 3D' }).length).toBeGreaterThan(0);
   });
 
+  it('la portada no muestra etiquetas de fase y ofrece instalar y usar sin conexión', () => {
+    renderEn('/');
+    expect(screen.queryByText(/Fase \d/)).not.toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /Instalar/ })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Usar sin conexión' })).toBeInTheDocument();
+  });
+
   it.each([
     ['/simulaciones', /Simulaciones fisiológicas/],
     ['/estudio', /Modo estudio/],

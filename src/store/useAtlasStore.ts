@@ -39,6 +39,8 @@ export interface EstadoAtlas {
   comandoCamara: ComandoCamara | null;
   /** Modo quiz: sin etiqueta de hover ni pines (revelarían la respuesta) y sin acercar la cámara al hacer clic. */
   modoQuiz: boolean;
+  /** Medidor de FPS: render continuo con la cámara girando (no se guarda). */
+  medirFps: boolean;
 
   alternarSistema: (id: SistemaId) => void;
   setOpacidad: (id: SistemaId, valor: number) => void;
@@ -55,6 +57,7 @@ export interface EstadoAtlas {
   setCorte: (cambios: Partial<Corte>) => void;
   setExplosion: (cambios: Partial<EstadoAtlas['explosion']>) => void;
   setEtiquetas: (v: boolean) => void;
+  setMedirFps: (v: boolean) => void;
   setRegionActiva: (region: string | null) => void;
   vista: (vista: Vista) => void;
   enfocar: (id: string) => void;
@@ -95,6 +98,7 @@ export const useAtlasStore = create<EstadoAtlas>()(
       regionActiva: null,
       comandoCamara: null,
       modoQuiz: false,
+      medirFps: false,
 
       alternarSistema: (id) =>
         set((s) => ({ sistemasVisibles: { ...s.sistemasVisibles, [id]: !s.sistemasVisibles[id] } })),
@@ -131,6 +135,7 @@ export const useAtlasStore = create<EstadoAtlas>()(
           },
         })),
       setEtiquetas: (v) => set({ etiquetas: v }),
+      setMedirFps: (v) => set({ medirFps: v }),
       setRegionActiva: (region) => set({ regionActiva: region }),
       vista: (vista) => set({ comandoCamara: { tipo: 'vista', vista, n: n() } }),
       enfocar: (id) => set({ comandoCamara: { tipo: 'enfocar', id, n: n() } }),

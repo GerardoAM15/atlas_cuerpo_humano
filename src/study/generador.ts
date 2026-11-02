@@ -1,7 +1,7 @@
 // Generador de preguntas de estudio a partir de las fichas (determinista con una semilla).
-import { normalizar } from '@/data/busqueda';
-import { ESTRUCTURAS } from '@/data/catalogo';
-import type { Estructura, EstructuraMusculo } from '@/data/esquemas';
+import { normalizar } from '@/data/texto';
+import { INDICE, fichaDe } from '@/data/catalogo';
+import type { EstructuraMusculo } from '@/data/esquemas';
 import { conceptosEn, nombreBase, type Alcance, type Concepto } from './conceptos';
 
 export type TipoPregunta = 'encontrar' | 'que-es' | 'funcion' | 'origen-insercion' | 'inervacion';
@@ -71,7 +71,12 @@ export function crearAzar(semilla: number) {
 type Azar = ReturnType<typeof crearAzar>;
 
 // ---------------------------------------------------------------- Aplicabilidad
-const esMusculo = (e: Estructura): e is EstructuraMusculo => e.tipo === 'musculo';
+// Las preguntas de texto leen la ficha completa: las fichas del alcance deben estar cargadas
+// (`cargarSistemas`); sin ficha, la pregunta no se puede construir y no se ofrece.
+const fichaMusculo = (c: Concepto): EstructuraMusculo | undefined => {
+  const f = fichaDe(c.e.id);
+  return f?.tipo === 'musculo' ? f : undefined;
+};
 
 /** Nervio principal de una inervación: «Nervio femoral (L2–L4).» → «nervio femoral». */
 export const claveNervio = (s: string) => normalizar(s.split(/[(,;.]/)[0] ?? s).trim();
@@ -81,12 +86,14 @@ function aplicable(tipo: TipoPregunta, c: Concepto): boolean {
     case 'encontrar':
     case 'que-es':
       return c.tieneModelo;
-    case 'funcion':
+    case 'funcion': {
       // Se descarta si el texto de la función delata el nombre.
-      return !normalizar(c.e.funcion).includes(normalizar(c.nombre.split(' (')[0]!));
+      const f = fichaDe(c.e.id);
+      return f !== undefined && !normalizar(f.funcion).includes(normalizar(c.nombre.split(' (')[0]!));
+    }
     case 'origen-insercion':
     case 'inervacion':
-      return esMusculo(c.e);
+      return fichaMusculo(c) !== undefined;
   }
 }
 
@@ -135,7 +142,7 @@ function construir(tipo: TipoPregunta, c: Concepto, n: number, cfg: ConfigQuiz, 
 
   if (tipo === 'que-es') {
     const e = azar.elegir(conModelo);
-    const candidatas = ESTRUCTURAS.filter((x) => x.nodoModelo !== null && cfg.alcance.sistemas.includes(x.sistema) && x.id !== e.id);
+    const candidatas = INDICE.filter((x) => x.nodoModelo !== null && cfg.alcance.sistemas.includes(x.sistema) && x.id !== e.id);
     const grupos = gruposPorDificultad(e, candidatas, cfg.dificultad, (x) => x.tipo === e.tipo);
     // En difícil, el mismo hueso del otro lado es el distractor más traicionero.
     const opuesto = e.lado ? c.lados.filter((x) => x.id !== e.id && x.nodoModelo !== null) : [];
@@ -162,14 +169,14 @@ function construir(tipo: TipoPregunta, c: Concepto, n: number, cfg: ConfigQuiz, 
       ...base,
       objetivo: c.e.id,
       enunciado: '¿Qué estructura cumple esta función?',
-      detalle: c.e.funcion,
+      detalle: fichaDe(c.e.id)!.funcion,
       opciones: azar.barajar([c, ...dist]).map(deConcepto),
       correcta: c.id,
     };
   }
 
-  const musculo = c.e as EstructuraMusculo;
-  const musculos = candidatos.filter((x) => esMusculo(x.e));
+  const musculo = fichaMusculo(c)!;
+  const musculos = candidatos.filter((x) => fichaMusculo(x) !== undefined);
 
   if (tipo === 'origen-insercion') {
     const grupos = gruposPorDificultad(c, musculos, cfg.dificultad, () => true);
@@ -187,7 +194,7 @@ function construir(tipo: TipoPregunta, c: Concepto, n: number, cfg: ConfigQuiz, 
 
   // Inervación: las opciones son nervios; se descartan los que coinciden con el del objetivo.
   const grupos = gruposPorDificultad(c, musculos, cfg.dificultad, () => true);
-  const inerv = (x: Concepto) => (x.e as EstructuraMusculo).inervacion;
+  const inerv = (x: Concepto) => fichaMusculo(x)!.inervacion;
   const dist = elegirDistractores(azar, c, grupos, inerv, (x) => claveNervio(inerv(x)));
   if (dist.length < 3) return null;
   return {

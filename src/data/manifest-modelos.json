@@ -4361,8 +4361,8 @@
     },
     "endocrino": {
       "archivo": "models/endocrino.glb",
-      "bytes": 60308,
-      "triangulos": 8034,
+      "bytes": 122784,
+      "triangulos": 13192,
       "estructuras": [
         {
           "id": "hipofisis",
@@ -4477,6 +4477,238 @@
               0.0755,
               1.1082,
               0.0833
+            ]
+          }
+        },
+        {
+          "id": "arteria-tiroidea-inferior-d",
+          "nodo": "arteria-tiroidea-inferior-d",
+          "tipo": "vaso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA10697"
+          ],
+          "elementos": [
+            "FJ2209"
+          ],
+          "nombresFuente": [
+            "Right inferior thyroid artery"
+          ],
+          "triangulos": 482,
+          "caja": {
+            "min": [
+              -0.0434,
+              1.3575,
+              0.0977
+            ],
+            "max": [
+              -0.0287,
+              1.3909,
+              0.1058
+            ]
+          }
+        },
+        {
+          "id": "arteria-tiroidea-inferior-i",
+          "nodo": "arteria-tiroidea-inferior-i",
+          "tipo": "vaso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA10680"
+          ],
+          "elementos": [
+            "FJ2210"
+          ],
+          "nombresFuente": [
+            "Left inferior thyroid artery"
+          ],
+          "triangulos": 480,
+          "caja": {
+            "min": [
+              0.0288,
+              1.3575,
+              0.0977
+            ],
+            "max": [
+              0.0434,
+              1.3909,
+              0.1058
+            ]
+          }
+        },
+        {
+          "id": "arteria-suprarrenal-media-d",
+          "nodo": "arteria-suprarrenal-media-d",
+          "tipo": "vaso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA14755"
+          ],
+          "elementos": [
+            "FJ3586"
+          ],
+          "nombresFuente": [
+            "Right middle suprarenal artery"
+          ],
+          "triangulos": 654,
+          "caja": {
+            "min": [
+              -0.0549,
+              1.0553,
+              0.0806
+            ],
+            "max": [
+              0.0066,
+              1.0787,
+              0.1108
+            ]
+          }
+        },
+        {
+          "id": "arteria-suprarrenal-media-i",
+          "nodo": "arteria-suprarrenal-media-i",
+          "tipo": "vaso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA14756"
+          ],
+          "elementos": [
+            "FJ3472"
+          ],
+          "nombresFuente": [
+            "Left middle suprarenal artery"
+          ],
+          "triangulos": 552,
+          "caja": {
+            "min": [
+              0.0087,
+              1.0562,
+              0.0661
+            ],
+            "max": [
+              0.0584,
+              1.0973,
+              0.1118
+            ]
+          }
+        },
+        {
+          "id": "arteria-suprarrenal-inferior-d",
+          "nodo": "arteria-suprarrenal-inferior-d",
+          "tipo": "vaso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA69265"
+          ],
+          "elementos": [
+            "FJ3584"
+          ],
+          "nombresFuente": [
+            "Right inferior suprarenal artery"
+          ],
+          "triangulos": 754,
+          "caja": {
+            "min": [
+              -0.0701,
+              1.0303,
+              0.0755
+            ],
+            "max": [
+              -0.0298,
+              1.0715,
+              0.1037
+            ]
+          }
+        },
+        {
+          "id": "arteria-suprarrenal-inferior-i",
+          "nodo": "arteria-suprarrenal-inferior-i",
+          "tipo": "vaso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA69266"
+          ],
+          "elementos": [
+            "FJ3467"
+          ],
+          "nombresFuente": [
+            "Left inferior suprarenal artery"
+          ],
+          "triangulos": 954,
+          "caja": {
+            "min": [
+              0.0221,
+              1.0402,
+              0.0684
+            ],
+            "max": [
+              0.076,
+              1.0882,
+              0.1065
+            ]
+          }
+        },
+        {
+          "id": "vena-suprarrenal-d",
+          "nodo": "vena-suprarrenal-d",
+          "tipo": "vaso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA14343"
+          ],
+          "elementos": [
+            "FJ3580"
+          ],
+          "nombresFuente": [
+            "Right suprarenal vein"
+          ],
+          "triangulos": 608,
+          "caja": {
+            "min": [
+              -0.0456,
+              1.0373,
+              0.0878
+            ],
+            "max": [
+              -0.0185,
+              1.0866,
+              0.1156
+            ]
+          }
+        },
+        {
+          "id": "vena-suprarrenal-i",
+          "nodo": "vena-suprarrenal-i",
+          "tipo": "vaso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA14349"
+          ],
+          "elementos": [
+            "FJ3480"
+          ],
+          "nombresFuente": [
+            "Left suprarenal vein"
+          ],
+          "triangulos": 674,
+          "caja": {
+            "min": [
+              0.0269,
+              1.0376,
+              0.0698
+            ],
+            "max": [
+              0.044,
+              1.103,
+              0.0892
             ]
           }
         },
@@ -11419,8 +11651,8 @@
     },
     "linfatico": {
       "archivo": "models/linfatico.glb",
-      "bytes": 30104,
-      "triangulos": 3410,
+      "bytes": 100832,
+      "triangulos": 9854,
       "estructuras": [
         {
           "id": "bazo",
@@ -11506,6 +11738,38 @@
               0.0218,
               1.3167,
               0.1593
+            ]
+          }
+        },
+        {
+          "id": "arteria-esplenica",
+          "nodo": "arteria-esplenica",
+          "tipo": "vaso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA14773"
+          ],
+          "elementos": [
+            "FJ2562",
+            "FJ3420",
+            "FJ3544",
+            "FJ3640"
+          ],
+          "nombresFuente": [
+            "Splenic artery"
+          ],
+          "triangulos": 6444,
+          "caja": {
+            "min": [
+              0.0019,
+              1.0596,
+              0.0804
+            ],
+            "max": [
+              0.1005,
+              1.0946,
+              0.1376
             ]
           }
         },
@@ -20079,8 +20343,8 @@
     },
     "reproductor": {
       "archivo": "models/reproductor.glb",
-      "bytes": 57580,
-      "triangulos": 5130,
+      "bytes": 508796,
+      "triangulos": 75634,
       "estructuras": [
         {
           "id": "testiculo-d",
@@ -20369,6 +20633,240 @@
               0.0142,
               0.7381,
               0.2009
+            ]
+          }
+        },
+        {
+          "id": "arteria-testicular-d",
+          "nodo": "arteria-testicular-d",
+          "tipo": "vaso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA14759"
+          ],
+          "elementos": [
+            "FJ3617"
+          ],
+          "nombresFuente": [
+            "Right testicular artery"
+          ],
+          "triangulos": 12938,
+          "caja": {
+            "min": [
+              -0.0676,
+              0.6894,
+              0.08
+            ],
+            "max": [
+              0.0057,
+              1.0269,
+              0.1493
+            ]
+          }
+        },
+        {
+          "id": "arteria-testicular-i",
+          "nodo": "arteria-testicular-i",
+          "tipo": "vaso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA14760"
+          ],
+          "elementos": [
+            "FJ3532"
+          ],
+          "nombresFuente": [
+            "Left testicular artery"
+          ],
+          "triangulos": 12420,
+          "caja": {
+            "min": [
+              0.0075,
+              0.6894,
+              0.0849
+            ],
+            "max": [
+              0.0698,
+              1.025,
+              0.1491
+            ]
+          }
+        },
+        {
+          "id": "vena-testicular-d",
+          "nodo": "vena-testicular-d",
+          "tipo": "vaso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA14341"
+          ],
+          "elementos": [
+            "FJ3618"
+          ],
+          "nombresFuente": [
+            "Right testicular vein"
+          ],
+          "triangulos": 13640,
+          "caja": {
+            "min": [
+              -0.0697,
+              0.6894,
+              0.0793
+            ],
+            "max": [
+              -0.0118,
+              1.0222,
+              0.1495
+            ]
+          }
+        },
+        {
+          "id": "vena-testicular-i",
+          "nodo": "vena-testicular-i",
+          "tipo": "vaso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA14345"
+          ],
+          "elementos": [
+            "FJ3533"
+          ],
+          "nombresFuente": [
+            "Left testicular vein"
+          ],
+          "triangulos": 14488,
+          "caja": {
+            "min": [
+              0.0133,
+              0.6897,
+              0.0852
+            ],
+            "max": [
+              0.0725,
+              1.0361,
+              0.1493
+            ]
+          }
+        },
+        {
+          "id": "arteria-dorsal-pene-d",
+          "nodo": "arteria-dorsal-pene-d",
+          "tipo": "vaso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA20818"
+          ],
+          "elementos": [
+            "FJ3592",
+            "FJ3593"
+          ],
+          "nombresFuente": [
+            "Right dorsal artery of penis"
+          ],
+          "triangulos": 6650,
+          "caja": {
+            "min": [
+              -0.0263,
+              0.7334,
+              0.0662
+            ],
+            "max": [
+              -0.003,
+              0.7893,
+              0.1939
+            ]
+          }
+        },
+        {
+          "id": "arteria-dorsal-pene-i",
+          "nodo": "arteria-dorsal-pene-i",
+          "tipo": "vaso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA20819"
+          ],
+          "elementos": [
+            "FJ3496",
+            "FJ3497"
+          ],
+          "nombresFuente": [
+            "Left dorsal artery of penis"
+          ],
+          "triangulos": 6532,
+          "caja": {
+            "min": [
+              0.0031,
+              0.7331,
+              0.0663
+            ],
+            "max": [
+              0.0263,
+              0.7892,
+              0.1942
+            ]
+          }
+        },
+        {
+          "id": "vena-dorsal-profunda-pene",
+          "nodo": "vena-dorsal-profunda-pene",
+          "tipo": "vaso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA21354"
+          ],
+          "elementos": [
+            "FJ2056"
+          ],
+          "nombresFuente": [
+            "Deep dorsal vein of penis"
+          ],
+          "triangulos": 2356,
+          "caja": {
+            "min": [
+              -0.0051,
+              0.7142,
+              0.1023
+            ],
+            "max": [
+              0.0051,
+              0.7941,
+              0.179
+            ]
+          }
+        },
+        {
+          "id": "vena-dorsal-superficial-pene",
+          "nodo": "vena-dorsal-superficial-pene",
+          "tipo": "vaso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA21384"
+          ],
+          "elementos": [
+            "FJ2208"
+          ],
+          "nombresFuente": [
+            "Superficial dorsal vein of penis"
+          ],
+          "triangulos": 1480,
+          "caja": {
+            "min": [
+              -0.001,
+              0.7143,
+              0.1436
+            ],
+            "max": [
+              0.001,
+              0.7933,
+              0.1867
             ]
           }
         },
@@ -22145,8 +22643,8 @@
     },
     "urinario": {
       "archivo": "models/urinario.glb",
-      "bytes": 78772,
-      "triangulos": 9944,
+      "bytes": 336412,
+      "triangulos": 38924,
       "estructuras": [
         {
           "id": "rinon-d",
@@ -22321,6 +22819,318 @@
               0.1842
             ]
           }
+        },
+        {
+          "id": "division-anterior-arteria-renal-d",
+          "nodo": "division-anterior-arteria-renal-d",
+          "tipo": "vaso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA70486"
+          ],
+          "elementos": [
+            "FJ3558",
+            "FJ3559",
+            "FJ3560",
+            "FJ3561",
+            "FJ3562",
+            "FJ3563"
+          ],
+          "nombresFuente": [
+            "Anterior division of right renal artery"
+          ],
+          "triangulos": 9040,
+          "caja": {
+            "min": [
+              -0.0735,
+              0.9805,
+              0.0793
+            ],
+            "max": [
+              -0.0329,
+              1.0591,
+              0.1037
+            ]
+          }
+        },
+        {
+          "id": "division-anterior-arteria-renal-i",
+          "nodo": "division-anterior-arteria-renal-i",
+          "tipo": "vaso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA70487"
+          ],
+          "elementos": [
+            "FJ3458",
+            "FJ3459",
+            "FJ3460",
+            "FJ3461",
+            "FJ3462",
+            "FJ3463"
+          ],
+          "nombresFuente": [
+            "Anterior division of left renal artery"
+          ],
+          "triangulos": 11408,
+          "caja": {
+            "min": [
+              0.0271,
+              0.9968,
+              0.0716
+            ],
+            "max": [
+              0.0816,
+              1.0752,
+              0.1103
+            ]
+          }
+        },
+        {
+          "id": "arteria-segmento-superior-rinon-d",
+          "nodo": "arteria-segmento-superior-rinon-d",
+          "tipo": "vaso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA86340"
+          ],
+          "elementos": [
+            "FJ2042"
+          ],
+          "nombresFuente": [
+            "Superior segmental branch of right renal artery"
+          ],
+          "triangulos": 296,
+          "caja": {
+            "min": [
+              -0.069,
+              1.0302,
+              0.0637
+            ],
+            "max": [
+              -0.0576,
+              1.0731,
+              0.0897
+            ]
+          }
+        },
+        {
+          "id": "arteria-segmento-superior-rinon-i",
+          "nodo": "arteria-segmento-superior-rinon-i",
+          "tipo": "vaso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA86341"
+          ],
+          "elementos": [
+            "FJ2052"
+          ],
+          "nombresFuente": [
+            "Superior segmental branch of left renal artery"
+          ],
+          "triangulos": 262,
+          "caja": {
+            "min": [
+              0.0456,
+              1.0439,
+              0.0654
+            ],
+            "max": [
+              0.0526,
+              1.0854,
+              0.0947
+            ]
+          }
+        },
+        {
+          "id": "arteria-segmento-inferior-rinon-d",
+          "nodo": "arteria-segmento-inferior-rinon-d",
+          "tipo": "vaso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA86346"
+          ],
+          "elementos": [
+            "FJ2043"
+          ],
+          "nombresFuente": [
+            "Inferior segmental branch of right renal artery"
+          ],
+          "triangulos": 260,
+          "caja": {
+            "min": [
+              -0.0866,
+              0.9996,
+              0.0836
+            ],
+            "max": [
+              -0.0566,
+              1.0338,
+              0.0924
+            ]
+          }
+        },
+        {
+          "id": "arteria-segmento-inferior-rinon-i",
+          "nodo": "arteria-segmento-inferior-rinon-i",
+          "tipo": "vaso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA86347"
+          ],
+          "elementos": [
+            "FJ2049"
+          ],
+          "nombresFuente": [
+            "Inferior segmental branch of left renal artery"
+          ],
+          "triangulos": 304,
+          "caja": {
+            "min": [
+              0.0477,
+              1.0191,
+              0.0805
+            ],
+            "max": [
+              0.0816,
+              1.0462,
+              0.0913
+            ]
+          }
+        },
+        {
+          "id": "division-posterior-arteria-renal-d",
+          "nodo": "division-posterior-arteria-renal-d",
+          "tipo": "vaso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA70489",
+            "FMA86348"
+          ],
+          "elementos": [
+            "FJ3573",
+            "FJ3574",
+            "FJ3575",
+            "FJ2045"
+          ],
+          "nombresFuente": [
+            "Posterior division of right renal artery",
+            "Posterior segmental branch of right renal artery"
+          ],
+          "triangulos": 3266,
+          "caja": {
+            "min": [
+              -0.1114,
+              0.9935,
+              0.0506
+            ],
+            "max": [
+              -0.0268,
+              1.0349,
+              0.1057
+            ]
+          }
+        },
+        {
+          "id": "division-posterior-arteria-renal-i",
+          "nodo": "division-posterior-arteria-renal-i",
+          "tipo": "vaso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA70490",
+            "FMA86349"
+          ],
+          "elementos": [
+            "FJ3473",
+            "FJ3474",
+            "FJ3475",
+            "FJ2053",
+            "FJ2054"
+          ],
+          "nombresFuente": [
+            "Posterior division of left renal artery",
+            "Posterior segmental branch of left renal artery"
+          ],
+          "triangulos": 1774,
+          "caja": {
+            "min": [
+              0.016,
+              1.0283,
+              0.0502
+            ],
+            "max": [
+              0.0939,
+              1.0716,
+              0.1126
+            ]
+          }
+        },
+        {
+          "id": "rama-ureteral-arteria-renal-d",
+          "nodo": "rama-ureteral-arteria-renal-d",
+          "tipo": "vaso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA70492"
+          ],
+          "elementos": [
+            "FJ3581",
+            "FJ3582"
+          ],
+          "nombresFuente": [
+            "Ureteric segment of right renal artery"
+          ],
+          "triangulos": 1074,
+          "caja": {
+            "min": [
+              -0.0377,
+              0.9825,
+              0.0922
+            ],
+            "max": [
+              -0.0242,
+              1.0287,
+              0.1052
+            ]
+          }
+        },
+        {
+          "id": "rama-ureteral-arteria-renal-i",
+          "nodo": "rama-ureteral-arteria-renal-i",
+          "tipo": "vaso",
+          "estado": "disponible",
+          "fuente": "bodyparts3d",
+          "fma": [
+            "FMA70493"
+          ],
+          "elementos": [
+            "FJ3481"
+          ],
+          "nombresFuente": [
+            "Ureteric segment of left renal artery"
+          ],
+          "triangulos": 1296,
+          "caja": {
+            "min": [
+              0.0266,
+              0.9698,
+              0.0916
+            ],
+            "max": [
+              0.0383,
+              1.0387,
+              0.1102
+            ]
+          }
         }
       ]
     }
@@ -22342,5 +23152,5 @@
       "nota": "Licencia vigente desde el 25/02/2025; antes CC BY-SA 2.1 JP (los OBJ conservan la cabecera antigua)."
     }
   },
-  "bytesTotales": 19476664
+  "bytesTotales": 20318724
 }

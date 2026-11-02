@@ -24,6 +24,11 @@ Atribución exigida por el licenciante:
 Si se incorporan modelos de Z-Anatomy (p. ej. huesecillos del oído o cóccix), sus derivados deberán
 distribuirse bajo **CC BY-SA 4.0** (cláusula *CompartirIgual*) y añadirse a la página de créditos.
 
+## Software
+Todas las bibliotecas usadas tienen licencias permisivas: React, React Router, three.js, @react-three/fiber y drei,
+camera-controls, Zustand, Zod, Tailwind CSS, Vite, vite-plugin-pwa, Workbox, meshoptimizer y glTF-Transform (MIT);
+Fuse.js y obj2gltf (Apache 2.0). La lista está también en la página «Créditos y licencias».
+
 ## Texto
 Contenido original redactado a partir de las obras listadas en [FUENTES.md](FUENTES.md). OpenStax
 *Anatomy & Physiology* es CC BY 4.0.

@@ -130,7 +130,7 @@ function FlujoTubular() {
           );
         })}
       </ul>
-      <p className="mt-2 text-[11px] text-slate-500">
+      <p className="mt-2 text-[11px] text-slate-400">
         Al final queda ≈ {Math.round(fraccionRestante('agua', TRAMOS.length - 1) * 100)} % del agua filtrada (con ADH). Valores medios aproximados.
       </p>
     </figure>

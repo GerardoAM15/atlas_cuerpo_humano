@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Link, NavLink, Outlet } from 'react-router-dom';
+import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
+import BotonInstalar from '@/pwa/BotonInstalar';
 import { RUTAS_NAV } from './rutas';
 
 const claseEnlace = ({ isActive }: { isActive: boolean }) =>
@@ -10,6 +11,8 @@ const claseEnlace = ({ isActive }: { isActive: boolean }) =>
 
 export default function Layout() {
   const [menuAbierto, setMenuAbierto] = useState(false);
+  // El atlas ocupa toda la altura de la ventana: allí el pie (y la atribución) va dentro del visor.
+  const pantallaCompleta = useLocation().pathname === '/atlas';
 
   return (
     <div className="flex min-h-full flex-col">
@@ -25,7 +28,7 @@ export default function Layout() {
           <Link to="/" className="flex items-center gap-2 font-semibold tracking-tight">
             <img src="./favicon.svg" alt="" className="h-7 w-7" />
             <span>
-              Atlas 3D <span className="text-slate-400">del Cuerpo Humano</span>
+              Atlas 3D <span className="hidden text-slate-400 sm:inline">del Cuerpo Humano</span>
             </span>
           </Link>
 
@@ -37,18 +40,21 @@ export default function Layout() {
             ))}
           </nav>
 
-          <button
-            type="button"
-            className="rounded-md p-2 text-slate-300 hover:bg-slate-800 md:hidden"
-            aria-expanded={menuAbierto}
-            aria-controls="menu-movil"
-            aria-label={menuAbierto ? 'Cerrar menú' : 'Abrir menú'}
-            onClick={() => setMenuAbierto((v) => !v)}
-          >
-            <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2">
-              {menuAbierto ? <path d="M6 6l12 12M6 18L18 6" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
-            </svg>
-          </button>
+          <div className="flex items-center gap-1">
+            <BotonInstalar />
+            <button
+              type="button"
+              className="rounded-md p-2 text-slate-300 hover:bg-slate-800 md:hidden"
+              aria-expanded={menuAbierto}
+              aria-controls="menu-movil"
+              aria-label={menuAbierto ? 'Cerrar menú' : 'Abrir menú'}
+              onClick={() => setMenuAbierto((v) => !v)}
+            >
+              <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+                {menuAbierto ? <path d="M6 6l12 12M6 18L18 6" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
+              </svg>
+            </button>
+          </div>
         </div>
 
         {menuAbierto && (
@@ -72,7 +78,7 @@ export default function Layout() {
         <Outlet />
       </main>
 
-      <footer className="border-t border-slate-800 px-4 py-4 text-center text-xs text-slate-500">
+      <footer className={`border-t border-slate-800 px-4 py-4 text-center text-xs text-slate-400 ${pantallaCompleta ? 'hidden' : ''}`}>
         Proyecto personal de estudio. Contenido educativo; no sustituye la consulta médica. Modelos 3D:
         BodyParts3D © DBCLS (CC BY 4.0) —{' '}
         <Link to="/creditos" className="underline hover:text-slate-300">

@@ -1,5 +1,7 @@
-// Sistema urinario: riñones, uréteres, vejiga y uretra (modelo masculino).
-import { par, unica } from '../util.mjs';
+// Sistema urinario: riñones, uréteres, vejiga, uretra (modelo masculino) y ramas intrarrenales de la arteria renal.
+import { datosVaso, par, unica } from '../util.mjs';
+
+const VR = 'vascularizacion-renal';
 
 export default [
   ...par('rinon', 'm', {
@@ -61,5 +63,78 @@ export default [
     relacionesExtra: ['vejiga', 'prostata', 'cuerpo-esponjoso'],
     datosClinicos: 'El crecimiento benigno de la próstata comprime su porción prostática y dificulta la micción.',
     curiosidad: 'La uretra femenina mide solo unos 4 cm.',
+  }),
+  // Vascularización intrarrenal: ramas de la arteria renal (el tronco está en el sistema cardiovascular).
+  ...par('division-anterior-arteria-renal', 'f', {
+    ...datosVaso('arteria'),
+    region: VR,
+    nombre: 'Rama anterior de la arteria renal {lado}',
+    latin: 'Ramus anterior arteriae renalis',
+    ingles: 'Anterior division of {side} renal artery',
+    fuente: ['Anterior division of {side} renal artery'],
+    descripcion:
+      'División de la arteria renal que pasa por delante de la pelvis renal y da las arterias segmentarias anteriores (anterosuperior y anteroinferior) y, habitualmente, las de los segmentos superior e inferior.',
+    funcion: 'Irriga la mayor parte del parénquima renal: todo el riñón salvo el segmento posterior.',
+    ubicacion: 'Hilio y seno renal, por delante de la pelvis renal.',
+    relacionesExtra: ['arteria-renal~', 'rinon~', 'arteria-segmento-superior-rinon~', 'arteria-segmento-inferior-rinon~', 'division-posterior-arteria-renal~'],
+    datosClinicos:
+      'Las arterias segmentarias son terminales (no se anastomosan entre sí): la oclusión de una de ellas produce un infarto en cuña del segmento que irriga.',
+  }),
+  ...par('arteria-segmento-superior-rinon', 'f', {
+    ...datosVaso('arteria'),
+    region: VR,
+    nombre: 'Arteria del segmento superior del riñón {lado}',
+    latin: 'Arteria segmenti superioris renis',
+    ingles: 'Superior segmental artery of {side} kidney',
+    fuente: ['Superior segmental branch of {side} renal artery'],
+    descripcion:
+      'Arteria segmentaria que se dirige al polo superior del riñón; suele nacer de la rama anterior, aunque su origen es variable (rama posterior o tronco renal).',
+    funcion: 'Irriga el segmento superior (apical) del riñón.',
+    ubicacion: 'Seno renal, hacia el polo superior.',
+    relacionesExtra: ['division-anterior-arteria-renal~', 'rinon~'],
+    datosClinicos: 'Son frecuentes las arterias polares superiores accesorias, que nacen directamente de la aorta en lugar de la arteria renal.',
+  }),
+  ...par('arteria-segmento-inferior-rinon', 'f', {
+    ...datosVaso('arteria'),
+    region: VR,
+    nombre: 'Arteria del segmento inferior del riñón {lado}',
+    latin: 'Arteria segmenti inferioris renis',
+    ingles: 'Inferior segmental artery of {side} kidney',
+    fuente: ['Inferior segmental branch of {side} renal artery'],
+    descripcion: 'Arteria segmentaria, rama de la división anterior, que se dirige al polo inferior del riñón.',
+    funcion: 'Irriga el segmento inferior del riñón, en sus caras anterior y posterior.',
+    ubicacion: 'Seno renal, hacia el polo inferior, por delante de la pelvis renal.',
+    relacionesExtra: ['division-anterior-arteria-renal~', 'rinon~', 'ureter~'],
+    datosClinicos:
+      'Una arteria polar inferior (o accesoria) que cruza por delante de la unión pieloureteral puede obstruirla y causar hidronefrosis.',
+  }),
+  ...par('division-posterior-arteria-renal', 'f', {
+    ...datosVaso('arteria'),
+    region: VR,
+    nombre: 'Rama posterior de la arteria renal {lado}',
+    latin: 'Ramus posterior arteriae renalis (arteria segmenti posterioris)',
+    ingles: 'Posterior division of {side} renal artery',
+    fuente: ['Posterior division of {side} renal artery', 'Posterior segmental branch of {side} renal artery'],
+    descripcion: 'División de la arteria renal que pasa por detrás de la pelvis renal y se continúa como arteria del segmento posterior.',
+    funcion: 'Irriga el segmento posterior del riñón.',
+    ubicacion: 'Hilio y seno renal, por detrás de la pelvis renal.',
+    relacionesExtra: ['arteria-renal~', 'rinon~', 'division-anterior-arteria-renal~'],
+    datosClinicos:
+      'Entre los territorios de las ramas anterior y posterior queda un plano relativamente avascular (línea de Brödel), útil como vía de acceso en la cirugía renal.',
+  }),
+  ...par('rama-ureteral-arteria-renal', 'f', {
+    ...datosVaso('arteria'),
+    region: VR,
+    nombre: 'Rama ureteral de la arteria renal {lado}',
+    latin: 'Ramus uretericus arteriae renalis',
+    ingles: 'Ureteric branch of {side} renal artery',
+    fuente: ['Ureteric segment of {side} renal artery'],
+    descripcion: 'Rama fina de la arteria renal que desciende junto a la pelvis renal y la porción proximal del uréter.',
+    funcion: 'Irriga la pelvis renal y el tramo superior del uréter, que recibe además ramas de la aorta, las gonadales y las ilíacas.',
+    ubicacion: 'Junto a la pelvis renal y el uréter abdominal.',
+    relacionesExtra: ['arteria-renal~', 'ureter~', 'rinon~'],
+    datosClinicos:
+      'Como el uréter se irriga por ramas de distinto origen, una disección quirúrgica que lo despoje de su adventicia puede dejarlo isquémico y provocar estenosis o fístulas.',
+    revisar: 'BodyParts3D la denomina «ureteric segment of renal artery»; comprobar que corresponde a las ramas ureterales.',
   }),
 ];

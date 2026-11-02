@@ -16,7 +16,7 @@ interface Props {
 export default function MarcoSimulacion({ titulo, resumen, esquematico = true, controles, visual, lateral, pie }: Props) {
   return (
     <div className="mx-auto w-full max-w-7xl px-4 py-6">
-      <nav aria-label="Ruta" className="text-xs text-slate-500">
+      <nav aria-label="Ruta" className="text-xs text-slate-400">
         <Link to="/simulaciones" className="hover:text-slate-300">
           Simulaciones
         </Link>{' '}
@@ -40,7 +40,7 @@ export default function MarcoSimulacion({ titulo, resumen, esquematico = true, c
         <aside className="space-y-4">{lateral}</aside>
       </div>
       {pie && <div className="mt-4 grid gap-4 md:grid-cols-2">{pie}</div>}
-      <p className="mt-6 text-xs text-slate-600">
+      <p className="mt-6 text-xs text-slate-400">
         Valores típicos de un adulto sano en reposo, redondeados con fines didácticos (fuentes generales en docs/FUENTES.md).
       </p>
     </div>

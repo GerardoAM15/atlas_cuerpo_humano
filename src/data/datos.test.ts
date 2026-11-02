@@ -1,9 +1,22 @@
-import { describe, expect, it } from 'vitest';
-import { ArchivoEstructuras } from './esquemas';
-import { ESTRUCTURAS, MANIFEST, POR_ID, estructurasDe } from './catalogo';
+import { beforeAll, describe, expect, it } from 'vitest';
+import { ArchivoEstructuras, ManifestModelos, ResumenModelos, type Estructura } from './esquemas';
+import { INDICE, MODELOS, POR_ID as INDICE_POR_ID, cajaDe, cargarSistemas, fichasCargadas } from './catalogo';
+import manifestJson from './manifest-modelos.json';
 import { REGIONES } from './regiones';
 import { SISTEMAS } from './sistemas';
 import esqueletico from './estructuras/esqueletico.json';
+
+// El manifest completo (con elementos y nombres de la fuente) solo lo leen los tests y los scripts.
+const MANIFEST = ManifestModelos.parse(manifestJson);
+let ESTRUCTURAS: Estructura[] = [];
+let POR_ID = new Map<string, Estructura>();
+const estructurasDe = (s: string) => ESTRUCTURAS.filter((e) => e.sistema === s);
+
+beforeAll(async () => {
+  await cargarSistemas(SISTEMAS.map((s) => s.id));
+  ESTRUCTURAS = fichasCargadas();
+  POR_ID = new Map(ESTRUCTURAS.map((e) => [e.id, e]));
+});
 
 describe('datos de estructuras', () => {
   it('el JSON del esqueleto cumple el esquema Zod', () => {
@@ -104,5 +117,38 @@ describe('datos de estructuras', () => {
       const pareja = e.id.replace(/-(d|i)$/, (_, s: string) => (s === 'd' ? '-i' : '-d'));
       expect(POR_ID.has(pareja), e.id).toBe(true);
     }
+  });
+});
+
+describe('índice y resumen de modelos (lo que la app carga al inicio)', () => {
+  it('el índice coincide con las fichas completas', () => {
+    expect(INDICE.map((e) => e.id).sort()).toEqual(ESTRUCTURAS.map((e) => e.id).sort());
+    for (const r of INDICE) {
+      const e = POR_ID.get(r.id)!;
+      expect([r.nombre, r.latin, r.ingles, r.sistema, r.region, r.tipo, r.lado, r.nodoModelo], r.id).toEqual([e.nombre, e.latin, e.ingles, e.sistema, e.region, e.tipo, e.lado, e.nodoModelo]);
+    }
+  });
+
+  it('las cajas y los motivos del índice salen del manifest', () => {
+    for (const s of Object.values(MANIFEST.sistemas)) {
+      for (const m of s.estructuras) {
+        const r = INDICE_POR_ID.get(m.id)!;
+        if (m.estado === 'disponible') {
+          const c = cajaDe(m.id)!;
+          for (let k = 0; k < 3; k++) {
+            expect(c.min[k], m.id).toBeCloseTo(m.caja.min[k]!, 3);
+            expect(c.max[k], m.id).toBeCloseTo(m.caja.max[k]!, 3);
+          }
+        } else {
+          expect(r.motivo, m.id).toBe(m.motivo);
+        }
+      }
+    }
+  });
+
+  it('el resumen de modelos cumple su esquema y coincide con el manifest', () => {
+    expect(ResumenModelos.safeParse(MODELOS).success).toBe(true);
+    expect(MODELOS.bytesTotales).toBe(MANIFEST.bytesTotales);
+    for (const [id, s] of Object.entries(MANIFEST.sistemas)) expect(MODELOS.sistemas[id], id).toMatchObject({ archivo: s.archivo, bytes: s.bytes, triangulos: s.triangulos });
   });
 });

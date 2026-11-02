@@ -124,7 +124,7 @@ export default function Digestion() {
               {seg.nombre}
             </h2>
             <p className="text-xs text-slate-400">Tiempo típico de permanencia: {seg.tiempo}</p>
-            <h3 className="mt-3 text-xs font-semibold uppercase tracking-wide text-slate-500">Qué ocurre</h3>
+            <h3 className="mt-3 text-xs font-semibold uppercase tracking-wide text-slate-400">Qué ocurre</h3>
             <ul className="mt-1 list-disc space-y-1 pl-5 text-sm text-slate-300">
               {seg.procesos.map((p) => (
                 <li key={p}>{p}</li>
@@ -132,10 +132,10 @@ export default function Digestion() {
             </ul>
             {seg.enzimas.length > 0 && (
               <>
-                <h3 className="mt-3 text-xs font-semibold uppercase tracking-wide text-slate-500">Enzimas</h3>
+                <h3 className="mt-3 text-xs font-semibold uppercase tracking-wide text-slate-400">Enzimas</h3>
                 <div className="mt-1 overflow-x-auto">
                   <table className="w-full text-left text-xs">
-                    <thead className="text-slate-500">
+                    <thead className="text-slate-400">
                       <tr>
                         <th className="py-1 pr-2 font-medium">Enzima</th>
                         <th className="py-1 pr-2 font-medium">Origen</th>
@@ -162,7 +162,7 @@ export default function Digestion() {
                 <strong className="text-slate-100">Absorción:</strong> {seg.absorcion}
               </p>
             )}
-            <p className="mt-3 flex flex-wrap gap-1 text-[11px] text-slate-500">
+            <p className="mt-3 flex flex-wrap gap-1 text-[11px] text-slate-400">
               En el atlas:
               {seg.estructuras.map((id) => (
                 <span key={id} className="rounded bg-slate-800 px-1.5 py-0.5 text-slate-300">

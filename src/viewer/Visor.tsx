@@ -5,6 +5,7 @@ import { POR_ID, sistemaTieneModelo } from '@/data/catalogo';
 import { SISTEMAS, type SistemaId } from '@/data/sistemas';
 import { useAtlasStore } from '@/store/useAtlasStore';
 import ControlCamara from './ControlCamara';
+import MedidorFps from './MedidorFps';
 import ModeloSistema from './ModeloSistema';
 import Pines from './Pines';
 import PlanoCorte from './PlanoCorte';
@@ -20,6 +21,8 @@ export default function Visor() {
   const visibles = useAtlasStore((s) => s.sistemasVisibles);
   const hoverReal = useAtlasStore((s) => s.hover);
   const modoQuiz = useAtlasStore((s) => s.modoQuiz);
+  const medirFps = useAtlasStore((s) => s.medirFps);
+  const salidaFps = useRef<HTMLParagraphElement>(null);
   // En modo quiz no se muestra el nombre al pasar el ratón.
   const hover = modoQuiz ? null : hoverReal;
   const etiqueta = useRef<HTMLDivElement>(null);
@@ -74,7 +77,18 @@ export default function Visor() {
         {!modoQuiz && <Pines />}
         <PlanoCorte sistemas={sistemas.length ? sistemas : SISTEMAS_CON_MODELO} />
         <ControlCamara sistemas={sistemas.length ? sistemas : SISTEMAS_CON_MODELO} />
+        {medirFps && <MedidorFps salida={salidaFps} />}
       </Canvas>
+
+      {medirFps && (
+        <p
+          ref={salidaFps}
+          role="status"
+          className="pointer-events-none absolute left-2 top-2 z-10 rounded-md border border-slate-700 bg-slate-950/90 px-2 py-1 font-mono text-xs text-emerald-300"
+        >
+          Midiendo…
+        </p>
+      )}
 
       <div
         ref={etiqueta}

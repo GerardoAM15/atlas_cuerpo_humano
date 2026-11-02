@@ -29,7 +29,7 @@ export default function PanelSistemas() {
               <label htmlFor={idCheck} className="flex-1 text-sm">
                 {s.nombre}
               </label>
-              {!disponible && <span className="text-[10px] text-slate-500">Fase {s.fase}</span>}
+              {!disponible && <span className="text-[10px] text-slate-400">sin modelo</span>}
             </div>
             {disponible && visibles[s.id] && (
               <label className="mt-1 flex items-center gap-2 pl-6 text-xs text-slate-400">

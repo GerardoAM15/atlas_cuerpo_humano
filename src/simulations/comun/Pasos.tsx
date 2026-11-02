@@ -13,7 +13,7 @@ export default function Pasos({ pasos, activo, onElegir }: { pasos: readonly Pas
   const actual = pasos.find((p) => p.id === activo);
   return (
     <section aria-labelledby="pasos-titulo" className="rounded-lg border border-slate-800 bg-slate-900/50 p-3">
-      <h2 id="pasos-titulo" className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+      <h2 id="pasos-titulo" className="text-xs font-semibold uppercase tracking-wide text-slate-400">
         Paso a paso
       </h2>
       <ol className="mt-2 space-y-1">
@@ -30,7 +30,7 @@ export default function Pasos({ pasos, activo, onElegir }: { pasos: readonly Pas
                   esActivo ? 'bg-sky-500/15 text-sky-200' : 'text-slate-400 enabled:hover:bg-slate-800'
                 }`}
               >
-                <span className={`font-bold ${esActivo ? 'text-sky-300' : 'text-slate-600'}`}>{i + 1}.</span>
+                <span className={`font-bold ${esActivo ? 'text-sky-300' : 'text-slate-400'}`}>{i + 1}.</span>
                 {p.titulo}
               </button>
             </li>

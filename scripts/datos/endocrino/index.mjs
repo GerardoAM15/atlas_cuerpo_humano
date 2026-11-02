@@ -1,6 +1,7 @@
 // Sistema endocrino: hipófisis, pineal, tiroides y paratiroides (sin modelo), suprarrenales,
-// páncreas endocrino y gónadas (estas dos remiten a los modelos de los sistemas digestivo y reproductor).
-import { par, unica } from '../util.mjs';
+// páncreas endocrino y gónadas (estas dos remiten a los modelos de los sistemas digestivo y reproductor),
+// más los vasos propios de las glándulas (tiroideas inferiores y suprarrenales).
+import { datosVaso, par, unica } from '../util.mjs';
 
 const GL = { tipo: 'glandula', material: 'glandula' };
 const SIN_MODELO = 'BodyParts3D 4.0 no incluye esta glándula. Candidato: Z-Anatomy.';
@@ -98,4 +99,62 @@ export default [
     relacionesExtra: ['testiculo-d', 'testiculo-i', 'ovarios', 'hipofisis'],
     datosClinicos: 'Su función depende de la FSH y la LH hipofisarias; el hipogonadismo puede ser primario (gonadal) o central (hipotálamo-hipófisis).',
   }),
+  // Vasos propios de las glándulas (con modelo en BodyParts3D).
+  ...par('arteria-tiroidea-inferior', 'f', {
+    ...datosVaso('arteria'),
+    region: 'glandulas-cervicales',
+    nombre: 'Arteria tiroidea inferior {lado}',
+    latin: 'Arteria thyroidea inferior',
+    ingles: '{Side} inferior thyroid artery',
+    fuente: ['{side} inferior thyroid artery'],
+    descripcion:
+      'Rama del tronco tirocervical (de la arteria subclavia) que asciende por delante del escaleno anterior y se curva medialmente por detrás de la vaina carotídea hasta el polo inferior de la tiroides.',
+    funcion: 'Irriga la tiroides y es la principal arteria de las glándulas paratiroides; también da ramas a la laringe, la tráquea y el esófago.',
+    ubicacion: 'Raíz del cuello, por detrás de la vaina carotídea, hacia la cara posterior del lóbulo tiroideo.',
+    relacionesExtra: ['arteria-subclavia~', 'carotida-comun~', 'tiroides', 'paratiroides', 'traquea', 'esofago'],
+    datosClinicos:
+      'Cerca del polo inferior de la tiroides se cruza con el nervio laríngeo recurrente; en la tiroidectomía se liga lejos de la glándula para no lesionarlo ni dejar sin riego a las paratiroides.',
+  }),
+  ...par('arteria-suprarrenal-media', 'f', {
+    ...datosVaso('arteria'),
+    region: 'glandulas-abdominales',
+    nombre: 'Arteria suprarrenal media {lado}',
+    latin: 'Arteria suprarenalis media',
+    ingles: '{Side} middle suprarenal artery',
+    fuente: ['{side} middle suprarenal artery'],
+    descripcion: 'Rama lateral de la aorta abdominal, a la altura de la arteria mesentérica superior (L1), que se dirige a la glándula suprarrenal.',
+    funcion: 'Irriga la suprarrenal junto con las arterias suprarrenales superiores (de la frénica inferior) e inferiores (de la renal).',
+    ubicacion: 'Retroperitoneo, sobre el pilar del diafragma, entre la aorta y la suprarrenal.',
+    relacionesExtra: ['aorta-abdominal', 'glandula-suprarrenal~', 'arteria-suprarrenal-inferior~', 'diafragma'],
+    datosClinicos:
+      'La suprarrenal recibe tres grupos de arterias pero drena por una sola vena; esta disposición favorece la hemorragia suprarrenal en el estrés grave (p. ej. síndrome de Waterhouse-Friderichsen en la sepsis meningocócica).',
+  }),
+  ...par('arteria-suprarrenal-inferior', 'f', {
+    ...datosVaso('arteria'),
+    region: 'glandulas-abdominales',
+    nombre: 'Arteria suprarrenal inferior {lado}',
+    latin: 'Arteria suprarenalis inferior',
+    ingles: '{Side} inferior suprarenal artery',
+    fuente: ['{side} inferior suprarenal artery'],
+    descripcion: 'Rama de la arteria renal que asciende hasta la parte inferior de la glándula suprarrenal.',
+    funcion: 'Irriga la porción inferior de la suprarrenal y da pequeñas ramas a la grasa perirrenal y al uréter.',
+    ubicacion: 'Retroperitoneo, entre el hilio renal y la cara inferior de la suprarrenal.',
+    relacionesExtra: ['arteria-renal~', 'glandula-suprarrenal~', 'arteria-suprarrenal-media~', 'rinon~'],
+    datosClinicos: 'Al formar parte de una triple irrigación arterial, la ligadura de una sola arteria suprarrenal rara vez compromete la glándula.',
+  }),
+  ...par('vena-suprarrenal', 'f', {
+    ...datosVaso('vena'),
+    region: 'glandulas-abdominales',
+    nombre: 'Vena suprarrenal {lado}',
+    latin: 'Vena suprarenalis',
+    ingles: '{Side} suprarenal vein',
+    fuente: ['{side} suprarenal vein'],
+    descripcion:
+      'Vena única que sale del hilio de la glándula; la derecha, muy corta, desemboca directamente en la vena cava inferior y la izquierda en la vena renal izquierda.',
+    funcion: 'Drena la sangre de la suprarrenal y lleva a la circulación el cortisol, la aldosterona y las catecolaminas que secreta.',
+    ubicacion: 'Desde el hilio de la suprarrenal: la derecha va directamente a la cara posterior de la cava inferior; la izquierda desciende hasta la vena renal izquierda.',
+    relacionesExtra: ['glandula-suprarrenal~', 'arteria-suprarrenal-media~'],
+    datosClinicos:
+      'El cateterismo de ambas venas suprarrenales permite medir la aldosterona de cada glándula y localizar un adenoma productor (hiperaldosteronismo primario); la derecha, por ser tan corta, es la más difícil de canalizar.',
+  }).map((e) => ({ ...e, relacionesExtra: [...e.relacionesExtra, e.lado === 'derecho' ? 'vena-cava-inferior' : 'vena-renal-i'] })),
 ];

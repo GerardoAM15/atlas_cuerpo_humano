@@ -38,7 +38,12 @@ sistemas, consultar la ficha de cada estructura, ver simulaciones fisiológicas 
 - **Los JSON se generan; no se editan a mano.** La fuente está en `scripts/datos/<sistema>/` (módulos compactos:
   `par()` crea la versión derecha/izquierda; en ids, `~` = mismo lado y `^` = lado opuesto). Tras editar:
   `npm run datos`. `nodoModelo` se toma del manifest y `relaciones` se deriva de las articulaciones más `relacionesExtra`.
-- Esquemas Zod en `src/data/esquemas.ts`; el catálogo (`src/data/catalogo.ts`) valida al cargar. Tests de integridad:
+- `npm run datos` genera también `src/data/indice.json` (resumen de cada estructura: nombres, región, tipo, lado, caja
+  y FMA del modelo, motivo si está pendiente) y `src/data/modelos.json` (fuentes; archivo, bytes y hash de cada `.glb`).
+  La app **no importa** `manifest-modelos.json` (solo scripts y tests).
+- Catálogo (`src/data/catalogo.ts`): `INDICE`/`POR_ID` (resumen, síncrono) y fichas completas bajo demanda por sistema
+  (`cargarSistemas`, `useFichas`, `fichaDe`; un chunk por sistema). `src/data/modelos.ts` es ligero (lo usa la portada).
+- Esquemas Zod en `src/data/esquemas.ts`; el catálogo valida el índice y cada sistema al cargarlos. Tests de integridad:
   ids únicos, 206 huesos, cada `nodoModelo` existe en el manifest (o la estructura está `pendiente`), relaciones
   válidas, articulaciones recíprocas, regiones conocidas (`src/data/regiones.ts`) y pares completos.
 - Nivel universitario introductorio, preciso y conciso. Fuentes generales en `docs/FUENTES.md`.
@@ -52,13 +57,17 @@ src/
   simulations/  una carpeta por simulación
   study/        quiz, SM-2, progreso
   components/   UI reutilizable
+  pwa/          service worker (registro), botón Instalar, descarga de modelos para usar sin conexión
   store/        Zustand
   pages/        Inicio, Atlas, Simulaciones, Estudio, Créditos
 scripts/        pipeline de modelos
 docs/           README técnico, fuentes, licencias
 ```
 - Alias de importación: `@/` → `src/`.
-- Las páginas con three.js se cargan con `React.lazy` para no penalizar la portada.
+- Las páginas con three.js se cargan con `React.lazy` para no penalizar la portada. three.js, r3f y drei van al chunk
+  `three`; la portada no debe precargarlo (comprobar `dist/index.html` tras cambiar `manualChunks`).
+- PWA (`vite-plugin-pwa`, `registerType: 'autoUpdate'`): precache de la app; `.glb` con CacheFirst en la caché
+  `atlas-modelos` (`src/pwa/cache.ts`). La URL del modelo lleva `?v=<hash>` (de `modelos.json`).
 - Simulaciones (`src/simulations/<id>/`): `modelo.ts` con funciones puras del tiempo (curvas fisiológicas, fases),
   probadas en `modelo.test.ts`, y un componente SVG que usa lo común de `src/simulations/comun/` (reloj con
   Play/Pausa/velocidad, `GraficaLinea`, `Pasos` narrados, `MarcoSimulacion` con la etiqueta «Esquemático»).
@@ -70,7 +79,7 @@ docs/           README técnico, fuentes, licencias
   `atlas3d:progreso`). El quiz reutiliza el `Visor` en «modo quiz» (sin etiquetas que revelen la respuesta).
 
 ## Rendimiento
-- Objetivo: 60 FPS en una laptop sin GPU dedicada. Sombras desactivadas por defecto; instancing/merge cuando se
+- Objetivo: 60 FPS en una laptop sin GPU dedicada (medir con el botón «FPS» del visor). Sombras desactivadas por defecto; instancing/merge cuando se
   pueda; `dpr` limitado; carga diferida por sistema con barra de progreso.
 
 ## Pruebas
@@ -96,5 +105,5 @@ docs/           README técnico, fuentes, licencias
 - `npm run build` — typecheck + build de producción
 - `npm test` — pruebas (Vitest)
 - `npm run preview` — sirve `dist/`
-- `npm run datos` — regenera `src/data/estructuras/*.json` desde `scripts/datos/`
+- `npm run datos` — regenera `src/data/estructuras/*.json`, `indice.json` y `modelos.json` (también tras `npm run modelos`)
 - `npm run modelos` — regenera los `.glb` y el manifest (requiere `npm run modelos:descargar`)

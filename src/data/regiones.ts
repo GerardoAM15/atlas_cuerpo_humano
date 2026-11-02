@@ -64,6 +64,7 @@ export const REGIONES: Partial<Record<SistemaId, readonly Region[]>> = {
   urinario: [
     { id: 'rinones', nombre: 'Riñones' },
     { id: 'vias-urinarias', nombre: 'Vías urinarias' },
+    { id: 'vascularizacion-renal', nombre: 'Vascularización renal', explosion: true },
   ],
   endocrino: [
     { id: 'glandulas-craneales', nombre: 'Hipófisis y pineal' },

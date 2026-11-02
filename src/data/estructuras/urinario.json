@@ -131,5 +131,249 @@
       "prostata",
       "cuerpo-esponjoso"
     ]
+  },
+  {
+    "id": "division-anterior-arteria-renal-d",
+    "nodoModelo": "division-anterior-arteria-renal-d",
+    "tipo": "vaso",
+    "sistema": "urinario",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "vascularizacion-renal",
+    "nombre": "Rama anterior de la arteria renal derecha",
+    "latin": "Ramus anterior arteriae renalis",
+    "ingles": "Anterior division of right renal artery",
+    "descripcion": "División de la arteria renal que pasa por delante de la pelvis renal y da las arterias segmentarias anteriores (anterosuperior y anteroinferior) y, habitualmente, las de los segmentos superior e inferior.",
+    "funcion": "Irriga la mayor parte del parénquima renal: todo el riñón salvo el segmento posterior.",
+    "ubicacion": "Hilio y seno renal, por delante de la pelvis renal.",
+    "datosClinicos": "Las arterias segmentarias son terminales (no se anastomosan entre sí): la oclusión de una de ellas produce un infarto en cuña del segmento que irriga.",
+    "relaciones": [
+      "arteria-renal-d",
+      "rinon-d",
+      "arteria-segmento-superior-rinon-d",
+      "arteria-segmento-inferior-rinon-d",
+      "division-posterior-arteria-renal-d"
+    ]
+  },
+  {
+    "id": "division-anterior-arteria-renal-i",
+    "nodoModelo": "division-anterior-arteria-renal-i",
+    "tipo": "vaso",
+    "sistema": "urinario",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "vascularizacion-renal",
+    "nombre": "Rama anterior de la arteria renal izquierda",
+    "latin": "Ramus anterior arteriae renalis",
+    "ingles": "Anterior division of left renal artery",
+    "descripcion": "División de la arteria renal que pasa por delante de la pelvis renal y da las arterias segmentarias anteriores (anterosuperior y anteroinferior) y, habitualmente, las de los segmentos superior e inferior.",
+    "funcion": "Irriga la mayor parte del parénquima renal: todo el riñón salvo el segmento posterior.",
+    "ubicacion": "Hilio y seno renal, por delante de la pelvis renal.",
+    "datosClinicos": "Las arterias segmentarias son terminales (no se anastomosan entre sí): la oclusión de una de ellas produce un infarto en cuña del segmento que irriga.",
+    "relaciones": [
+      "arteria-renal-i",
+      "rinon-i",
+      "arteria-segmento-superior-rinon-i",
+      "arteria-segmento-inferior-rinon-i",
+      "division-posterior-arteria-renal-i"
+    ]
+  },
+  {
+    "id": "arteria-segmento-superior-rinon-d",
+    "nodoModelo": "arteria-segmento-superior-rinon-d",
+    "tipo": "vaso",
+    "sistema": "urinario",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "vascularizacion-renal",
+    "nombre": "Arteria del segmento superior del riñón derecha",
+    "latin": "Arteria segmenti superioris renis",
+    "ingles": "Superior segmental artery of right kidney",
+    "descripcion": "Arteria segmentaria que se dirige al polo superior del riñón; suele nacer de la rama anterior, aunque su origen es variable (rama posterior o tronco renal).",
+    "funcion": "Irriga el segmento superior (apical) del riñón.",
+    "ubicacion": "Seno renal, hacia el polo superior.",
+    "datosClinicos": "Son frecuentes las arterias polares superiores accesorias, que nacen directamente de la aorta en lugar de la arteria renal.",
+    "relaciones": [
+      "division-anterior-arteria-renal-d",
+      "rinon-d"
+    ]
+  },
+  {
+    "id": "arteria-segmento-superior-rinon-i",
+    "nodoModelo": "arteria-segmento-superior-rinon-i",
+    "tipo": "vaso",
+    "sistema": "urinario",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "vascularizacion-renal",
+    "nombre": "Arteria del segmento superior del riñón izquierda",
+    "latin": "Arteria segmenti superioris renis",
+    "ingles": "Superior segmental artery of left kidney",
+    "descripcion": "Arteria segmentaria que se dirige al polo superior del riñón; suele nacer de la rama anterior, aunque su origen es variable (rama posterior o tronco renal).",
+    "funcion": "Irriga el segmento superior (apical) del riñón.",
+    "ubicacion": "Seno renal, hacia el polo superior.",
+    "datosClinicos": "Son frecuentes las arterias polares superiores accesorias, que nacen directamente de la aorta en lugar de la arteria renal.",
+    "relaciones": [
+      "division-anterior-arteria-renal-i",
+      "rinon-i"
+    ]
+  },
+  {
+    "id": "arteria-segmento-inferior-rinon-d",
+    "nodoModelo": "arteria-segmento-inferior-rinon-d",
+    "tipo": "vaso",
+    "sistema": "urinario",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "vascularizacion-renal",
+    "nombre": "Arteria del segmento inferior del riñón derecha",
+    "latin": "Arteria segmenti inferioris renis",
+    "ingles": "Inferior segmental artery of right kidney",
+    "descripcion": "Arteria segmentaria, rama de la división anterior, que se dirige al polo inferior del riñón.",
+    "funcion": "Irriga el segmento inferior del riñón, en sus caras anterior y posterior.",
+    "ubicacion": "Seno renal, hacia el polo inferior, por delante de la pelvis renal.",
+    "datosClinicos": "Una arteria polar inferior (o accesoria) que cruza por delante de la unión pieloureteral puede obstruirla y causar hidronefrosis.",
+    "relaciones": [
+      "division-anterior-arteria-renal-d",
+      "rinon-d",
+      "ureter-d"
+    ]
+  },
+  {
+    "id": "arteria-segmento-inferior-rinon-i",
+    "nodoModelo": "arteria-segmento-inferior-rinon-i",
+    "tipo": "vaso",
+    "sistema": "urinario",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "vascularizacion-renal",
+    "nombre": "Arteria del segmento inferior del riñón izquierda",
+    "latin": "Arteria segmenti inferioris renis",
+    "ingles": "Inferior segmental artery of left kidney",
+    "descripcion": "Arteria segmentaria, rama de la división anterior, que se dirige al polo inferior del riñón.",
+    "funcion": "Irriga el segmento inferior del riñón, en sus caras anterior y posterior.",
+    "ubicacion": "Seno renal, hacia el polo inferior, por delante de la pelvis renal.",
+    "datosClinicos": "Una arteria polar inferior (o accesoria) que cruza por delante de la unión pieloureteral puede obstruirla y causar hidronefrosis.",
+    "relaciones": [
+      "division-anterior-arteria-renal-i",
+      "rinon-i",
+      "ureter-i"
+    ]
+  },
+  {
+    "id": "division-posterior-arteria-renal-d",
+    "nodoModelo": "division-posterior-arteria-renal-d",
+    "tipo": "vaso",
+    "sistema": "urinario",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "vascularizacion-renal",
+    "nombre": "Rama posterior de la arteria renal derecha",
+    "latin": "Ramus posterior arteriae renalis (arteria segmenti posterioris)",
+    "ingles": "Posterior division of right renal artery",
+    "descripcion": "División de la arteria renal que pasa por detrás de la pelvis renal y se continúa como arteria del segmento posterior.",
+    "funcion": "Irriga el segmento posterior del riñón.",
+    "ubicacion": "Hilio y seno renal, por detrás de la pelvis renal.",
+    "datosClinicos": "Entre los territorios de las ramas anterior y posterior queda un plano relativamente avascular (línea de Brödel), útil como vía de acceso en la cirugía renal.",
+    "relaciones": [
+      "arteria-renal-d",
+      "rinon-d",
+      "division-anterior-arteria-renal-d"
+    ]
+  },
+  {
+    "id": "division-posterior-arteria-renal-i",
+    "nodoModelo": "division-posterior-arteria-renal-i",
+    "tipo": "vaso",
+    "sistema": "urinario",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "vascularizacion-renal",
+    "nombre": "Rama posterior de la arteria renal izquierda",
+    "latin": "Ramus posterior arteriae renalis (arteria segmenti posterioris)",
+    "ingles": "Posterior division of left renal artery",
+    "descripcion": "División de la arteria renal que pasa por detrás de la pelvis renal y se continúa como arteria del segmento posterior.",
+    "funcion": "Irriga el segmento posterior del riñón.",
+    "ubicacion": "Hilio y seno renal, por detrás de la pelvis renal.",
+    "datosClinicos": "Entre los territorios de las ramas anterior y posterior queda un plano relativamente avascular (línea de Brödel), útil como vía de acceso en la cirugía renal.",
+    "relaciones": [
+      "arteria-renal-i",
+      "rinon-i",
+      "division-anterior-arteria-renal-i"
+    ]
+  },
+  {
+    "id": "rama-ureteral-arteria-renal-d",
+    "nodoModelo": "rama-ureteral-arteria-renal-d",
+    "tipo": "vaso",
+    "sistema": "urinario",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "vascularizacion-renal",
+    "nombre": "Rama ureteral de la arteria renal derecha",
+    "latin": "Ramus uretericus arteriae renalis",
+    "ingles": "Ureteric branch of right renal artery",
+    "descripcion": "Rama fina de la arteria renal que desciende junto a la pelvis renal y la porción proximal del uréter.",
+    "funcion": "Irriga la pelvis renal y el tramo superior del uréter, que recibe además ramas de la aorta, las gonadales y las ilíacas.",
+    "ubicacion": "Junto a la pelvis renal y el uréter abdominal.",
+    "datosClinicos": "Como el uréter se irriga por ramas de distinto origen, una disección quirúrgica que lo despoje de su adventicia puede dejarlo isquémico y provocar estenosis o fístulas.",
+    "revisar": "BodyParts3D la denomina «ureteric segment of renal artery»; comprobar que corresponde a las ramas ureterales.",
+    "relaciones": [
+      "arteria-renal-d",
+      "ureter-d",
+      "rinon-d"
+    ]
+  },
+  {
+    "id": "rama-ureteral-arteria-renal-i",
+    "nodoModelo": "rama-ureteral-arteria-renal-i",
+    "tipo": "vaso",
+    "sistema": "urinario",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "vascularizacion-renal",
+    "nombre": "Rama ureteral de la arteria renal izquierda",
+    "latin": "Ramus uretericus arteriae renalis",
+    "ingles": "Ureteric branch of left renal artery",
+    "descripcion": "Rama fina de la arteria renal que desciende junto a la pelvis renal y la porción proximal del uréter.",
+    "funcion": "Irriga la pelvis renal y el tramo superior del uréter, que recibe además ramas de la aorta, las gonadales y las ilíacas.",
+    "ubicacion": "Junto a la pelvis renal y el uréter abdominal.",
+    "datosClinicos": "Como el uréter se irriga por ramas de distinto origen, una disección quirúrgica que lo despoje de su adventicia puede dejarlo isquémico y provocar estenosis o fístulas.",
+    "revisar": "BodyParts3D la denomina «ureteric segment of renal artery»; comprobar que corresponde a las ramas ureterales.",
+    "relaciones": [
+      "arteria-renal-i",
+      "ureter-i",
+      "rinon-i"
+    ]
   }
 ]

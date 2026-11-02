@@ -72,7 +72,7 @@ export default function ArbolEstructuras() {
                       >
                         <span aria-hidden className={`inline-block text-xs transition-transform ${abiertoR ? 'rotate-90' : ''}`}>▸</span>
                         {r.nombre}
-                        <span className="ml-auto text-[10px] text-slate-500">{items.length}</span>
+                        <span className="ml-auto text-[10px] text-slate-400">{items.length}</span>
                       </button>
                       {abiertoR && (
                         <ul role="group" className="ml-3">
@@ -87,7 +87,7 @@ export default function ArbolEstructuras() {
                                   onClick={() => seleccionar(e.id, { enfocar: !sinModelo, region: claveRegion(e.sistema, e.region), sistema: e.sistema })}
                                   className={`flex-1 truncate rounded px-1 py-0.5 text-left text-xs ${
                                     sel ? 'bg-sky-500/20 text-sky-200' : 'text-slate-400 hover:bg-slate-800 hover:text-slate-100'
-                                  } ${oculta ? 'line-through opacity-60' : ''} ${sinModelo ? 'italic text-slate-500' : ''}`}
+                                  } ${oculta ? 'line-through opacity-60' : ''} ${sinModelo ? 'italic text-slate-400' : ''}`}
                                   title={sinModelo ? `${e.nombre} (sin modelo 3D)` : e.nombre}
                                 >
                                   {e.nombre}
@@ -99,7 +99,7 @@ export default function ArbolEstructuras() {
                                     onClick={() => (oculta ? mostrar(e.id) : ocultar(e.id))}
                                     aria-label={oculta ? `Mostrar ${e.nombre}` : `Ocultar ${e.nombre}`}
                                     aria-pressed={oculta}
-                                    className={`rounded p-1 text-slate-500 hover:text-slate-200 ${oculta ? '' : 'opacity-0 group-hover:opacity-100 focus:opacity-100'}`}
+                                    className={`rounded p-1 text-slate-400 hover:text-slate-200 ${oculta ? '' : 'opacity-0 group-hover:opacity-100 focus:opacity-100'}`}
                                   >
                                     <IconoOjo tachado={oculta} />
                                   </button>

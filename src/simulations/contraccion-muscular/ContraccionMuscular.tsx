@@ -166,7 +166,7 @@ export default function ContraccionMuscular() {
                   <strong className="text-red-300">Puente cruzado:</strong> {TEXTO_PUENTE[e.puente]}
                 </>
               ) : (
-                <span className="text-slate-500">Azul: actina (filamento fino) · Rojo: miosina (filamento grueso) · Z: discos Z</span>
+                <span className="text-slate-400">Azul: actina (filamento fino) · Rojo: miosina (filamento grueso) · Z: discos Z</span>
               )}
             </p>
           </div>
@@ -207,7 +207,7 @@ export default function ContraccionMuscular() {
               <dt>Ventaja mecánica</dt>
               <dd className="text-right tabular-nums text-slate-200">{ventajaMecanica().toFixed(2)}</dd>
             </dl>
-            <p className="mt-2 text-[11px] text-slate-500">
+            <p className="mt-2 text-[11px] text-slate-400">
               El bíceps se inserta a ≈ 4 cm del codo y la carga está a ≈ 35 cm: necesita casi 9 veces más fuerza que el peso que sostiene,
               pero a cambio la mano recorre mucha más distancia y más rápido. Simplificación: el brazo de palanca del bíceps se toma constante.
             </p>

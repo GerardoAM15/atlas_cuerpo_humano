@@ -222,7 +222,7 @@ export default function ImpulsoNervioso() {
           <figure className="rounded-lg border border-slate-800 bg-slate-950/60 p-2">
             <figcaption className="px-1 text-xs font-semibold text-slate-300">Conducción del impulso (mismo tiempo transcurrido)</figcaption>
             <Axones tc={reloj.t} />
-            <p className="px-1 text-[11px] text-slate-500">
+            <p className="px-1 text-[11px] text-slate-400">
               La mielina aísla el axón: el potencial de acción solo se regenera en los nódulos de Ranvier y «salta» entre ellos. Por eso es
               más rápida y gasta menos energía. La desmielinización (p. ej. en la esclerosis múltiple) enlentece o bloquea la conducción.
             </p>

@@ -97,6 +97,60 @@ export type EstructuraHueso = z.infer<typeof EstructuraHueso>;
 export type EstructuraMusculo = z.infer<typeof EstructuraMusculo>;
 export type Articulacion = z.infer<typeof Articulacion>;
 
+// ------------------------------------------------------------------ Índice (src/data/indice.json)
+
+const Vec3Indice = z.tuple([z.number(), z.number(), z.number()]);
+
+/**
+ * Resumen de una estructura que la app carga al inicio: basta para el árbol, la búsqueda, los
+ * pines, la cámara y los conceptos de estudio. La ficha completa se carga por sistema.
+ */
+export const ResumenEstructura = z.object({
+  id: IdEstructura,
+  nodoModelo: IdEstructura.nullable(),
+  nombre: texto,
+  latin: texto,
+  ingles: texto,
+  sistema: SistemaIdEsquema,
+  region: texto,
+  tipo: TipoEstructura,
+  lado: z.enum(['derecho', 'izquierdo']).optional(),
+  /** Caja envolvente en coordenadas de escena (solo si hay modelo). */
+  caja: z.object({ min: Vec3Indice, max: Vec3Indice }).optional(),
+  /** Motivo por el que el modelo está pendiente. */
+  motivo: z.string().optional(),
+  /** Conceptos FMA del modelo. */
+  fma: z.array(z.string()).optional(),
+});
+export const Indice = z.array(ResumenEstructura);
+export type ResumenEstructura = z.infer<typeof ResumenEstructura>;
+
+/** Resumen de los modelos (src/data/modelos.json). */
+export const ResumenModelos = z.object({
+  fuentes: z.record(
+    z.object({
+      nombre: z.string(),
+      version: z.string(),
+      licencia: z.string(),
+      urlLicencia: z.string().url(),
+      url: z.string().url(),
+      atribucion: z.string(),
+      nota: z.string().optional(),
+    }),
+  ),
+  bytesTotales: z.number().int().nonnegative(),
+  sistemas: z.record(
+    z.object({
+      archivo: z.string(),
+      bytes: z.number().int().positive(),
+      triangulos: z.number().int().nonnegative(),
+      /** Hash del contenido: se añade a la URL para que la caché offline no sirva un modelo antiguo. */
+      version: z.string(),
+    }),
+  ),
+});
+export type ResumenModelos = z.infer<typeof ResumenModelos>;
+
 // ------------------------------------------------------------------ Manifest
 
 const Vec3 = z.tuple([z.number(), z.number(), z.number()]);

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-import { POR_ID, cajaDe, sistemaTieneModelo } from '@/data/catalogo';
+import { POR_ID, cajaDe, sistemaTieneModelo, useFichas } from '@/data/catalogo';
 import type { Caja } from '@/data/esquemas';
 import { REGIONES } from '@/data/regiones';
 import { SISTEMAS, SISTEMAS_POR_ID, type SistemaId } from '@/data/sistemas';
@@ -47,7 +47,12 @@ function cajaRegion(id: string): Caja | null {
 // ---------------------------------------------------------------- Configuración
 function Configuracion({ inicial, onEmpezar }: { inicial: Formulario; onEmpezar: (f: Formulario) => void }) {
   const [f, setF] = useState(inicial);
-  const disponibles = useMemo(() => tiposDisponibles({ sistemas: f.sistemas, region: f.region || null }), [f.sistemas, f.region]);
+  // Las preguntas de texto leen las fichas completas: se cargan al elegir los sistemas.
+  const fichasListas = useFichas(f.sistemas);
+  const disponibles = useMemo(
+    () => (fichasListas ? tiposDisponibles({ sistemas: f.sistemas, region: f.region || null }) : []),
+    [f.sistemas, f.region, fichasListas],
+  );
   const tipos = f.tipos.filter((t) => disponibles.includes(t));
   const regiones = f.sistemas.length === 1 ? (REGIONES[f.sistemas[0]!] ?? []) : [];
   const alternar = <T,>(lista: T[], x: T) => (lista.includes(x) ? lista.filter((y) => y !== x) : [...lista, x]);
@@ -97,7 +102,7 @@ function Configuracion({ inicial, onEmpezar }: { inicial: Formulario; onEmpezar:
             <label key={t} className={`flex items-center gap-2 text-sm ${disponibles.includes(t) ? 'text-slate-300' : 'text-slate-600'}`}>
               <input type="checkbox" className="accent-sky-500" disabled={!disponibles.includes(t)} checked={tipos.includes(t)} onChange={() => setF({ ...f, tipos: alternar(f.tipos, t) })} />
               {NOMBRE_TIPO[t]}
-              {!disponibles.includes(t) && <span className="text-[11px]">(no aplica a esta selección)</span>}
+              {fichasListas && !disponibles.includes(t) && <span className="text-[11px]">(no aplica a esta selección)</span>}
             </label>
           ))}
         </div>
@@ -140,10 +145,10 @@ function Configuracion({ inicial, onEmpezar }: { inicial: Formulario; onEmpezar:
 
       <button
         type="submit"
-        disabled={f.sistemas.length === 0 || tipos.length === 0}
+        disabled={!fichasListas || f.sistemas.length === 0 || tipos.length === 0}
         className="rounded-lg bg-sky-500 px-5 py-2.5 font-semibold text-slate-950 hover:bg-sky-400 disabled:cursor-not-allowed disabled:opacity-40"
       >
-        Empezar
+        {fichasListas ? 'Empezar' : 'Cargando fichas…'}
       </button>
     </form>
   );
@@ -281,7 +286,7 @@ function Sesion({ preguntas, form, onFin }: { preguntas: Pregunta[]; form: Formu
 
   const panel = (
     <section aria-live="polite" className="rounded-xl border border-slate-800 bg-slate-900/70 p-4">
-      <div className="flex items-center justify-between text-xs text-slate-500">
+      <div className="flex items-center justify-between text-xs text-slate-400">
         <span>
           Pregunta {indice + 1} de {preguntas.length} · {NOMBRE_TIPO[p.tipo]}
         </span>
@@ -294,7 +299,7 @@ function Sesion({ preguntas, form, onFin }: { preguntas: Pregunta[]; form: Formu
       )}
       <h2 className="mt-3 text-lg font-semibold text-slate-50">{p.enunciado}</h2>
       {p.detalle && <p className="mt-1 whitespace-pre-line text-sm text-slate-300">{p.detalle}</p>}
-      {p.tipo === 'encontrar' && !respondida && <p className="mt-2 text-xs text-slate-500">Gira y acerca el modelo y haz clic en la estructura.</p>}
+      {p.tipo === 'encontrar' && !respondida && <p className="mt-2 text-xs text-slate-400">Gira y acerca el modelo y haz clic en la estructura.</p>}
 
       {p.opciones.length > 0 && (
         <ol className="mt-4 space-y-2">
@@ -311,7 +316,7 @@ function Sesion({ preguntas, form, onFin }: { preguntas: Pregunta[]; form: Formu
             return (
               <li key={o.id}>
                 <button type="button" disabled={respondida} onClick={() => elegir(o.id)} className={`flex w-full gap-2 rounded-lg border px-3 py-2 text-left text-sm ${estilo}`}>
-                  <span className="font-bold text-slate-500">{i + 1}</span>
+                  <span className="font-bold text-slate-400">{i + 1}</span>
                   {o.texto}
                 </button>
               </li>
@@ -389,7 +394,7 @@ function Resumen({ respuestas, onOtra, onConfigurar }: { respuestas: Respuesta[]
             {fallos.map((r) => (
               <li key={r.pregunta.n} className="flex justify-between gap-3 border-t border-slate-800 pt-1">
                 <span className="text-slate-200">{conceptos().get(r.pregunta.concepto)?.nombre ?? r.pregunta.concepto}</span>
-                <span className="text-xs text-slate-500">{NOMBRE_TIPO[r.pregunta.tipo]}</span>
+                <span className="text-xs text-slate-400">{NOMBRE_TIPO[r.pregunta.tipo]}</span>
               </li>
             ))}
           </ul>
@@ -451,7 +456,7 @@ export default function Quiz() {
 
   return (
     <div className="mx-auto w-full max-w-7xl px-4 py-6">
-      <nav aria-label="Ruta" className="text-xs text-slate-500">
+      <nav aria-label="Ruta" className="text-xs text-slate-400">
         <Link to="/estudio" className="hover:text-slate-300">
           Modo estudio
         </Link>{' '}

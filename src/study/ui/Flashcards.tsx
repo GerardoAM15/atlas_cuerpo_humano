@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { fichaDe, useFichas } from '@/data/catalogo';
 import { nombreRegion } from '@/data/regiones';
 import { SISTEMAS, SISTEMAS_POR_ID, type SistemaId } from '@/data/sistemas';
 import type { Estructura } from '@/data/esquemas';
@@ -37,7 +38,7 @@ function Reverso({ e, c }: { e: Estructura; c: Concepto }) {
       <p className="text-slate-400">
         <i lang="la">{e.latin}</i> · <span lang="en">{e.ingles.replace(/^(Right|Left) /, '')}</span>
       </p>
-      <p className="text-xs text-slate-500">
+      <p className="text-xs text-slate-400">
         {SISTEMAS_POR_ID[e.sistema].nombre} › {nombreRegion(e.sistema, e.region)}
       </p>
       <p className="text-slate-300">
@@ -45,13 +46,13 @@ function Reverso({ e, c }: { e: Estructura; c: Concepto }) {
       </p>
       {e.tipo === 'musculo' && (
         <dl className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-xs text-slate-300">
-          <dt className="text-slate-500">Origen</dt>
+          <dt className="text-slate-400">Origen</dt>
           <dd>{e.origen}</dd>
-          <dt className="text-slate-500">Inserción</dt>
+          <dt className="text-slate-400">Inserción</dt>
           <dd>{e.insercion}</dd>
-          <dt className="text-slate-500">Inervación</dt>
+          <dt className="text-slate-400">Inervación</dt>
           <dd>{e.inervacion}</dd>
-          <dt className="text-slate-500">Acción</dt>
+          <dt className="text-slate-400">Acción</dt>
           <dd>{e.accion}</dd>
         </dl>
       )}
@@ -68,6 +69,8 @@ export default function Flashcards() {
   const mazo = useMemo(() => crearMazo(sistemas, useProgresoStore.getState().tarjetas, semilla), [sistemas, semilla]);
   const [indice, setIndice] = useState(0);
   const [volteada, setVolteada] = useState(false);
+  // Las fichas completas (para el reverso) se cargan por sistema.
+  const fichasListas = useFichas(sistemas);
   const hoy = fechaLocal();
   const c = mazo[indice];
   const e = c ? (c.lados.find((x) => x.nodoModelo) ?? c.e) : undefined;
@@ -81,7 +84,7 @@ export default function Flashcards() {
 
   return (
     <div className="mx-auto w-full max-w-4xl px-4 py-6">
-      <nav aria-label="Ruta" className="text-xs text-slate-500">
+      <nav aria-label="Ruta" className="text-xs text-slate-400">
         <Link to="/estudio" className="hover:text-slate-300">
           Modo estudio
         </Link>{' '}
@@ -132,7 +135,7 @@ export default function Flashcards() {
         </section>
       ) : (
         <section className="mt-6 rounded-xl border border-slate-800 bg-slate-900/60 p-4" aria-live="polite">
-          <p className="mb-2 flex justify-between text-xs text-slate-500">
+          <p className="mb-2 flex justify-between text-xs text-slate-400">
             <span>
               Tarjeta {indice + 1} de {mazo.length}
               {tarjetas[c.id] ? ' · repaso' : ' · nueva'}
@@ -146,11 +149,17 @@ export default function Flashcards() {
             <Vista3DEstructura e={e} />
             <div className="flex flex-col justify-center">
               {volteada ? (
-                <Reverso e={e} c={c} />
+                fichasListas && fichaDe(e.id) ? (
+                  <Reverso e={fichaDe(e.id)!} c={c} />
+                ) : (
+                  <p role="status" className="text-sm text-slate-400">
+                    Cargando ficha…
+                  </p>
+                )
               ) : (
                 <div className="text-center">
                   <p className="text-lg font-semibold text-slate-200">¿Qué estructura es?</p>
-                  <p className="mt-1 text-sm text-slate-500">Gírala con el ratón. Piensa la respuesta y dale la vuelta.</p>
+                  <p className="mt-1 text-sm text-slate-400">Gírala con el ratón. Piensa la respuesta y dale la vuelta.</p>
                   <button type="button" onClick={() => setVolteada(true)} className="mt-4 rounded-lg bg-sky-500 px-5 py-2 font-semibold text-slate-950 hover:bg-sky-400" autoFocus>
                     Mostrar respuesta
                   </button>

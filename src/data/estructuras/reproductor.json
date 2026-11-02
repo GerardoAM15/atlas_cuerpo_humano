@@ -221,6 +221,211 @@
     ]
   },
   {
+    "id": "arteria-testicular-d",
+    "nodoModelo": "arteria-testicular-d",
+    "tipo": "vaso",
+    "sistema": "reproductor",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "masculino",
+    "nombre": "Arteria testicular derecha",
+    "latin": "Arteria testicularis",
+    "ingles": "Right testicular artery",
+    "descripcion": "Arteria larga y fina que nace de la cara anterior de la aorta abdominal, por debajo de las renales (L2), desciende por el retroperitoneo y atraviesa el conducto inguinal dentro del cordón espermático.",
+    "funcion": "Irriga el testículo y el epidídimo.",
+    "ubicacion": "Retroperitoneo sobre el psoas (cruzando por delante del uréter), conducto inguinal y cordón espermático.",
+    "datosClinicos": "En la torsión testicular el cordón se retuerce y la ocluye: es una urgencia, porque el testículo se pierde si no se destuerce en pocas horas.",
+    "curiosidad": "Su gran longitud se debe a que el testículo se forma en la región lumbar y desciende al escroto durante el desarrollo fetal.",
+    "relaciones": [
+      "aorta-abdominal",
+      "testiculo-d",
+      "epididimo-d",
+      "vena-testicular-d",
+      "psoas-mayor-d",
+      "ureter-d"
+    ]
+  },
+  {
+    "id": "arteria-testicular-i",
+    "nodoModelo": "arteria-testicular-i",
+    "tipo": "vaso",
+    "sistema": "reproductor",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "masculino",
+    "nombre": "Arteria testicular izquierda",
+    "latin": "Arteria testicularis",
+    "ingles": "Left testicular artery",
+    "descripcion": "Arteria larga y fina que nace de la cara anterior de la aorta abdominal, por debajo de las renales (L2), desciende por el retroperitoneo y atraviesa el conducto inguinal dentro del cordón espermático.",
+    "funcion": "Irriga el testículo y el epidídimo.",
+    "ubicacion": "Retroperitoneo sobre el psoas (cruzando por delante del uréter), conducto inguinal y cordón espermático.",
+    "datosClinicos": "En la torsión testicular el cordón se retuerce y la ocluye: es una urgencia, porque el testículo se pierde si no se destuerce en pocas horas.",
+    "curiosidad": "Su gran longitud se debe a que el testículo se forma en la región lumbar y desciende al escroto durante el desarrollo fetal.",
+    "relaciones": [
+      "aorta-abdominal",
+      "testiculo-i",
+      "epididimo-i",
+      "vena-testicular-i",
+      "psoas-mayor-i",
+      "ureter-i"
+    ]
+  },
+  {
+    "id": "vena-testicular-d",
+    "nodoModelo": "vena-testicular-d",
+    "tipo": "vaso",
+    "sistema": "reproductor",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "masculino",
+    "nombre": "Vena testicular derecha",
+    "latin": "Vena testicularis",
+    "ingles": "Right testicular vein",
+    "descripcion": "Nace del plexo pampiniforme del cordón espermático y asciende por el retroperitoneo; la derecha desemboca en la vena cava inferior y la izquierda, en ángulo recto, en la vena renal izquierda.",
+    "funcion": "Drena la sangre del testículo; el plexo pampiniforme enfría la sangre arterial que llega a él (intercambio de calor a contracorriente).",
+    "ubicacion": "Cordón espermático, conducto inguinal y retroperitoneo, junto a la arteria testicular.",
+    "datosClinicos": "El varicocele (dilatación del plexo pampiniforme) es mucho más frecuente en el lado izquierdo, por la desembocadura en ángulo recto en la vena renal; puede reducir la fertilidad.",
+    "relaciones": [
+      "testiculo-d",
+      "epididimo-d",
+      "arteria-testicular-d",
+      "psoas-mayor-d",
+      "vena-cava-inferior"
+    ]
+  },
+  {
+    "id": "vena-testicular-i",
+    "nodoModelo": "vena-testicular-i",
+    "tipo": "vaso",
+    "sistema": "reproductor",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "masculino",
+    "nombre": "Vena testicular izquierda",
+    "latin": "Vena testicularis",
+    "ingles": "Left testicular vein",
+    "descripcion": "Nace del plexo pampiniforme del cordón espermático y asciende por el retroperitoneo; la derecha desemboca en la vena cava inferior y la izquierda, en ángulo recto, en la vena renal izquierda.",
+    "funcion": "Drena la sangre del testículo; el plexo pampiniforme enfría la sangre arterial que llega a él (intercambio de calor a contracorriente).",
+    "ubicacion": "Cordón espermático, conducto inguinal y retroperitoneo, junto a la arteria testicular.",
+    "datosClinicos": "El varicocele (dilatación del plexo pampiniforme) es mucho más frecuente en el lado izquierdo, por la desembocadura en ángulo recto en la vena renal; puede reducir la fertilidad.",
+    "relaciones": [
+      "testiculo-i",
+      "epididimo-i",
+      "arteria-testicular-i",
+      "psoas-mayor-i",
+      "vena-renal-i"
+    ]
+  },
+  {
+    "id": "arteria-dorsal-pene-d",
+    "nodoModelo": "arteria-dorsal-pene-d",
+    "tipo": "vaso",
+    "sistema": "reproductor",
+    "lado": "derecho",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "masculino",
+    "nombre": "Arteria dorsal del pene derecha",
+    "latin": "Arteria dorsalis penis",
+    "ingles": "Right dorsal artery of penis",
+    "descripcion": "Rama terminal de la arteria pudenda interna que recorre el dorso del pene bajo la fascia profunda (de Buck), entre la vena dorsal profunda (medial) y el nervio dorsal (lateral).",
+    "funcion": "Irriga la piel, las fascias y el glande; la erección depende sobre todo de la arteria profunda (cavernosa), otra rama de la pudenda interna.",
+    "ubicacion": "Dorso del pene, bajo la fascia de Buck, desde la raíz hasta el glande.",
+    "datosClinicos": "La disfunción eréctil de origen arterial suele deberse a aterosclerosis de las arterias pudendas y del pene; se estudia con ecografía Doppler.",
+    "relaciones": [
+      "cuerpos-cavernosos",
+      "glande",
+      "vena-dorsal-profunda-pene",
+      "iliaca-interna-d"
+    ]
+  },
+  {
+    "id": "arteria-dorsal-pene-i",
+    "nodoModelo": "arteria-dorsal-pene-i",
+    "tipo": "vaso",
+    "sistema": "reproductor",
+    "lado": "izquierdo",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "masculino",
+    "nombre": "Arteria dorsal del pene izquierda",
+    "latin": "Arteria dorsalis penis",
+    "ingles": "Left dorsal artery of penis",
+    "descripcion": "Rama terminal de la arteria pudenda interna que recorre el dorso del pene bajo la fascia profunda (de Buck), entre la vena dorsal profunda (medial) y el nervio dorsal (lateral).",
+    "funcion": "Irriga la piel, las fascias y el glande; la erección depende sobre todo de la arteria profunda (cavernosa), otra rama de la pudenda interna.",
+    "ubicacion": "Dorso del pene, bajo la fascia de Buck, desde la raíz hasta el glande.",
+    "datosClinicos": "La disfunción eréctil de origen arterial suele deberse a aterosclerosis de las arterias pudendas y del pene; se estudia con ecografía Doppler.",
+    "relaciones": [
+      "cuerpos-cavernosos",
+      "glande",
+      "vena-dorsal-profunda-pene",
+      "iliaca-interna-i"
+    ]
+  },
+  {
+    "id": "vena-dorsal-profunda-pene",
+    "nodoModelo": "vena-dorsal-profunda-pene",
+    "tipo": "vaso",
+    "sistema": "reproductor",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "masculino",
+    "nombre": "Vena dorsal profunda del pene",
+    "latin": "Vena dorsalis profunda penis",
+    "ingles": "Deep dorsal vein of penis",
+    "descripcion": "Vena impar de la línea media del dorso del pene, bajo la fascia profunda (de Buck), entre las dos arterias dorsales.",
+    "funcion": "Drena el glande y los cuerpos cavernosos hacia el plexo venoso prostático.",
+    "ubicacion": "Surco dorsal entre los cuerpos cavernosos; pasa bajo la sínfisis del pubis hasta el plexo prostático.",
+    "datosClinicos": "La fuga venosa, por fallo del mecanismo venooclusivo de los cuerpos cavernosos, es una causa de disfunción eréctil.",
+    "relaciones": [
+      "cuerpos-cavernosos",
+      "glande",
+      "arteria-dorsal-pene-d",
+      "arteria-dorsal-pene-i",
+      "prostata"
+    ]
+  },
+  {
+    "id": "vena-dorsal-superficial-pene",
+    "nodoModelo": "vena-dorsal-superficial-pene",
+    "tipo": "vaso",
+    "sistema": "reproductor",
+    "vaso": {
+      "clase": "vena",
+      "sangre": "desoxigenada"
+    },
+    "region": "masculino",
+    "nombre": "Vena dorsal superficial del pene",
+    "latin": "Vena dorsalis superficialis penis",
+    "ingles": "Superficial dorsal vein of penis",
+    "descripcion": "Vena subcutánea del dorso del pene, por encima de la fascia profunda; suele ser única en la línea media, aunque a menudo se divide en dos.",
+    "funcion": "Drena la piel y el tejido subcutáneo del pene hacia las venas pudendas externas superficiales y la safena mayor.",
+    "ubicacion": "Tejido subcutáneo del dorso del pene, por encima de la fascia de Buck.",
+    "datosClinicos": "La enfermedad de Mondor del pene es una tromboflebitis de esta vena, generalmente benigna y autolimitada.",
+    "relaciones": [
+      "vena-dorsal-profunda-pene",
+      "cuerpos-cavernosos"
+    ]
+  },
+  {
     "id": "ovarios",
     "nodoModelo": null,
     "tipo": "glandula",

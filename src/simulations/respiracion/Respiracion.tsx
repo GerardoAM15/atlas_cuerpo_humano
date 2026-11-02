@@ -297,7 +297,7 @@ export default function Respiracion() {
           <figure className="rounded-lg border border-slate-800 bg-slate-950/60 p-2">
             <figcaption className="px-1 text-xs font-semibold text-slate-300">Intercambio alveolar (difusión)</figcaption>
             <Alveolo t={reloj.t} />
-            <p className="px-1 text-[11px] text-slate-500">
+            <p className="px-1 text-[11px] text-slate-400">
               Cada gas difunde a favor de su gradiente de presión parcial a través de la membrana respiratoria (≈ 0,5 µm). El equilibrio se
               alcanza en el primer tercio del recorrido capilar en reposo.
             </p>

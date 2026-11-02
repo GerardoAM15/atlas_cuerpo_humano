@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { SISTEMAS } from '@/data/sistemas';
+import PanelSinConexion from '@/pwa/PanelSinConexion';
 
 const SECCIONES = [
   {
@@ -72,16 +73,11 @@ export default function Inicio() {
         <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {SISTEMAS.map((s) => (
             <li key={s.id} className="rounded-xl border border-slate-800 bg-slate-900/40 p-4">
-              <div className="flex items-start justify-between gap-3">
-                <div className="flex items-center gap-2">
-                  <span aria-hidden className="h-3 w-3 rounded-full" style={{ backgroundColor: s.color }} />
-                  <h3 className="font-semibold">{s.nombre}</h3>
-                </div>
-                <span className="shrink-0 rounded-full bg-slate-800 px-2 py-0.5 text-[11px] text-slate-400">
-                  Fase {s.fase}
-                </span>
+              <div className="flex items-center gap-2">
+                <span aria-hidden className="h-3 w-3 rounded-full" style={{ backgroundColor: s.color }} />
+                <h3 className="font-semibold">{s.nombre}</h3>
               </div>
-              <p className="mt-1 text-xs italic text-slate-500">
+              <p className="mt-1 text-xs italic text-slate-400">
                 {s.latin} · {s.ingles}
               </p>
               <p className="mt-2 text-sm text-slate-400">{s.descripcion}</p>
@@ -89,6 +85,10 @@ export default function Inicio() {
           ))}
         </ul>
       </section>
+
+      <div className="mt-12">
+        <PanelSinConexion />
+      </div>
     </div>
   );
 }

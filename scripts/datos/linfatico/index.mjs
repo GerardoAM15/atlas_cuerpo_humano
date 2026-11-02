@@ -1,5 +1,5 @@
-// Sistema linfático e inmune: bazo y timo (con modelo); ganglios, conducto torácico y amígdalas (sin modelo).
-import { par, unica } from '../util.mjs';
+// Sistema linfático e inmune: bazo, arteria esplénica y timo (con modelo); ganglios, conducto torácico y amígdalas (sin modelo).
+import { datosVaso, par, unica } from '../util.mjs';
 
 const SIN_MODELO = 'BodyParts3D 4.0 no incluye esta estructura. Candidato: Z-Anatomy.';
 const LIN = { material: 'linfatico' };
@@ -88,5 +88,19 @@ export default [
     ubicacion: 'Fosas amigdalinas, entre los pilares anterior y posterior del velo del paladar.',
     relacionesExtra: ['paladar-blando', 'lengua'],
     datosClinicos: 'La amigdalitis por estreptococo debe tratarse para prevenir la fiebre reumática.',
+  }),
+  unica('arteria-esplenica', {
+    ...datosVaso('arteria'),
+    region: 'organos-linfoides',
+    nombre: 'Arteria esplénica',
+    latin: 'Arteria splenica (lienalis)',
+    ingles: 'Splenic artery',
+    fuente: ['Splenic artery'],
+    descripcion: 'La rama más grande del tronco celíaco; recorre con un trayecto tortuoso el borde superior del páncreas hasta el hilio del bazo.',
+    funcion:
+      'Irriga el bazo y da ramas al páncreas (pancreática dorsal y magna) y al estómago (gástricas cortas y gastroomental izquierda).',
+    ubicacion: 'Detrás del estómago, en la pared posterior de la bolsa omental, a lo largo del borde superior del páncreas.',
+    relacionesExtra: ['tronco-celiaco', 'bazo', 'pancreas', 'estomago', 'vena-esplenica'],
+    datosClinicos: 'Es la localización más frecuente de los aneurismas de las arterias viscerales, con mayor riesgo de rotura durante el embarazo.',
   }),
 ];

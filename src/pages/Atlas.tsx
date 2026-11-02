@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useAtlasStore } from '@/store/useAtlasStore';
 import Visor from '@/viewer/Visor';
 import ArbolEstructuras from '@/viewer/ui/ArbolEstructuras';
@@ -13,6 +14,11 @@ export default function Atlas() {
   const seleccionar = useAtlasStore((s) => s.seleccionar);
   const [panelAbierto, setPanelAbierto] = useState(false);
 
+  // En móvil el panel es un cajón superpuesto: se cierra al elegir una estructura para ver su ficha.
+  useEffect(() => {
+    if (seleccion) setPanelAbierto(false);
+  }, [seleccion]);
+
   // Escape cierra la ficha (salvo cuando se está escribiendo en un campo).
   useEffect(() => {
     const alPulsar = (e: KeyboardEvent) => {
@@ -25,8 +31,10 @@ export default function Atlas() {
     return () => window.removeEventListener('keydown', alPulsar);
   }, [seleccionar]);
 
+  // Alto de la ventana menos la cabecera (3,5 rem + 1 px de borde): sin scroll de página.
   return (
-    <div className="relative flex h-[calc(100dvh-3.5rem)] overflow-hidden">
+    <div className="relative flex h-[calc(100dvh-3.5rem-1px)] overflow-hidden">
+      <h1 className="sr-only">Atlas 3D</h1>
       {/* Panel lateral: búsqueda, sistemas y árbol. En móvil es un cajón superpuesto. */}
       <aside
         aria-label="Sistemas y estructuras"
@@ -36,11 +44,11 @@ export default function Atlas() {
           <Buscador />
         </div>
         <div className="border-b border-slate-800 p-3">
-          <h2 className="mb-1 text-xs font-semibold uppercase tracking-wide text-slate-500">Sistemas</h2>
+          <h2 className="mb-1 text-xs font-semibold uppercase tracking-wide text-slate-400">Sistemas</h2>
           <PanelSistemas />
         </div>
         <div className="min-h-0 flex-1 overflow-auto p-3">
-          <h2 className="mb-1 text-xs font-semibold uppercase tracking-wide text-slate-500">Estructuras</h2>
+          <h2 className="mb-1 text-xs font-semibold uppercase tracking-wide text-slate-400">Estructuras</h2>
           <ArbolEstructuras />
         </div>
       </aside>
@@ -63,9 +71,15 @@ export default function Atlas() {
         <div className="absolute bottom-2 left-2">
           <LeyendaPines />
         </div>
-        <p className="pointer-events-none absolute bottom-2 right-3 hidden text-[11px] text-slate-600 sm:block">
-          Arrastrar: girar · Rueda: zoom · Clic derecho: desplazar · Esc: deseleccionar
-        </p>
+        <div className="pointer-events-none absolute bottom-2 right-3 text-right text-[11px] text-slate-400">
+          <p className="hidden sm:block">Arrastrar: girar · Rueda: zoom · Clic derecho: desplazar · Esc: deseleccionar</p>
+          <p>
+            Modelos: BodyParts3D © DBCLS (CC BY 4.0) ·{' '}
+            <Link to="/creditos" className="pointer-events-auto underline hover:text-slate-200">
+              créditos
+            </Link>
+          </p>
+        </div>
       </section>
 
       {/* Ficha: panel derecho en escritorio, hoja inferior en móvil. */}

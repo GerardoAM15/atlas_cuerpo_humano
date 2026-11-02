@@ -1,0 +1,82 @@
+{
+  "fuentes": {
+    "bodyparts3d": {
+      "nombre": "BodyParts3D",
+      "version": "4.0 (árbol PART-OF, reducción de polígonos 99 %)",
+      "licencia": "CC BY 4.0",
+      "urlLicencia": "https://creativecommons.org/licenses/by/4.0/",
+      "url": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "atribucion": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+      "nota": "Licencia vigente desde el 25/02/2025; antes CC BY-SA 2.1 JP (los OBJ conservan la cabecera antigua)."
+    }
+  },
+  "bytesTotales": 20318724,
+  "sistemas": {
+    "cardiovascular": {
+      "archivo": "models/cardiovascular.glb",
+      "bytes": 2457484,
+      "triangulos": 312962,
+      "version": "4f341a5796"
+    },
+    "digestivo": {
+      "archivo": "models/digestivo.glb",
+      "bytes": 1351492,
+      "triangulos": 161552,
+      "version": "dd029ddbd4"
+    },
+    "endocrino": {
+      "archivo": "models/endocrino.glb",
+      "bytes": 122784,
+      "triangulos": 13192,
+      "version": "8300a08506"
+    },
+    "esqueletico": {
+      "archivo": "models/esqueletico.glb",
+      "bytes": 3204760,
+      "triangulos": 357810,
+      "version": "0eed049fd4"
+    },
+    "linfatico": {
+      "archivo": "models/linfatico.glb",
+      "bytes": 100832,
+      "triangulos": 9854,
+      "version": "336fa0d460"
+    },
+    "muscular": {
+      "archivo": "models/muscular.glb",
+      "bytes": 6099040,
+      "triangulos": 605166,
+      "version": "5dd3e05914"
+    },
+    "nervioso": {
+      "archivo": "models/nervioso.glb",
+      "bytes": 2369760,
+      "triangulos": 293958,
+      "version": "2f1bdac703"
+    },
+    "reproductor": {
+      "archivo": "models/reproductor.glb",
+      "bytes": 508796,
+      "triangulos": 75634,
+      "version": "15607aa141"
+    },
+    "respiratorio": {
+      "archivo": "models/respiratorio.glb",
+      "bytes": 2797632,
+      "triangulos": 264246,
+      "version": "55565b5af5"
+    },
+    "sentidos": {
+      "archivo": "models/sentidos.glb",
+      "bytes": 969732,
+      "triangulos": 131172,
+      "version": "88d2b45227"
+    },
+    "urinario": {
+      "archivo": "models/urinario.glb",
+      "bytes": 336412,
+      "triangulos": 38924,
+      "version": "e440185eed"
+    }
+  }
+}

@@ -1,9 +1,10 @@
-import { describe, expect, it } from 'vitest';
-import { normalizar } from '@/data/busqueda';
-import { POR_ID } from '@/data/catalogo';
+import { beforeAll, describe, expect, it } from 'vitest';
+import { normalizar } from '@/data/texto';
+import { POR_ID, cargarSistemas, fichaDe } from '@/data/catalogo';
+import { SISTEMAS } from '@/data/sistemas';
 import type { EstructuraMusculo } from '@/data/esquemas';
 import { conceptoDe, conceptos } from './conceptos';
-import { claveNervio, crearAzar, generarQuiz, tiposDisponibles, type ConfigQuiz, type TipoPregunta } from './generador';
+import { claveNervio, crearAzar, generarQuiz, tiposDisponibles, type ConfigQuiz, type Pregunta, type TipoPregunta } from './generador';
 
 const TODOS: TipoPregunta[] = ['encontrar', 'que-es', 'funcion', 'origen-insercion', 'inervacion'];
 const cfg = (extra: Partial<ConfigQuiz> = {}): ConfigQuiz => ({
@@ -15,8 +16,14 @@ const cfg = (extra: Partial<ConfigQuiz> = {}): ConfigQuiz => ({
   ...extra,
 });
 
+// Las preguntas de texto necesitan las fichas completas, que se cargan bajo demanda.
+beforeAll(() => cargarSistemas(SISTEMAS.map((s) => s.id)));
+
 describe('generador de quiz', () => {
-  const quiz = generarQuiz(cfg());
+  let quiz: Pregunta[] = [];
+  beforeAll(() => {
+    quiz = generarQuiz(cfg());
+  });
 
   it('genera el número pedido de preguntas', () => {
     expect(quiz).toHaveLength(40);
@@ -68,7 +75,7 @@ describe('tipos de pregunta', () => {
       const claves = p.opciones.map((o) => claveNervio(o.texto));
       expect(new Set(claves).size).toBe(4);
       const correcta = p.opciones.find((o) => o.id === p.correcta)!;
-      expect(correcta.texto).toBe((conceptoDe(p.objetivo)!.e as EstructuraMusculo).inervacion);
+      expect(correcta.texto).toBe((fichaDe(conceptoDe(p.objetivo)!.e.id) as EstructuraMusculo).inervacion);
     }
   });
 

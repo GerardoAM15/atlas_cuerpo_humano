@@ -7,7 +7,7 @@ npm run modelos:descargar        # 1. descarga (~210 MB) y descomprime en assets
 npm run modelos                  # 2-4. todos los sistemas configurados
 npm run modelos -- esqueletico   #      o solo uno
 npm run modelos:inspeccionar     # resumen del .glb con gltf-transform inspect
-npm run datos                    # regenera las fichas JSON (después de cambiar modelos o datos)
+npm run datos                    # regenera las fichas JSON, indice.json y modelos.json (después de cambiar modelos o datos)
 ```
 
 `assets-raw/` está en `.gitignore`. Los `.glb` de `public/models/` y `src/data/manifest-modelos.json` **sí** se versionan.

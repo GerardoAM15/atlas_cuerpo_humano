@@ -16,7 +16,7 @@ export default function Simulaciones() {
               to={`/simulaciones/${s.id}`}
               className="block h-full rounded-xl border border-slate-800 bg-slate-900/60 p-5 transition-colors hover:border-sky-500/50 hover:bg-slate-900"
             >
-              <p className="text-xs font-semibold text-slate-500">{i + 1}</p>
+              <p className="text-xs font-semibold text-slate-400">{i + 1}</p>
               <h2 className="text-lg font-semibold text-slate-100">{s.titulo}</h2>
               <p className="mt-2 text-sm text-slate-400">{s.resumen}</p>
             </Link>

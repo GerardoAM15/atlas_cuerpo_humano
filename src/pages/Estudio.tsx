@@ -60,7 +60,7 @@ export default function Estudio() {
           onClick={() => {
             if (window.confirm('¿Borrar todo tu progreso de estudio? No se puede deshacer.')) reiniciar();
           }}
-          className="text-xs text-slate-500 underline hover:text-red-300"
+          className="text-xs text-slate-400 underline hover:text-red-300"
         >
           Borrar el progreso
         </button>

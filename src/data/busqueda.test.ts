@@ -1,8 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { crearBuscador, normalizar } from './busqueda';
-import { ESTRUCTURAS } from './catalogo';
+import { crearBuscador } from './busqueda';
+import { normalizar } from './texto';
+import { INDICE } from './catalogo';
 
-const buscar = crearBuscador(ESTRUCTURAS);
+const buscar = crearBuscador(INDICE);
 const ids = (q: string, n = 5) => buscar(q, n).map((e) => e.id);
 
 describe('normalizar', () => {

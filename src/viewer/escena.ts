@@ -1,6 +1,6 @@
 // Cálculos puros del visor (sin React ni WebGL): cajas, planos de corte, vistas, explosión y pines.
-import { MANIFEST, POR_ID, cajaDe, centroDe, estructurasDe } from '@/data/catalogo';
-import type { Caja, Estructura } from '@/data/esquemas';
+import { POR_ID, cajaDe, centroDe, estructurasDe } from '@/data/catalogo';
+import type { Caja, ResumenEstructura } from '@/data/esquemas';
 import type { SistemaId } from '@/data/sistemas';
 import type { EjeCorte, Vista } from '@/store/useAtlasStore';
 
@@ -22,7 +22,7 @@ export function unirCajas(cajas: readonly Caja[]): Caja | null {
 /** Caja de todas las estructuras con modelo de los sistemas indicados. */
 export function cajaDeSistemas(sistemas: readonly SistemaId[]): Caja | null {
   return unirCajas(
-    sistemas.flatMap((s) => (MANIFEST.sistemas[s]?.estructuras ?? []).map((e) => cajaDe(e.id)).filter((c): c is Caja => c !== null)),
+    sistemas.flatMap((s) => estructurasDe(s).map((e) => cajaDe(e.id)).filter((c): c is Caja => c !== null)),
   );
 }
 
@@ -92,7 +92,7 @@ export const claveRegion = (sistema: SistemaId, region: string) => `${sistema}/$
  * Estructuras con pin numerado: las de la región activa («sistema/región») con modelo. Si la
  * selección tiene lado, solo se muestran las de ese lado (y las impares) para no saturar la vista.
  */
-export function pinesDeRegion(clave: string | null, seleccion: string | null): Estructura[] {
+export function pinesDeRegion(clave: string | null, seleccion: string | null): ResumenEstructura[] {
   if (!clave) return [];
   const [sistema, region] = clave.split('/');
   const lado = seleccion ? POR_ID.get(seleccion)?.lado : undefined;

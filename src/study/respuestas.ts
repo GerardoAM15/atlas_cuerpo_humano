@@ -1,6 +1,6 @@
 // Evaluación de respuestas escritas: sin distinguir acentos ni mayúsculas, en español, latín o inglés.
-import { normalizar } from '@/data/busqueda';
-import type { Estructura } from '@/data/esquemas';
+import { normalizar } from '@/data/texto';
+import type { ResumenEstructura } from '@/data/esquemas';
 import { nombreBase } from './conceptos';
 
 export type ResultadoEscrito = 'correcta' | 'falta-lado' | 'casi' | 'incorrecta';
@@ -51,7 +51,7 @@ const tolerancia = (s: string) => Math.max(1, Math.floor(s.length / 8));
  * Evalúa lo escrito frente a una estructura. Si la estructura es par y la respuesta acierta el
  * nombre pero no el lado, devuelve «falta-lado».
  */
-export function evaluarEscrita(texto: string, e: Pick<Estructura, 'nombre' | 'latin' | 'ingles' | 'lado'>): ResultadoEscrito {
+export function evaluarEscrita(texto: string, e: Pick<ResumenEstructura, 'nombre' | 'latin' | 'ingles' | 'lado'>): ResultadoEscrito {
   const r = limpiar(texto);
   if (!r) return 'incorrecta';
   // El nombre latino no lleva lado: en las estructuras pares solo acredita el concepto.

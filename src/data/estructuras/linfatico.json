@@ -154,5 +154,30 @@
       "paladar-blando",
       "lengua"
     ]
+  },
+  {
+    "id": "arteria-esplenica",
+    "nodoModelo": "arteria-esplenica",
+    "tipo": "vaso",
+    "sistema": "linfatico",
+    "vaso": {
+      "clase": "arteria",
+      "sangre": "oxigenada"
+    },
+    "region": "organos-linfoides",
+    "nombre": "Arteria esplénica",
+    "latin": "Arteria splenica (lienalis)",
+    "ingles": "Splenic artery",
+    "descripcion": "La rama más grande del tronco celíaco; recorre con un trayecto tortuoso el borde superior del páncreas hasta el hilio del bazo.",
+    "funcion": "Irriga el bazo y da ramas al páncreas (pancreática dorsal y magna) y al estómago (gástricas cortas y gastroomental izquierda).",
+    "ubicacion": "Detrás del estómago, en la pared posterior de la bolsa omental, a lo largo del borde superior del páncreas.",
+    "datosClinicos": "Es la localización más frecuente de los aneurismas de las arterias viscerales, con mayor riesgo de rotura durante el embarazo.",
+    "relaciones": [
+      "tronco-celiaco",
+      "bazo",
+      "pancreas",
+      "estomago",
+      "vena-esplenica"
+    ]
   }
 ]

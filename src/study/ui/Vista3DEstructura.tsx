@@ -3,13 +3,13 @@ import * as THREE from 'three';
 import { Canvas, useThree } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import { urlModelo } from '@/data/catalogo';
-import type { Estructura } from '@/data/esquemas';
+import type { ResumenEstructura } from '@/data/esquemas';
 
 /**
  * Copia aislada de una estructura del modelo del sistema, centrada y con materiales propios
  * (para no alterar los del visor principal, que comparten la caché de useGLTF).
  */
-function Pieza({ e }: { e: Estructura }) {
+function Pieza({ e }: { e: ResumenEstructura }) {
   const { scene } = useGLTF(urlModelo(e.sistema), false, true);
   const { objeto, distancia } = useMemo(() => {
     scene.updateMatrixWorld(true);
@@ -55,7 +55,7 @@ function PosicionCamara({ distancia }: { distancia: number }) {
 }
 
 /** Vista 3D de una sola estructura, que se puede girar (la usan las flashcards). */
-export default function Vista3DEstructura({ e }: { e: Estructura }) {
+export default function Vista3DEstructura({ e }: { e: ResumenEstructura }) {
   return (
     <div className="h-64 w-full overflow-hidden rounded-lg bg-slate-950 sm:h-80">
       <Canvas camera={{ position: [0, 0, 0.4], fov: 35, near: 0.001, far: 20 }} dpr={[1, 1.75]} aria-label="Estructura en 3D">

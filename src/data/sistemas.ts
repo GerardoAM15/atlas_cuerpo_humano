@@ -23,8 +23,6 @@ export interface Sistema {
   descripcion: string;
   /** Color de acento para la UI (hex). */
   color: string;
-  /** Fase del plan en que se incorporan modelo y datos. */
-  fase: number;
 }
 
 export const SISTEMAS: readonly Sistema[] = [
@@ -35,7 +33,6 @@ export const SISTEMAS: readonly Sistema[] = [
     ingles: 'Skeletal system',
     descripcion: 'Los 206 huesos del adulto y sus articulaciones principales.',
     color: '#e7e5e4',
-    fase: 2,
   },
   {
     id: 'muscular',
@@ -44,7 +41,6 @@ export const SISTEMAS: readonly Sistema[] = [
     ingles: 'Muscular system',
     descripcion: 'Músculos esqueléticos superficiales y profundos: origen, inserción, inervación y acción.',
     color: '#f87171',
-    fase: 3,
   },
   {
     id: 'cardiovascular',
@@ -53,7 +49,6 @@ export const SISTEMAS: readonly Sistema[] = [
     ingles: 'Cardiovascular system',
     descripcion: 'Corazón, grandes arterias y venas, y vasos principales de miembros y órganos.',
     color: '#ef4444',
-    fase: 3,
   },
   {
     id: 'respiratorio',
@@ -62,7 +57,6 @@ export const SISTEMAS: readonly Sistema[] = [
     ingles: 'Respiratory system',
     descripcion: 'Vías aéreas superiores e inferiores, pulmones por lóbulos y diafragma.',
     color: '#7dd3fc',
-    fase: 3,
   },
   {
     id: 'nervioso',
@@ -71,7 +65,6 @@ export const SISTEMAS: readonly Sistema[] = [
     ingles: 'Nervous system',
     descripcion: 'Encéfalo, médula espinal, nervios craneales y nervios periféricos principales.',
     color: '#facc15',
-    fase: 4,
   },
   {
     id: 'digestivo',
@@ -80,7 +73,6 @@ export const SISTEMAS: readonly Sistema[] = [
     ingles: 'Digestive system',
     descripcion: 'Tubo digestivo de la boca al ano y glándulas anexas: hígado, vesícula y páncreas.',
     color: '#fb923c',
-    fase: 4,
   },
   {
     id: 'urinario',
@@ -89,7 +81,6 @@ export const SISTEMAS: readonly Sistema[] = [
     ingles: 'Urinary system',
     descripcion: 'Riñones, uréteres, vejiga urinaria y uretra.',
     color: '#fde047',
-    fase: 4,
   },
   {
     id: 'endocrino',
@@ -98,7 +89,6 @@ export const SISTEMAS: readonly Sistema[] = [
     ingles: 'Endocrine glands',
     descripcion: 'Hipófisis, tiroides, paratiroides, suprarrenales, páncreas endocrino y gónadas.',
     color: '#c084fc',
-    fase: 4,
   },
   {
     id: 'linfatico',
@@ -107,7 +97,6 @@ export const SISTEMAS: readonly Sistema[] = [
     ingles: 'Lymphoid system',
     descripcion: 'Ganglios linfáticos principales, bazo, timo y conductos linfáticos.',
     color: '#4ade80',
-    fase: 4,
   },
   {
     id: 'reproductor',
@@ -116,7 +105,6 @@ export const SISTEMAS: readonly Sistema[] = [
     ingles: 'Genital systems',
     descripcion: 'Órganos genitales masculinos y femeninos (contenido académico).',
     color: '#f472b6',
-    fase: 4,
   },
   {
     id: 'sentidos',
@@ -125,7 +113,6 @@ export const SISTEMAS: readonly Sistema[] = [
     ingles: 'Sense organs',
     descripcion: 'Ojo y oído con modelos de detalle ampliados.',
     color: '#2dd4bf',
-    fase: 4,
   },
 ] as const;
 

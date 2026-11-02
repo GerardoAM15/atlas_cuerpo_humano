@@ -16,3 +16,9 @@ body,
 body {
   color-scheme: dark;
 }
+
+/* Foco visible y uniforme para la navegación con teclado (no aparece al hacer clic con el ratón). */
+:focus-visible {
+  outline: 2px solid var(--color-sky-400);
+  outline-offset: 2px;
+}

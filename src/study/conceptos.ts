@@ -1,21 +1,21 @@
 // Conceptos de estudio: las estructuras pares (derecha/izquierda) se estudian como un solo concepto
 // («fémur»), aunque las preguntas sobre el modelo 3D pregunten por un lado concreto.
-import { ESTRUCTURAS, POR_ID } from '@/data/catalogo';
-import type { Estructura } from '@/data/esquemas';
+import { INDICE, POR_ID } from '@/data/catalogo';
+import type { ResumenEstructura } from '@/data/esquemas';
 import type { SistemaId } from '@/data/sistemas';
 
 /** Id del concepto: el de la estructura sin el sufijo de lado. */
-export const conceptoId = (e: Pick<Estructura, 'id' | 'lado'>) => (e.lado ? e.id.replace(/-(d|i)$/, '') : e.id);
+export const conceptoId = (e: Pick<ResumenEstructura, 'id' | 'lado'>) => (e.lado ? e.id.replace(/-(d|i)$/, '') : e.id);
 
 /** Nombre sin el lado: «Fémur derecho» → «Fémur», «Lóbulo derecho del timo» → «Lóbulo del timo». */
-export const nombreBase = (e: Pick<Estructura, 'nombre' | 'lado'>) =>
+export const nombreBase = (e: Pick<ResumenEstructura, 'nombre' | 'lado'>) =>
   e.lado ? e.nombre.replace(/\s(derech|izquierd)[oa]\b/u, '').replace(/\s{2,}/g, ' ').trim() : e.nombre;
 
 export interface Concepto {
   id: string;
   /** Estructura representativa (la derecha si es par). */
-  e: Estructura;
-  lados: Estructura[];
+  e: ResumenEstructura;
+  lados: ResumenEstructura[];
   nombre: string;
   sistema: SistemaId;
   region: string;
@@ -28,7 +28,7 @@ let cache: Map<string, Concepto> | null = null;
 export function conceptos(): Map<string, Concepto> {
   if (cache) return cache;
   const mapa = new Map<string, Concepto>();
-  for (const e of ESTRUCTURAS) {
+  for (const e of INDICE) {
     const id = conceptoId(e);
     const c = mapa.get(id);
     if (c) {
