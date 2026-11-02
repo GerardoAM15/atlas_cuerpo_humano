@@ -15,6 +15,7 @@ const SOFTWARE = [
   { nombre: 'Zod', licencia: 'MIT', url: 'https://zod.dev' },
   { nombre: 'Fuse.js', licencia: 'Apache 2.0', url: 'https://www.fusejs.io' },
   { nombre: 'Tailwind CSS', licencia: 'MIT', url: 'https://tailwindcss.com' },
+  { nombre: 'Tipografía Fraunces (Undercase Type)', licencia: 'OFL 1.1', url: 'https://github.com/undercasetype/Fraunces' },
   { nombre: 'Vite, vite-plugin-pwa y Workbox', licencia: 'MIT', url: 'https://vite-pwa-org.netlify.app' },
   { nombre: 'meshoptimizer (compresión de mallas)', licencia: 'MIT', url: 'https://github.com/zeux/meshoptimizer' },
   { nombre: 'glTF-Transform (pipeline)', licencia: 'MIT', url: 'https://gltf-transform.dev' },
@@ -23,7 +24,7 @@ const SOFTWARE = [
 
 function Enlace({ href, children }: { href: string; children: string }) {
   return (
-    <a className="text-sky-400 underline hover:text-sky-300" href={href} target="_blank" rel="noreferrer">
+    <a className="text-oro-400 underline hover:text-oro-300" href={href} target="_blank" rel="noreferrer">
       {children}
     </a>
   );
@@ -38,16 +39,27 @@ export default function Creditos() {
     <section className="mx-auto w-full max-w-3xl px-4 py-10">
       <h1 className="text-3xl font-bold tracking-tight">Créditos y licencias</h1>
 
-      <div className="mt-6 space-y-6 text-slate-300">
+      <div className="mt-6 space-y-6 text-tinta-300">
+        <article className="rounded-lg border border-oro-500/40 bg-oro-500/5 p-5">
+          <h2 className="text-lg font-semibold text-tinta-100">Autor</h2>
+          <p className="mt-2">
+            <strong className="font-serif text-xl font-semibold text-oro-300">Gerardo Alarcón</strong>
+          </p>
+          <p className="mt-1 text-sm text-tinta-400">
+            Idea, dirección y revisión del proyecto: atlas 3D, fichas, simulaciones y modo estudio. Código en{' '}
+            <Enlace href="https://github.com/GerardoAM15/atlas_cuerpo_humano">GitHub</Enlace>.
+          </p>
+        </article>
+
         {bp3d && (
-          <article className="rounded-lg border border-slate-800 bg-slate-900/50 p-5">
-            <h2 className="text-lg font-semibold text-slate-100">Modelos 3D: {bp3d.nombre}</h2>
+          <article className="rounded-lg border border-tinta-800 bg-tinta-900/50 p-5">
+            <h2 className="text-lg font-semibold text-tinta-100">Modelos 3D: {bp3d.nombre}</h2>
             <p className="mt-2">«{bp3d.atribucion}».</p>
             <p className="mt-2">
               Licencia: <Enlace href={bp3d.urlLicencia}>{bp3d.licencia}</Enlace>. Fuente: <Enlace href={bp3d.url}>LSDB Archive (DBCLS)</Enlace>, versión{' '}
               {bp3d.version}. Estructuras identificadas con IDs del <em>Foundational Model of Anatomy</em> (FMA).
             </p>
-            <p className="mt-2 text-sm text-slate-400">
+            <p className="mt-2 text-sm text-tinta-400">
               Modificaciones: conversión OBJ → glTF (obj2gltf), cambio de ejes y unidades (mm → m), agrupación por sistema, simplificación de mallas y
               compresión meshopt. {bp3d.nota}
             </p>
@@ -55,8 +67,8 @@ export default function Creditos() {
         )}
 
         {za && (
-          <article className="rounded-lg border border-slate-800 bg-slate-900/50 p-5">
-            <h2 className="text-lg font-semibold text-slate-100">Modelos 3D: {za.nombre}</h2>
+          <article className="rounded-lg border border-tinta-800 bg-tinta-900/50 p-5">
+            <h2 className="text-lg font-semibold text-tinta-100">Modelos 3D: {za.nombre}</h2>
             <p className="mt-2">«{za.atribucion}».</p>
             <p className="mt-2">
               Licencia: <Enlace href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">{za.licencia}</Enlace> (Reconocimiento-CompartirIgual). Fuente:{' '}
@@ -66,24 +78,24 @@ export default function Creditos() {
               Se usa para las estructuras que BodyParts3D no tiene: {deZAnatomy.map((e) => e.nombre.replace(/ derech[oa]$/, '')).join(', ')}. Estas mallas y sus derivados en este
               proyecto se distribuyen bajo CC BY-SA 4.0.
             </p>
-            <p className="mt-2 text-sm text-slate-400">
+            <p className="mt-2 text-sm text-tinta-400">
               Modificaciones: exportación a glTF con Blender (modificadores aplicados, curvas convertidas en mallas), alineación con BodyParts3D por
               escala y traslación ajustadas con estructuras vecinas, agrupación por sistema y compresión meshopt.
             </p>
           </article>
         )}
 
-        <article className="rounded-lg border border-slate-800 bg-slate-900/50 p-5">
-          <h2 className="text-lg font-semibold text-slate-100">Contenido textual</h2>
+        <article className="rounded-lg border border-tinta-800 bg-tinta-900/50 p-5">
+          <h2 className="text-lg font-semibold text-tinta-100">Contenido textual</h2>
           <p className="mt-2">
             Redactado con fines educativos a partir de fuentes de referencia generales (Gray&apos;s Anatomy, Moore, Netter, OpenStax <em>Anatomy &amp; Physiology</em>).
             Consulta <code>docs/FUENTES.md</code> en el repositorio. Los datos dudosos se marcan como «pendiente de revisión» en la ficha.
           </p>
         </article>
 
-        <article className="rounded-lg border border-slate-800 bg-slate-900/50 p-5">
-          <h2 className="text-lg font-semibold text-slate-100">Modelos utilizados</h2>
-          <p className="mt-2 text-sm text-slate-400">
+        <article className="rounded-lg border border-tinta-800 bg-tinta-900/50 p-5">
+          <h2 className="text-lg font-semibold text-tinta-100">Modelos utilizados</h2>
+          <p className="mt-2 text-sm text-tinta-400">
             Generado a partir del manifest del pipeline: {mb(MODELOS.bytesTotales)} en total. Despliega un sistema para ver cada estructura con sus
             conceptos FMA.
           </p>
@@ -94,10 +106,10 @@ export default function Creditos() {
               const conModelo = estructuras.filter((e) => e.nodoModelo);
               const pendientes = estructuras.filter((e) => !e.nodoModelo);
               return (
-                <details key={s.id} className="rounded border border-slate-800 bg-slate-950/40 px-3 py-2 text-sm">
+                <details key={s.id} className="rounded border border-tinta-800 bg-tinta-950/40 px-3 py-2 text-sm">
                   <summary className="cursor-pointer">
-                    <span className="font-medium text-slate-100">{s.nombre}</span>{' '}
-                    <span className="text-xs text-slate-400">
+                    <span className="font-medium text-tinta-100">{s.nombre}</span>{' '}
+                    <span className="text-xs text-tinta-400">
                       {conModelo.length} con modelo · {pendientes.length} sin modelo
                       {m ? ` · ${miles(m.triangulos)} triángulos · ${mb(m.bytes)}` : ''}
                     </span>
@@ -105,14 +117,14 @@ export default function Creditos() {
                   <ul className="mt-2 space-y-0.5 text-xs">
                     {conModelo.map((e) => (
                       <li key={e.id}>
-                        {e.nombre} <span className="text-slate-400">— {e.fuenteModelo === 'z-anatomy' ? 'Z-Anatomy (CC BY-SA 4.0)' : e.fma?.join(', ')}</span>
+                        {e.nombre} <span className="text-tinta-400">— {e.fuenteModelo === 'z-anatomy' ? 'Z-Anatomy (CC BY-SA 4.0)' : e.fma?.join(', ')}</span>
                       </li>
                     ))}
                   </ul>
                   {pendientes.length > 0 && (
                     <>
                       <p className="mt-2 text-xs font-semibold text-amber-300">Sin modelo</p>
-                      <ul className="mt-1 space-y-0.5 text-xs text-slate-400">
+                      <ul className="mt-1 space-y-0.5 text-xs text-tinta-400">
                         {pendientes.map((e) => (
                           <li key={e.id}>
                             {e.nombre}
@@ -128,12 +140,12 @@ export default function Creditos() {
           </div>
         </article>
 
-        <article className="rounded-lg border border-slate-800 bg-slate-900/50 p-5">
-          <h2 className="text-lg font-semibold text-slate-100">Software</h2>
+        <article className="rounded-lg border border-tinta-800 bg-tinta-900/50 p-5">
+          <h2 className="text-lg font-semibold text-tinta-100">Software</h2>
           <ul className="mt-2 grid gap-1 text-sm sm:grid-cols-2">
             {SOFTWARE.map((b) => (
               <li key={b.nombre}>
-                <Enlace href={b.url}>{b.nombre}</Enlace> <span className="text-slate-400">({b.licencia})</span>
+                <Enlace href={b.url}>{b.nombre}</Enlace> <span className="text-tinta-400">({b.licencia})</span>
               </li>
             ))}
           </ul>

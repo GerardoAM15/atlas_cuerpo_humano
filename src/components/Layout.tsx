@@ -6,7 +6,7 @@ import { RUTAS_NAV } from './rutas';
 const claseEnlace = ({ isActive }: { isActive: boolean }) =>
   [
     'rounded-md px-3 py-2 text-sm font-medium transition-colors',
-    isActive ? 'bg-sky-500/15 text-sky-300' : 'text-slate-300 hover:bg-slate-800 hover:text-white',
+    isActive ? 'bg-oro-500/15 text-oro-300' : 'text-tinta-300 hover:bg-tinta-800 hover:text-tinta-50',
   ].join(' ');
 
 export default function Layout() {
@@ -18,17 +18,17 @@ export default function Layout() {
     <div className="flex min-h-full flex-col">
       <a
         href="#contenido"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-sky-600 focus:px-3 focus:py-2"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-oro-600 focus:px-3 focus:py-2"
       >
         Saltar al contenido
       </a>
 
-      <header className="sticky top-0 z-40 border-b border-slate-800 bg-slate-950/90 backdrop-blur">
+      <header className="sticky top-0 z-40 border-b border-tinta-800 bg-tinta-950/90 backdrop-blur">
         <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4">
           <Link to="/" className="flex items-center gap-2 font-semibold tracking-tight">
             <img src="./favicon.svg" alt="" className="h-7 w-7" />
             <span>
-              Atlas 3D <span className="hidden text-slate-400 sm:inline">del Cuerpo Humano</span>
+              Atlas 3D <span className="hidden text-tinta-400 sm:inline">del Cuerpo Humano</span>
             </span>
           </Link>
 
@@ -44,7 +44,7 @@ export default function Layout() {
             <BotonInstalar />
             <button
               type="button"
-              className="rounded-md p-2 text-slate-300 hover:bg-slate-800 md:hidden"
+              className="rounded-md p-2 text-tinta-300 hover:bg-tinta-800 md:hidden"
               aria-expanded={menuAbierto}
               aria-controls="menu-movil"
               aria-label={menuAbierto ? 'Cerrar menú' : 'Abrir menú'}
@@ -78,10 +78,10 @@ export default function Layout() {
         <Outlet />
       </main>
 
-      <footer className={`border-t border-slate-800 px-4 py-4 text-center text-xs text-slate-400 ${pantallaCompleta ? 'hidden' : ''}`}>
-        Proyecto personal de estudio. Contenido educativo; no sustituye la consulta médica. Modelos 3D:
+      <footer className={`border-t border-tinta-800 px-4 py-4 text-center text-xs text-tinta-400 ${pantallaCompleta ? 'hidden' : ''}`}>
+        Proyecto de <span className="text-tinta-300">Gerardo Alarcón</span>. Contenido educativo; no sustituye la consulta médica. Modelos 3D:
         BodyParts3D © DBCLS (CC BY 4.0) y Z-Anatomy (CC BY-SA 4.0) —{' '}
-        <Link to="/creditos" className="underline hover:text-slate-300">
+        <Link to="/creditos" className="underline hover:text-tinta-300">
           ver créditos
         </Link>
         .

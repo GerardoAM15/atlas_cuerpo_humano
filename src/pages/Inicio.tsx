@@ -25,22 +25,22 @@ export default function Inicio() {
     <div className="mx-auto w-full max-w-7xl px-4 py-10">
       <section className="max-w-3xl">
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-          Atlas 3D interactivo <span className="text-sky-400">del cuerpo humano</span>
+          Atlas 3D interactivo <span className="text-oro-400">del cuerpo humano</span>
         </h1>
-        <p className="mt-4 text-lg text-slate-300">
+        <p className="mt-4 text-lg text-tinta-300">
           Una herramienta de estudio de anatomía y fisiología construida sobre modelos anatómicos reales de licencia
           libre. Cada estructura incluye su nombre según la <em>Terminologia Anatomica</em> y en inglés.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link
             to="/atlas"
-            className="rounded-lg bg-sky-500 px-5 py-2.5 font-semibold text-slate-950 hover:bg-sky-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300"
+            className="rounded-lg bg-oro-500 px-5 py-2.5 font-semibold text-tinta-950 hover:bg-oro-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-oro-300"
           >
             Abrir el atlas
           </Link>
           <Link
             to="/estudio"
-            className="rounded-lg border border-slate-700 px-5 py-2.5 font-semibold text-slate-200 hover:bg-slate-800"
+            className="rounded-lg border border-tinta-700 px-5 py-2.5 font-semibold text-tinta-200 hover:bg-tinta-800"
           >
             Empezar a estudiar
           </Link>
@@ -56,10 +56,10 @@ export default function Inicio() {
             <li key={s.ruta}>
               <Link
                 to={s.ruta}
-                className="block h-full rounded-xl border border-slate-800 bg-slate-900/60 p-5 transition-colors hover:border-sky-500/50 hover:bg-slate-900"
+                className="block h-full rounded-xl border border-tinta-800 bg-tinta-900/60 p-5 transition-colors hover:border-oro-500/50 hover:bg-tinta-900"
               >
                 <h3 className="text-lg font-semibold">{s.titulo}</h3>
-                <p className="mt-2 text-sm text-slate-400">{s.texto}</p>
+                <p className="mt-2 text-sm text-tinta-400">{s.texto}</p>
               </Link>
             </li>
           ))}
@@ -72,15 +72,15 @@ export default function Inicio() {
         </h2>
         <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {SISTEMAS.map((s) => (
-            <li key={s.id} className="rounded-xl border border-slate-800 bg-slate-900/40 p-4">
+            <li key={s.id} className="rounded-xl border border-tinta-800 bg-tinta-900/40 p-4">
               <div className="flex items-center gap-2">
                 <span aria-hidden className="h-3 w-3 rounded-full" style={{ backgroundColor: s.color }} />
                 <h3 className="font-semibold">{s.nombre}</h3>
               </div>
-              <p className="mt-1 text-xs italic text-slate-400">
+              <p className="mt-1 text-xs italic text-tinta-400">
                 {s.latin} · {s.ingles}
               </p>
-              <p className="mt-2 text-sm text-slate-400">{s.descripcion}</p>
+              <p className="mt-2 text-sm text-tinta-400">{s.descripcion}</p>
             </li>
           ))}
         </ul>

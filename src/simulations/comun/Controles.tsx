@@ -8,19 +8,19 @@ export default function Controles({ reloj, unidad = '×' }: { reloj: Reloj; unid
       <button
         type="button"
         onClick={() => setReproduciendo(!reproduciendo)}
-        className="min-w-24 rounded-md bg-sky-500 px-3 py-1.5 text-sm font-semibold text-slate-950 hover:bg-sky-400"
+        className="min-w-24 rounded-md bg-oro-500 px-3 py-1.5 text-sm font-semibold text-tinta-950 hover:bg-oro-400"
       >
         {reproduciendo ? '❚❚ Pausa' : '▶ Play'}
       </button>
-      <button type="button" onClick={reiniciar} className="rounded-md border border-slate-700 px-3 py-1.5 text-sm text-slate-200 hover:bg-slate-800">
+      <button type="button" onClick={reiniciar} className="rounded-md border border-tinta-700 px-3 py-1.5 text-sm text-tinta-200 hover:bg-tinta-800">
         ⟲ Reiniciar
       </button>
-      <label className="ml-1 flex items-center gap-2 text-sm text-slate-400">
+      <label className="ml-1 flex items-center gap-2 text-sm text-tinta-400">
         Velocidad
         <select
           value={velocidad}
           onChange={(e) => setVelocidad(Number(e.target.value))}
-          className="rounded border border-slate-700 bg-slate-900 px-2 py-1 text-slate-100"
+          className="rounded border border-tinta-700 bg-tinta-900 px-2 py-1 text-tinta-100"
         >
           {VELOCIDADES.map((v) => (
             <option key={v} value={v}>

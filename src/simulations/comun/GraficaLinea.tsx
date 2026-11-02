@@ -57,37 +57,37 @@ export default function GraficaLinea({
   const ticks = ticksY ?? [y[0], (y[0] + y[1]) / 2, y[1]];
 
   return (
-    <figure className="rounded-lg border border-slate-800 bg-slate-950/60 p-2">
-      <figcaption className="px-1 text-xs font-semibold text-slate-300">{titulo}</figcaption>
+    <figure className="rounded-lg border border-tinta-800 bg-tinta-950/60 p-2">
+      <figcaption className="px-1 text-xs font-semibold text-tinta-300">{titulo}</figcaption>
       <svg viewBox={`0 0 ${ancho} ${alto}`} className="h-auto w-full" role="img" aria-label={descripcion}>
         {bandas.map((b) => (
           <g key={`${b.desde}-${b.etiqueta}`}>
             <rect x={sx(b.desde)} y={M.sup} width={Math.max(0, sx(b.hasta) - sx(b.desde))} height={h} fill={b.color} />
-            <text x={(sx(b.desde) + sx(b.hasta)) / 2} y={M.sup - 5} textAnchor="middle" className="fill-slate-500 text-[9px]">
+            <text x={(sx(b.desde) + sx(b.hasta)) / 2} y={M.sup - 5} textAnchor="middle" className="fill-tinta-500 text-[9px]">
               {b.etiqueta}
             </text>
           </g>
         ))}
         {ticks.map((t) => (
           <g key={t}>
-            <line x1={M.izq} x2={M.izq + w} y1={sy(t)} y2={sy(t)} className="stroke-slate-800" />
-            <text x={M.izq - 4} y={sy(t) + 3} textAnchor="end" className="fill-slate-500 text-[10px]">
+            <line x1={M.izq} x2={M.izq + w} y1={sy(t)} y2={sy(t)} className="stroke-tinta-800" />
+            <text x={M.izq - 4} y={sy(t) + 3} textAnchor="end" className="fill-tinta-500 text-[10px]">
               {t}
             </text>
           </g>
         ))}
-        <line x1={M.izq} x2={M.izq} y1={M.sup} y2={M.sup + h} className="stroke-slate-600" />
-        <line x1={M.izq} x2={M.izq + w} y1={M.sup + h} y2={M.sup + h} className="stroke-slate-600" />
-        <text x={M.izq + w / 2} y={alto - 4} textAnchor="middle" className="fill-slate-500 text-[10px]">
+        <line x1={M.izq} x2={M.izq} y1={M.sup} y2={M.sup + h} className="stroke-tinta-600" />
+        <line x1={M.izq} x2={M.izq + w} y1={M.sup + h} y2={M.sup + h} className="stroke-tinta-600" />
+        <text x={M.izq + w / 2} y={alto - 4} textAnchor="middle" className="fill-tinta-500 text-[10px]">
           {etiquetaX}
         </text>
-        <text x={10} y={M.sup + h / 2} textAnchor="middle" transform={`rotate(-90 10 ${M.sup + h / 2})`} className="fill-slate-500 text-[10px]">
+        <text x={10} y={M.sup + h / 2} textAnchor="middle" transform={`rotate(-90 10 ${M.sup + h / 2})`} className="fill-tinta-500 text-[10px]">
           {etiquetaY}
         </text>
         {marcas.map((m) => (
           <g key={`${m.x}-${m.etiqueta}`}>
-            <line x1={sx(m.x)} x2={sx(m.x)} y1={M.sup} y2={M.sup + h} className="stroke-slate-600" strokeDasharray="2 3" />
-            <text x={sx(m.x) + 2} y={M.sup + 9} className="fill-slate-400 text-[9px]">
+            <line x1={sx(m.x)} x2={sx(m.x)} y1={M.sup} y2={M.sup + h} className="stroke-tinta-600" strokeDasharray="2 3" />
+            <text x={sx(m.x) + 2} y={M.sup + 9} className="fill-tinta-400 text-[9px]">
               {m.etiqueta}
             </text>
           </g>
@@ -103,11 +103,11 @@ export default function GraficaLinea({
             strokeLinejoin="round"
           />
         ))}
-        {cursorX !== undefined && <line x1={sx(cursorX)} x2={sx(cursorX)} y1={M.sup} y2={M.sup + h} stroke="#f8fafc" strokeWidth={1} opacity={0.7} />}
-        {punto && <circle cx={sx(punto[0])} cy={sy(punto[1])} r={4.5} fill="#f8fafc" stroke="#0f172a" strokeWidth={1.5} />}
+        {cursorX !== undefined && <line x1={sx(cursorX)} x2={sx(cursorX)} y1={M.sup} y2={M.sup + h} stroke="#faf7f1" strokeWidth={1} opacity={0.7} />}
+        {punto && <circle cx={sx(punto[0])} cy={sy(punto[1])} r={4.5} fill="#faf7f1" stroke="#1d1a17" strokeWidth={1.5} />}
       </svg>
       {series.length > 1 && (
-        <ul className="flex flex-wrap gap-3 px-1 text-[11px] text-slate-400">
+        <ul className="flex flex-wrap gap-3 px-1 text-[11px] text-tinta-400">
           {series.map((s) => (
             <li key={s.nombre} className="flex items-center gap-1">
               <span aria-hidden className="inline-block h-0.5 w-4" style={{ backgroundColor: s.color }} />

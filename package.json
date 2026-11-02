@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "description": "Atlas 3D interactivo del cuerpo humano — proyecto personal de estudio de anatomía y fisiología.",
+  "author": "Gerardo Alarcón",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -19,6 +20,7 @@
     "modelos:zanatomy": "node scripts/exportar-zanatomy.mjs"
   },
   "dependencies": {
+    "@fontsource-variable/fraunces": "^5.3.0",
     "@react-three/drei": "^9.122.0",
     "@react-three/fiber": "^8.18.0",
     "fuse.js": "^7.5.0",

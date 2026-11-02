@@ -50,12 +50,12 @@ export default function ArbolEstructuras() {
         const abiertoS = abiertos.has(s.id);
         return (
           <div key={s.id} role="treeitem" aria-expanded={abiertoS} aria-selected={false}>
-            <button type="button" onClick={() => alternar(s.id)} className="flex w-full items-center gap-1.5 rounded px-1 py-1 font-semibold hover:bg-slate-800">
+            <button type="button" onClick={() => alternar(s.id)} className="flex w-full items-center gap-1.5 rounded px-1 py-1 font-semibold hover:bg-tinta-800">
               <span aria-hidden className={`inline-block transition-transform ${abiertoS ? 'rotate-90' : ''}`}>▸</span>
               {s.nombre}
             </button>
             {abiertoS && (
-              <div role="group" className="ml-3 border-l border-slate-800 pl-1">
+              <div role="group" className="ml-3 border-l border-tinta-800 pl-1">
                 {(REGIONES[s.id] ?? []).map((r) => {
                   const clave = `${s.id}/${r.id}`;
                   const abiertoR = abiertos.has(clave);
@@ -68,11 +68,11 @@ export default function ArbolEstructuras() {
                           alternar(clave);
                           setRegionActiva(claveRegion(s.id, r.id));
                         }}
-                        className="flex w-full items-center gap-1.5 rounded px-1 py-0.5 text-slate-300 hover:bg-slate-800"
+                        className="flex w-full items-center gap-1.5 rounded px-1 py-0.5 text-tinta-300 hover:bg-tinta-800"
                       >
                         <span aria-hidden className={`inline-block text-xs transition-transform ${abiertoR ? 'rotate-90' : ''}`}>▸</span>
                         {r.nombre}
-                        <span className="ml-auto text-[10px] text-slate-400">{items.length}</span>
+                        <span className="ml-auto text-[10px] text-tinta-400">{items.length}</span>
                       </button>
                       {abiertoR && (
                         <ul role="group" className="ml-3">
@@ -86,8 +86,8 @@ export default function ArbolEstructuras() {
                                   type="button"
                                   onClick={() => seleccionar(e.id, { enfocar: !sinModelo, region: claveRegion(e.sistema, e.region), sistema: e.sistema })}
                                   className={`flex-1 truncate rounded px-1 py-0.5 text-left text-xs ${
-                                    sel ? 'bg-sky-500/20 text-sky-200' : 'text-slate-400 hover:bg-slate-800 hover:text-slate-100'
-                                  } ${oculta ? 'line-through opacity-60' : ''} ${sinModelo ? 'italic text-slate-400' : ''}`}
+                                    sel ? 'bg-oro-500/20 text-oro-200' : 'text-tinta-400 hover:bg-tinta-800 hover:text-tinta-100'
+                                  } ${oculta ? 'line-through opacity-60' : ''} ${sinModelo ? 'italic text-tinta-400' : ''}`}
                                   title={sinModelo ? `${e.nombre} (sin modelo 3D)` : e.nombre}
                                 >
                                   {e.nombre}
@@ -99,7 +99,7 @@ export default function ArbolEstructuras() {
                                     onClick={() => (oculta ? mostrar(e.id) : ocultar(e.id))}
                                     aria-label={oculta ? `Mostrar ${e.nombre}` : `Ocultar ${e.nombre}`}
                                     aria-pressed={oculta}
-                                    className={`rounded p-1 text-slate-400 hover:text-slate-200 ${oculta ? '' : 'opacity-0 group-hover:opacity-100 focus:opacity-100'}`}
+                                    className={`rounded p-1 text-tinta-400 hover:text-tinta-200 ${oculta ? '' : 'opacity-0 group-hover:opacity-100 focus:opacity-100'}`}
                                   >
                                     <IconoOjo tachado={oculta} />
                                   </button>

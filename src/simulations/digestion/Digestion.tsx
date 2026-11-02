@@ -70,8 +70,8 @@ function Tubo({ indice, progreso }: { indice: number; progreso: number }) {
   const bolo = TRAYECTOS[seg.id]!.en(progreso);
   return (
     <svg viewBox="0 0 300 445" className="mx-auto h-auto w-full max-w-sm" role="img" aria-label={`Tubo digestivo esquemático; el bolo está en: ${seg.nombre}`}>
-      <ellipse cx={150} cy={32} rx={34} ry={26} fill="none" stroke="#475569" strokeDasharray="3 3" />
-      <path d="M 70 120 Q 150 90 230 120 L 255 420 Q 150 445 45 420 Z" fill="none" stroke="#334155" strokeDasharray="4 4" />
+      <ellipse cx={150} cy={32} rx={34} ry={26} fill="none" stroke="#5f584f" strokeDasharray="3 3" />
+      <path d="M 70 120 Q 150 90 230 120 L 255 420 Q 150 445 45 420 Z" fill="none" stroke="#443e38" strokeDasharray="4 4" />
       {SEGMENTOS.map((s, i) => (
         <path
           key={s.id}
@@ -116,36 +116,36 @@ export default function Digestion() {
       controles={<Controles reloj={reloj} />}
       visual={
         <div className="grid gap-4 md:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)]">
-          <div className="rounded-lg border border-slate-800 bg-slate-900/40 p-3">
+          <div className="rounded-lg border border-tinta-800 bg-tinta-900/40 p-3">
             <Tubo indice={indice} progreso={progreso} />
           </div>
-          <article className="rounded-lg border border-slate-800 bg-slate-900/50 p-4" aria-live="polite">
+          <article className="rounded-lg border border-tinta-800 bg-tinta-900/50 p-4" aria-live="polite">
             <h2 className="text-lg font-semibold" style={{ color: '#fde68a' }}>
               {seg.nombre}
             </h2>
-            <p className="text-xs text-slate-400">Tiempo típico de permanencia: {seg.tiempo}</p>
-            <h3 className="mt-3 text-xs font-semibold uppercase tracking-wide text-slate-400">Qué ocurre</h3>
-            <ul className="mt-1 list-disc space-y-1 pl-5 text-sm text-slate-300">
+            <p className="text-xs text-tinta-400">Tiempo típico de permanencia: {seg.tiempo}</p>
+            <h3 className="mt-3 text-xs font-semibold uppercase tracking-wide text-tinta-400">Qué ocurre</h3>
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-sm text-tinta-300">
               {seg.procesos.map((p) => (
                 <li key={p}>{p}</li>
               ))}
             </ul>
             {seg.enzimas.length > 0 && (
               <>
-                <h3 className="mt-3 text-xs font-semibold uppercase tracking-wide text-slate-400">Enzimas</h3>
+                <h3 className="mt-3 text-xs font-semibold uppercase tracking-wide text-tinta-400">Enzimas</h3>
                 <div className="mt-1 overflow-x-auto">
                   <table className="w-full text-left text-xs">
-                    <thead className="text-slate-400">
+                    <thead className="text-tinta-400">
                       <tr>
                         <th className="py-1 pr-2 font-medium">Enzima</th>
                         <th className="py-1 pr-2 font-medium">Origen</th>
                         <th className="py-1 pr-2 font-medium">Sustrato → producto</th>
                       </tr>
                     </thead>
-                    <tbody className="text-slate-300">
+                    <tbody className="text-tinta-300">
                       {seg.enzimas.map((e) => (
-                        <tr key={e.nombre} className="border-t border-slate-800 align-top">
-                          <td className="py-1 pr-2 font-medium text-slate-100">{e.nombre}</td>
+                        <tr key={e.nombre} className="border-t border-tinta-800 align-top">
+                          <td className="py-1 pr-2 font-medium text-tinta-100">{e.nombre}</td>
                           <td className="py-1 pr-2">{e.origen}</td>
                           <td className="py-1 pr-2">
                             {e.sustrato} → {e.producto}
@@ -158,14 +158,14 @@ export default function Digestion() {
               </>
             )}
             {seg.absorcion && (
-              <p className="mt-3 text-sm text-slate-300">
-                <strong className="text-slate-100">Absorción:</strong> {seg.absorcion}
+              <p className="mt-3 text-sm text-tinta-300">
+                <strong className="text-tinta-100">Absorción:</strong> {seg.absorcion}
               </p>
             )}
-            <p className="mt-3 flex flex-wrap gap-1 text-[11px] text-slate-400">
+            <p className="mt-3 flex flex-wrap gap-1 text-[11px] text-tinta-400">
               En el atlas:
               {seg.estructuras.map((id) => (
-                <span key={id} className="rounded bg-slate-800 px-1.5 py-0.5 text-slate-300">
+                <span key={id} className="rounded bg-tinta-800 px-1.5 py-0.5 text-tinta-300">
                   {POR_ID.get(id)?.nombre ?? id}
                 </span>
               ))}

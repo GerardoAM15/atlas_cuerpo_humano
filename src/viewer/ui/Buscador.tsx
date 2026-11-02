@@ -78,15 +78,15 @@ export default function Buscador() {
             setAbierto(false);
           }
         }}
-        className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-400 focus:border-sky-500 focus:outline-none"
+        className="w-full rounded-lg border border-tinta-700 bg-tinta-900 px-3 py-2 text-sm text-tinta-100 placeholder:text-tinta-400 focus:border-oro-500 focus:outline-none"
       />
       {mostrarLista && (
         <ul
           id={idLista}
           role="listbox"
-          className="absolute z-30 mt-1 max-h-80 w-full overflow-auto rounded-lg border border-slate-700 bg-slate-900 py-1 shadow-xl"
+          className="absolute z-30 mt-1 max-h-80 w-full overflow-auto rounded-lg border border-tinta-700 bg-tinta-900 py-1 shadow-xl"
         >
-          {resultados.length === 0 && <li className="px-3 py-2 text-sm text-slate-400">{buscar ? 'Sin resultados' : 'Preparando la búsqueda…'}</li>}
+          {resultados.length === 0 && <li className="px-3 py-2 text-sm text-tinta-400">{buscar ? 'Sin resultados' : 'Preparando la búsqueda…'}</li>}
           {resultados.map((e, i) => (
             <li
               key={e.id}
@@ -96,13 +96,13 @@ export default function Buscador() {
               onMouseDown={(ev) => ev.preventDefault()}
               onClick={() => elegir(i)}
               onMouseEnter={() => setActivo(i)}
-              className={`cursor-pointer px-3 py-1.5 ${i === activo ? 'bg-sky-500/15' : ''}`}
+              className={`cursor-pointer px-3 py-1.5 ${i === activo ? 'bg-oro-500/15' : ''}`}
             >
-              <p className="text-sm text-slate-100">
+              <p className="text-sm text-tinta-100">
                 {e.nombre}
                 {e.nodoModelo === null && <span className="ml-2 text-[10px] text-amber-400">sin modelo</span>}
               </p>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs text-tinta-400">
                 <i>{e.latin}</i> · {e.ingles}
               </p>
             </li>

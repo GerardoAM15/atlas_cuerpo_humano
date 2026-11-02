@@ -60,15 +60,15 @@ function Nefrona({ t, paso }: { t: number; paso: number }) {
 
   return (
     <svg viewBox="0 0 360 370" className="mx-auto h-auto w-full max-w-md" role="img" aria-label={`Nefrona esquemática; paso actual: ${TRAMOS[paso]!.nombre}`}>
-      <circle cx={70} cy={70} r={30} fill="none" stroke="#94a3b8" strokeWidth={3} />
+      <circle cx={70} cy={70} r={30} fill="none" stroke="#aea594" strokeWidth={3} />
       <circle cx={70} cy={70} r={20} fill="#7f1d1d" fillOpacity={0.6} />
-      <text x={70} y={120} textAnchor="middle" className="fill-slate-400 text-[9px]">
+      <text x={70} y={120} textAnchor="middle" className="fill-tinta-400 text-[9px]">
         Glomérulo y
       </text>
-      <text x={70} y={131} textAnchor="middle" className="fill-slate-400 text-[9px]">
+      <text x={70} y={131} textAnchor="middle" className="fill-tinta-400 text-[9px]">
         cápsula de Bowman
       </text>
-      <path d={NEFRONA.d} fill="none" stroke="#334155" strokeWidth={16} strokeLinejoin="round" strokeLinecap="round" />
+      <path d={NEFRONA.d} fill="none" stroke="#443e38" strokeWidth={16} strokeLinejoin="round" strokeLinecap="round" />
       {TRAMOS.slice(0, -1).map((_, i) => {
         const [ini, fin] = tramoEn(i);
         const pts = Array.from({ length: 21 }, (_, k) => NEFRONA.en(ini + ((fin - ini) * k) / 20));
@@ -77,7 +77,7 @@ function Nefrona({ t, paso }: { t: number; paso: number }) {
             key={i}
             points={pts.map((p) => p.join(',')).join(' ')}
             fill="none"
-            stroke={i === paso ? '#fde68a' : '#64748b'}
+            stroke={i === paso ? '#fde68a' : '#857c6f'}
             strokeOpacity={i === paso ? 0.9 : 0.5}
             strokeWidth={i === paso ? 10 : 8}
             strokeLinejoin="round"
@@ -86,24 +86,24 @@ function Nefrona({ t, paso }: { t: number; paso: number }) {
         );
       })}
       {particulas.map((p) => (
-        <circle key={p.key} cx={p.x} cy={p.y} r={3.6} fill={COLOR[p.tipo]} opacity={p.opacidad} stroke="#0f172a" strokeWidth={0.6} />
+        <circle key={p.key} cx={p.x} cy={p.y} r={3.6} fill={COLOR[p.tipo]} opacity={p.opacidad} stroke="#1d1a17" strokeWidth={0.6} />
       ))}
-      <text x={140} y={30} className="fill-slate-400 text-[9px]">
+      <text x={140} y={30} className="fill-tinta-400 text-[9px]">
         Túbulo proximal
       </text>
-      <text x={160} y={210} textAnchor="end" className="fill-slate-400 text-[9px]">
+      <text x={160} y={210} textAnchor="end" className="fill-tinta-400 text-[9px]">
         Asa de Henle
       </text>
-      <text x={258} y={78} className="fill-slate-400 text-[9px]">
+      <text x={258} y={78} className="fill-tinta-400 text-[9px]">
         Túbulo distal
       </text>
-      <text x={330} y={220} className="fill-slate-400 text-[9px]" transform="rotate(90 330 220)">
+      <text x={330} y={220} className="fill-tinta-400 text-[9px]" transform="rotate(90 330 220)">
         Túbulo colector
       </text>
-      <text x={300} y={366} className="fill-slate-300 text-[10px] font-semibold">
+      <text x={300} y={366} className="fill-tinta-300 text-[10px] font-semibold">
         Orina ↓
       </text>
-      <text x={10} y={360} className="fill-slate-500 text-[9px]">
+      <text x={10} y={360} className="fill-tinta-500 text-[9px]">
         Médula renal (más concentrada) ↓
       </text>
     </svg>
@@ -112,25 +112,25 @@ function Nefrona({ t, paso }: { t: number; paso: number }) {
 
 function FlujoTubular() {
   return (
-    <figure className="rounded-lg border border-slate-800 bg-slate-950/60 p-3">
-      <figcaption className="text-xs font-semibold text-slate-300">Volumen de líquido tubular a lo largo de la nefrona</figcaption>
+    <figure className="rounded-lg border border-tinta-800 bg-tinta-950/60 p-3">
+      <figcaption className="text-xs font-semibold text-tinta-300">Volumen de líquido tubular a lo largo de la nefrona</figcaption>
       <ul className="mt-2 space-y-1.5">
         {TRAMOS.slice(0, -1).map((t, i) => {
           const flujo = flujoTubular(i);
           return (
-            <li key={t.id} className="text-[11px] text-slate-400">
+            <li key={t.id} className="text-[11px] text-tinta-400">
               <div className="flex justify-between">
                 <span>{t.nombre}</span>
-                <span className="tabular-nums text-slate-200">{flujo.toFixed(flujo < 10 ? 1 : 0)} ml/min</span>
+                <span className="tabular-nums text-tinta-200">{flujo.toFixed(flujo < 10 ? 1 : 0)} ml/min</span>
               </div>
-              <div className="mt-0.5 h-1.5 rounded bg-slate-800">
-                <div className="h-full rounded bg-sky-400" style={{ width: `${(flujo / TFG_ML_MIN) * 100}%` }} />
+              <div className="mt-0.5 h-1.5 rounded bg-tinta-800">
+                <div className="h-full rounded bg-oro-400" style={{ width: `${(flujo / TFG_ML_MIN) * 100}%` }} />
               </div>
             </li>
           );
         })}
       </ul>
-      <p className="mt-2 text-[11px] text-slate-400">
+      <p className="mt-2 text-[11px] text-tinta-400">
         Al final queda ≈ {Math.round(fraccionRestante('agua', TRAMOS.length - 1) * 100)} % del agua filtrada (con ADH). Valores medios aproximados.
       </p>
     </figure>
@@ -148,9 +148,9 @@ export default function FiltracionRenal() {
       controles={<Controles reloj={reloj} />}
       visual={
         <div className="grid gap-4 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
-          <div className="rounded-lg border border-slate-800 bg-slate-900/40 p-3">
+          <div className="rounded-lg border border-tinta-800 bg-tinta-900/40 p-3">
             <Nefrona t={reloj.t} paso={paso} />
-            <ul className="mt-1 flex flex-wrap justify-center gap-3 text-[11px] text-slate-400">
+            <ul className="mt-1 flex flex-wrap justify-center gap-3 text-[11px] text-tinta-400">
               {SUSTANCIAS_ANIMADAS.map((s) => (
                 <li key={s} className="flex items-center gap-1">
                   <span aria-hidden className="inline-block h-2.5 w-2.5 rounded-full" style={{ backgroundColor: COLOR[s] }} />
@@ -160,20 +160,20 @@ export default function FiltracionRenal() {
             </ul>
           </div>
           <div className="space-y-4">
-            <article className="rounded-lg border border-slate-800 bg-slate-900/50 p-4" aria-live="polite">
+            <article className="rounded-lg border border-tinta-800 bg-tinta-900/50 p-4" aria-live="polite">
               <h2 className="text-lg font-semibold text-amber-200">{tramo.nombre}</h2>
-              <p className="mt-1 text-sm text-slate-300">{tramo.texto}</p>
+              <p className="mt-1 text-sm text-tinta-300">{tramo.texto}</p>
               {Object.keys(tramo.reabsorbe).length > 0 && (
-                <p className="mt-2 text-xs text-slate-400">
-                  <strong className="text-slate-200">Reabsorbe (de lo filtrado):</strong>{' '}
+                <p className="mt-2 text-xs text-tinta-400">
+                  <strong className="text-tinta-200">Reabsorbe (de lo filtrado):</strong>{' '}
                   {Object.entries(tramo.reabsorbe)
                     .map(([s, f]) => `${NOMBRE[s as keyof typeof NOMBRE]} ${Math.round((f ?? 0) * 100)} %`)
                     .join(' · ')}
                 </p>
               )}
               {tramo.secreta && (
-                <p className="mt-1 text-xs text-slate-400">
-                  <strong className="text-slate-200">Secreta:</strong> {tramo.secreta}
+                <p className="mt-1 text-xs text-tinta-400">
+                  <strong className="text-tinta-200">Secreta:</strong> {tramo.secreta}
                 </p>
               )}
             </article>

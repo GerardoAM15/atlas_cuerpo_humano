@@ -15,7 +15,7 @@ const NUEVAS_POR_SESION = 15;
 const VALORACIONES = [
   { calidad: 1, texto: 'Otra vez', clase: 'border-red-400/60 text-red-200 hover:bg-red-500/15' },
   { calidad: 3, texto: 'Difícil', clase: 'border-amber-400/60 text-amber-200 hover:bg-amber-500/15' },
-  { calidad: 4, texto: 'Bien', clase: 'border-sky-400/60 text-sky-200 hover:bg-sky-500/15' },
+  { calidad: 4, texto: 'Bien', clase: 'border-oro-400/60 text-oro-200 hover:bg-oro-500/15' },
   { calidad: 5, texto: 'Fácil', clase: 'border-emerald-400/60 text-emerald-200 hover:bg-emerald-500/15' },
 ] as const;
 
@@ -34,25 +34,25 @@ function crearMazo(sistemas: SistemaId[], tarjetas: ReturnType<typeof useProgres
 function Reverso({ e, c }: { e: Estructura; c: Concepto }) {
   return (
     <div className="space-y-2 text-sm">
-      <p className="text-2xl font-bold text-slate-50">{c.nombre}</p>
-      <p className="text-slate-400">
+      <p className="text-2xl font-bold text-tinta-50">{c.nombre}</p>
+      <p className="text-tinta-400">
         <i lang="la">{e.latin}</i> · <span lang="en">{e.ingles.replace(/^(Right|Left) /, '')}</span>
       </p>
-      <p className="text-xs text-slate-400">
+      <p className="text-xs text-tinta-400">
         {SISTEMAS_POR_ID[e.sistema].nombre} › {nombreRegion(e.sistema, e.region)}
       </p>
-      <p className="text-slate-300">
-        <strong className="text-slate-100">Función:</strong> {e.funcion}
+      <p className="text-tinta-300">
+        <strong className="text-tinta-100">Función:</strong> {e.funcion}
       </p>
       {e.tipo === 'musculo' && (
-        <dl className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-xs text-slate-300">
-          <dt className="text-slate-400">Origen</dt>
+        <dl className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-xs text-tinta-300">
+          <dt className="text-tinta-400">Origen</dt>
           <dd>{e.origen}</dd>
-          <dt className="text-slate-400">Inserción</dt>
+          <dt className="text-tinta-400">Inserción</dt>
           <dd>{e.insercion}</dd>
-          <dt className="text-slate-400">Inervación</dt>
+          <dt className="text-tinta-400">Inervación</dt>
           <dd>{e.inervacion}</dd>
-          <dt className="text-slate-400">Acción</dt>
+          <dt className="text-tinta-400">Acción</dt>
           <dd>{e.accion}</dd>
         </dl>
       )}
@@ -84,8 +84,8 @@ export default function Flashcards() {
 
   return (
     <div className="mx-auto w-full max-w-4xl px-4 py-6">
-      <nav aria-label="Ruta" className="text-xs text-slate-400">
-        <Link to="/estudio" className="hover:text-slate-300">
+      <nav aria-label="Ruta" className="text-xs text-tinta-400">
+        <Link to="/estudio" className="hover:text-tinta-300">
           Modo estudio
         </Link>{' '}
         › Flashcards
@@ -96,7 +96,7 @@ export default function Flashcards() {
         <legend className="sr-only">Sistemas</legend>
         <div className="flex flex-wrap gap-2">
           {SISTEMAS.map((s) => (
-            <label key={s.id} className={`cursor-pointer rounded-full border px-3 py-1 text-xs ${sistemas.includes(s.id) ? 'border-sky-400 bg-sky-500/15 text-sky-100' : 'border-slate-700 text-slate-400'}`}>
+            <label key={s.id} className={`cursor-pointer rounded-full border px-3 py-1 text-xs ${sistemas.includes(s.id) ? 'border-oro-400 bg-oro-500/15 text-oro-100' : 'border-tinta-700 text-tinta-400'}`}>
               <input
                 type="checkbox"
                 className="sr-only"
@@ -114,9 +114,9 @@ export default function Flashcards() {
       </fieldset>
 
       {!c || !e ? (
-        <section className="mt-6 rounded-xl border border-slate-800 bg-slate-900/60 p-6 text-center">
+        <section className="mt-6 rounded-xl border border-tinta-800 bg-tinta-900/60 p-6 text-center">
           <p className="text-lg font-semibold">{mazo.length ? '¡Mazo terminado!' : 'No hay tarjetas para hoy en esta selección.'}</p>
-          <p className="mt-1 text-sm text-slate-400">Las tarjetas volverán cuando les toque repaso.</p>
+          <p className="mt-1 text-sm text-tinta-400">Las tarjetas volverán cuando les toque repaso.</p>
           <div className="mt-4 flex justify-center gap-3">
             <button
               type="button"
@@ -124,18 +124,18 @@ export default function Flashcards() {
                 setSemilla((s) => s + 1);
                 setIndice(0);
               }}
-              className="rounded-lg bg-sky-500 px-4 py-2 font-semibold text-slate-950 hover:bg-sky-400"
+              className="rounded-lg bg-oro-500 px-4 py-2 font-semibold text-tinta-950 hover:bg-oro-400"
             >
               Nuevo mazo
             </button>
-            <Link to="/estudio" className="rounded-lg border border-slate-700 px-4 py-2 text-slate-200 hover:bg-slate-800">
+            <Link to="/estudio" className="rounded-lg border border-tinta-700 px-4 py-2 text-tinta-200 hover:bg-tinta-800">
               Volver
             </Link>
           </div>
         </section>
       ) : (
-        <section className="mt-6 rounded-xl border border-slate-800 bg-slate-900/60 p-4" aria-live="polite">
-          <p className="mb-2 flex justify-between text-xs text-slate-400">
+        <section className="mt-6 rounded-xl border border-tinta-800 bg-tinta-900/60 p-4" aria-live="polite">
+          <p className="mb-2 flex justify-between text-xs text-tinta-400">
             <span>
               Tarjeta {indice + 1} de {mazo.length}
               {tarjetas[c.id] ? ' · repaso' : ' · nueva'}
@@ -152,15 +152,15 @@ export default function Flashcards() {
                 fichasListas && fichaDe(e.id) ? (
                   <Reverso e={fichaDe(e.id)!} c={c} />
                 ) : (
-                  <p role="status" className="text-sm text-slate-400">
+                  <p role="status" className="text-sm text-tinta-400">
                     Cargando ficha…
                   </p>
                 )
               ) : (
                 <div className="text-center">
-                  <p className="text-lg font-semibold text-slate-200">¿Qué estructura es?</p>
-                  <p className="mt-1 text-sm text-slate-400">Gírala con el ratón. Piensa la respuesta y dale la vuelta.</p>
-                  <button type="button" onClick={() => setVolteada(true)} className="mt-4 rounded-lg bg-sky-500 px-5 py-2 font-semibold text-slate-950 hover:bg-sky-400" autoFocus>
+                  <p className="text-lg font-semibold text-tinta-200">¿Qué estructura es?</p>
+                  <p className="mt-1 text-sm text-tinta-400">Gírala con el ratón. Piensa la respuesta y dale la vuelta.</p>
+                  <button type="button" onClick={() => setVolteada(true)} className="mt-4 rounded-lg bg-oro-500 px-5 py-2 font-semibold text-tinta-950 hover:bg-oro-400" autoFocus>
                     Mostrar respuesta
                   </button>
                 </div>

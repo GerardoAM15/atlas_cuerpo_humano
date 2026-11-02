@@ -6,6 +6,8 @@ practicar con quizzes y repetición espaciada. Se puede instalar como aplicació
 
 **Web:** https://gerardoam15.github.io/atlas_cuerpo_humano/
 
+**Autor:** Gerardo Alarcón.
+
 ## Qué incluye
 - **Atlas 3D** con 11 sistemas y 825 estructuras (762 con modelo 3D real de BodyParts3D y Z-Anatomy, 19,6 MB en total):
   búsqueda difusa en tres idiomas, árbol por regiones, ficha de cada estructura, cortes anatómicos, modo explosión,

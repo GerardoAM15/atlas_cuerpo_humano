@@ -35,7 +35,7 @@ export default function PlanoCorte({ sistemas }: { sistemas: readonly SistemaId[
   return (
     <mesh position={posicion} rotation={rotacion} raycast={() => null} renderOrder={10}>
       <planeGeometry args={[tam, tam]} />
-      <meshBasicMaterial color="#38bdf8" transparent opacity={0.08} side={THREE.DoubleSide} depthWrite={false} />
+      <meshBasicMaterial color="#d6b26a" transparent opacity={0.08} side={THREE.DoubleSide} depthWrite={false} />
     </mesh>
   );
 }

@@ -21,8 +21,8 @@ const pwa = VitePWA({
     start_url: './',
     scope: './',
     display: 'standalone',
-    theme_color: '#020617',
-    background_color: '#020617',
+    theme_color: '#13110f',
+    background_color: '#13110f',
     categories: ['education', 'medical'],
     icons: [
       { src: 'iconos/icono-192.png', sizes: '192x192', type: 'image/png' },
@@ -31,7 +31,7 @@ const pwa = VitePWA({
     ],
   },
   workbox: {
-    globPatterns: ['**/*.{js,css,html,svg,png,webmanifest}'],
+    globPatterns: ['**/*.{js,css,html,svg,png,webmanifest,woff2}'],
     // Ningún .glb en el precache (≈20 MB): se guardan al visitarlos o con «Descargar todo».
     globIgnores: ['models/**'],
     navigateFallback: 'index.html',

@@ -105,8 +105,8 @@ function Corazon({ e, tGlobal }: { e: Estado; tGlobal: number }) {
 
   const camara = (cx: number, cy: number, w: number, h: number, escala: number, color: string, etiqueta: string) => (
     <g transform={`translate(${cx} ${cy}) scale(${escala}) translate(${-cx} ${-cy})`}>
-      <rect x={cx - w / 2} y={cy - h / 2} width={w} height={h} rx={18} fill={color} stroke="#0f172a" strokeWidth={2} />
-      <text x={cx} y={cy + 4} textAnchor="middle" className="fill-slate-950 text-[12px] font-bold">
+      <rect x={cx - w / 2} y={cy - h / 2} width={w} height={h} rx={18} fill={color} stroke="#1d1a17" strokeWidth={2} />
+      <text x={cx} y={cy + 4} textAnchor="middle" className="fill-tinta-950 text-[12px] font-bold">
         {etiqueta}
       </text>
     </g>
@@ -123,13 +123,13 @@ function Corazon({ e, tGlobal }: { e: Estado; tGlobal: number }) {
 
   return (
     <svg viewBox="0 0 400 375" className="mx-auto h-auto w-full max-w-md" role="img" aria-label={`Corazón esquemático en fase de ${NOMBRE_FASE[e.fase]}`}>
-      <path d={CIRCUITO.d} fill="none" stroke="#334155" strokeWidth={10} strokeLinejoin="round" />
-      <rect x={160} y={10} width={80} height={24} rx={8} className="fill-slate-700" />
-      <text x={200} y={26} textAnchor="middle" className="fill-slate-100 text-[11px] font-semibold">
+      <path d={CIRCUITO.d} fill="none" stroke="#443e38" strokeWidth={10} strokeLinejoin="round" />
+      <rect x={160} y={10} width={80} height={24} rx={8} className="fill-tinta-700" />
+      <text x={200} y={26} textAnchor="middle" className="fill-tinta-100 text-[11px] font-semibold">
         Pulmones
       </text>
-      <rect x={160} y={335} width={80} height={24} rx={8} className="fill-slate-700" />
-      <text x={200} y={351} textAnchor="middle" className="fill-slate-100 text-[11px] font-semibold">
+      <rect x={160} y={335} width={80} height={24} rx={8} className="fill-tinta-700" />
+      <text x={200} y={351} textAnchor="middle" className="fill-tinta-100 text-[11px] font-semibold">
         Cuerpo
       </text>
       {camara(120, 120, 90, 70, escalaA, '#60a5fa', 'AD')}
@@ -146,9 +146,9 @@ function Corazon({ e, tGlobal }: { e: Estado; tGlobal: number }) {
       <text x={152} y={194} className="fill-amber-200 text-[9px]">Pulmonar</text>
       <text x={312} y={194} className="fill-amber-200 text-[9px]">Aórtica</text>
       {particulas.map(({ f, oxigenada, p }) => (
-        <circle key={f} cx={p[0]} cy={p[1]} r={3.5} fill={oxigenada ? '#f87171' : '#60a5fa'} stroke="#0f172a" strokeWidth={0.8} />
+        <circle key={f} cx={p[0]} cy={p[1]} r={3.5} fill={oxigenada ? '#f87171' : '#60a5fa'} stroke="#1d1a17" strokeWidth={0.8} />
       ))}
-      <text x={200} y={372} textAnchor="middle" className="fill-slate-400 text-[10px]">
+      <text x={200} y={372} textAnchor="middle" className="fill-tinta-400 text-[10px]">
         Rojo: sangre oxigenada · Azul: desoxigenada
       </text>
     </svg>
@@ -193,8 +193,8 @@ export default function CicloCardiaco() {
       controles={<Controles reloj={reloj} />}
       visual={
         <>
-          <div className="rounded-lg border border-slate-800 bg-slate-900/40 p-3">
-            <p className="text-center text-sm font-semibold text-sky-200" aria-live="polite">
+          <div className="rounded-lg border border-tinta-800 bg-tinta-900/40 p-3">
+            <p className="text-center text-sm font-semibold text-oro-200" aria-live="polite">
               {NOMBRE_FASE[e.fase]}
             </p>
             <Corazon e={e} tGlobal={reloj.t / periodo} />
@@ -204,7 +204,7 @@ export default function CicloCardiaco() {
             descripcion="Presiones aórtica, ventricular izquierda y auricular izquierda a lo largo de un ciclo"
             series={[
               { nombre: 'Aorta', color: '#f87171', puntos: curvas.aorta },
-              { nombre: 'Ventrículo izquierdo', color: '#f1f5f9', puntos: curvas.vi },
+              { nombre: 'Ventrículo izquierdo', color: '#f2ede3', puntos: curvas.vi },
               { nombre: 'Aurícula izquierda', color: '#60a5fa', puntos: curvas.ai, discontinua: true },
             ]}
             x={[0, periodo]}
@@ -245,7 +245,7 @@ export default function CicloCardiaco() {
             alto={220}
             ancho={400}
           />
-          <p className="text-[11px] text-slate-400">
+          <p className="text-[11px] text-tinta-400">
             En el bucle: el lado derecho (vertical) es la contracción isovolumétrica, el superior la eyección, el izquierdo la relajación
             isovolumétrica y el inferior el llenado. El área encerrada es el trabajo sistólico.
           </p>
@@ -272,26 +272,26 @@ export default function CicloCardiaco() {
       }
       lateral={
         <>
-          <section className="rounded-lg border border-slate-800 bg-slate-900/50 p-3">
-            <label className="block text-sm text-slate-300">
+          <section className="rounded-lg border border-tinta-800 bg-tinta-900/50 p-3">
+            <label className="block text-sm text-tinta-300">
               Frecuencia cardíaca: <strong className="tabular-nums">{fc} lpm</strong>
-              <input type="range" min={40} max={180} value={fc} onChange={(ev2) => setFc(Number(ev2.target.value))} className="mt-1 w-full accent-sky-500" />
+              <input type="range" min={40} max={180} value={fc} onChange={(ev2) => setFc(Number(ev2.target.value))} className="mt-1 w-full accent-oro-500" />
             </label>
-            <dl className="mt-2 grid grid-cols-2 gap-x-3 gap-y-1 text-xs text-slate-400">
+            <dl className="mt-2 grid grid-cols-2 gap-x-3 gap-y-1 text-xs text-tinta-400">
               <dt>Periodo</dt>
-              <dd className="text-right tabular-nums text-slate-200">{periodo.toFixed(2)} s</dd>
+              <dd className="text-right tabular-nums text-tinta-200">{periodo.toFixed(2)} s</dd>
               <dt>Volumen sistólico</dt>
-              <dd className="text-right tabular-nums text-slate-200">{ind.volumenSistolico} ml</dd>
+              <dd className="text-right tabular-nums text-tinta-200">{ind.volumenSistolico} ml</dd>
               <dt>Fracción de eyección</dt>
-              <dd className="text-right tabular-nums text-slate-200">{Math.round(ind.fraccionEyeccion * 100)} %</dd>
+              <dd className="text-right tabular-nums text-tinta-200">{Math.round(ind.fraccionEyeccion * 100)} %</dd>
               <dt>Gasto cardíaco</dt>
-              <dd className="text-right tabular-nums text-slate-200">{ind.gastoCardiaco.toFixed(1)} l/min</dd>
+              <dd className="text-right tabular-nums text-tinta-200">{ind.gastoCardiaco.toFixed(1)} l/min</dd>
               <dt>Diástole</dt>
-              <dd className="text-right tabular-nums text-slate-200">
+              <dd className="text-right tabular-nums text-tinta-200">
                 {(periodo - ((ts[1]!.fin - ts[1]!.inicio) + (ts[2]!.fin - ts[2]!.inicio))).toFixed(2)} s
               </dd>
             </dl>
-            <p className="mt-2 text-[11px] text-slate-400">
+            <p className="mt-2 text-[11px] text-tinta-400">
               Modelo simplificado: el volumen sistólico se mantiene fijo al cambiar la frecuencia (en realidad depende del llenado y de la contractilidad).
             </p>
           </section>

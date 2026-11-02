@@ -67,32 +67,32 @@ function Membrana({ e, t }: { e: EstadoPA; t: number }) {
       <rect x={x - 22} y={70} width={14} height={60} rx={4} fill={color} />
       <rect x={x + 8} y={70} width={14} height={60} rx={4} fill={color} />
       {!abierto && <rect x={x - 8} y={inactivado ? 118 : 70} width={16} height={12} rx={3} fill={inactivado ? '#f97316' : color} />}
-      <text x={x} y={150} textAnchor="middle" className="fill-slate-300 text-[10px]">
+      <text x={x} y={150} textAnchor="middle" className="fill-tinta-300 text-[10px]">
         {etiqueta}
       </text>
-      <text x={x} y={162} textAnchor="middle" className="fill-slate-500 text-[9px]">
+      <text x={x} y={162} textAnchor="middle" className="fill-tinta-500 text-[9px]">
         {inactivado ? 'inactivado' : abierto ? 'abierto' : 'cerrado'}
       </text>
     </g>
   );
   return (
     <svg viewBox="0 0 360 175" className="mx-auto h-auto w-full max-w-xl" role="img" aria-label={`Membrana: canal de sodio ${e.canalNa}, canal de potasio ${e.canalK}`}>
-      <text x={8} y={20} className="fill-slate-400 text-[10px]">
+      <text x={8} y={20} className="fill-tinta-400 text-[10px]">
         Exterior (más Na⁺)
       </text>
-      <text x={8} y={172} className="fill-slate-400 text-[10px]">
+      <text x={8} y={172} className="fill-tinta-400 text-[10px]">
         Interior (más K⁺)
       </text>
-      <rect x={0} y={80} width={360} height={40} fill="#334155" />
-      <rect x={0} y={80} width={360} height={6} fill="#64748b" />
-      <rect x={0} y={114} width={360} height={6} fill="#64748b" />
+      <rect x={0} y={80} width={360} height={40} fill="#443e38" />
+      <rect x={0} y={80} width={360} height={6} fill="#857c6f" />
+      <rect x={0} y={114} width={360} height={6} fill="#857c6f" />
       {canal(110, naAbierto, e.canalNa === 'inactivado', 'Canal de Na⁺', '#0ea5e9')}
       {canal(250, kAbierto, false, 'Canal de K⁺', '#a855f7')}
       {naAbierto &&
         iones.map((p) => <circle key={`na${p}`} cx={110} cy={40 + p * 80} r={5} fill="#38bdf8" stroke="#0c4a6e" />)}
       {kAbierto &&
         iones.map((p) => <circle key={`k${p}`} cx={250} cy={150 - p * 100} r={5} fill="#c084fc" stroke="#3b0764" />)}
-      <text x={340} y={20} textAnchor="end" className="fill-slate-200 text-[13px] font-bold tabular-nums">
+      <text x={340} y={20} textAnchor="end" className="fill-tinta-200 text-[13px] font-bold tabular-nums">
         {Math.round(e.potencial)} mV
       </text>
     </svg>
@@ -107,25 +107,25 @@ function Axones({ tc }: { tc: number }) {
   const nodos = Array.from({ length: AXON_MM / INTERNODO_MM + 1 }, (_, i) => i * INTERNODO_MM);
   return (
     <svg viewBox="0 0 360 150" className="mx-auto h-auto w-full max-w-xl" role="img" aria-label="Comparación de la conducción en fibras con y sin mielina">
-      <text x={15} y={22} className="fill-slate-300 text-[10px]">
+      <text x={15} y={22} className="fill-tinta-300 text-[10px]">
         Sin mielina (≈ {VELOCIDAD.sinMielina} m/s): conducción continua
       </text>
-      <line x1={x(0)} x2={x(AXON_MM)} y1={38} y2={38} stroke="#94a3b8" strokeWidth={6} strokeLinecap="round" />
+      <line x1={x(0)} x2={x(AXON_MM)} y1={38} y2={38} stroke="#aea594" strokeWidth={6} strokeLinecap="round" />
       <line x1={x(0)} x2={x(pSin)} y1={38} y2={38} stroke="#facc15" strokeWidth={6} strokeLinecap="round" />
       <circle cx={x(pSin)} cy={38} r={6} fill="#fde047" />
 
-      <text x={15} y={82} className="fill-slate-300 text-[10px]">
+      <text x={15} y={82} className="fill-tinta-300 text-[10px]">
         Con mielina (≈ {VELOCIDAD.conMielina} m/s): conducción saltatoria
       </text>
-      <line x1={x(0)} x2={x(AXON_MM)} y1={100} y2={100} stroke="#94a3b8" strokeWidth={4} />
+      <line x1={x(0)} x2={x(AXON_MM)} y1={100} y2={100} stroke="#aea594" strokeWidth={4} />
       {nodos.slice(0, -1).map((n) => (
-        <rect key={n} x={x(n) + 0.8} y={93} width={x(n + INTERNODO_MM) - x(n) - 1.6} height={14} rx={4} fill="#e2e8f0" fillOpacity={n < pCon ? 0.35 : 0.85} />
+        <rect key={n} x={x(n) + 0.8} y={93} width={x(n + INTERNODO_MM) - x(n) - 1.6} height={14} rx={4} fill="#e4dccd" fillOpacity={n < pCon ? 0.35 : 0.85} />
       ))}
       <circle cx={x(pCon)} cy={100} r={6} fill="#fde047" />
-      <text x={15} y={135} className="fill-slate-500 text-[9px]">
+      <text x={15} y={135} className="fill-tinta-500 text-[9px]">
         t = {modulo(tc, 2.5).toFixed(2)} ms · claro: mielina · huecos: nódulos de Ranvier
       </text>
-      <text x={345} y={122} textAnchor="end" className="fill-slate-500 text-[9px]">
+      <text x={345} y={122} textAnchor="end" className="fill-tinta-500 text-[9px]">
         {AXON_MM} mm
       </text>
     </svg>
@@ -162,19 +162,19 @@ function Sinapsis({ t }: { t: number }) {
           <rect key={i} x={84 + i * 30} y={114} width={12} height={10} rx={2} fill={unidos ? '#22c55e' : '#166534'} />
         ))}
         {indice === 4 && (
-          <text x={150} y={150} textAnchor="middle" className="fill-sky-300 text-[10px] font-bold">
+          <text x={150} y={150} textAnchor="middle" className="fill-oro-300 text-[10px] font-bold">
             Na⁺ entra → despolarización
           </text>
         )}
         <text x={150} y={160} textAnchor="middle" className="fill-green-200 text-[9px]">
           Neurona postsináptica
         </text>
-        <text x={268} y={100} className="fill-slate-500 text-[8px]">
+        <text x={268} y={100} className="fill-tinta-500 text-[8px]">
           hendidura
         </text>
       </svg>
-      <p className="mt-1 text-xs text-slate-300">
-        <strong className="text-sky-200">
+      <p className="mt-1 text-xs text-tinta-300">
+        <strong className="text-oro-200">
           {indice + 1}. {PASOS_SINAPSIS[indice]!.titulo}:
         </strong>{' '}
         {PASOS_SINAPSIS[indice]!.texto}
@@ -197,8 +197,8 @@ export default function ImpulsoNervioso() {
       controles={<Controles reloj={reloj} />}
       visual={
         <>
-          <div className="rounded-lg border border-slate-800 bg-slate-900/40 p-3">
-            <p className="text-center text-sm font-semibold text-sky-200" aria-live="polite">
+          <div className="rounded-lg border border-tinta-800 bg-tinta-900/40 p-3">
+            <p className="text-center text-sm font-semibold text-oro-200" aria-live="polite">
               {PASOS.find((p) => p.id === e.fase)?.titulo}
               {e.refractario !== 'ninguno' && <span className="ml-2 text-xs text-amber-300">(periodo refractario {e.refractario})</span>}
             </p>
@@ -219,10 +219,10 @@ export default function ImpulsoNervioso() {
               { desde: 3.2, hasta: 5.5, etiqueta: 'refr. relativo', color: 'rgba(250,204,21,0.07)' },
             ]}
           />
-          <figure className="rounded-lg border border-slate-800 bg-slate-950/60 p-2">
-            <figcaption className="px-1 text-xs font-semibold text-slate-300">Conducción del impulso (mismo tiempo transcurrido)</figcaption>
+          <figure className="rounded-lg border border-tinta-800 bg-tinta-950/60 p-2">
+            <figcaption className="px-1 text-xs font-semibold text-tinta-300">Conducción del impulso (mismo tiempo transcurrido)</figcaption>
             <Axones tc={reloj.t} />
-            <p className="px-1 text-[11px] text-slate-400">
+            <p className="px-1 text-[11px] text-tinta-400">
               La mielina aísla el axón: el potencial de acción solo se regenera en los nódulos de Ranvier y «salta» entre ellos. Por eso es
               más rápida y gasta menos energía. La desmielinización (p. ej. en la esclerosis múltiple) enlentece o bloquea la conducción.
             </p>
@@ -239,8 +239,8 @@ export default function ImpulsoNervioso() {
               if (p) reloj.setT((Math.floor(tms / CICLO_PA) * CICLO_PA + p.t) / MS_POR_SEGUNDO_PA);
             }}
           />
-          <figure className="rounded-lg border border-slate-800 bg-slate-950/60 p-3">
-            <figcaption className="text-xs font-semibold text-slate-300">Sinapsis química</figcaption>
+          <figure className="rounded-lg border border-tinta-800 bg-tinta-950/60 p-3">
+            <figcaption className="text-xs font-semibold text-tinta-300">Sinapsis química</figcaption>
             <Sinapsis t={reloj.t} />
           </figure>
         </>

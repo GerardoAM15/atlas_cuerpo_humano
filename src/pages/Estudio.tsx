@@ -25,7 +25,7 @@ export default function Estudio() {
     <div className="mx-auto w-full max-w-6xl space-y-8 px-4 py-10">
       <header>
         <h1 className="text-3xl font-bold tracking-tight">Modo estudio</h1>
-        <p className="mt-2 max-w-3xl text-slate-400">
+        <p className="mt-2 max-w-3xl text-tinta-400">
           Practica con el atlas. Las estructuras que falles vuelven antes gracias a la repetición espaciada (algoritmo SM-2). Tu progreso
           se guarda solo en este navegador.
         </p>
@@ -33,20 +33,20 @@ export default function Estudio() {
 
       <div className="grid gap-4 md:grid-cols-3">
         {MODOS.map((m) => (
-          <Link key={m.ruta} to={m.ruta} className="rounded-xl border border-slate-800 bg-slate-900/60 p-5 transition-colors hover:border-sky-500/50 hover:bg-slate-900">
+          <Link key={m.ruta} to={m.ruta} className="rounded-xl border border-tinta-800 bg-tinta-900/60 p-5 transition-colors hover:border-oro-500/50 hover:bg-tinta-900">
             <h2 className="text-lg font-semibold">{m.titulo}</h2>
-            <p className="mt-2 text-sm text-slate-400">{m.texto}</p>
+            <p className="mt-2 text-sm text-tinta-400">{m.texto}</p>
           </Link>
         ))}
         <Link
           to="/estudio/quiz?repaso=1"
           aria-disabled={n === 0}
           className={`rounded-xl border p-5 transition-colors ${
-            n > 0 ? 'border-amber-400/40 bg-amber-400/10 hover:bg-amber-400/15' : 'pointer-events-none border-slate-800 bg-slate-900/30 opacity-60'
+            n > 0 ? 'border-amber-400/40 bg-amber-400/10 hover:bg-amber-400/15' : 'pointer-events-none border-tinta-800 bg-tinta-900/30 opacity-60'
           }`}
         >
           <h2 className="text-lg font-semibold">Repaso de hoy</h2>
-          <p className="mt-2 text-sm text-slate-300">
+          <p className="mt-2 text-sm text-tinta-300">
             {n > 0 ? `${n} ${n === 1 ? 'estructura pendiente' : 'estructuras pendientes'} de repaso.` : 'No tienes repasos pendientes hoy.'}
           </p>
         </Link>
@@ -60,7 +60,7 @@ export default function Estudio() {
           onClick={() => {
             if (window.confirm('¿Borrar todo tu progreso de estudio? No se puede deshacer.')) reiniciar();
           }}
-          className="text-xs text-slate-400 underline hover:text-red-300"
+          className="text-xs text-tinta-400 underline hover:text-red-300"
         >
           Borrar el progreso
         </button>

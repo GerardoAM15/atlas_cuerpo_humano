@@ -34,7 +34,7 @@ export default function BotonInstalar() {
         onClick={async () => {
           if (!(await instalar())) setAyuda((v) => !v);
         }}
-        className="flex items-center gap-1.5 rounded-md border border-sky-500/50 px-2.5 py-1.5 text-sm font-medium text-sky-200 hover:bg-sky-500/15"
+        className="flex items-center gap-1.5 rounded-md border border-oro-500/50 px-2.5 py-1.5 text-sm font-medium text-oro-200 hover:bg-oro-500/15"
       >
         <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
           <path d="M12 4v11M7 10l5 5 5-5M5 20h14" />
@@ -46,9 +46,9 @@ export default function BotonInstalar() {
           id="ayuda-instalar"
           role="dialog"
           aria-label="Cómo instalar la aplicación"
-          className="absolute right-0 top-full z-50 mt-2 w-72 rounded-lg border border-slate-700 bg-slate-900 p-4 text-sm text-slate-300 shadow-xl"
+          className="absolute right-0 top-full z-50 mt-2 w-72 rounded-lg border border-tinta-700 bg-tinta-900 p-4 text-sm text-tinta-300 shadow-xl"
         >
-          <p className="font-semibold text-slate-100">Instalar el atlas como aplicación</p>
+          <p className="font-semibold text-tinta-100">Instalar el atlas como aplicación</p>
           <ul className="mt-2 list-disc space-y-1 pl-4 text-xs">
             <li>
               <strong>iPhone/iPad (Safari):</strong> botón Compartir → «Añadir a pantalla de inicio».
@@ -60,7 +60,7 @@ export default function BotonInstalar() {
               <strong>Ordenador (Chrome o Edge):</strong> icono de instalar en la barra de direcciones o menú → «Instalar Atlas 3D».
             </li>
           </ul>
-          <p className="mt-2 text-xs text-slate-400">Si no aparece la opción, puede que tu navegador no admita instalar aplicaciones web.</p>
+          <p className="mt-2 text-xs text-tinta-400">Si no aparece la opción, puede que tu navegador no admita instalar aplicaciones web.</p>
         </div>
       )}
     </div>

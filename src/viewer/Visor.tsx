@@ -56,16 +56,16 @@ export default function Visor() {
         gl={{ antialias: true, powerPreference: 'high-performance' }}
         aria-label="Modelo 3D del cuerpo humano"
       >
-        <color attach="background" args={['#020617']} />
-        <hemisphereLight args={['#f1f5f9', '#1e293b', 1.3]} />
+        <color attach="background" args={['#13110f']} />
+        <hemisphereLight args={['#f2ede3', '#2e2a26', 1.3]} />
         <directionalLight position={[1.5, 3, 2.5]} intensity={1.6} />
         <directionalLight position={[-2, 1.5, -2]} intensity={0.6} />
         <Grid
           args={[10, 10]}
           cellSize={0.1}
           sectionSize={1}
-          cellColor="#1e293b"
-          sectionColor="#334155"
+          cellColor="#2e2a26"
+          sectionColor="#443e38"
           fadeDistance={8}
           infiniteGrid
         />
@@ -84,7 +84,7 @@ export default function Visor() {
         <p
           ref={salidaFps}
           role="status"
-          className="pointer-events-none absolute left-2 top-2 z-10 rounded-md border border-slate-700 bg-slate-950/90 px-2 py-1 font-mono text-xs text-emerald-300"
+          className="pointer-events-none absolute left-2 top-2 z-10 rounded-md border border-tinta-700 bg-tinta-950/90 px-2 py-1 font-mono text-xs text-emerald-300"
         >
           Midiendo…
         </p>
@@ -93,7 +93,7 @@ export default function Visor() {
       <div
         ref={etiqueta}
         role="tooltip"
-        className={`pointer-events-none absolute left-0 top-0 z-10 rounded-md border border-slate-700 bg-slate-950/90 px-2 py-1 text-xs text-slate-100 shadow ${
+        className={`pointer-events-none absolute left-0 top-0 z-10 rounded-md border border-tinta-700 bg-tinta-950/90 px-2 py-1 text-xs text-tinta-100 shadow ${
           hover ? '' : 'hidden'
         }`}
       >

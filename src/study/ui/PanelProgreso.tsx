@@ -14,10 +14,10 @@ export default function PanelProgreso() {
   const vistos = Object.keys(tarjetas).length;
 
   const tarjeta = (titulo: string, valor: string | number, pie?: string) => (
-    <div className="rounded-xl border border-slate-800 bg-slate-900/60 p-4">
-      <p className="text-xs uppercase tracking-wide text-slate-400">{titulo}</p>
-      <p className="mt-1 text-3xl font-bold tabular-nums text-slate-50">{valor}</p>
-      {pie && <p className="text-xs text-slate-400">{pie}</p>}
+    <div className="rounded-xl border border-tinta-800 bg-tinta-900/60 p-4">
+      <p className="text-xs uppercase tracking-wide text-tinta-400">{titulo}</p>
+      <p className="mt-1 text-3xl font-bold tabular-nums text-tinta-50">{valor}</p>
+      {pie && <p className="text-xs text-tinta-400">{pie}</p>}
     </div>
   );
 
@@ -34,22 +34,22 @@ export default function PanelProgreso() {
       </div>
 
       <div className="grid gap-4 lg:grid-cols-2">
-        <div className="rounded-xl border border-slate-800 bg-slate-900/40 p-4">
-          <h3 className="text-sm font-semibold text-slate-300">Dominio por sistema</h3>
+        <div className="rounded-xl border border-tinta-800 bg-tinta-900/40 p-4">
+          <h3 className="text-sm font-semibold text-tinta-300">Dominio por sistema</h3>
           <ul className="mt-3 space-y-2">
             {dominio.map((d) => {
               const sis = SISTEMAS_POR_ID[d.sistema];
               const pct = Math.round(d.porcentaje * 100);
               return (
                 <li key={d.sistema} className="text-xs">
-                  <div className="flex justify-between text-slate-400">
+                  <div className="flex justify-between text-tinta-400">
                     <span>{sis.nombre}</span>
                     <span className="tabular-nums">
                       {pct} % · {d.dominados}/{d.total}
                     </span>
                   </div>
                   <div
-                    className="mt-1 h-2 overflow-hidden rounded bg-slate-800"
+                    className="mt-1 h-2 overflow-hidden rounded bg-tinta-800"
                     role="progressbar"
                     aria-label={`Dominio del sistema ${sis.nombre}`}
                     aria-valuemin={0}
@@ -63,16 +63,16 @@ export default function PanelProgreso() {
             })}
           </ul>
         </div>
-        <div className="rounded-xl border border-slate-800 bg-slate-900/40 p-4">
-          <h3 className="text-sm font-semibold text-slate-300">Estructuras difíciles</h3>
+        <div className="rounded-xl border border-tinta-800 bg-tinta-900/40 p-4">
+          <h3 className="text-sm font-semibold text-tinta-300">Estructuras difíciles</h3>
           {listaDificiles.length === 0 ? (
-            <p className="mt-3 text-sm text-slate-400">Aún no hay fallos registrados. Cuando falles alguna estructura aparecerá aquí.</p>
+            <p className="mt-3 text-sm text-tinta-400">Aún no hay fallos registrados. Cuando falles alguna estructura aparecerá aquí.</p>
           ) : (
             <ol className="mt-3 space-y-1.5 text-sm">
               {listaDificiles.map(({ id, tarjeta: t, tasaFallo }) => (
                 <li key={id} className="flex items-center justify-between gap-2">
-                  <span className="text-slate-200">{conceptos().get(id)?.nombre ?? id}</span>
-                  <span className="shrink-0 text-xs tabular-nums text-slate-400">
+                  <span className="text-tinta-200">{conceptos().get(id)?.nombre ?? id}</span>
+                  <span className="shrink-0 text-xs tabular-nums text-tinta-400">
                     {Math.round(tasaFallo * 100)} % fallos · repaso {t.proxima <= hoy ? 'hoy' : t.proxima}
                   </span>
                 </li>

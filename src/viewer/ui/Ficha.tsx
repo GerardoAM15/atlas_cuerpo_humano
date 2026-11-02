@@ -41,11 +41,11 @@ function DatosMusculo({ e }: { e: { origen: string; insercion: string; inervacio
     ['Acción', e.accion],
   ];
   return (
-    <dl className="mt-4 space-y-2 rounded-lg border border-slate-800 bg-slate-900/50 p-3 text-sm">
+    <dl className="mt-4 space-y-2 rounded-lg border border-tinta-800 bg-tinta-900/50 p-3 text-sm">
       {filas.map(([k, v]) => (
         <div key={k}>
-          <dt className="text-xs font-semibold uppercase tracking-wide text-slate-400">{k}</dt>
-          <dd className="text-slate-300">{v}</dd>
+          <dt className="text-xs font-semibold uppercase tracking-wide text-tinta-400">{k}</dt>
+          <dd className="text-tinta-300">{v}</dd>
         </div>
       ))}
     </dl>
@@ -55,8 +55,8 @@ function DatosMusculo({ e }: { e: { origen: string; insercion: string; inervacio
 function Seccion({ titulo, children }: { titulo: string; children: ReactNode }) {
   return (
     <section className="mt-4">
-      <h3 className="text-xs font-semibold uppercase tracking-wide text-slate-400">{titulo}</h3>
-      <div className="mt-1 text-sm leading-relaxed text-slate-300">{children}</div>
+      <h3 className="text-xs font-semibold uppercase tracking-wide text-tinta-400">{titulo}</h3>
+      <div className="mt-1 text-sm leading-relaxed text-tinta-300">{children}</div>
     </section>
   );
 }
@@ -69,7 +69,7 @@ function Enlace({ id }: { id: string }) {
     <button
       type="button"
       onClick={() => seleccionar(id, { enfocar: e.nodoModelo !== null, region: claveRegion(e.sistema, e.region), sistema: e.sistema })}
-      className="rounded bg-slate-800 px-1.5 py-0.5 text-xs text-sky-300 hover:bg-slate-700"
+      className="rounded bg-tinta-800 px-1.5 py-0.5 text-xs text-oro-300 hover:bg-tinta-700"
     >
       {e.nombre}
     </button>
@@ -96,13 +96,13 @@ export default function Ficha({ onCerrar }: { onCerrar?: () => void }) {
     <article aria-labelledby="ficha-titulo" className="p-4">
       <header className="flex items-start gap-2">
         <div className="flex-1">
-          <p className="text-xs text-slate-400">
+          <p className="text-xs text-tinta-400">
             {SISTEMAS_POR_ID[r.sistema].nombre} › {nombreRegion(r.sistema, r.region)}
           </p>
-          <h2 id="ficha-titulo" className="mt-0.5 text-xl font-bold leading-tight text-slate-50">
+          <h2 id="ficha-titulo" className="mt-0.5 text-xl font-bold leading-tight text-tinta-50">
             {r.nombre}
           </h2>
-          <p className="mt-1 text-sm text-slate-400">
+          <p className="mt-1 text-sm text-tinta-400">
             <i lang="la">{r.latin}</i> · <span lang="en">{r.ingles}</span>
           </p>
         </div>
@@ -113,7 +113,7 @@ export default function Ficha({ onCerrar }: { onCerrar?: () => void }) {
             onCerrar?.();
           }}
           aria-label="Cerrar ficha"
-          className="rounded p-1 text-slate-400 hover:bg-slate-800 hover:text-white"
+          className="rounded p-1 text-tinta-400 hover:bg-tinta-800 hover:text-tinta-50"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
             <path d="M6 6l12 12M6 18L18 6" />
@@ -122,10 +122,10 @@ export default function Ficha({ onCerrar }: { onCerrar?: () => void }) {
       </header>
 
       <div className="mt-3 flex flex-wrap gap-1.5">
-        <span className="rounded-full bg-slate-800 px-2 py-0.5 text-xs text-slate-300">{TIPO[r.tipo] ?? r.tipo}</span>
+        <span className="rounded-full bg-tinta-800 px-2 py-0.5 text-xs text-tinta-300">{TIPO[r.tipo] ?? r.tipo}</span>
         {e?.tipo === 'hueso' &&
           e.clasificacion.map((c) => (
-            <span key={c} className="rounded-full bg-slate-800 px-2 py-0.5 text-xs text-slate-300">
+            <span key={c} className="rounded-full bg-tinta-800 px-2 py-0.5 text-xs text-tinta-300">
               {CLASIFICACION[c] ?? c}
             </span>
           ))}
@@ -144,25 +144,25 @@ export default function Ficha({ onCerrar }: { onCerrar?: () => void }) {
         </p>
       ) : (
         <div className="mt-3 flex flex-wrap gap-2">
-          <button type="button" onClick={() => enfocar(r.id)} className="rounded-md bg-sky-500 px-2.5 py-1 text-xs font-semibold text-slate-950 hover:bg-sky-400">
+          <button type="button" onClick={() => enfocar(r.id)} className="rounded-md bg-oro-500 px-2.5 py-1 text-xs font-semibold text-tinta-950 hover:bg-oro-400">
             Enfocar
           </button>
           <button
             type="button"
             onClick={() => setAislar(!aislar)}
             aria-pressed={aislar}
-            className={`rounded-md border px-2.5 py-1 text-xs font-semibold ${aislar ? 'border-sky-400 text-sky-300' : 'border-slate-700 text-slate-200 hover:bg-slate-800'}`}
+            className={`rounded-md border px-2.5 py-1 text-xs font-semibold ${aislar ? 'border-oro-400 text-oro-300' : 'border-tinta-700 text-tinta-200 hover:bg-tinta-800'}`}
           >
             {aislar ? 'Mostrar todo' : 'Aislar'}
           </button>
-          <button type="button" onClick={() => ocultar(r.id)} className="rounded-md border border-slate-700 px-2.5 py-1 text-xs font-semibold text-slate-200 hover:bg-slate-800">
+          <button type="button" onClick={() => ocultar(r.id)} className="rounded-md border border-tinta-700 px-2.5 py-1 text-xs font-semibold text-tinta-200 hover:bg-tinta-800">
             Ocultar
           </button>
         </div>
       )}
 
       {!e ? (
-        <p className="mt-4 text-sm text-slate-400" role="status">
+        <p className="mt-4 text-sm text-tinta-400" role="status">
           Cargando ficha…
         </p>
       ) : (
@@ -170,7 +170,7 @@ export default function Ficha({ onCerrar }: { onCerrar?: () => void }) {
       )}
 
       {!pendiente && (
-        <p className="mt-4 text-[11px] text-slate-400">
+        <p className="mt-4 text-[11px] text-tinta-400">
           {r.fuenteModelo === 'z-anatomy' ? 'Modelo: Z-Anatomy (CC BY-SA 4.0)' : `Modelo: BodyParts3D${r.fma ? ` · ${r.fma.join(', ')}` : ''}`}
           {r.notaModelo && <span className="mt-1 block text-amber-200/90">{r.notaModelo}</span>}
         </p>
@@ -204,8 +204,8 @@ function DetalleFicha({ e }: { e: Estructura }) {
           <ul className="space-y-2">
             {e.articulaciones.map((a) => (
               <li key={a.nombre + a.con.join()}>
-                <p className="text-slate-200">
-                  {a.nombre} <span className="text-xs text-slate-400">({a.tipo})</span>
+                <p className="text-tinta-200">
+                  {a.nombre} <span className="text-xs text-tinta-400">({a.tipo})</span>
                 </p>
                 <div className="mt-1 flex flex-wrap gap-1">
                   {a.con.map((id) => (

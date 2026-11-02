@@ -55,19 +55,19 @@ export default function PanelSinConexion() {
   const completo = guardados !== null && nGuardados === modelos.length;
 
   return (
-    <section aria-labelledby="sin-conexion" className="rounded-xl border border-slate-800 bg-slate-900/40 p-5">
+    <section aria-labelledby="sin-conexion" className="rounded-xl border border-tinta-800 bg-tinta-900/40 p-5">
       <h2 id="sin-conexion" className="text-lg font-semibold">
         Usar sin conexión
       </h2>
       {!disponible ? (
-        <p className="mt-2 text-sm text-slate-400">Este navegador no permite guardar la app para usarla sin conexión.</p>
+        <p className="mt-2 text-sm text-tinta-400">Este navegador no permite guardar la app para usarla sin conexión.</p>
       ) : (
         <>
-          <p className="mt-2 text-sm text-slate-400">
+          <p className="mt-2 text-sm text-tinta-400">
             {listaOffline ? 'La aplicación ya funciona sin internet.' : 'Preparando la aplicación para funcionar sin internet…'} Los modelos 3D se
             guardan al abrir cada sistema; también puedes descargarlos todos ahora ({mb(bytesTotales)}).
           </p>
-          <p className="mt-2 text-sm text-slate-300">
+          <p className="mt-2 text-sm text-tinta-300">
             Modelos guardados: {guardados === null ? '…' : `${nGuardados} de ${modelos.length} sistemas (${mb(bytesGuardados)})`}
           </p>
 
@@ -79,16 +79,16 @@ export default function PanelSinConexion() {
                 aria-valuemin={0}
                 aria-valuemax={100}
                 aria-valuenow={Math.round((estado.progreso.bytes / estado.progreso.bytesTotales) * 100)}
-                className="h-2.5 overflow-hidden rounded bg-slate-800"
+                className="h-2.5 overflow-hidden rounded bg-tinta-800"
               >
-                <div className="h-full rounded bg-sky-400 transition-[width]" style={{ width: `${(estado.progreso.bytes / estado.progreso.bytesTotales) * 100}%` }} />
+                <div className="h-full rounded bg-oro-400 transition-[width]" style={{ width: `${(estado.progreso.bytes / estado.progreso.bytesTotales) * 100}%` }} />
               </div>
-              <div className="flex items-center justify-between gap-3 text-xs text-slate-400">
+              <div className="flex items-center justify-between gap-3 text-xs text-tinta-400">
                 <span>
                   {estado.progreso.actual ? `Descargando ${SISTEMAS_POR_ID[estado.progreso.actual].nombre.toLowerCase()}… ` : 'Comprobando… '}
                   {mb(estado.progreso.bytes)} de {mb(estado.progreso.bytesTotales)} · {Math.round((estado.progreso.bytes / estado.progreso.bytesTotales) * 100)} %
                 </span>
-                <button type="button" onClick={() => cancelar.current?.abort()} className="rounded border border-slate-700 px-2 py-1 text-slate-300 hover:bg-slate-800">
+                <button type="button" onClick={() => cancelar.current?.abort()} className="rounded border border-tinta-700 px-2 py-1 text-tinta-300 hover:bg-tinta-800">
                   Cancelar
                 </button>
               </div>
@@ -99,7 +99,7 @@ export default function PanelSinConexion() {
                 type="button"
                 onClick={descargar}
                 disabled={completo}
-                className="rounded-lg bg-sky-500 px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-sky-400 disabled:cursor-default disabled:opacity-50"
+                className="rounded-lg bg-oro-500 px-4 py-2 text-sm font-semibold text-tinta-950 hover:bg-oro-400 disabled:cursor-default disabled:opacity-50"
               >
                 {completo ? 'Todo descargado' : 'Descargar todo para usar sin internet'}
               </button>

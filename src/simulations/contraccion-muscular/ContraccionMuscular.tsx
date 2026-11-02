@@ -59,8 +59,8 @@ function Sarcomero({ activacion, calcio, golpe }: { activacion: number; calcio: 
       {s.zonaH > 0.01 && <rect x={cx - (s.zonaH / 2) * escala} y={30} width={s.zonaH * escala} height={130} fill="#facc15" fillOpacity={0.08} />}
       {[zIzq, zDer].map((x, i) => (
         <g key={i}>
-          <line x1={x} x2={x} y1={30} y2={160} stroke="#e2e8f0" strokeWidth={3} />
-          <text x={x} y={24} textAnchor="middle" className="fill-slate-300 text-[10px]">
+          <line x1={x} x2={x} y1={30} y2={160} stroke="#e4dccd" strokeWidth={3} />
+          <text x={x} y={24} textAnchor="middle" className="fill-tinta-300 text-[10px]">
             Z
           </text>
         </g>
@@ -96,7 +96,7 @@ function Sarcomero({ activacion, calcio, golpe }: { activacion: number; calcio: 
             Ca²⁺
           </text>
         ))}
-      <text x={cx} y={196} textAnchor="middle" className="fill-slate-400 text-[10px]">
+      <text x={cx} y={196} textAnchor="middle" className="fill-tinta-400 text-[10px]">
         Sarcómero: {s.longitud.toFixed(2)} µm · banda I {s.bandaI.toFixed(2)} · zona H {s.zonaH.toFixed(2)} · banda A {s.bandaA.toFixed(1)}
       </text>
     </svg>
@@ -116,7 +116,7 @@ function Codo({ angulo, masa }: { angulo: number; masa: number }) {
   return (
     <svg viewBox="0 0 320 330" className="mx-auto h-auto w-full max-w-xs" role="img" aria-label={`Codo flexionado ${Math.round(angulo)} grados`}>
       <line x1={hombro[0]} y1={hombro[1]} x2={codo[0]} y2={codo[1]} stroke="#e7e5e4" strokeWidth={14} strokeLinecap="round" />
-      <text x={hombro[0] - 12} y={hombro[1] + 70} textAnchor="end" className="fill-slate-400 text-[10px]">
+      <text x={hombro[0] - 12} y={hombro[1] + 70} textAnchor="end" className="fill-tinta-400 text-[10px]">
         Húmero
       </text>
       <line x1={codo[0]} y1={codo[1]} x2={mano[0]} y2={mano[1]} stroke="#e7e5e4" strokeWidth={11} strokeLinecap="round" />
@@ -128,12 +128,12 @@ function Codo({ angulo, masa }: { angulo: number; masa: number }) {
       <text x={codo[0] - 12} y={codo[1] + 4} textAnchor="end" className="fill-yellow-300 text-[10px]">
         Fulcro (codo)
       </text>
-      <rect x={mano[0] - 12} y={mano[1] + 4} width={24} height={Math.max(10, 6 + masa * 2.5)} rx={3} fill="#64748b" />
-      <text x={mano[0]} y={mano[1] + Math.max(10, 6 + masa * 2.5) + 18} textAnchor="middle" className="fill-slate-300 text-[10px]">
+      <rect x={mano[0] - 12} y={mano[1] + 4} width={24} height={Math.max(10, 6 + masa * 2.5)} rx={3} fill="#857c6f" />
+      <text x={mano[0]} y={mano[1] + Math.max(10, 6 + masa * 2.5) + 18} textAnchor="middle" className="fill-tinta-300 text-[10px]">
         {masa} kg
       </text>
       <circle cx={insercion[0]} cy={insercion[1]} r={4} fill="#fecaca" />
-      <text x={160} y={322} textAnchor="middle" className="fill-slate-500 text-[9px]">
+      <text x={160} y={322} textAnchor="middle" className="fill-tinta-500 text-[9px]">
         Palanca de 3.er género: la potencia está entre el fulcro y la resistencia
       </text>
     </svg>
@@ -155,24 +155,24 @@ export default function ContraccionMuscular() {
       controles={<Controles reloj={reloj} />}
       visual={
         <>
-          <div className="rounded-lg border border-slate-800 bg-slate-900/40 p-3">
-            <p className="text-center text-sm font-semibold text-sky-200" aria-live="polite">
+          <div className="rounded-lg border border-tinta-800 bg-tinta-900/40 p-3">
+            <p className="text-center text-sm font-semibold text-oro-200" aria-live="polite">
               {PASOS.find((p) => p.id === e.fase)?.titulo}
             </p>
             <Sarcomero activacion={e.activacion} calcio={e.calcio} golpe={e.puente === 'golpe' || e.puente === 'separacion'} />
-            <p className="mt-1 min-h-10 text-center text-xs text-slate-300">
+            <p className="mt-1 min-h-10 text-center text-xs text-tinta-300">
               {e.puente ? (
                 <>
                   <strong className="text-red-300">Puente cruzado:</strong> {TEXTO_PUENTE[e.puente]}
                 </>
               ) : (
-                <span className="text-slate-400">Azul: actina (filamento fino) · Rojo: miosina (filamento grueso) · Z: discos Z</span>
+                <span className="text-tinta-400">Azul: actina (filamento fino) · Rojo: miosina (filamento grueso) · Z: discos Z</span>
               )}
             </p>
           </div>
           <div className="grid gap-4 md:grid-cols-2">
-            <figure className="rounded-lg border border-slate-800 bg-slate-950/60 p-2">
-              <figcaption className="px-1 text-xs font-semibold text-slate-300">El codo como palanca</figcaption>
+            <figure className="rounded-lg border border-tinta-800 bg-tinta-950/60 p-2">
+              <figcaption className="px-1 text-xs font-semibold text-tinta-300">El codo como palanca</figcaption>
               <Codo angulo={angulo} masa={masa} />
             </figure>
             <GraficaLinea
@@ -192,22 +192,22 @@ export default function ContraccionMuscular() {
       }
       lateral={
         <>
-          <section className="rounded-lg border border-slate-800 bg-slate-900/50 p-3 text-sm">
-            <label className="block text-slate-300">
+          <section className="rounded-lg border border-tinta-800 bg-tinta-900/50 p-3 text-sm">
+            <label className="block text-tinta-300">
               Carga en la mano: <strong className="tabular-nums">{masa} kg</strong>
-              <input type="range" min={0} max={10} value={masa} onChange={(ev) => setMasa(Number(ev.target.value))} className="mt-1 w-full accent-sky-500" />
+              <input type="range" min={0} max={10} value={masa} onChange={(ev) => setMasa(Number(ev.target.value))} className="mt-1 w-full accent-oro-500" />
             </label>
-            <dl className="mt-2 grid grid-cols-2 gap-x-3 gap-y-1 text-xs text-slate-400">
+            <dl className="mt-2 grid grid-cols-2 gap-x-3 gap-y-1 text-xs text-tinta-400">
               <dt>Flexión del codo</dt>
-              <dd className="text-right tabular-nums text-slate-200">{Math.round(angulo)}°</dd>
+              <dd className="text-right tabular-nums text-tinta-200">{Math.round(angulo)}°</dd>
               <dt>Fuerza del bíceps</dt>
-              <dd className="text-right tabular-nums text-slate-200">{Math.round(fuerza)} N</dd>
+              <dd className="text-right tabular-nums text-tinta-200">{Math.round(fuerza)} N</dd>
               <dt>Peso de la carga</dt>
-              <dd className="text-right tabular-nums text-slate-200">{Math.round(masa * 9.81)} N</dd>
+              <dd className="text-right tabular-nums text-tinta-200">{Math.round(masa * 9.81)} N</dd>
               <dt>Ventaja mecánica</dt>
-              <dd className="text-right tabular-nums text-slate-200">{ventajaMecanica().toFixed(2)}</dd>
+              <dd className="text-right tabular-nums text-tinta-200">{ventajaMecanica().toFixed(2)}</dd>
             </dl>
-            <p className="mt-2 text-[11px] text-slate-400">
+            <p className="mt-2 text-[11px] text-tinta-400">
               El bíceps se inserta a ≈ 4 cm del codo y la carga está a ≈ 35 cm: necesita casi 9 veces más fuerza que el peso que sostiene,
               pero a cambio la mano recorre mucha más distancia y más rápido. Simplificación: el brazo de palanca del bíceps se toma constante.
             </p>

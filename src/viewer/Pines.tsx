@@ -32,7 +32,7 @@ export default function Pines() {
               title={e.nombre}
               aria-label={`${i + 1}. ${e.nombre}`}
               className={`flex h-5 min-w-5 items-center justify-center rounded-full border px-1 text-[10px] font-bold shadow ${
-                activo ? 'border-sky-200 bg-sky-500 text-slate-950' : 'border-slate-900 bg-amber-300 text-slate-950 hover:bg-amber-200'
+                activo ? 'border-oro-200 bg-oro-500 text-tinta-950' : 'border-tinta-900 bg-amber-300 text-tinta-950 hover:bg-amber-200'
               }`}
             >
               {i + 1}

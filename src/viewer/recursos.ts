@@ -6,5 +6,5 @@ import * as THREE from 'three';
  */
 export const PLANO_CORTE = new THREE.Plane(new THREE.Vector3(-1, 0, 0), 0);
 
-export const COLOR_SELECCION = '#38bdf8';
-export const COLOR_HOVER = '#fbbf24';
+export const COLOR_SELECCION = '#d6b26a'; // oro-400
+export const COLOR_HOVER = '#8fb8c4'; // azul grisáceo: se distingue de la selección

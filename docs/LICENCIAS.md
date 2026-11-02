@@ -1,7 +1,7 @@
 # Licencias
 
 ## Código
-Proyecto personal de estudio. Licencia del código: por definir por el autor.
+Proyecto personal de estudio de Gerardo Alarcón. Licencia del código: por definir por el autor.
 
 ## Modelos 3D
 | Fuente | Licencia | Uso |

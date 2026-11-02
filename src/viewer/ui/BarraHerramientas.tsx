@@ -24,7 +24,7 @@ const REGIONES_EXPLOSION = SISTEMAS_CON_MODELO.flatMap((s) => (REGIONES[s] ?? []
 
 const boton = (activo = false) =>
   `rounded-md px-2 py-1 text-xs font-medium transition-colors ${
-    activo ? 'bg-sky-500 text-slate-950' : 'bg-slate-800/80 text-slate-200 hover:bg-slate-700'
+    activo ? 'bg-oro-500 text-tinta-950' : 'bg-tinta-800/80 text-tinta-200 hover:bg-tinta-700'
   }`;
 
 function Desplegable({ titulo, activo, children }: { titulo: string; activo: boolean; children: ReactNode }) {
@@ -35,7 +35,7 @@ function Desplegable({ titulo, activo, children }: { titulo: string; activo: boo
         {titulo} ▾
       </button>
       {abierto && (
-        <div className="absolute right-0 z-20 mt-1 w-64 rounded-lg border border-slate-700 bg-slate-900/95 p-3 shadow-xl backdrop-blur">
+        <div className="absolute right-0 z-20 mt-1 w-64 rounded-lg border border-tinta-700 bg-tinta-900/95 p-3 shadow-xl backdrop-blur">
           {children}
         </div>
       )}
@@ -91,7 +91,7 @@ export default function BarraHerramientas() {
               if (e.target.checked && !corte.activo) cambiarEje(corte.eje);
               setCorte({ activo: e.target.checked });
             }}
-            className="accent-sky-500"
+            className="accent-oro-500"
           />
           Activar plano de corte
         </label>
@@ -103,7 +103,7 @@ export default function BarraHerramientas() {
             </button>
           ))}
         </fieldset>
-        <label className="mt-3 block text-xs text-slate-400">
+        <label className="mt-3 block text-xs text-tinta-400">
           Posición del plano
           <input
             type="range"
@@ -113,22 +113,22 @@ export default function BarraHerramientas() {
             value={corte.posicion}
             disabled={!corte.activo}
             onChange={(e) => setCorte({ posicion: Number(e.target.value) })}
-            className="mt-1 w-full accent-sky-500"
+            className="mt-1 w-full accent-oro-500"
           />
         </label>
-        <label className="mt-2 flex items-center gap-2 text-xs text-slate-300">
-          <input type="checkbox" checked={corte.invertir} disabled={!corte.activo} onChange={(e) => setCorte({ invertir: e.target.checked })} className="accent-sky-500" />
+        <label className="mt-2 flex items-center gap-2 text-xs text-tinta-300">
+          <input type="checkbox" checked={corte.invertir} disabled={!corte.activo} onChange={(e) => setCorte({ invertir: e.target.checked })} className="accent-oro-500" />
           Invertir lado conservado
         </label>
       </Desplegable>
 
       <Desplegable titulo="Explosión" activo={explosion.factor > 0}>
-        <label className="block text-xs text-slate-400">
+        <label className="block text-xs text-tinta-400">
           Región
           <select
             value={explosion.region}
             onChange={(e) => setExplosion({ region: e.target.value })}
-            className="mt-1 w-full rounded border border-slate-700 bg-slate-800 px-2 py-1 text-sm text-slate-100"
+            className="mt-1 w-full rounded border border-tinta-700 bg-tinta-800 px-2 py-1 text-sm text-tinta-100"
           >
             {REGIONES_EXPLOSION.map((r) => (
               <option key={r.id} value={r.id}>
@@ -137,7 +137,7 @@ export default function BarraHerramientas() {
             ))}
           </select>
         </label>
-        <label className="mt-3 block text-xs text-slate-400">
+        <label className="mt-3 block text-xs text-tinta-400">
           Separación
           <input
             type="range"
@@ -146,7 +146,7 @@ export default function BarraHerramientas() {
             step={0.01}
             value={explosion.factor}
             onChange={(e) => setExplosion({ factor: Number(e.target.value) })}
-            className="mt-1 w-full accent-sky-500"
+            className="mt-1 w-full accent-oro-500"
           />
         </label>
       </Desplegable>

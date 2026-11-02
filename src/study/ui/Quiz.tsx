@@ -66,10 +66,10 @@ function Configuracion({ inicial, onEmpezar }: { inicial: Formulario; onEmpezar:
       }}
     >
       <fieldset>
-        <legend className="text-sm font-semibold text-slate-300">Sistemas</legend>
+        <legend className="text-sm font-semibold text-tinta-300">Sistemas</legend>
         <div className="mt-2 flex flex-wrap gap-2">
           {SISTEMAS.map((s) => (
-            <label key={s.id} className={`cursor-pointer rounded-full border px-3 py-1 text-sm ${f.sistemas.includes(s.id) ? 'border-sky-400 bg-sky-500/15 text-sky-100' : 'border-slate-700 text-slate-400'}`}>
+            <label key={s.id} className={`cursor-pointer rounded-full border px-3 py-1 text-sm ${f.sistemas.includes(s.id) ? 'border-oro-400 bg-oro-500/15 text-oro-100' : 'border-tinta-700 text-tinta-400'}`}>
               <input type="checkbox" className="sr-only" checked={f.sistemas.includes(s.id)} onChange={() => setF({ ...f, sistemas: alternar(f.sistemas, s.id), region: '' })} />
               {s.nombre}
             </label>
@@ -78,12 +78,12 @@ function Configuracion({ inicial, onEmpezar }: { inicial: Formulario; onEmpezar:
       </fieldset>
 
       {regiones.length > 0 && (
-        <label className="block text-sm text-slate-300">
+        <label className="block text-sm text-tinta-300">
           Región
           <select
             value={f.region}
             onChange={(e) => setF({ ...f, region: e.target.value })}
-            className="mt-1 block w-full max-w-sm rounded border border-slate-700 bg-slate-900 px-2 py-1.5 text-slate-100"
+            className="mt-1 block w-full max-w-sm rounded border border-tinta-700 bg-tinta-900 px-2 py-1.5 text-tinta-100"
           >
             <option value="">Todas</option>
             {regiones.map((r) => (
@@ -96,11 +96,11 @@ function Configuracion({ inicial, onEmpezar }: { inicial: Formulario; onEmpezar:
       )}
 
       <fieldset>
-        <legend className="text-sm font-semibold text-slate-300">Tipos de pregunta</legend>
+        <legend className="text-sm font-semibold text-tinta-300">Tipos de pregunta</legend>
         <div className="mt-2 grid gap-1.5 sm:grid-cols-2">
           {(Object.keys(NOMBRE_TIPO) as TipoPregunta[]).map((t) => (
-            <label key={t} className={`flex items-center gap-2 text-sm ${disponibles.includes(t) ? 'text-slate-300' : 'text-slate-600'}`}>
-              <input type="checkbox" className="accent-sky-500" disabled={!disponibles.includes(t)} checked={tipos.includes(t)} onChange={() => setF({ ...f, tipos: alternar(f.tipos, t) })} />
+            <label key={t} className={`flex items-center gap-2 text-sm ${disponibles.includes(t) ? 'text-tinta-300' : 'text-tinta-600'}`}>
+              <input type="checkbox" className="accent-oro-500" disabled={!disponibles.includes(t)} checked={tipos.includes(t)} onChange={() => setF({ ...f, tipos: alternar(f.tipos, t) })} />
               {NOMBRE_TIPO[t]}
               {fichasListas && !disponibles.includes(t) && <span className="text-[11px]">(no aplica a esta selección)</span>}
             </label>
@@ -109,17 +109,17 @@ function Configuracion({ inicial, onEmpezar }: { inicial: Formulario; onEmpezar:
       </fieldset>
 
       <div className="grid gap-4 sm:grid-cols-3">
-        <label className="block text-sm text-slate-300">
+        <label className="block text-sm text-tinta-300">
           Dificultad
-          <select value={f.dificultad} onChange={(e) => setF({ ...f, dificultad: e.target.value as Dificultad })} className="mt-1 block w-full rounded border border-slate-700 bg-slate-900 px-2 py-1.5 text-slate-100">
+          <select value={f.dificultad} onChange={(e) => setF({ ...f, dificultad: e.target.value as Dificultad })} className="mt-1 block w-full rounded border border-tinta-700 bg-tinta-900 px-2 py-1.5 text-tinta-100">
             <option value="facil">Fácil: opciones de otras regiones</option>
             <option value="media">Media</option>
             <option value="dificil">Difícil: opciones parecidas y del otro lado</option>
           </select>
         </label>
-        <label className="block text-sm text-slate-300">
+        <label className="block text-sm text-tinta-300">
           Preguntas
-          <select value={f.numero} onChange={(e) => setF({ ...f, numero: Number(e.target.value) })} className="mt-1 block w-full rounded border border-slate-700 bg-slate-900 px-2 py-1.5 text-slate-100">
+          <select value={f.numero} onChange={(e) => setF({ ...f, numero: Number(e.target.value) })} className="mt-1 block w-full rounded border border-tinta-700 bg-tinta-900 px-2 py-1.5 text-tinta-100">
             {[5, 10, 20, 30].map((n) => (
               <option key={n} value={n}>
                 {n}
@@ -127,9 +127,9 @@ function Configuracion({ inicial, onEmpezar }: { inicial: Formulario; onEmpezar:
             ))}
           </select>
         </label>
-        <label className="block text-sm text-slate-300">
+        <label className="block text-sm text-tinta-300">
           Temporizador
-          <select value={f.segundos} onChange={(e) => setF({ ...f, segundos: Number(e.target.value) })} className="mt-1 block w-full rounded border border-slate-700 bg-slate-900 px-2 py-1.5 text-slate-100">
+          <select value={f.segundos} onChange={(e) => setF({ ...f, segundos: Number(e.target.value) })} className="mt-1 block w-full rounded border border-tinta-700 bg-tinta-900 px-2 py-1.5 text-tinta-100">
             <option value={0}>Sin límite</option>
             <option value={15}>15 s por pregunta</option>
             <option value={30}>30 s por pregunta</option>
@@ -138,15 +138,15 @@ function Configuracion({ inicial, onEmpezar }: { inicial: Formulario; onEmpezar:
         </label>
       </div>
 
-      <label className="flex items-center gap-2 text-sm text-slate-300">
-        <input type="checkbox" className="accent-sky-500" checked={f.priorizar} onChange={(e) => setF({ ...f, priorizar: e.target.checked })} />
+      <label className="flex items-center gap-2 text-sm text-tinta-300">
+        <input type="checkbox" className="accent-oro-500" checked={f.priorizar} onChange={(e) => setF({ ...f, priorizar: e.target.checked })} />
         Preguntar primero por las estructuras pendientes de repaso
       </label>
 
       <button
         type="submit"
         disabled={!fichasListas || f.sistemas.length === 0 || tipos.length === 0}
-        className="rounded-lg bg-sky-500 px-5 py-2.5 font-semibold text-slate-950 hover:bg-sky-400 disabled:cursor-not-allowed disabled:opacity-40"
+        className="rounded-lg bg-oro-500 px-5 py-2.5 font-semibold text-tinta-950 hover:bg-oro-400 disabled:cursor-not-allowed disabled:opacity-40"
       >
         {fichasListas ? 'Empezar' : 'Cargando fichas…'}
       </button>
@@ -285,21 +285,21 @@ function Sesion({ preguntas, form, onFin }: { preguntas: Pregunta[]; form: Formu
   const aciertos = respuestas.filter((r) => r.correcta).length;
 
   const panel = (
-    <section aria-live="polite" className="rounded-xl border border-slate-800 bg-slate-900/70 p-4">
-      <div className="flex items-center justify-between text-xs text-slate-400">
+    <section aria-live="polite" className="rounded-xl border border-tinta-800 bg-tinta-900/70 p-4">
+      <div className="flex items-center justify-between text-xs text-tinta-400">
         <span>
           Pregunta {indice + 1} de {preguntas.length} · {NOMBRE_TIPO[p.tipo]}
         </span>
         <span className="tabular-nums">Aciertos: {aciertos}</span>
       </div>
       {form.segundos > 0 && !respondida && (
-        <div className="mt-2 h-1.5 overflow-hidden rounded bg-slate-800" role="timer" aria-label={`${Math.ceil(restante)} segundos`}>
-          <div className={`h-full ${restante < 5 ? 'bg-red-400' : 'bg-sky-400'}`} style={{ width: `${(restante / form.segundos) * 100}%` }} />
+        <div className="mt-2 h-1.5 overflow-hidden rounded bg-tinta-800" role="timer" aria-label={`${Math.ceil(restante)} segundos`}>
+          <div className={`h-full ${restante < 5 ? 'bg-red-400' : 'bg-oro-400'}`} style={{ width: `${(restante / form.segundos) * 100}%` }} />
         </div>
       )}
-      <h2 className="mt-3 text-lg font-semibold text-slate-50">{p.enunciado}</h2>
-      {p.detalle && <p className="mt-1 whitespace-pre-line text-sm text-slate-300">{p.detalle}</p>}
-      {p.tipo === 'encontrar' && !respondida && <p className="mt-2 text-xs text-slate-400">Gira y acerca el modelo y haz clic en la estructura.</p>}
+      <h2 className="mt-3 text-lg font-semibold text-tinta-50">{p.enunciado}</h2>
+      {p.detalle && <p className="mt-1 whitespace-pre-line text-sm text-tinta-300">{p.detalle}</p>}
+      {p.tipo === 'encontrar' && !respondida && <p className="mt-2 text-xs text-tinta-400">Gira y acerca el modelo y haz clic en la estructura.</p>}
 
       {p.opciones.length > 0 && (
         <ol className="mt-4 space-y-2">
@@ -307,16 +307,16 @@ function Sesion({ preguntas, form, onFin }: { preguntas: Pregunta[]; form: Formu
             const esCorrecta = o.id === p.correcta;
             const elegida = actual?.elegida === o.id;
             const estilo = !respondida
-              ? 'border-slate-700 hover:border-sky-400 hover:bg-slate-800'
+              ? 'border-tinta-700 hover:border-oro-400 hover:bg-tinta-800'
               : esCorrecta
                 ? 'border-emerald-400 bg-emerald-500/15 text-emerald-100'
                 : elegida
                   ? 'border-red-400 bg-red-500/15 text-red-100'
-                  : 'border-slate-800 opacity-60';
+                  : 'border-tinta-800 opacity-60';
             return (
               <li key={o.id}>
                 <button type="button" disabled={respondida} onClick={() => elegir(o.id)} className={`flex w-full gap-2 rounded-lg border px-3 py-2 text-left text-sm ${estilo}`}>
-                  <span className="font-bold text-slate-400">{i + 1}</span>
+                  <span className="font-bold text-tinta-400">{i + 1}</span>
                   {o.texto}
                 </button>
               </li>
@@ -341,9 +341,9 @@ function Sesion({ preguntas, form, onFin }: { preguntas: Pregunta[]; form: Formu
             value={escrito}
             onChange={(e) => setEscrito(e.target.value)}
             placeholder="…o escribe el nombre (español, latín o inglés)"
-            className="min-w-0 flex-1 rounded border border-slate-700 bg-slate-950 px-2 py-1.5 text-sm text-slate-100"
+            className="min-w-0 flex-1 rounded border border-tinta-700 bg-tinta-950 px-2 py-1.5 text-sm text-tinta-100"
           />
-          <button type="submit" className="rounded border border-slate-600 px-3 text-sm text-slate-200 hover:bg-slate-800">
+          <button type="submit" className="rounded border border-tinta-600 px-3 text-sm text-tinta-200 hover:bg-tinta-800">
             Responder
           </button>
         </form>
@@ -353,8 +353,8 @@ function Sesion({ preguntas, form, onFin }: { preguntas: Pregunta[]; form: Formu
         <div className={`mt-4 rounded-lg p-3 text-sm ${actual.correcta ? 'bg-emerald-500/10 text-emerald-200' : 'bg-red-500/10 text-red-200'}`}>
           <p className="font-semibold">{actual.correcta ? '¡Correcto!' : 'Incorrecto'}</p>
           {actual.nota && <p className="mt-1">{actual.nota}</p>}
-          {!actual.correcta && <p className="mt-1 text-slate-200">Respuesta: {textoCorrecto}</p>}
-          <button type="button" onClick={siguiente} className="mt-3 rounded-md bg-sky-500 px-4 py-1.5 font-semibold text-slate-950 hover:bg-sky-400" autoFocus>
+          {!actual.correcta && <p className="mt-1 text-tinta-200">Respuesta: {textoCorrecto}</p>}
+          <button type="button" onClick={siguiente} className="mt-3 rounded-md bg-oro-500 px-4 py-1.5 font-semibold text-tinta-950 hover:bg-oro-400" autoFocus>
             {indice + 1 < preguntas.length ? 'Siguiente (Intro)' : 'Ver resultados'}
           </button>
         </div>
@@ -365,9 +365,9 @@ function Sesion({ preguntas, form, onFin }: { preguntas: Pregunta[]; form: Formu
   if (!hay3d) return <div className="mx-auto max-w-2xl">{panel}</div>;
   return (
     <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_380px]">
-      <div className="relative h-[60vh] min-h-80 overflow-hidden rounded-xl border border-slate-800 lg:h-[70vh]">
+      <div className="relative h-[60vh] min-h-80 overflow-hidden rounded-xl border border-tinta-800 lg:h-[70vh]">
         <Visor />
-        <button type="button" onClick={() => useAtlasStore.getState().reiniciarCamara()} className="absolute right-2 top-2 rounded-md bg-slate-800/90 px-2 py-1 text-xs text-slate-200">
+        <button type="button" onClick={() => useAtlasStore.getState().reiniciarCamara()} className="absolute right-2 top-2 rounded-md bg-tinta-800/90 px-2 py-1 text-xs text-tinta-200">
           ⟲ Cámara
         </button>
       </div>
@@ -382,32 +382,32 @@ function Resumen({ respuestas, onOtra, onConfigurar }: { respuestas: Respuesta[]
   const fallos = respuestas.filter((r) => !r.correcta);
   const pct = respuestas.length ? Math.round((aciertos / respuestas.length) * 100) : 0;
   return (
-    <section className="mx-auto max-w-2xl rounded-xl border border-slate-800 bg-slate-900/70 p-6">
+    <section className="mx-auto max-w-2xl rounded-xl border border-tinta-800 bg-tinta-900/70 p-6">
       <h2 className="text-2xl font-bold">Resultado: {pct} %</h2>
-      <p className="mt-1 text-slate-400">
+      <p className="mt-1 text-tinta-400">
         {aciertos} de {respuestas.length} aciertos. Las estructuras falladas volverán antes en tus repasos.
       </p>
       {fallos.length > 0 && (
         <>
-          <h3 className="mt-5 text-sm font-semibold text-slate-300">Para repasar</h3>
+          <h3 className="mt-5 text-sm font-semibold text-tinta-300">Para repasar</h3>
           <ul className="mt-2 space-y-1 text-sm">
             {fallos.map((r) => (
-              <li key={r.pregunta.n} className="flex justify-between gap-3 border-t border-slate-800 pt-1">
-                <span className="text-slate-200">{conceptos().get(r.pregunta.concepto)?.nombre ?? r.pregunta.concepto}</span>
-                <span className="text-xs text-slate-400">{NOMBRE_TIPO[r.pregunta.tipo]}</span>
+              <li key={r.pregunta.n} className="flex justify-between gap-3 border-t border-tinta-800 pt-1">
+                <span className="text-tinta-200">{conceptos().get(r.pregunta.concepto)?.nombre ?? r.pregunta.concepto}</span>
+                <span className="text-xs text-tinta-400">{NOMBRE_TIPO[r.pregunta.tipo]}</span>
               </li>
             ))}
           </ul>
         </>
       )}
       <div className="mt-6 flex flex-wrap gap-3">
-        <button type="button" onClick={onOtra} className="rounded-lg bg-sky-500 px-4 py-2 font-semibold text-slate-950 hover:bg-sky-400">
+        <button type="button" onClick={onOtra} className="rounded-lg bg-oro-500 px-4 py-2 font-semibold text-tinta-950 hover:bg-oro-400">
           Otra ronda
         </button>
-        <button type="button" onClick={onConfigurar} className="rounded-lg border border-slate-700 px-4 py-2 text-slate-200 hover:bg-slate-800">
+        <button type="button" onClick={onConfigurar} className="rounded-lg border border-tinta-700 px-4 py-2 text-tinta-200 hover:bg-tinta-800">
           Cambiar configuración
         </button>
-        <Link to="/estudio" className="rounded-lg px-4 py-2 text-slate-400 hover:text-slate-200">
+        <Link to="/estudio" className="rounded-lg px-4 py-2 text-tinta-400 hover:text-tinta-200">
           Volver al modo estudio
         </Link>
       </div>
@@ -456,20 +456,20 @@ export default function Quiz() {
 
   return (
     <div className="mx-auto w-full max-w-7xl px-4 py-6">
-      <nav aria-label="Ruta" className="text-xs text-slate-400">
-        <Link to="/estudio" className="hover:text-slate-300">
+      <nav aria-label="Ruta" className="text-xs text-tinta-400">
+        <Link to="/estudio" className="hover:text-tinta-300">
           Modo estudio
         </Link>{' '}
         › Quiz
       </nav>
       <h1 className="mt-1 text-2xl font-bold tracking-tight">Quiz</h1>
-      <p className="mb-5 text-sm text-slate-400">{form.sistemas.map((s) => SISTEMAS_POR_ID[s].nombre).join(', ')}</p>
+      <p className="mb-5 text-sm text-tinta-400">{form.sistemas.map((s) => SISTEMAS_POR_ID[s].nombre).join(', ')}</p>
 
       {resultado ? (
         <Resumen respuestas={resultado} onOtra={() => empezar(form)} onConfigurar={() => (setResultado(null), setPreguntas(null))} />
       ) : preguntas ? (
         preguntas.length === 0 ? (
-          <p className="text-slate-400">
+          <p className="text-tinta-400">
             No hay preguntas posibles con esta configuración.{' '}
             <button type="button" className="underline" onClick={() => setPreguntas(null)}>
               Cambiarla
@@ -479,7 +479,7 @@ export default function Quiz() {
           <Sesion key={ronda} preguntas={preguntas} form={form} onFin={setResultado} />
         )
       ) : (
-        <div className="max-w-3xl rounded-xl border border-slate-800 bg-slate-900/50 p-5">
+        <div className="max-w-3xl rounded-xl border border-tinta-800 bg-tinta-900/50 p-5">
           <Configuracion inicial={form} onEmpezar={empezar} />
         </div>
       )}

@@ -66,13 +66,13 @@ function Torax({ e }: { e: EstadoResp }) {
       ))}
       {pulmon(-1)}
       {pulmon(1)}
-      <path d="M 180 15 L 180 100 M 180 100 L 150 125 M 180 100 L 210 125" stroke="#e2e8f0" strokeWidth={8} strokeLinecap="round" fill="none" />
+      <path d="M 180 15 L 180 100 M 180 100 L 150 125 M 180 100 L 210 125" stroke="#e4dccd" strokeWidth={8} strokeLinecap="round" fill="none" />
       <path d={`M 55 ${yd + 10} Q 180 ${yd - 70} 305 ${yd + 10}`} fill="none" stroke="#f87171" strokeWidth={7} strokeLinecap="round" />
       <text x={305} y={yd + 26} textAnchor="end" className="fill-red-300 text-[11px]">
         Diafragma
       </text>
       {(entra || sale) && (
-        <g className={entra ? 'fill-sky-300' : 'fill-amber-300'}>
+        <g className={entra ? 'fill-oro-300' : 'fill-amber-300'}>
           <path d={entra ? 'M 200 20 l 10 0 l 0 22 l 7 0 l -12 14 l -12 -14 l 7 0 z' : 'M 200 56 l 10 0 l 0 -22 l 7 0 l -12 -14 l -12 14 l 7 0 z'} />
           <text x={222} y={40} className="text-[11px]">
             {entra ? 'Entra aire' : 'Sale aire'}
@@ -87,7 +87,7 @@ function ColumnaVolumenes({ volumen }: { volumen: number }) {
   const alto = 260;
   const y = (v: number) => 10 + alto - (v / CAPACIDADES.cpt) * alto;
   const tramos = [
-    { nombre: 'VR', desde: 0, hasta: VOL.vr, color: '#475569' },
+    { nombre: 'VR', desde: 0, hasta: VOL.vr, color: '#5f584f' },
     { nombre: 'VRE', desde: VOL.vr, hasta: CAPACIDADES.crf, color: '#0ea5e9' },
     { nombre: 'VT', desde: CAPACIDADES.crf, hasta: CAPACIDADES.crf + VOL.vt, color: '#22c55e' },
     { nombre: 'VRI', desde: CAPACIDADES.crf + VOL.vt, hasta: CAPACIDADES.cpt, color: '#a855f7' },
@@ -102,26 +102,26 @@ function ColumnaVolumenes({ volumen }: { volumen: number }) {
     <svg viewBox="0 0 210 280" className="h-auto w-full" role="img" aria-label="Volúmenes y capacidades pulmonares con el volumen actual">
       {tramos.map((t) => (
         <g key={t.nombre}>
-          <rect x={40} y={y(t.hasta)} width={60} height={y(t.desde) - y(t.hasta)} fill={t.color} fillOpacity={0.55} stroke="#0f172a" />
+          <rect x={40} y={y(t.hasta)} width={60} height={y(t.desde) - y(t.hasta)} fill={t.color} fillOpacity={0.55} stroke="#1d1a17" />
           <text x={70} y={(y(t.desde) + y(t.hasta)) / 2 + 4} textAnchor="middle" className="fill-white text-[11px] font-bold">
             {t.nombre}
           </text>
-          <text x={36} y={(y(t.desde) + y(t.hasta)) / 2 + 4} textAnchor="end" className="fill-slate-400 text-[9px]">
+          <text x={36} y={(y(t.desde) + y(t.hasta)) / 2 + 4} textAnchor="end" className="fill-tinta-400 text-[9px]">
             {t.hasta - t.desde}
           </text>
         </g>
       ))}
       {llaves.map((l) => (
-        <g key={l.nombre} className="stroke-slate-500">
+        <g key={l.nombre} className="stroke-tinta-500">
           <line x1={l.x} x2={l.x} y1={y(l.hasta) + 2} y2={y(l.desde) - 2} strokeWidth={1.5} />
           <line x1={l.x - 4} x2={l.x} y1={y(l.hasta) + 2} y2={y(l.hasta) + 2} />
           <line x1={l.x - 4} x2={l.x} y1={y(l.desde) - 2} y2={y(l.desde) - 2} />
-          <text x={l.x + 3} y={(y(l.desde) + y(l.hasta)) / 2 + 3} className="fill-slate-300 stroke-none text-[9px]">
+          <text x={l.x + 3} y={(y(l.desde) + y(l.hasta)) / 2 + 3} className="fill-tinta-300 stroke-none text-[9px]">
             {l.nombre}
           </text>
         </g>
       ))}
-      <line x1={30} x2={110} y1={y(volumen)} y2={y(volumen)} stroke="#f8fafc" strokeWidth={2.5} />
+      <line x1={30} x2={110} y1={y(volumen)} y2={y(volumen)} stroke="#faf7f1" strokeWidth={2.5} />
       <text x={112} y={y(volumen) - 3} className="fill-white text-[9px]">
         {Math.round(volumen)} ml
       </text>
@@ -144,7 +144,7 @@ function Alveolo({ t }: { t: number }) {
       <text x={150} y={34} textAnchor="middle" className="fill-rose-200 text-[10px] font-semibold">
         Alvéolo
       </text>
-      <text x={150} y={50} textAnchor="middle" className="fill-slate-300 text-[9px]">
+      <text x={150} y={50} textAnchor="middle" className="fill-tinta-300 text-[9px]">
         PO₂ {g.alveolo.o2} · PCO₂ {g.alveolo.co2} mmHg
       </text>
       <rect x={20} y={120} width={260} height={30} rx={15} fill="url(#capilar)" fillOpacity={0.8} />
@@ -154,7 +154,7 @@ function Alveolo({ t }: { t: number }) {
       <text x={276} y={170} textAnchor="end" className="fill-red-300 text-[9px]">
         Sale: PO₂ {g.sangreArterial.o2} · PCO₂ {g.sangreArterial.co2}
       </text>
-      <text x={150} y={185} textAnchor="middle" className="fill-slate-400 text-[9px]">
+      <text x={150} y={185} textAnchor="middle" className="fill-tinta-400 text-[9px]">
         Capilar pulmonar →
       </text>
       {particulas.map((p, i) => (
@@ -165,7 +165,7 @@ function Alveolo({ t }: { t: number }) {
           <circle cx={170 + i * 8} cy={130 - p * 60} r={4} fill="#fbbf24" />
         </g>
       ))}
-      <text x={60} y={100} className="fill-sky-300 text-[10px]">
+      <text x={60} y={100} className="fill-oro-300 text-[10px]">
         O₂ ↓
       </text>
       <text x={222} y={100} className="fill-amber-300 text-[10px]">
@@ -213,7 +213,7 @@ export default function Respiracion() {
       controles={
         <div className="flex flex-wrap items-center gap-4">
           <Controles reloj={reloj} />
-          <div className="flex rounded-md border border-slate-700 p-0.5 text-sm" role="group" aria-label="Modo">
+          <div className="flex rounded-md border border-tinta-700 p-0.5 text-sm" role="group" aria-label="Modo">
             {(
               [
                 ['reposo', 'Respiración en reposo'],
@@ -228,7 +228,7 @@ export default function Respiracion() {
                   setModo(m);
                   reloj.reiniciar();
                 }}
-                className={`rounded px-3 py-1 ${modo === m ? 'bg-sky-500 text-slate-950' : 'text-slate-300 hover:bg-slate-800'}`}
+                className={`rounded px-3 py-1 ${modo === m ? 'bg-oro-500 text-tinta-950' : 'text-tinta-300 hover:bg-tinta-800'}`}
               >
                 {nombre}
               </button>
@@ -238,9 +238,9 @@ export default function Respiracion() {
       }
       visual={
         <>
-          <div className="grid gap-4 rounded-lg border border-slate-800 bg-slate-900/40 p-3 sm:grid-cols-[minmax(0,1fr)_200px]">
+          <div className="grid gap-4 rounded-lg border border-tinta-800 bg-tinta-900/40 p-3 sm:grid-cols-[minmax(0,1fr)_200px]">
             <div>
-              <p className="text-center text-sm font-semibold text-sky-200" aria-live="polite">
+              <p className="text-center text-sm font-semibold text-oro-200" aria-live="polite">
                 {PASOS.find((p) => p.id === e.fase)?.titulo}
               </p>
               <Torax e={e} />
@@ -263,41 +263,41 @@ export default function Respiracion() {
       }
       lateral={
         <>
-          <section className="rounded-lg border border-slate-800 bg-slate-900/50 p-3 text-sm">
+          <section className="rounded-lg border border-tinta-800 bg-tinta-900/50 p-3 text-sm">
             {modo === 'reposo' && (
-              <label className="block text-slate-300">
+              <label className="block text-tinta-300">
                 Frecuencia respiratoria: <strong className="tabular-nums">{fr} rpm</strong>
-                <input type="range" min={8} max={30} value={fr} onChange={(ev) => setFr(Number(ev.target.value))} className="mt-1 w-full accent-sky-500" />
+                <input type="range" min={8} max={30} value={fr} onChange={(ev) => setFr(Number(ev.target.value))} className="mt-1 w-full accent-oro-500" />
               </label>
             )}
-            <dl className="mt-2 grid grid-cols-2 gap-x-3 gap-y-1 text-xs text-slate-400">
+            <dl className="mt-2 grid grid-cols-2 gap-x-3 gap-y-1 text-xs text-tinta-400">
               <dt>Volumen pulmonar</dt>
-              <dd className="text-right tabular-nums text-slate-200">{Math.round(e.volumen)} ml</dd>
+              <dd className="text-right tabular-nums text-tinta-200">{Math.round(e.volumen)} ml</dd>
               <dt>Presión alveolar</dt>
-              <dd className="text-right tabular-nums text-slate-200">
+              <dd className="text-right tabular-nums text-tinta-200">
                 {e.presionAlveolar > 0 ? '+' : ''}
                 {e.presionAlveolar.toFixed(1)} mmHg
               </dd>
               <dt>Presión intrapleural (aprox.)</dt>
-              <dd className="text-right tabular-nums text-slate-200">{e.presionPleural.toFixed(1)} mmHg</dd>
+              <dd className="text-right tabular-nums text-tinta-200">{e.presionPleural.toFixed(1)} mmHg</dd>
               {modo === 'reposo' && (
                 <>
                   <dt>Ventilación minuto</dt>
-                  <dd className="text-right tabular-nums text-slate-200">{(vent.minuto / 1000).toFixed(1)} l/min</dd>
+                  <dd className="text-right tabular-nums text-tinta-200">{(vent.minuto / 1000).toFixed(1)} l/min</dd>
                   <dt>Ventilación alveolar</dt>
-                  <dd className="text-right tabular-nums text-slate-200">{(vent.alveolar / 1000).toFixed(1)} l/min</dd>
+                  <dd className="text-right tabular-nums text-tinta-200">{(vent.alveolar / 1000).toFixed(1)} l/min</dd>
                 </>
               )}
             </dl>
-            <p className="mt-2 text-xs text-slate-400">
-              <strong className="text-slate-300">Músculos activos:</strong> {MUSCULOS[e.fase]}
+            <p className="mt-2 text-xs text-tinta-400">
+              <strong className="text-tinta-300">Músculos activos:</strong> {MUSCULOS[e.fase]}
             </p>
           </section>
           <Pasos pasos={PASOS} activo={e.fase} onElegir={elegirPaso} />
-          <figure className="rounded-lg border border-slate-800 bg-slate-950/60 p-2">
-            <figcaption className="px-1 text-xs font-semibold text-slate-300">Intercambio alveolar (difusión)</figcaption>
+          <figure className="rounded-lg border border-tinta-800 bg-tinta-950/60 p-2">
+            <figcaption className="px-1 text-xs font-semibold text-tinta-300">Intercambio alveolar (difusión)</figcaption>
             <Alveolo t={reloj.t} />
-            <p className="px-1 text-[11px] text-slate-400">
+            <p className="px-1 text-[11px] text-tinta-400">
               Cada gas difunde a favor de su gradiente de presión parcial a través de la membrana respiratoria (≈ 0,5 µm). El equilibrio se
               alcanza en el primer tercio del recorrido capilar en reposo.
             </p>
